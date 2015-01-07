@@ -4,12 +4,9 @@ layout: home
 
 <div class="index-content blog">
     <div class="section">
-        <ul class="artical-cate">
-            <li class="on"><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/demo"><span>Demo</span></a></li>
-            <li style="text-align:right"><a href="/about"><span>About</span></a></li>
-        </ul>
-
+        ---
+        layout: category_list
+        ---
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="artical-list">
