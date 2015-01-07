@@ -74,7 +74,7 @@ box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
 background-size:cover;
 background-position:50% 50%;
 }
-.blog .aside{
+/*.blog .aside{
 background-image:url(/images/bg1.jpg);
 }
 .opinion .aside{
@@ -82,7 +82,7 @@ background-image:url(/images/bg0.jpg);
 }
 .project .aside{
 background-image:url(/images/bg2.jpg)
-}
+}*/
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 .index-content .artical-list { width:70%; margin:0 auto; }
 .index-content .artical-list li { margin-bottom:70px; }
