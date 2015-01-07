@@ -19,15 +19,15 @@
 <a class="home-follow" href="#" title="Contact Me">+</a>
 </div>
 <div class="home-contact">
-<a href="http://weibo.com/ppmoli/" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-<a href="http://www.douban.com/people/ppmoli/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-<a href="http://instagram.com/ppmoli/" target="_blank" style="text-align:right"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a>
+	<a href="http://weibo.com/ppmoli/" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+	<a href="http://www.douban.com/people/ppmoli/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
+	<a href="http://instagram.com/ppmoli/" target="_blank" style="text-align:right"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a>
 </div>
 </div>
 {{ content }}
 <script type="text/javascript">
 $(function(){
-$('.home-follow').click(function(e){
+$('.home-follow').mouseover(function(e){
 e.preventDefault();
 if($('.home-contact').is(':visible')){
 $('.home-contact').slideUp(100);
