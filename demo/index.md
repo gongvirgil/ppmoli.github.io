@@ -4,11 +4,7 @@ layout: home
 
 <div class="index-content blog">
     <div class="section">
-        <ul class="artical-cate">
-            <li><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center" class="on"><a href="/demo"><span>Demo</span></a></li>
-            <li style="text-align:right"><a href="/about"><span>About</span></a></li>
-        </ul>
+        {% include category_list.html %}
 
         <div class="cate-bar"><span id="cateBar"></span></div>
 
