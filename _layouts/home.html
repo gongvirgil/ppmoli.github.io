@@ -4,7 +4,7 @@ layout: default
 {{ content }}
 <script type="text/javascript">
 $(function(){
-	document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1]).className="on";
+	document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1]?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";
 function animateBar($item,noAni){
 var spanLeft = $item.find('span').offset().left;
 var conLeft = $item.parent().offset().left;
