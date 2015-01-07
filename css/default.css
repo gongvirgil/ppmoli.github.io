@@ -74,10 +74,10 @@ background-size:cover;
 background-position:50% 50%;
 }
 .blog .aside{
-background-image:url(/images/bg0.jpg);
+background-image:url(/images/bg1.jpg);
 }
 .opinion .aside{
-background-image:url(/images/bg1.jpg);
+background-image:url(/images/bg0.jpg);
 }
 .project .aside{
 background-image:url(/images/bg2.jpg)
