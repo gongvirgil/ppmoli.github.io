@@ -4,9 +4,8 @@ layout: home
 
 <div class="index-content blog">
     <div class="section">
-        ---
-        layout: category_list
-        ---
+        {% include category_list.html %}
+        
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="artical-list">
