@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>测试1 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
     <link rel="stylesheet" href="/public/css/default.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
   </head>
@@ -61,23 +61,33 @@
               <a href="">Instagram</a>
             </div>
           </div>
-          {% for category in site.categories %}
+          
           <div class="my_cate x">
-            <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
+            <a onclick="toggle(this,'技术')"><span>3</span>技术</a>
           </div>
-          <div class="{{ category | first }} cate y">
-            {% for post in category.last %}
-            <li><a href="{{ post.url }}"><!-- <span>{{ post.date | date:"%Y/%d/%m"}}</span> -->{{ post.title }}</a></li>
-            {% endfor %}
+          <div class="技术 cate y">
+            
+            <li><a href="/blog/2015-01-19/3.html"><!-- <span>2015/19/01</span> -->测试1</a></li>
+            
+            <li><a href="/blog/2015-01-19/2.html"><!-- <span>2015/19/01</span> -->安装Jekyll</a></li>
+            
+            <li><a href="/blog/2015-01-19/1.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a></li>
+            
           </div>
-          {% endfor %}
+          
           <div class="my_tags x">
             <a onclick="toggle(this,'tags')">标签</a>
           </div>
           <div class="tags y">
-            {% for tag in site.tags %}
-              <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}"><sup>{{ tag[1].size }}</sup>{{ tag[0] }}</a>
-            {% endfor %}
+            
+              <a href="/tags/?tag=Github" title="Github"><sup>1</sup>Github</a>
+            
+              <a href="/tags/?tag=Blog" title="Blog"><sup>3</sup>Blog</a>
+            
+              <a href="/tags/?tag=Jekyll" title="Jekyll"><sup>1</sup>Jekyll</a>
+            
+              <a href="/tags/?tag=测试" title="测试"><sup>1</sup>测试</a>
+            
           </div>
           <div class="post_view x">
             <a>归档</a>
@@ -106,7 +116,49 @@
         </script>
       </div>
       <div class="middle">
-      {{ content }}
+      <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+<div id="content">
+    <div class="post">
+        <h1 class="post_title"><a href="/blog/2015-01-19/3.html" title="测试1">测试1</a></h1>
+        <p class="post_date">2015-01-19</p>
+        
+
+    </div>
+
+<!--     <div class="sidenav">
+    <h2>Blog</h2>
+    <ul class="artical-list">
+    
+    </ul>
+
+    <h2>Opinion</h2>
+    <ul class="artical-list">
+    
+    </ul>
+
+    <h2>Project</h2>
+    <ul class="artical-list">
+    
+    </ul>
+</div> -->
+</div>
+<!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/blog/2015-01-19/3" data-title="测试1" data-url="/blog/2015-01-19/3.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gongvirgil"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+    
       </div>
       <div class="right"></div>
     </div>

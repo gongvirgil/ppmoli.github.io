@@ -1,0 +1,56 @@
+.posts {overflow: hidden;}
+.posts ul li{
+	background-color: #fff;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    padding: 16px 20px;
+}
+.posts h2 {
+	font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    word-break:break-all;
+}
+.posts .title-desc {
+    color: #666;
+    line-height: 2em;
+}
+
+.title-desc p ,.introduce p{
+    text-indent: 2em;
+}
+
+.post_meta {
+	font-family: Tahoma,"Microsoft Yahei",sans-serif;
+	padding-top: 8px;
+    height: 20px;	
+}
+.post_meta a{
+	float: left;
+	margin-right: 15px;
+}
+.post_meta span {
+	background: url('../images/glyphicons-halflings.png');
+	width: 15px;
+	height: 15px;
+	float: left;
+	margin: 6px 2px 0 0;
+}
+.date span{
+	background-position: -47px -23px;
+}
+.comment span {
+	background-position: 230px 40px;
+}
+.post_tags a{
+    margin: 0 12px 10px 0;
+    padding: 0px 8px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 12px;
+	float: right;
+}
+.post_tags a:hover {
+	background-color: #4d4d4d;
+}

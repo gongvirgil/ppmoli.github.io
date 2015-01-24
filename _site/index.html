@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
     <link rel="stylesheet" href="/public/css/default.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
   </head>
@@ -61,23 +61,33 @@
               <a href="">Instagram</a>
             </div>
           </div>
-          {% for category in site.categories %}
+          
           <div class="my_cate x">
-            <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
+            <a onclick="toggle(this,'技术')"><span>3</span>技术</a>
           </div>
-          <div class="{{ category | first }} cate y">
-            {% for post in category.last %}
-            <li><a href="{{ post.url }}"><!-- <span>{{ post.date | date:"%Y/%d/%m"}}</span> -->{{ post.title }}</a></li>
-            {% endfor %}
+          <div class="技术 cate y">
+            
+            <li><a href="/blog/2015-01-19/3.html"><!-- <span>2015/19/01</span> -->测试1</a></li>
+            
+            <li><a href="/blog/2015-01-19/2.html"><!-- <span>2015/19/01</span> -->安装Jekyll</a></li>
+            
+            <li><a href="/blog/2015-01-19/1.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a></li>
+            
           </div>
-          {% endfor %}
+          
           <div class="my_tags x">
             <a onclick="toggle(this,'tags')">标签</a>
           </div>
           <div class="tags y">
-            {% for tag in site.tags %}
-              <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}"><sup>{{ tag[1].size }}</sup>{{ tag[0] }}</a>
-            {% endfor %}
+            
+              <a href="/tags/?tag=Github" title="Github"><sup>1</sup>Github</a>
+            
+              <a href="/tags/?tag=Blog" title="Blog"><sup>3</sup>Blog</a>
+            
+              <a href="/tags/?tag=Jekyll" title="Jekyll"><sup>1</sup>Jekyll</a>
+            
+              <a href="/tags/?tag=测试" title="测试"><sup>1</sup>测试</a>
+            
           </div>
           <div class="post_view x">
             <a>归档</a>
@@ -106,7 +116,97 @@
         </script>
       </div>
       <div class="middle">
-      {{ content }}
+      <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="posts">
+  <ul class="artical-list"  id="post_list">
+    
+<li>
+    <h2><a href="/blog/2015-01-19/3.html">测试1</a></h2>
+    <div class="title-desc"><p>测试哦测试哦</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="">2015-01-19</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="">1条评论</a>
+      </div>
+<div class="post_tags">
+      
+      <a href="">● 测试</a>
+      
+      <a href="">● Blog</a>
+      
+</div>
+</div>
+</li> 
+
+<li>
+    <h2><a href="/blog/2015-01-19/2.html">安装Jekyll</a></h2>
+    <div class="title-desc"><p>安装Jekyll，下载地址：http://rubyinstaller.org/downloads/</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="">2015-01-19</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="">1条评论</a>
+      </div>
+<div class="post_tags">
+      
+      <a href="">● Jekyll</a>
+      
+      <a href="">● Blog</a>
+      
+</div>
+</div>
+</li> 
+
+<li>
+    <h2><a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a></h2>
+    <div class="title-desc"><p>Github本身就是不错的代码社区，他也提供了一些其他的服务，比如Github Pages，使用它可以很方便的建立自己的独立博客，并且免费。</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="">2015-01-19</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="">1条评论</a>
+      </div>
+<div class="post_tags">
+      
+      <a href="">● Github</a>
+      
+      <a href="">● Blog</a>
+      
+</div>
+</div>
+</li> 
+                                
+                               
+  </ul>
+  <p class="toNext">
+    <a href="">下一页</a>
+  </p> 
+  <p class="toTOP">
+    <a href="">回到顶部</a>
+  </p> 
+</div>
+<div class=""></div>
+  <!--           
+  <script type="text/javascript">
+    function TriggerPost(i){
+      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
+      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
+    }
+    var scrollFun=function(e){
+      e=e || window.event;
+      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
+      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
+    }
+    if(document.addEventListener){
+        document.addEventListener('DOMMouseScroll',scrollFun,false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFun;
+  </script> 
+  -->
       </div>
       <div class="right"></div>
     </div>

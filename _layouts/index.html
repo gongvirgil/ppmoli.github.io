@@ -1,148 +1,33 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gongvirgil.io</title>
-<!--     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="/public/css/main.css">
-    <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<!--     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
-<!--     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
-  </head>
-  <body>
-    <!--Nav-->
-    <div class="navbar navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li id="blog" class="on"><a href="/"><span>Blog</span></a></li>
-            <li id="demo"><a href="/demo"><span>Demo</span></a></li>
-            <li id="about"><a href="/about"><span>About</span></a></li>
-          </ul>
-          <style type="text/css">
-            .nav li {width:33.33%;}
-          </style>
-        </div>
-        <div class="cate_select">
-          <span id="cate_on"></span>
-        </div>
-      </div>
-    </div>
-    <!--Nav End-->
-    <div class="notice"></div>
-    <!--Main-->
-    <div class="main">
-      <div class="left">
-        <div class=""></div>
-        <div class="home" id="home">
-          <div class="my_info">
-            <a class="on" onclick="toggle(this,'info')">HOME</a>
-          </div>
-          <div class="info y">
-            <div class="avatar">
-              <a id="avatar" href=""></a>
-              <h3>GongVirgil</h3>
-            </div>
-            <!--
-            <div class="introduce">
-              <p class="cont">容颜，隐藏在油纸伞里，转动的光影，依稀的，想起了素手执笔的岁月年。 </p>
-            </div>
-            -->
-            <div class="contact">
-              <a href="">微博</a>
-              <a href="">豆瓣</a>
-              <a href="">Instagram</a>
-            </div>
-          </div>
-          <div class="my_tags">
-            <a onclick="toggle(this,'tags')">Category</a>
-          </div>
-          <div class="tags y">
-              <a href="javascript:void(0)"><span>11</span>aaa1</a>
-              <a href="javascript:void(0)"><span>11</span>aaa2</a>
-              <a href="javascript:void(0)"><span>11</span>aaa3</a>
-              <a href="javascript:void(0)"><span>11</span>aaa4</a>
-              <a href="javascript:void(0)"><span>11</span>aaa5</a>
-              <a href="javascript:void(0)"><span>11</span>aaa6</a>
-              <a><span>↓</span>NEXT</a>
-          </div>
-          <div class="post_view">
-            <a>归档</a>
-          </div>
-          <div class="mail_to">
-            <a>联系我</a>
-          </div>
-        </div>
-        <script type="text/javascript">
-          function toggle(i,index){
-            $(i).toggleClass('on').parents().siblings().find('a').removeClass('on');
-            $("."+index).toggle(500).siblings('.y').hide(500);
-          }
-          function fixed(id){
-            var navH = $(id).offset().top;
-            $(window).scroll(function(){
-              var scroH = $(this).scrollTop();
-              if(scroH>=navH){
-                $(id).css({"position":"fixed","top":0});
-              }else if(scroH<navH){
-                $(id).css({"position":"static"});
-              }
-            })
-          }
-          fixed("#home");
-        </script>
-      </div>
-      <div class="middle">
-      {{ content }}
-      </div>
-      <div class="right"></div>
-    </div>
-    <!--Main End-->
-    <script type="text/javascript">
-    $(function(){
-      function animateBar($item,noAni){
-        var spanLeft = $item.find('span').offset().left;
-        var conLeft = $item.parent().offset().left;
-        var left = spanLeft - conLeft;
-        var width = $item.find('span').width() + 8;
-        if(noAni){
-        $('#cate_on').css({left:left,width:width})
-        }else{
-        $('#cate_on').stop().animate({left:left,width:width},300)
-        }
-      }
-      var waitForFinalEvent = (function () {
-        var timers = {};
-        return function (callback, ms, uniqueId) {
-          if (!uniqueId) {
-          uniqueId = "Don't call this twice without a uniqueId";
-          }
-          if (timers[uniqueId]) {
-          clearTimeout (timers[uniqueId]);
-          }
-          timers[uniqueId] = setTimeout(callback, ms);
-        };
-      })();
-      $('.nav li')
-      .mouseenter(function(){
-        animateBar($(this));
-      })
-      .mouseleave(function(){
-        animateBar($('.nav .on'));
-      });
-      $(window).resize(function(e){
-        waitForFinalEvent(function(){
-          animateBar($('.nav .on'));
-        })
-      })
-      animateBar($('.nav .on'),true);
-    });
-    </script>
-  </body>
-</html>
+---
+layout: default
+---
+<link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="posts">
+  <ul class="artical-list"  id="post_list">
+    {{ content }}                               
+  </ul>
+  <p class="toNext">
+    <a href="">下一页</a>
+  </p> 
+  <p class="toTOP">
+    <a href="">回到顶部</a>
+  </p> 
+</div>
+<div class=""></div>
+  <!--           
+  <script type="text/javascript">
+    function TriggerPost(i){
+      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
+      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
+    }
+    var scrollFun=function(e){
+      e=e || window.event;
+      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
+      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
+    }
+    if(document.addEventListener){
+        document.addEventListener('DOMMouseScroll',scrollFun,false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFun;
+  </script> 
+  -->
