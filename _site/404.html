@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>404 Not Found! | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
     <link rel="stylesheet" href="/public/css/default.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
   </head>
@@ -65,36 +65,70 @@
             <a onclick="toggle(this,'cate')">栏目</a>
           </div>
           <div class="cate y">
-            {% for category in site.categories %}
+            
             <div class="x">
-              <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
+              <a onclick="toggle(this,'技术')"><span>3</span>技术</a>
             </div>
-            <div class="{{ category | first }} y">
-              {% for post in category.last %}
-              <a href="{{ post.url }}"><!-- <span>{{ post.date | date:"%Y/%d/%m"}}</span> -->{{ post.title }}</a>
-              {% endfor %}
+            <div class="技术 y">
+              
+              <a href="/blog/2015-01-19/%E6%B5%8B%E8%AF%951.html"><!-- <span>2015/19/01</span> -->测试1</a>
+              
+              <a href="/blog/2015-01-19/%E5%AE%89%E8%A3%85Jekyll.html"><!-- <span>2015/19/01</span> -->安装Jekyll</a>
+              
+              <a href="/blog/2015-01-19/%E4%BD%BF%E7%94%A8Github%20Pages%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
+              
             </div>
-            {% endfor %}
+            
+            <div class="x">
+              <a onclick="toggle(this,'随笔')"><span>1</span>随笔</a>
+            </div>
+            <div class="随笔 y">
+              
+              <a href="/blog/2015-01-26/test.html"><!-- <span>2015/26/01</span> -->测试</a>
+              
+            </div>
+            
           </div>   
           <!--                
-          {% for category in site.categories %}
+          
           <div class="my_cate x">
-            <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
+            <a onclick="toggle(this,'技术')"><span>3</span>技术</a>
           </div>
-          <div class="{{ category | first }} cate y">
-            {% for post in category.last %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
+          <div class="技术 cate y">
+            
+            <li><a href="/blog/2015-01-19/%E6%B5%8B%E8%AF%951.html">测试1</a></li>
+            
+            <li><a href="/blog/2015-01-19/%E5%AE%89%E8%A3%85Jekyll.html">安装Jekyll</a></li>
+            
+            <li><a href="/blog/2015-01-19/%E4%BD%BF%E7%94%A8Github%20Pages%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2.html">使用Github Pages建独立博客</a></li>
+            
           </div>
-          {% endfor %}
+          
+          <div class="my_cate x">
+            <a onclick="toggle(this,'随笔')"><span>1</span>随笔</a>
+          </div>
+          <div class="随笔 cate y">
+            
+            <li><a href="/blog/2015-01-26/test.html">测试</a></li>
+            
+          </div>
+          
           -->
           <div class="my_tags x">
             <a onclick="toggle(this,'tags')">标签</a>
           </div>
           <div class="tags y">
-            {% for tag in site.tags %}
-              <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}"><sup>{{ tag[1].size }}</sup>{{ tag[0] }}</a>
-            {% endfor %}
+            
+              <a href="/tags/?tag=Github" title="Github"><sup>1</sup>Github</a>
+            
+              <a href="/tags/?tag=Blog" title="Blog"><sup>3</sup>Blog</a>
+            
+              <a href="/tags/?tag=Jekyll" title="Jekyll"><sup>1</sup>Jekyll</a>
+            
+              <a href="/tags/?tag=测试" title="测试"><sup>1</sup>测试</a>
+            
+              <a href="/tags/?tag=test" title="test"><sup>1</sup>test</a>
+            
           </div>
           <div class="post_view x">
             <a>归档</a>
@@ -120,7 +154,19 @@
         </script>
       </div>
       <div class="middle">
-      {{ content }}
+      <article class="main-article main-article-page">
+    <div class="violet-title">
+        <h3 class="violet-title-item">404 Not Found!</h3>
+    </div>
+    <div class="violet-post">
+        <div class="main-article-contant">
+            <h4>很抱歉：</h4>
+            <p>您访问的是一个未知的页面，如果可以，请不要停留在这个页面太久。</p>
+            <p>尽快<a href="http://gongvirgil.hithub.io">【返回首页】</a>!</p>
+        </div>
+    </div>
+</article>
+
       </div>
       <div class="right"></div>
     </div>

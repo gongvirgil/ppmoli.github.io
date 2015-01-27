@@ -1,4 +1,4 @@
-html{overflow:visible;}
+html{}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body{
 	font: 14px/200% "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
     word-wrap: break-word;
     background-color: #fff;
-	/* overflow: hidden; */
+    background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 #fff;
 }
 li {
 	list-style: none;
@@ -20,7 +20,7 @@ a {
 a:hover {
 	color: #da6426;
 }
-.navbar {background-color: #fff;height: 100px;}
+.navbar {background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;height: 100px;}
 .container-fluid {padding: 30px 0 0 30%;}
 #navbar {width: 600px;padding: 0;}
 #navbar .nav {width: 100%;}
@@ -31,47 +31,41 @@ a:hover {
 .container-fluid #cate_on { display:inline-block; zoom:1; height:3px; background:red; position:absolute;}
 
 .notice {height: 50px;width: 200px;margin: 0 auto;background: rgba(30, 30, 30, 0.3);display: none;}
-.main {padding: 50px;overflow: hidden;background: url("/public/images/bg9.jpg") no-repeat fixed 0 -100px #fff;}
+.main {padding: 50px 0;min-height: 500px;}
 .left {float: left;width: 15%;height:100px;}
-.middle {width: 70%;margin: 0 auto;overflow: hidden;}
+.middle {width: 60%;margin: 0 auto;}
 .right {float: left;width: 15%;}
-.footer {position:absolute;height: 50px;width: 100%;background-color: #000;}
-
+.footer {position: absolute;height: 50px;width: 100%;background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;}
+.footer_info {padding: 2px 50px;color: #000;text-align: center;}
 
 .left .home{position: absolute;}
-.my_info, .info, .my_cate, .cate, .my_tags, .tags, .post_view, .mail_to {
+.my_info, .info, 
+.my_cate, .cate, 
+.my_tags, .tags, 
+.post_view{
 	padding: 0 15px;
 	width: 185px;
 	text-align: center;
 }
 .y {display: none;}
-.my_info a, .my_cate a, .cate a, .my_tags a, .post_view a, .mail_to a{
+.x a, .cate .y a{
 	padding: 5px 15px;
 	margin-bottom: 1px;
 	display: block;
 	font-weight: bold;
 } 
-.my_info a, .my_cate a, .my_tags a, .post_view a, .mail_to a{
+.x a, .cate .y a{
 	background-color: rgba(30, 30, 30, 0.03);
 	*background-color: #ffffff;
 	font-size: 16px;
 }
-.tags a {
-	width: 45px;
-}
-.cate a,.tags a {
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.my_info a:hover, .my_cate a:hover, .cate a:hover, .my_tags a:hover, .tags a:hover, 
-.post_view a:hover, .mail_to a:hover, 
-.my_info a:focus, .my_cate a:focus, .cate a:focus, .my_tags a:focus, .tags a:focus,
-.post_view a:focus, .mail_to a:focus, 
-.my_info a.on, .my_cate a.on, .my_tags a.on
+.x a:hover, .x a:hover, .x a:focus,.x a.on
 {
 	background-color: rgba(30, 30, 30, 0.3);
 	color: #da6426;
+}
+.cate .y {
+	text-align: left;
 }
 .my_info a span, .my_cate a span, .cate a span, .my_tags a span,.tags a span {
 	background-color: rgba(30, 30, 30, 0.4);
