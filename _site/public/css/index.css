@@ -54,3 +54,12 @@
 .post_tags a:hover {
 	background-color: #4d4d4d;
 }
+
+.page{
+	text-align: center;
+}
+.page a, .page span {
+	padding: 20px;
+	background-color: #fff;
+	opacity: 0.9;
+}

@@ -6,14 +6,13 @@ layout: default
   <ul class="artical-list"  id="post_list">
     {{ content }}                               
   </ul>
-  <p class="toNext">
-    <a href="">下一页</a>
-  </p> 
-  <p class="toTOP">
-    <a href="">回到顶部</a>
-  </p> 
 </div>
 <div class=""></div>
+<div class="page">
+<a href="{{ paginator.previous_page_path }}" class="pre_page">上一页</a>
+<span>{{ paginator.page }}/{{ paginator.total_pages }}</span>
+<a href="{{ paginator.next_page_path }}" class="next_page">下一页</a>
+</div>  
   <!--           
   <script type="text/javascript">
     function TriggerPost(i){

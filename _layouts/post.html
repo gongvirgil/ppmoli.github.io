@@ -5,11 +5,27 @@ comments: true
 <link rel="stylesheet" type="text/css" href="/public/css/post.css">
 <div id="content">
     <div class="post">
-        <h1 class="post_title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="post_date">{{ page.date|date:"%Y-%m-%d" }}</p>
-        {{ content }}
+        <div class="post_title">
+            <h1><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        </div>
+        <div class="post_content">
+            <li>
+                <p class="post_relate">
+                    <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
+                    <span class="post_tags">
+                        {% for tag in site.tags %}
+                            <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}">{{ tag[0] }}</a>
+                        {% endfor %}
+                    </span>
+                </p>
+            </li>
+            {{ content }}            
+        </div>
     </div>
-
+    <div class="pre-next">
+        <li class="pre"><a href="{{ page.previous.url }}">上一篇：{{ page.previous.title | truncatewords:5 }}</a></li>
+        <li class="next"><a href="{{ page.next.url }}">下一篇：{{ page.next.title | truncatewords:5 }}</a></li>
+    </div>
 <!--     <div class="sidenav">
     <h2>Blog</h2>
     <ul class="artical-list">

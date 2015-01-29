@@ -20,7 +20,7 @@ a {
 a:hover {
 	color: #da6426;
 }
-.navbar {background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;height: 100px;}
+.navbar {background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;height: 100px;border-top: 2px solid red;}
 .container-fluid {padding: 30px 0 0 30%;}
 #navbar {width: 600px;padding: 0;}
 #navbar .nav {width: 100%;}
@@ -35,7 +35,7 @@ a:hover {
 .left {float: left;width: 15%;height:100px;}
 .middle {width: 60%;margin: 0 auto;}
 .right {float: left;width: 15%;}
-.footer {position: absolute;height: 50px;width: 100%;background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;}
+.footer {height: 50px;width: 100%;background-color: rgba(255, 255, 255, 0.3);box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3) inset;}
 .footer_info {padding: 2px 50px;color: #000;text-align: center;}
 
 .left .home{position: absolute;}
@@ -103,4 +103,16 @@ span#next {
 .avatar h3 {color: #da6426}
 .introduce .cont {
 	color: #ddd;
+}
+
+.goTop {
+ 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 100px;
+    display: none;
+    height: 50px;
+    overflow: hidden;
+    position: fixed;
+    right: 30px;
+    width: 50px;
+    z-index: 79;
 }
