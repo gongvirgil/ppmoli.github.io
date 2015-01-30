@@ -138,11 +138,12 @@
     </div>
     <!--Footer End-->
     <script type="text/javascript">
-    $(function(){
       $(window).scroll(function () {
         if ($(window).scrollTop() >= $(window).height()) {
+          console.log("1234");
           $("#goTop").fadeIn(600);
         } else {
+          console.log("4321");
           $("#goTop").fadeOut(600);
         }
       });
@@ -152,6 +153,7 @@
         }, 600);
         return false
       });
+    $(function(){
       function animateBar($item,noAni){
         var spanLeft = $item.find('span').offset().left;
         var conLeft = $item.parent().offset().left;
