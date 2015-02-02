@@ -139,11 +139,10 @@
     <!--Footer End-->
     <script type="text/javascript">
       $(window).scroll(function () {
+        console.log($(window).scrollTop()+"|||"+$(window).height());
         if ($(window).scrollTop() >= $(window).height()) {
-          console.log("1234");
           $("#goTop").fadeIn(600);
         } else {
-          console.log("4321");
           $("#goTop").fadeOut(600);
         }
       });

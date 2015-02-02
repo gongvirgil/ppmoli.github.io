@@ -3,20 +3,21 @@ layout: default
 comments: true
 ---
 <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 <div id="content">
     <div class="post">
         <div class="post_title">
             <h1><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         </div>
+        <div class="post_relate">
+            <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
+            <span class="post_tags">
+                {% for tag in page.tags %}
+                    <a href="{{site.baseurl}}/tags/?tag={{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </span>
+        </div>
         <div class="post_content">
-            <p class="post_relate">
-                <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
-                <span class="post_tags">
-                    {% for tag in page.tags %}
-                        <a href="{{site.baseurl}}/tags/?tag={{ tag }}" title="{{ tag }}">{{ tag }}</a>
-                    {% endfor %}
-                </span>
-            </p>
             {{ content }}            
         </div>
     </div>
@@ -25,15 +26,13 @@ comments: true
         <li class="next"><a href="{{ page.next.url }}">下一篇：{{ page.next.title | truncatewords:5 }}</a></li>
     </div>
 </div>
-<script type="text/javascript">
-    
-</script>
+<script type="text/javascript" src="/public/js/post.js"></script>
 <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"gongvirgil"};
+var duoshuoQuery = {short_name:"{{ site.short_name }}"};
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;

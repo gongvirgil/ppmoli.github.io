@@ -27,7 +27,7 @@ a:hover {
 #navbar .nav li {float: left;text-align: left;font-size: 18px;cursor: pointer;}
 .navbar-nav  li  a,.navbar-nav  li  a:visited,.navbar-nav  li  a:hover,.navbar-nav  li  a:focus {color: #000;background-color: rgba(0, 0, 0, 0);outline:none;padding: 0;}
 #navbar .nav li.on span {color: red;}
-.container-fluid .cate_select {position:absolute; top: 60px; height:3px; margin:0 auto;}
+.container-fluid .cate_select {position:absolute; top: 80px; height:3px; margin:0 auto;}
 .container-fluid #cate_on { display:inline-block; zoom:1; height:3px; background:red; position:absolute;}
 
 .notice {height: 50px;width: 200px;margin: 0 auto;background: rgba(30, 30, 30, 0.3);display: none;}
