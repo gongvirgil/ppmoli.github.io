@@ -27,6 +27,10 @@ comments: true
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
+<script type="text/javascript">
+        toggle($('.my_cate a'),'cate');
+        toggle($('.cate div').eq($('.cate .{{ page.category }}').index()-1).find('a'),'{{ page.category }}');
+</script>
 <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 <!-- 多说评论框 end -->

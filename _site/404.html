@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 Not Found! | site of gongvirgil</title>
+    <meta name="author" content="gongvirgil" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="gongvirgil's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <link rel="stylesheet" href="/public/css/default.css">
+    <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <!--Nav-->
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="blog"><a href="/"><span>HOME</span></a></li>
+            <li id="demo"><a href="/demo"><span>DEMO</span></a></li>
+            <li id="about"><a href="/about"><span>ABOUT</span></a></li>
+          </ul>
+          <script type="text/javascript">
+          $(".nav li").width(100/$(".nav li").length+"%");
+          document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1]?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";
+          </script>
+        </div>
+        <div class="cate_select">
+          <span id="cate_on"></span>
+        </div>
+      </div>
+    </div>
+    <!--Nav End-->
+    <div class="notice"></div>
+    <div class="side_bar"></div>
+    <!--Main-->
+    <div class="main">
+      <div class="left">
+        <div class=""></div>
+        <div class="home" id="home">
+          <!--
+          <div class="my_info x">
+            <a onclick="toggle(this,'info')">HOME</a>
+          </div>
+          <div class="info y">
+            <div class="avatar">
+              <a id="avatar" href=""></a>
+              <h3>GongVirgil</h3>
+            </div>
+            <div class="contact">
+              <a href="">微博</a>
+              <a href="">豆瓣</a>
+              <a href="">Instagram</a>
+            </div>
+          </div>
+          -->
+          <div class="my_cate x">
+            <a onclick="toggle(this,'cate')">Categories</a>
+          </div>
+          <div class="cate y">
+            
+            <div class="x">
+              <a onclick="toggle(this,'技术')"><span>2</span>技术</a>
+            </div>
+            <div class="技术 y">
+              
+              <a href="/blog/2015-01-19/2.html"><!-- <span>2015/19/01</span> -->安装Jekyll</a>
+              
+              <a href="/blog/2015-01-19/1.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
+              
+            </div>
+            
+            <div class="x">
+              <a onclick="toggle(this,'随笔')"><span>1</span>随笔</a>
+            </div>
+            <div class="随笔 y">
+              
+              <a href="/blog/2015-01-26/test.html"><!-- <span>2015/26/01</span> -->测试</a>
+              
+            </div>
+            
+            <div class="x">
+              <a onclick="toggle(this,'生活')"><span>1</span>生活</a>
+            </div>
+            <div class="生活 y">
+              
+              <a href="/blog/2015-01-30/1.html"><!-- <span>2015/30/01</span> -->标准的markdown格式练习</a>
+              
+            </div>
+            
+            <div class="x">
+              <a onclick="toggle(this,'诗词')"><span>1</span>诗词</a>
+            </div>
+            <div class="诗词 y">
+              
+              <a href="/blog/2015-02-02/diandian-blog-backup-ppmoli.html"><!-- <span>2015/02/02</span> -->点点导出的古诗词</a>
+              
+            </div>
+            
+          </div>   
+          <!--                
+          
+          <div class="my_cate x">
+            <a onclick="toggle(this,'技术')"><span>2</span>技术</a>
+          </div>
+          <div class="技术 cate y">
+            
+            <li><a href="/blog/2015-01-19/2.html">安装Jekyll</a></li>
+            
+            <li><a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a></li>
+            
+          </div>
+          
+          <div class="my_cate x">
+            <a onclick="toggle(this,'随笔')"><span>1</span>随笔</a>
+          </div>
+          <div class="随笔 cate y">
+            
+            <li><a href="/blog/2015-01-26/test.html">测试</a></li>
+            
+          </div>
+          
+          <div class="my_cate x">
+            <a onclick="toggle(this,'生活')"><span>1</span>生活</a>
+          </div>
+          <div class="生活 cate y">
+            
+            <li><a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a></li>
+            
+          </div>
+          
+          <div class="my_cate x">
+            <a onclick="toggle(this,'诗词')"><span>1</span>诗词</a>
+          </div>
+          <div class="诗词 cate y">
+            
+            <li><a href="/blog/2015-02-02/diandian-blog-backup-ppmoli.html">点点导出的古诗词</a></li>
+            
+          </div>
+          
+          -->
+          <div class="my_tags x">
+            <a onclick="toggle(this,'tags')">Tags</a>
+          </div>
+          <div class="tags y">
+            
+              <a href="/tags/?tag=Github" title="Github"><sup>1</sup>Github</a>
+            
+              <a href="/tags/?tag=Blog" title="Blog"><sup>2</sup>Blog</a>
+            
+              <a href="/tags/?tag=Jekyll" title="Jekyll"><sup>1</sup>Jekyll</a>
+            
+              <a href="/tags/?tag=test" title="test"><sup>1</sup>test</a>
+            
+              <a href="/tags/?tag=工作" title="工作"><sup>1</sup>工作</a>
+            
+              <a href="/tags/?tag=责任" title="责任"><sup>1</sup>责任</a>
+            
+              <a href="/tags/?tag=心态" title="心态"><sup>1</sup>心态</a>
+            
+              <a href="/tags/?tag=点点" title="点点"><sup>1</sup>点点</a>
+            
+              <a href="/tags/?tag=诗词" title="诗词"><sup>1</sup>诗词</a>
+            
+              <a href="/tags/?tag=古典" title="古典"><sup>1</sup>古典</a>
+            
+          </div>
+          <!--
+          <div class="post_view x">
+            <a>归档</a>
+          </div>
+          -->
+        </div>
+        <script type="text/javascript">
+          function toggle(i,index){
+            $(i).toggleClass('on').parent().siblings('.x').toggle(500).children('a').removeClass('on');
+            $("."+index).toggle(500).siblings('.y').hide(500);
+          }
+          function fixed(id){
+            var navH = $(id).offset().top;
+            $(window).scroll(function(){
+              var scroH = $(this).scrollTop();
+              if(scroH>=navH){
+                $(id).css({"position":"fixed","top":0});
+              }else if(scroH<navH){
+                $(id).css({"position":"static"});
+              }
+            })
+          }
+          fixed("#home");
+        </script>
+      </div>
+      <div class="middle">
+      <div class="main-article main-article-page">
+    <div class="violet-title">
+        <h3 class="violet-title-item">404 Not Found!</h3>
+    </div>
+    <div class="violet-post">
+        <div class="main-article-contant">
+            <h4>很抱歉：</h4>
+            <p>您访问的页面不存在！<a href="http://gongvirgil.github.io">【返回首页】</a></p>
+        </div>
+    </div>
+</div>
+
+      </div>
+      <div class="right"></div>
+    </div>
+    <!--Main End-->
+    <div class="goTop">
+      <a title="回到顶部" id="goTop" href="javascript:;">回到顶部</a>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer_info">
+        <p>
+        © 2012-2014 gongvirgil.github.io  
+        </p>
+      </div>      
+      <div class="tj"></div>      
+    </div>
+    <!--Footer End-->
+    <script type="text/javascript">
+      $(window).scroll(function () {
+        console.log($(window).scrollTop()+"|||"+$(window).height());
+        if ($(window).scrollTop() >= $(window).height()) {
+          $("#goTop").fadeIn(600);
+        } else {
+          $("#goTop").fadeOut(600);
+        }
+      });
+      $("#goTop").click(function () {
+        $('body,html').animate({
+          scrollTop : 0
+        }, 600);
+        return false
+      });
+    $(function(){
+      function animateBar($item,noAni){
+        var spanLeft = $item.find('span').offset().left;
+        var conLeft = $item.parent().offset().left;
+        var left = spanLeft - conLeft;
+        var width = $item.find('span').width() + 8;
+        if(noAni){
+        $('#cate_on').css({left:left,width:width})
+        }else{
+        $('#cate_on').stop().animate({left:left,width:width},300)
+        }
+      }
+      var waitForFinalEvent = (function () {
+        var timers = {};
+        return function (callback, ms, uniqueId) {
+          if (!uniqueId) {
+          uniqueId = "Don't call this twice without a uniqueId";
+          }
+          if (timers[uniqueId]) {
+          clearTimeout (timers[uniqueId]);
+          }
+          timers[uniqueId] = setTimeout(callback, ms);
+        };
+      })();
+      $('.nav li')
+      .mouseenter(function(){
+        animateBar($(this));
+      })
+      .mouseleave(function(){
+        animateBar($('.nav .on'));
+      });
+      $(window).resize(function(e){
+        waitForFinalEvent(function(){
+          animateBar($('.nav .on'));
+        })
+      })
+      animateBar($('.nav .on'),true);
+    });
+    </script>
+    <script type="text/javascript">
+      function change_bg(){
+        $("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed #fff');
+      }
+      change_bg();
+      window.setInterval(change_bg, 1000*60*5);
+    </script>
+  </body>
+</html>
