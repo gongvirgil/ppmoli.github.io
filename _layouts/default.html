@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/scroll/jquery.mCustomScrollbar.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/public/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
   </head>
   <body>
     <!--Nav-->
@@ -66,31 +68,44 @@
             <div class="x">
               <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
             </div>
-            <div class="{{ category | first }} y" dir="rtl">
+            <div class="{{ category | first }} y {% if category.last.size > 8 %} scrollContent {% endif %}">
               {% for post in category.last %}
               <a href="{{ post.url }}"><!-- <span>{{ post.date | date:"%Y/%d/%m"}}</span> -->{{ post.title }}</a>
               {% endfor %}
             </div>
             {% endfor %}
           </div>   
-          <!--                
-          {% for category in site.categories %}
-          <div class="my_cate x">
-            <a onclick="toggle(this,'{{ category | first }}')"><span>{{ category | last | size }}</span>{{ category | first }}</a>
-          </div>
-          <div class="{{ category | first }} cate y">
-            {% for post in category.last %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </div>
-          {% endfor %}
-          -->
+          <script type="text/javascript">
+            $(".scrollContent").mCustomScrollbar({
+              theme:"rounded-dark",
+              setWidth:"215px"
+            });
+          </script>
           <div class="my_tags x">
             <a onclick="toggle(this,'tags')">标签云</a>
           </div>
           <div class="tags y">
+<!--             {% for tag in site.tags %}
+  <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}"><sup>{{ tag[1].size }}</sup>{{ tag[0] }}</a>
+{% endfor %} -->
+
             {% for tag in site.tags %}
-              <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}"><sup>{{ tag[1].size }}</sup>{{ tag[0] }}</a>
+              {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
+              {% assign base = temp | divided_by: 4 %}
+              {% assign remain = temp | modulo: 4 %}
+              {% if remain == 0 %}
+                {% assign size = base | plus: 9 %}
+              {% elsif remain == 1 or remain == 2 %}
+                {% assign size = base | plus: 9 | append: '.5' %}
+              {% else %}
+                {% assign size = base | plus: 10 %}
+              {% endif %}
+              {% if remain == 0 or remain == 1 %}
+                {% assign color = 9 | minus: base %}
+              {% else %}
+                {% assign color = 8 | minus: base %}
+              {% endif %}
+              <a href="{{site.baseurl}}/tags/?tag={{tag[0] | cgi}}" title="{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
             {% endfor %}
           </div>
           <!--

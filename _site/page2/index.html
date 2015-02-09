@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
     <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/scroll/jquery.mCustomScrollbar.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/public/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
   </head>
   <body>
     <!--Nav-->
@@ -64,11 +66,19 @@
           <div class="cate y">
             
             <div class="x">
-              <a onclick="toggle(this,'技术')"><span>8</span>技术</a>
+              <a onclick="toggle(this,'技术')"><span>13</span>技术</a>
             </div>
-            <div class="技术 y" dir="rtl">
+            <div class="技术 y  scrollContent ">
+              
+              <a href="/blog/2015-02-09/3.html"><!-- <span>2015/09/02</span> -->自定义滚动条样式</a>
               
               <a href="/blog/2015-01-19/2.html"><!-- <span>2015/19/01</span> -->安装Jekyll</a>
+              
+              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
+              
+              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
+              
+              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
               
               <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
               
@@ -80,6 +90,8 @@
               
               <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
               
+              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(10).html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
+              
               <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
               
               <a href="/blog/2015-01-19/1.html"><!-- <span>2015/19/01</span> -->使用Github Pages建独立博客</a>
@@ -89,7 +101,7 @@
             <div class="x">
               <a onclick="toggle(this,'随笔')"><span>1</span>随笔</a>
             </div>
-            <div class="随笔 y" dir="rtl">
+            <div class="随笔 y ">
               
               <a href="/blog/2015-01-26/test.html"><!-- <span>2015/26/01</span> -->测试</a>
               
@@ -98,21 +110,35 @@
             <div class="x">
               <a onclick="toggle(this,'生活')"><span>1</span>生活</a>
             </div>
-            <div class="生活 y" dir="rtl">
+            <div class="生活 y ">
               
               <a href="/blog/2015-01-30/1.html"><!-- <span>2015/30/01</span> -->标准的markdown格式练习</a>
               
             </div>
             
           </div>   
+          <script type="text/javascript">
+            $(".scrollContent").mCustomScrollbar({
+              theme:"rounded-dark",
+              setWidth:"215px"
+            });
+          </script>
           <!--                
           
           <div class="my_cate x">
-            <a onclick="toggle(this,'技术')"><span>8</span>技术</a>
+            <a onclick="toggle(this,'技术')"><span>13</span>技术</a>
           </div>
           <div class="技术 cate y">
             
+            <li><a href="/blog/2015-02-09/3.html">自定义滚动条样式</a></li>
+            
             <li><a href="/blog/2015-01-19/2.html">安装Jekyll</a></li>
+            
+            <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html">使用Github Pages建独立博客</a></li>
+            
+            <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html">使用Github Pages建独立博客</a></li>
+            
+            <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html">使用Github Pages建独立博客</a></li>
             
             <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html">使用Github Pages建独立博客</a></li>
             
@@ -123,6 +149,8 @@
             <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html">使用Github Pages建独立博客</a></li>
             
             <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html">使用Github Pages建独立博客</a></li>
+            
+            <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(10).html">使用Github Pages建独立博客</a></li>
             
             <li><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC.html">使用Github Pages建独立博客</a></li>
             
@@ -154,9 +182,9 @@
           </div>
           <div class="tags y">
             
-              <a href="/tags/?tag=Github" title="Github"><sup>7</sup>Github</a>
+              <a href="/tags/?tag=Github" title="Github"><sup>11</sup>Github</a>
             
-              <a href="/tags/?tag=Blog" title="Blog"><sup>8</sup>Blog</a>
+              <a href="/tags/?tag=Blog" title="Blog"><sup>12</sup>Blog</a>
             
               <a href="/tags/?tag=Jekyll" title="Jekyll"><sup>1</sup>Jekyll</a>
             
@@ -167,6 +195,8 @@
               <a href="/tags/?tag=责任" title="责任"><sup>1</sup>责任</a>
             
               <a href="/tags/?tag=心态" title="心态"><sup>1</sup>心态</a>
+            
+              <a href="/tags/?tag=CSS" title="CSS"><sup>1</sup>CSS</a>
             
           </div>
           <!--
@@ -200,18 +230,18 @@
   <ul class="artical-list"  id="post_list">
     
 <li>
-    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html">使用Github Pages建独立博客</a></h2>
+    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html">使用Github Pages建独立博客</a></h2>
     <div class="title-desc"><p><p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 </p></div>
     <div class="post_meta">
       <div  class="date">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html">2015-01-19</a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html">2015-01-19</a>
       </div>
       <div class="comment">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (5)" data-count-type="comments"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (9)" data-count-type="comments"></a>
       </div>
       <div class="repost">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (5)" data-count-type="reposts"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (9)" data-count-type="reposts"></a>
       </div>
       <div class="post_tags">
             
@@ -224,18 +254,18 @@
 </li> 
 
 <li>
-    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html">使用Github Pages建独立博客</a></h2>
+    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html">使用Github Pages建独立博客</a></h2>
     <div class="title-desc"><p><p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 </p></div>
     <div class="post_meta">
       <div  class="date">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html">2015-01-19</a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html">2015-01-19</a>
       </div>
       <div class="comment">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (4)" data-count-type="comments"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (8)" data-count-type="comments"></a>
       </div>
       <div class="repost">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (4)" data-count-type="reposts"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (8)" data-count-type="reposts"></a>
       </div>
       <div class="post_tags">
             
@@ -248,18 +278,18 @@
 </li> 
 
 <li>
-    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html">使用Github Pages建独立博客</a></h2>
+    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html">使用Github Pages建独立博客</a></h2>
     <div class="title-desc"><p><p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 </p></div>
     <div class="post_meta">
       <div  class="date">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html">2015-01-19</a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html">2015-01-19</a>
       </div>
       <div class="comment">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (3)" data-count-type="comments"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (7)" data-count-type="comments"></a>
       </div>
       <div class="repost">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (3)" data-count-type="reposts"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (7)" data-count-type="reposts"></a>
       </div>
       <div class="post_tags">
             
@@ -272,18 +302,18 @@
 </li> 
 
 <li>
-    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html">使用Github Pages建独立博客</a></h2>
+    <h2><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html">使用Github Pages建独立博客</a></h2>
     <div class="title-desc"><p><p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 </p></div>
     <div class="post_meta">
       <div  class="date">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html">2015-01-19</a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html">2015-01-19</a>
       </div>
       <div class="comment">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (2)" data-count-type="comments"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (6)" data-count-type="comments"></a>
       </div>
       <div class="repost">
-        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (2)" data-count-type="reposts"></a>
+        <span></span><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/1 - 副本 (6)" data-count-type="reposts"></a>
       </div>
       <div class="post_tags">
             
@@ -311,7 +341,7 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 <div class=""></div>
 <div class="page">
 <a href="/index.html" class="pre_page">上一页</a>
-<span>2/3</span>
+<span>2/4</span>
 <a href="/page3" class="next_page">下一页</a>
 </div>  
   <!--           
