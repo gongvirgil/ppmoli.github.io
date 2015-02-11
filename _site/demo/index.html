@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>安装Jekyll | site of gongvirgil</title>
+    <title>site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -192,116 +192,10 @@
         </script>
       </div>
       <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/demo.css">
 <div id="content">
-    <div class="post">
-        <div class="post_title">
-            <h1><a href="/blog/2015-01-19/2.html" title="安装Jekyll">安装Jekyll</a></h1>
-        </div>
-        <div class="post_relate">
-            <span class="post_date">2015-01-19</span>
-            <span class="post_tags">
-                
-                    <a href="/tags/?tag=Jekyll" title="Jekyll">Jekyll</a>
-                
-                    <a href="/tags/?tag=Blog" title="Blog">Blog</a>
-                
-            </span>
-        </div>
-        <div class="post_content">
-            <h2>1）安装ruby环境</h2>
-
-<p>安装Jekyll，下载地址：[http://rubyinstaller.org/downloads/][]</p>
-
-<h2>2）下载DevKit并解压</h2>
-
-<p>  DevKit 是 windows 平台下编译和使用本地 C/C++ 扩展包的工具。它就是用来模拟 Linux 平 台下的 make,gcc,sh 来进行编译。但是这个方法目前仅支持通过 RubyInstaller 安装的 Ruby 。
-下载地址：http://rubyinstaller.org/downloads/</p>
-
-<h2>3）git下（cmd下各种问题）进入Devkit解压的目录，执行以下命令</h2>
-
-<h3>3.1</h3>
-
-<h4>3.1.1</h4>
-
-<p>$ Ruby dk.rb init
-$ Ruby dk.rb install
-如果config.yml有报错，找到这个文件，按里面的说明添加两行路径
-- E:\Ruby21-x64
-- E:\Ruby21-x64</p>
-
-<h4>3.1.2</h4>
-
-<p>$ ruby -v
-出现版本号，证明安装成功</p>
-
-<h3>3.2</h3>
-
-<p>$ Gem install Jekyll
-这一步安装Jekyll，由于天朝网络的关系，可能会出现Unable to download data的错误，解决方法：
-$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ gem sources -l
-<strong><em> CURRENT SOURCES </em></strong></p>
-
-<p>https://ruby.taobao.org
-（请确保只有 ruby.taobao.org）
-$ gem install rails
-参考这篇文章http://ruby.taobao.org/</p>
-
-<p>等待安装完毕...</p>
-
-<h3>3.3</h3>
-
-<p>$ Jekyll –v
-检查安装成功，</p>
-
-<h3>3.4</h3>
-
-<p>安装Rdiscount
-$ gem install rdiscount
-这个是用来解析Markdown标记的解析包，如果你使用Textile的话，就需要安装Kramdown。</p>
-
-<h3>3.5</h3>
-
-<p>$ git clone git://github.com/test/test.github.com.git
-将代码克隆到本地
-$ cd test.github.com
-$ Jekyll server
-进入到刚才的目录，启动Jekyll。
-访问http://localhost:4000/  就可以看到效果啦！</p>
-            
-        </div>
-    </div>
-    <div class="pre-next">
-        <li class="pre"><a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html">上一篇：使用Github Pages建独立博客</a></li>
-        <li class="next"><a href="/blog/2015-01-26/test.html">下一篇：测试</a></li>
-    </div>
+	
 </div>
-<script type="text/javascript" src="/public/js/post.js"></script>
-<script type="text/javascript">
-        toggle($('#cate'));
-        toggle($('#技术'));
-        $('.技术').find("a:contains(安装Jekyll)").addClass('on');
-</script>
-<!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-19/2" data-title="安装Jekyll" data-url="/blog/2015-01-19/2.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gongvirgil"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
-    
       </div>
       <div class="right"></div>
     </div>
