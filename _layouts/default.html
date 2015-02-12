@@ -71,7 +71,6 @@
             <div class="{{ category | first }} y {% if category.last.size > 8 %} scrollContent {% endif %}">
               {% for post in category.last %}
               <a href="{{ post.url }}"><p>{{ post.date | date:"%Y/%d/%m"}}</p>{{ post.title }}</a>
-              
               {% endfor %}
             </div>
             {% endfor %}
