@@ -120,8 +120,10 @@ a:hover {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #aaa;	
 	position: absolute;
+	left: 200px;
 	margin-top: -5px;
 	display: none;
+	z-index: 99;
 }
 
 .info .avatar, .info .introduce{
