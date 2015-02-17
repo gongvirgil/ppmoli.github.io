@@ -30,7 +30,11 @@ comments: true
 <script type="text/javascript">
         toggle($('#cate'));
         toggle($('#{{ page.category }}'));
+        $('.{{ page.category }}').css({
+            left: 0
+        });
         $('.{{ page.category }}').find("a:contains({{ page.title }})").addClass('on');
+
 </script>
 <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>

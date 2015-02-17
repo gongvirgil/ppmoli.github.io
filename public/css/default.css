@@ -6,8 +6,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 body{
 	font: 14px/200% "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
     word-wrap: break-word;
-    background-color: #fff;
-    background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 #fff;
+    background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 / 100% 100% #fff;
 }
 li {
 	list-style: none;
@@ -48,9 +47,9 @@ a:hover {
 	display: none;
 }
 .main {padding: 50px 0;min-height: 500px;}
-.left {float: left;width: 15%;height:100px;}
-.middle {width: 60%;margin: 0 auto;}
-.right {float: left;width: 15%;}
+.left {float: left;width: 20%;height:100px;}
+.middle {float: left;width: 60%;margin-left: 5%;}
+.right {float: left;width: 5%;}
 .footer {
 	height: 100px;
 	width: 100%;
@@ -64,26 +63,16 @@ a:hover {
 }
 
 .left .home{position: absolute;}
-.my_info, .info, 
-.my_cate, .cate, 
-.my_tags, .tags, 
-.post_view{
+.my_cate,.my_tags,.cate, .tags{
 	padding: 0 15px;
-	width: 185px;
 	text-align: center;
+	position: relative;
 }
 .y {display: none;}
 .x {
+	width: 120px;
 	font-weight: bold;
 	font-size: 16px;
-}
-.cate .y {
-	text-align: middle;
-	font-weight: normal;
-	font-size: 12px;
-	max-height: 260px;
-	width: 185px;
-	overflow: auto;
 }
 .x a {
 	padding: 5px 15px;
@@ -106,26 +95,51 @@ a:hover {
 	font-size: 12px;
 	text-align: center;
 }
-.cate .y a {
-	padding: 5px 2px;
-	background-color: rgba(255, 255, 255, 0.6);
-	display: block;
+.delta , .delta1 {
+   	border-style: dashed dashed solid dashed;
+    border-width: 10px;
+    left: 30px;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+    display: none;
 }
-.cate .y a.on {
-	color: #da6426;	
+.delta {
+	border-color: transparent transparent white transparent;
+    top: 38px;
 }
-.cate .y p{
-	padding: 5px 2px;
-	width: 80px;
-	background-color: rgba(0, 0, 0, 0.6);
-	color: #aaa;	
+.delta1 {
+    border-color: transparent transparent white transparent;
+    top: 39px;
+}
+.y .y {
 	position: absolute;
-	left: 200px;
-	margin-top: -5px;
-	display: none;
+	left: 150px;
+	top: -40px;
+	text-align: middle;
+	font-weight: normal;
+	font-size: 12px;
+	max-height: 260px;
+	width: 280px;
+	overflow: auto;
 	z-index: 99;
 }
-
+.y .y a {
+	padding: 5px 2px;
+	display: block;
+ 	border-bottom: 1px solid #eee;
+ 	color: #999;
+	background-color: white;
+}
+.y .y a.on,.y .y a:hover {
+	color: #da6426;
+	background-color: #f6f6f6;	
+}
+.y .y a.list_head {
+	color: #fff;
+	background-color: #666;	
+}
 .info .avatar, .info .introduce{
 	background-color:rgba(0, 0, 0, 0.1);
 	padding-top: 10px;

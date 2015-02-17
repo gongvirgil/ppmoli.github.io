@@ -12,7 +12,6 @@ h1,h2,h3,h4,h5,h6{
 	color: #363636;
 	font-family: inherit;
 	font-weight: 500;
-	line-height: 1.5;
 }
 .ds-thread {
 	background-color: #fff;opacity: 0.9;padding: 20px;	

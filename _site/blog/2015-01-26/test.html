@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/public/scroll/jquery.mCustomScrollbar.css">
     <script type="text/javascript" src="/public/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/public/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="/public/js/default.js"></script>
   </head>
   <body>
     <!--Nav-->
@@ -26,10 +27,6 @@
             <li id="demo"><a href="/demo/"><span>DEMO</span></a></li>
             <li id="about"><a href="/about/"><span>ABOUT</span></a></li>
           </ul>
-          <script type="text/javascript">
-          $(".nav li").width(100/$(".nav li").length+"%");
-          document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1]?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";
-          </script>
         </div>
         <div class="cate_select">
           <span id="cate_on"></span>
@@ -43,138 +40,130 @@
     <div class="main">
       <div class="left">
         <div class=""></div>
-        <div class="home" id="home">
-          <!--
-          <div class="my_info x">
-            <a onclick="toggle(this,'info')">HOME</a>
-          </div>
-          <div class="info y">
-            <div class="avatar">
-              <a id="avatar" href=""></a>
-              <h3>GongVirgil</h3>
-            </div>
-            <div class="contact">
-              <a href="">微博</a>
-              <a href="">豆瓣</a>
-              <a href="">Instagram</a>
-            </div>
-          </div>
-          -->
-          <div class="my_cate x">
-            <a id="cate">目录树</a>
-          </div>
-          <div class="cate y">
-            
-            <div class="x">
-              <a id="技术"><span>13</span>技术</a>
-            </div>
-            <div class="技术 y  scrollContent ">
-              
-              <a href="/blog/2015-02-09/3.html"><p>2015/09/02</p>自定义滚动条样式</a>
-              
-              <a href="/blog/2015-01-19/2.html"><p>2015/19/01</p>安装Jekyll</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(10).html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC.html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-              <a href="/blog/2015-01-19/1.html"><p>2015/19/01</p>使用Github Pages建独立博客</a>
-              
-            </div>
-            
-            <div class="x">
-              <a id="随笔"><span>1</span>随笔</a>
-            </div>
-            <div class="随笔 y ">
-              
-              <a href="/blog/2015-01-26/test.html"><p>2015/26/01</p>测试</a>
-              
-            </div>
-            
-            <div class="x">
-              <a id="生活"><span>1</span>生活</a>
-            </div>
-            <div class="生活 y ">
-              
-              <a href="/blog/2015-01-30/1.html"><p>2015/30/01</p>标准的markdown格式练习</a>
-              
-            </div>
-            
-          </div>   
-          <script type="text/javascript">
-            $(".scrollContent").mCustomScrollbar({
-              theme:"rounded-dark",
-              setWidth:"215px"
-            });
-          </script>
-          <div class="my_tags x">
-            <a id="tags">标签云</a>
-          </div>
-          <div class="tags y">
-            
-              <a href="/tags/?tag=Github" title="Github">Github<sup>11</sup></a>
-            
-              <a href="/tags/?tag=Blog" title="Blog">Blog<sup>12</sup></a>
-            
-              <a href="/tags/?tag=Jekyll" title="Jekyll">Jekyll<sup>1</sup></a>
-            
-              <a href="/tags/?tag=test" title="test">test<sup>1</sup></a>
-            
-              <a href="/tags/?tag=工作" title="工作">工作<sup>1</sup></a>
-            
-              <a href="/tags/?tag=责任" title="责任">责任<sup>1</sup></a>
-            
-              <a href="/tags/?tag=心态" title="心态">心态<sup>1</sup></a>
-            
-              <a href="/tags/?tag=CSS" title="CSS">CSS<sup>1</sup></a>
-            
-          </div>
-        </div>
-        <script type="text/javascript">
-        function toggle(index){
-            index.toggleClass('on').parent().siblings('.x').toggle(500).children('a').removeClass('on');
-            $('.'+index.attr('id')).toggle(500).siblings('.y').hide(500);          
-        }
-        $('.x').on('click', 'a', function(){
-          toggle($(this));
-        });
-        $('.cate .y').on({
-          'mouseenter':function(){
-            $(this).find('p').show(1000);
-          },
-          'mouseleave':function(){
-            $(this).find('p').hide(); 
-          }
-        },'a');       
-          function fixed(id){
-            var navH = $(id).offset().top;
-            $(window).scroll(function(){
-              var scroH = $(this).scrollTop();
-              if(scroH>=navH){
-                $(id).css({"position":"fixed","top":0});
-              }else if(scroH<navH){
-                $(id).css({"position":"static"});
-              }
-            })
-          }
-          fixed("#home");
-        </script>
+<div class="home" id="home">
+<div class="my_cate x">
+  <a id="cate">目录树</a>
+</div>
+<div class="cate y">
+  
+  <div class="x">
+    <a id="技术"><span>13</span>技术</a>
+  </div>
+  <div class="技术 y  scrollContent ">
+    <a class="list_head"><h3>技术</h3></a>
+    
+    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    
+    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(9).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(8).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(7).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(6).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(5).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(4).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(3).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(2).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC%20(10).html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1%20-%20%E5%89%AF%E6%9C%AC.html">使用Github Pages建独立博客</a>
+    
+    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
+    
+  </div>
+  
+  <div class="x">
+    <a id="随笔"><span>1</span>随笔</a>
+  </div>
+  <div class="随笔 y ">
+    <a class="list_head"><h3>随笔</h3></a>
+    
+    <a href="/blog/2015-01-26/test.html">测试</a>
+    
+  </div>
+  
+  <div class="x">
+    <a id="生活"><span>1</span>生活</a>
+  </div>
+  <div class="生活 y ">
+    <a class="list_head"><h3>生活</h3></a>
+    
+    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
+    
+  </div>
+  
+</div>   
+<div class="my_tags x">
+  <a id="tags">标签云</a>
+</div>
+<div class="tags y">
+  
+    <div class="x">
+      <a id="Github" title="Github"><span>11</span>Github</a>
+    </div>
+    <div class="Github y  scrollContent " tag="Github">
+      <a href="#">Github</a>
+    </div>
+  
+    <div class="x">
+      <a id="Blog" title="Blog"><span>12</span>Blog</a>
+    </div>
+    <div class="Blog y  scrollContent " tag="Blog">
+      <a href="#">Blog</a>
+    </div>
+  
+    <div class="x">
+      <a id="Jekyll" title="Jekyll"><span>1</span>Jekyll</a>
+    </div>
+    <div class="Jekyll y " tag="Jekyll">
+      <a href="#">Jekyll</a>
+    </div>
+  
+    <div class="x">
+      <a id="test" title="test"><span>1</span>test</a>
+    </div>
+    <div class="test y " tag="test">
+      <a href="#">test</a>
+    </div>
+  
+    <div class="x">
+      <a id="工作" title="工作"><span>1</span>工作</a>
+    </div>
+    <div class="工作 y " tag="工作">
+      <a href="#">工作</a>
+    </div>
+  
+    <div class="x">
+      <a id="责任" title="责任"><span>1</span>责任</a>
+    </div>
+    <div class="责任 y " tag="责任">
+      <a href="#">责任</a>
+    </div>
+  
+    <div class="x">
+      <a id="心态" title="心态"><span>1</span>心态</a>
+    </div>
+    <div class="心态 y " tag="心态">
+      <a href="#">心态</a>
+    </div>
+  
+    <div class="x">
+      <a id="CSS" title="CSS"><span>1</span>CSS</a>
+    </div>
+    <div class="CSS y " tag="CSS">
+      <a href="#">CSS</a>
+    </div>
+  
+</div>
+</div>
       </div>
       <div class="middle">
       <link rel="stylesheet" type="text/css" href="/public/css/post.css">
@@ -208,7 +197,11 @@
 <script type="text/javascript">
         toggle($('#cate'));
         toggle($('#随笔'));
+        $('.随笔').css({
+            left: 0
+        });
         $('.随笔').find("a:contains(测试)").addClass('on');
+
 </script>
 <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="/blog/2015-01-26/test" data-title="测试" data-url="/blog/2015-01-26/test.html"></div>
@@ -229,6 +222,7 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     
       </div>
       <div class="right"></div>
+      <div style="clear:both;"></div>
     </div>
     <!--Main End-->
     <div class="goTop" id="goTop">
@@ -237,73 +231,10 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     <!--Footer-->
     <div class="footer">
       <div class="footer_info">
-        <p>
-        © 2012-2014 gongvirgil.github.io  
-        </p>
-      </div>      
-      <div class="tj"></div>      
+	<p>© 2012-2014 gongvirgil.github.io</p>
+</div>      
+<div class="tj"></div>
     </div>
     <!--Footer End-->
-    <script type="text/javascript">
-      if ($("#goTop").length > 0){
-         $(window).scroll(function(){
-          if($(window).scrollTop()>200){
-            $("#goTop").fadeIn(600);
-          }else{
-            $("#goTop").fadeOut(600);
-          }
-        });
-         $("#goTop .goTop_btn").click(function(){
-          $("body,html").animate({scrollTop:0},300);
-          return false;
-         });
-         $(window).scroll();
-      }
-    $(function(){
-      function animateBar($item,noAni){
-        var spanLeft = $item.find('span').offset().left;
-        var conLeft = $item.parent().offset().left;
-        var left = spanLeft - conLeft;
-        var width = $item.find('span').width() + 8;
-        if(noAni){
-        $('#cate_on').css({left:left,width:width})
-        }else{
-        $('#cate_on').stop().animate({left:left,width:width},300)
-        }
-      }
-      var waitForFinalEvent = (function () {
-        var timers = {};
-        return function (callback, ms, uniqueId) {
-          if (!uniqueId) {
-          uniqueId = "Don't call this twice without a uniqueId";
-          }
-          if (timers[uniqueId]) {
-          clearTimeout (timers[uniqueId]);
-          }
-          timers[uniqueId] = setTimeout(callback, ms);
-        };
-      })();
-      $('.nav li')
-      .mouseenter(function(){
-        animateBar($(this));
-      })
-      .mouseleave(function(){
-        animateBar($('.nav .on'));
-      });
-      $(window).resize(function(e){
-        waitForFinalEvent(function(){
-          animateBar($('.nav .on'));
-        })
-      })
-      animateBar($('.nav .on'),true);
-    });
-    </script>
-    <script type="text/javascript">
-      function change_bg(){
-        $("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed #fff');
-      }
-      change_bg();
-      window.setInterval(change_bg, 1000*60*5);
-    </script>
   </body>
 </html>
