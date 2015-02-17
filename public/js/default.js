@@ -44,7 +44,7 @@ $(document).ready(function(){
 });
 //标签文章
 $.ajax.async = false;
-$.getJSON("tag.json",
+$.getJSON("/tag.json",
 function(data) {
 	$('.tags .y').each(function(index, el) {
 	  var tagstr = $(this).attr('tag');
