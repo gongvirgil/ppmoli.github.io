@@ -22,8 +22,8 @@ comments: true
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre"><a href="{{ page.previous.url }}">上一篇：{% if page.previous.title != null %}{{ page.previous.title | truncatewords:5 }}{% else %}没有了{% endif %}</a></li>
-        <li class="next"><a href="{{ page.next.url }}">下一篇：{% if page.next.title != null %}{{ page.next.title | truncatewords:5 }}{% else %}没有了{% endif %}</a></li>
+        <li class="pre">上一篇：{% if page.previous.title != null %}<a href="{{ page.previous.url }}">{{ page.previous.title | truncatewords:5 }}</a>{% else %}<a href="#">没有了{% endif %}</a></li>
+        <li class="next">下一篇：{% if page.next.title != null %}<a href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}</a>{% else %}<a href="#">没有了</a>{% endif %}</li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>

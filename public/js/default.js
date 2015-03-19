@@ -102,7 +102,6 @@ $(document).ready(function(){
     setWidth:$(".scrollContent").width()+"px"*/
   })        
 })
-
 //返回顶部
 $(window).scroll(function(){
     if ($(document).scrollTop() != 0) 

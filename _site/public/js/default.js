@@ -102,22 +102,18 @@ $(document).ready(function(){
     setWidth:$(".scrollContent").width()+"px"*/
   })        
 })
-
 //返回顶部
-if ($("#goTop").length > 0){
-	$(window).scroll(function(){
-	  if($(window).scrollTop()>200){
-	    $("#goTop").fadeIn(600);
-	  }else{
-	    $("#goTop").fadeOut(600);
-	  }
-	});
-	$("#goTop .goTop_btn").click(function(){
-		$("body,html").animate({scrollTop:0},300);
-		return false;
-	});
-	$(window).scroll();
-}
+$(window).scroll(function(){
+    if ($(document).scrollTop() != 0) 
+        $('#goTop').show();
+    else 
+        $('#goTop').hide();
+});
+$('#goTop a.goTop_btn').click(function(){
+    $('html, body').animate({
+        scrollTop: 0
+    }, 600);
+});
 //背景轮换
 function change_bg(){
 $("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
