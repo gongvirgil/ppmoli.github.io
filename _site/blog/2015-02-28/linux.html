@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>常用Linux操作命令 | site of gongvirgil</title>
+    <title>各种常用的Linux操作命令 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -47,14 +47,14 @@
 <div class="cate y">
   
   <div class="x">
-    <a id="技术"><span>18</span>技术</a>
+    <a id="技术"><span>11</span>技术</a>
   </div>
   <div class="技术 y  scrollContent ">
     <a class="list_head"><h3>技术</h3></a>
     
-    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP</a>
+    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-28/linux.html">常用Linux操作命令</a>
+    <a href="/blog/2015-02-28/linux.html">各种常用的Linux操作命令</a>
     
     <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
     
@@ -64,29 +64,15 @@
     
     <a href="/blog/2015-01-01/template.html"></a>
     
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-01/js.html">js笔记</a>
     
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
     
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-01/html.html">html笔记</a>
     
-    <a href="/blog/2015-01-01/template.html"></a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
-    
-    <a href="/blog/2015-01-01/soft.html">soft</a>
-    
-    <a href="/blog/2015-01-01/js.html">js</a>
-    
-    <a href="/blog/2015-01-01/jquery.html">jquery</a>
-    
-    <a href="/blog/2015-01-01/html.html">html</a>
-    
-    <a href="/blog/2015-01-01/css.html">css</a>
+    <a href="/blog/2015-01-01/css.html">css笔记</a>
     
   </div>
   
@@ -129,10 +115,45 @@
 <div class="tags y">
   
     <div class="x">
+      <a id="css" title="css"><span>1</span>css</a>
+    </div>
+    <div class="css y " tag="css">
+      <a href="#">css</a>
+    </div>
+  
+    <div class="x">
+      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+    </div>
+    <div class="笔记 y " tag="笔记">
+      <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
       <a id="html" title="html"><span>1</span>html</a>
     </div>
     <div class="html y " tag="html">
       <a href="#">html</a>
+    </div>
+  
+    <div class="x">
+      <a id="jquery" title="jquery"><span>1</span>jquery</a>
+    </div>
+    <div class="jquery y " tag="jquery">
+      <a href="#">jquery</a>
+    </div>
+  
+    <div class="x">
+      <a id="js" title="js"><span>1</span>js</a>
+    </div>
+    <div class="js y " tag="js">
+      <a href="#">js</a>
+    </div>
+  
+    <div class="x">
+      <a id="软件，笔记" title="软件，笔记"><span>1</span>软件，笔记</a>
+    </div>
+    <div class="软件，笔记 y " tag="软件，笔记">
+      <a href="#">软件，笔记</a>
     </div>
   
     <div class="x">
@@ -221,7 +242,7 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-02-28/linux.html" title="常用Linux操作命令">常用Linux操作命令</a></h1>
+            <h1><a href="/blog/2015-02-28/linux.html" title="各种常用的Linux操作命令">各种常用的Linux操作命令</a></h1>
         </div>
         <div class="post_relate">
             <span class="post_date">2015-02-28</span>
@@ -229,56 +250,61 @@
                 
                     <a href="/tags/?tag=Linux" title="Linux">Linux</a>
                 
+                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
+                
             </span>
         </div>
         <div class="post_content">
-            <p>各种常用的Linux操作命令大全</p>
+            <h2>简单速记命令：</h2>
 
-<p>查看时间： date</p>
+<ul>
+<li>查看时间： date</li>
+<li>重启httpd:       service httpd restart</li>
+<li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
+<li>修改权限 chmod -R 777 /home/aaa/*</li>
+<li>删除文件 rm -rf /home/aaa/*</li>
+<li>查看当前规则：cat  /etc/sysconfig/iptables</li>
+</ul>
 
-<p>重启httpd:         service httpd restart</p>
 
-<p>复制文件夹下文件  cp -r /home/aaa/* /home/sss</p>
+<h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
 
-<p>修改权限 chmod -R 777 /home/aaa/*</p>
+<pre><code>sed -i "s/XXXX/YYYY/g" \`grep XXXX -rl /www/../..\`
+</code></pre>
 
-<p>删除文件 rm -rf /home/aaa/*</p>
+<h2>查找目录下的所有文件中是否含有某个字符串</h2>
 
-<p>批量替换文件夹下全部文件中某字符串XXXX为YYYY</p>
+<pre><code>find .|xargs grep -ri "XXXX" 
+</code></pre>
 
-<p>sed -i "s/XXXX/YYYY/g" `grep XXXX -rl /www/../..`</p>
+<h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
 
-<p>查找目录下的所有文件中是否含有某个字符串</p>
+<pre><code>find .|xargs grep -ri "XXXX" -l 
 
-<p>find .|xargs grep -ri "XXXX"</p>
+service iptables stop
 
-<p>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</p>
+service iptables start
+</code></pre>
 
-<p>find .|xargs grep -ri "XXXX" -l</p>
-
-<p>service iptables stop</p>
-
-<p>service iptables start</p>
-
-<p>查看当前规则：cat  /etc/sysconfig/iptables</p>
-
-<h3>打包/压缩目录</h3>
+<h2>打包/压缩目录</h2>
 
 <p>范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar</p>
 
-<p>[root@linux ~]# tar -cvf /tmp/etc.tar /etc &lt;==仅打包，不压缩！</p>
+<pre><code>[root@linux ~]# tar -cvf /tmp/etc.tar /etc &lt;==仅打包，不压缩！
 
-<p>[root@linux ~]# tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩</p>
+[root@linux ~]# tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩
 
-<p>[root@linux ~]# tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩</p>
+[root@linux ~]# tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩
+</code></pre>
 
 <p>将 /tmp/etc.tar.gz 文件解压缩在 /usr/local/src 底下</p>
 
-<p>[root@linux ~]# cd /usr/local/src</p>
+<pre><code>[root@linux ~]# cd /usr/local/src
 
-<p>[root@linux src]# tar -zxvf /tmp/etc.tar.gz</p>
+[root@linux src]# tar -zxvf /tmp/etc.tar.gz
+</code></pre>
 
-<h3>Linux服务器间文件传输</h3>
+<h2>Linux服务器间文件传输</h2>
 
 <p>不同的Linux之间copy文件常用有3种方法：</p>
 
@@ -329,11 +355,11 @@ scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
         $('.技术').css({
             left: 0
         });
-        $('.技术').find("a:contains(常用Linux操作命令)").addClass('on');
+        $('.技术').find("a:contains(各种常用的Linux操作命令)").addClass('on');
 
 </script>
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-02-28/linux" data-title="常用Linux操作命令" data-url="/blog/2015-02-28/linux.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/2015-02-28/linux" data-title="各种常用的Linux操作命令" data-url="/blog/2015-02-28/linux.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
