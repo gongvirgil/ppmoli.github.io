@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>css笔记 | site of gongvirgil</title>
+    <title>linux批量替换字符串 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -249,42 +249,43 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-01-01/css.html" title="css笔记">css笔记</a></h1>
+            <h1><a href="/blog/2015-03-19/linux-1.html" title="linux批量替换字符串">linux批量替换字符串</a></h1>
         </div>
         <div class="post_relate">
-            <span class="post_date">2015-01-01</span>
+            <span class="post_date">2015-03-19</span>
             <span class="post_tags">
                 
-                    <a href="/tags/?tag=css" title="css">css</a>
-                
-                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
+                    <a href="/tags/?tag=linux" title="linux">linux</a>
                 
             </span>
         </div>
         <div class="post_content">
-            <h2>简介</h2>
+            <h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+
+<pre><code>sed -i "s/XXXX/YYYY/g" \`grep XXXX -rl /www/../..\`
+</code></pre>
             
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/1000-01-01/template.html">Template</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-01-01/html.html">html笔记</a></li>
+        <li class="pre">上一篇：<a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></a></li>
+        <li class="next">下一篇：<a href="/blog/2015-03-19/linux-2.html">linux批量替换字符串</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
 <!--
 <script type="text/javascript">
         toggle($('#cate'));
-        toggle($('#技术'));
-        $('.技术').css({
+        toggle($('#'));
+        $('.').css({
             left: 0
         });
-        $('.技术').find("a:contains(css笔记)").addClass('on');
+        $('.').find("a:contains(linux批量替换字符串)").addClass('on');
 
 </script>
 -->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-01/css" data-title="css笔记" data-url="/blog/2015-01-01/css.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-1" data-title="linux批量替换字符串" data-url="/blog/2015-03-19/linux-1.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

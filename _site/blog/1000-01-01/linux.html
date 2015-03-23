@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>测试1 | site of gongvirgil</title>
+    <title>各种常用的Linux操作命令 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -54,8 +54,6 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-28/linux.html">各种常用的Linux操作命令</a>
-    
     <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
     
     <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
@@ -73,6 +71,8 @@
     <a href="/blog/2015-01-01/html.html">html笔记</a>
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
+    
+    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
     
   </div>
   
@@ -115,10 +115,10 @@
 <div class="tags y">
   
     <div class="x">
-      <a id="css" title="css"><span>1</span>css</a>
+      <a id="Linux" title="Linux"><span>1</span>Linux</a>
     </div>
-    <div class="css y " tag="css">
-      <a href="#">css</a>
+    <div class="Linux y " tag="Linux">
+      <a href="#">Linux</a>
     </div>
   
     <div class="x">
@@ -126,6 +126,13 @@
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="css" title="css"><span>1</span>css</a>
+    </div>
+    <div class="css y " tag="css">
+      <a href="#">css</a>
     </div>
   
     <div class="x">
@@ -220,17 +227,17 @@
     </div>
   
     <div class="x">
-      <a id="Linux" title="Linux"><span>1</span>Linux</a>
-    </div>
-    <div class="Linux y " tag="Linux">
-      <a href="#">Linux</a>
-    </div>
-  
-    <div class="x">
       <a id="ThinkPHP" title="ThinkPHP"><span>1</span>ThinkPHP</a>
     </div>
     <div class="ThinkPHP y " tag="ThinkPHP">
       <a href="#">ThinkPHP</a>
+    </div>
+  
+    <div class="x">
+      <a id="linux" title="linux"><span>3</span>linux</a>
+    </div>
+    <div class="linux y " tag="linux">
+      <a href="#">linux</a>
     </div>
   
 </div>
@@ -242,36 +249,72 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-03-19/1.html" title="测试1">测试1</a></h1>
+            <h1><a href="/blog/1000-01-01/linux.html" title="各种常用的Linux操作命令">各种常用的Linux操作命令</a></h1>
         </div>
         <div class="post_relate">
-            <span class="post_date">2015-03-19</span>
+            <span class="post_date">1000-01-01</span>
             <span class="post_tags">
+                
+                    <a href="/tags/?tag=Linux" title="Linux">Linux</a>
+                
+                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
                 
             </span>
         </div>
         <div class="post_content">
-            <p>轻轻巧巧</p>
+            <h2>简单速记命令：</h2>
+
+<ul>
+<li>查看时间： date</li>
+<li>重启httpd:       service httpd restart</li>
+<li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
+<li>修改权限 chmod -R 777 /home/aaa/*</li>
+<li>删除文件 rm -rf /home/aaa/*</li>
+<li>查看当前规则：cat  /etc/sysconfig/iptables</li>
+</ul>
+
+
+<h2>复杂操作笔记：</h2>
+
+<ul>
+<li>替换字符串: <a href="http://localhost:4000/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
+<li>linux服务器之间文件传输：<a href="http://localhost:4000/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
+<li>打包/压缩目录：<a href="http://localhost:4000/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a>
+
+<h2>查找目录下的所有文件中是否含有某个字符串</h2>
+
+<p>  find .|xargs grep -ri "XXXX"</p></li>
+</ul>
+
+
+<h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
+
+<pre><code>find .|xargs grep -ri "XXXX" -l 
+service iptables stop
+service iptables start
+</code></pre>
             
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></a></li>
-        <li class="next">下一篇：<a href="#">没有了</a></li>
+        <li class="pre">上一篇：<a href="#">没有了</a></li>
+        <li class="next">下一篇：<a href="/blog/1000-01-01/template.html">Template</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
+<!--
 <script type="text/javascript">
         toggle($('#cate'));
-        toggle($('#'));
-        $('.').css({
+        toggle($('#技术'));
+        $('.技术').css({
             left: 0
         });
-        $('.').find("a:contains(测试1)").addClass('on');
+        $('.技术').find("a:contains(各种常用的Linux操作命令)").addClass('on');
 
 </script>
+-->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-03-19/1" data-title="测试1" data-url="/blog/2015-03-19/1.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/1000-01-01/linux" data-title="各种常用的Linux操作命令" data-url="/blog/1000-01-01/linux.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

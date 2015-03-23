@@ -48,7 +48,7 @@ a:hover {
 }
 .main {padding: 50px 0;min-height: 500px;}
 .left {float: left;width: 20%;height:100px;}
-.middle {float: left;width: 60%;margin-left: 5%;}
+.middle {float: left;width: 50%;margin-left: 5%;}
 .right {float: left;width: 5%;}
 .footer {
 	height: 100px;

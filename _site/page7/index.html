@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>css笔记 | site of gongvirgil</title>
+    <title>site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -244,62 +244,70 @@
 </div>
       </div>
       <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-<div id="content">
-    <div class="post">
-        <div class="post_title">
-            <h1><a href="/blog/2015-01-01/css.html" title="css笔记">css笔记</a></h1>
-        </div>
-        <div class="post_relate">
-            <span class="post_date">2015-01-01</span>
-            <span class="post_tags">
-                
-                    <a href="/tags/?tag=css" title="css">css</a>
-                
-                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
-                
-            </span>
-        </div>
-        <div class="post_content">
-            <h2>简介</h2>
+      <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="posts">
+  <ul class="artical-list"  id="post_list">
+    
+<li>
+    <h2><a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a></h2>
+    <div class="title-desc"><p><h2>简单速记命令：</h2>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/1000-01-01/linux.html">1000-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
             
-        </div>
-    </div>
-    <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/1000-01-01/template.html">Template</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-01-01/html.html">html笔记</a></li>
-    </div>
+            <a href="">● Linux</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
 </div>
-<script type="text/javascript" src="/public/js/post.js"></script>
-<!--
-<script type="text/javascript">
-        toggle($('#cate'));
-        toggle($('#技术'));
-        $('.技术').css({
-            left: 0
-        });
-        $('.技术').find("a:contains(css笔记)").addClass('on');
-
-</script>
--->
-<!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-01/css" data-title="css笔记" data-url="/blog/2015-01-01/css.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+</li> 
+                              
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"gongvirgil"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
-    
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>                               
+  </ul>
+</div>
+<div class=""></div>
+<div class="page">
+<a href="/page6" class="pre_page">上一页</a>
+<span>7/7</span>
+<a href="" class="next_page">下一页</a>
+</div>  
+  <!--           
+  <script type="text/javascript">
+    function TriggerPost(i){
+      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
+      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
+    }
+    var scrollFun=function(e){
+      e=e || window.event;
+      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
+      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
+    }
+    if(document.addEventListener){
+        document.addEventListener('DOMMouseScroll',scrollFun,false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFun;
+  </script> 
+  -->
       </div>
       <div class="right"></div>
       <div style="clear:both;"></div>

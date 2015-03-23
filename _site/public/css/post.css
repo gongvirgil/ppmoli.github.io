@@ -38,9 +38,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .pre-next .pre{
 	float: left;
-	width: 40%;
 }
 .pre-next .next{
 	float: right;
-	width: 40%;
 }
