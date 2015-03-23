@@ -54,13 +54,11 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
     
-    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
     
-    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
     
     <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
@@ -72,17 +70,9 @@
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
     
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    
     <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="随笔"><span>1</span>随笔</a>
-  </div>
-  <div class="随笔 y ">
-    <a class="list_head"><h3>随笔</h3></a>
-    
-    <a href="/blog/2015-01-26/test.html">测试</a>
     
   </div>
   
@@ -122,10 +112,17 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+      <a id="笔记" title="笔记"><span>7</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="php" title="php"><span>1</span>php</a>
+    </div>
+    <div class="php y " tag="php">
+      <a href="#">php</a>
     </div>
   
     <div class="x">
@@ -182,13 +179,6 @@
     </div>
     <div class="Jekyll y " tag="Jekyll">
       <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="test" title="test"><span>1</span>test</a>
-    </div>
-    <div class="test y " tag="test">
-      <a href="#">test</a>
     </div>
   
     <div class="x">
@@ -249,7 +239,7 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-01-19/2.html" title="安装Jekyll">安装Jekyll</a></h1>
+            <h1><a href="/blog/2015-01-19/jekyll.html" title="安装Jekyll">安装Jekyll</a></h1>
         </div>
         <div class="post_relate">
             <span class="post_date">2015-01-19</span>
@@ -262,73 +252,110 @@
             </span>
         </div>
         <div class="post_content">
-            <h2>1）安装ruby环境</h2>
+            <ul id="markdown-toc">
+  <li><a href="#ruby">安装ruby环境</a></li>
+  <li><a href="#devkit">下载DevKit并解压</a></li>
+  <li><a href="#gitdevkit">git下安装Devkit</a>    <ul>
+      <li><a href="#section">3.1</a>        <ul>
+          <li><a href="#section-1">3.1.1</a></li>
+          <li><a href="#section-2">3.1.2</a></li>
+        </ul>
+      </li>
+      <li><a href="#section-3">3.2</a></li>
+      <li><a href="#section-4">3.3</a></li>
+      <li><a href="#section-5">3.4</a></li>
+    </ul>
+  </li>
+</ul>
 
+<h2 id="ruby">安装ruby环境</h2>
 <p>安装Jekyll，下载地址：[http://rubyinstaller.org/downloads/][]</p>
 
-<h2>2）下载DevKit并解压</h2>
-
-<p>  DevKit 是 windows 平台下编译和使用本地 C/C++ 扩展包的工具。它就是用来模拟 Linux 平 台下的 make,gcc,sh 来进行编译。但是这个方法目前仅支持通过 RubyInstaller 安装的 Ruby 。
+<h2 id="devkit">下载DevKit并解压</h2>
+<p>DevKit 是 windows 平台下编译和使用本地 C/C++ 扩展包的工具。它就是用来模拟 Linux 平 台下的 make,gcc,sh 来进行编译。但是这个方法目前仅支持通过 RubyInstaller 安装的 Ruby 。 
 下载地址：http://rubyinstaller.org/downloads/</p>
 
-<h2>3）git下（cmd下各种问题）进入Devkit解压的目录，执行以下命令</h2>
+<h2 id="gitdevkit">git下安装Devkit</h2>
 
-<h3>3.1</h3>
+<h3 id="section">3.1</h3>
 
-<h4>3.1.1</h4>
+<p>git下（cmd下各种问题）进入Devkit解压的目录，执行以下命令</p>
 
-<p>$ Ruby dk.rb init
+<h4 id="section-1">3.1.1</h4>
+
+<pre><code>$ Ruby dk.rb init
 $ Ruby dk.rb install
-如果config.yml有报错，找到这个文件，按里面的说明添加两行路径
+</code></pre>
+
+<p>如果config.yml有报错，找到这个文件，按里面的说明添加两行路径</p>
+
+<pre><code>- E:\Ruby21-x64 
 - E:\Ruby21-x64
-- E:\Ruby21-x64</p>
+</code></pre>
 
-<h4>3.1.2</h4>
+<h4 id="section-2">3.1.2</h4>
 
-<p>$ ruby -v
-出现版本号，证明安装成功</p>
+<pre><code>$ ruby -v
+</code></pre>
 
-<h3>3.2</h3>
+<p>出现版本号，证明安装成功</p>
 
-<p>$ Gem install Jekyll
-这一步安装Jekyll，由于天朝网络的关系，可能会出现Unable to download data的错误，解决方法：
-$ gem sources --remove https://rubygems.org/
+<h3 id="section-3">3.2</h3>
+
+<pre><code>$ Gem install Jekyll
+</code></pre>
+
+<p>这一步安装Jekyll，由于天朝网络的关系，可能会出现Unable to download data的错误，解决方法：</p>
+
+<pre><code>$ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
 $ gem sources -l
-<strong><em> CURRENT SOURCES </em></strong></p>
 
-<p>https://ruby.taobao.org
+*** CURRENT SOURCES ***
+
+https://ruby.taobao.org
 （请确保只有 ruby.taobao.org）
 $ gem install rails
-参考这篇文章http://ruby.taobao.org/</p>
+</code></pre>
 
-<p>等待安装完毕...</p>
+<p>参考这篇文章http://ruby.taobao.org/</p>
 
-<h3>3.3</h3>
+<p>等待安装完毕…</p>
 
-<p>$ Jekyll –v
-检查安装成功，</p>
+<h3 id="section-4">3.3</h3>
 
-<h3>3.4</h3>
+<pre><code>$ Jekyll –v
+</code></pre>
 
-<p>安装Rdiscount
-$ gem install rdiscount
-这个是用来解析Markdown标记的解析包，如果你使用Textile的话，就需要安装Kramdown。</p>
+<p>检查安装成功。</p>
 
-<h3>3.5</h3>
+<h3 id="section-5">3.4</h3>
+<p>安装Rdiscount</p>
 
-<p>$ git clone git://github.com/test/test.github.com.git
-将代码克隆到本地
-$ cd test.github.com
+<pre><code>$ gem install rdiscount
+</code></pre>
+
+<p>这个是用来解析Markdown标记的解析包，如果你使用Textile的话，就需要安装Kramdown。
+###3.5</p>
+
+<pre><code>$ git clone git://github.com/test/test.github.com.git
+</code></pre>
+
+<p>将代码克隆到本地</p>
+
+<pre><code>$ cd test.github.com
 $ Jekyll server
-进入到刚才的目录，启动Jekyll。
+</code></pre>
+
+<p>进入到刚才的目录，启动Jekyll。
 访问http://localhost:4000/  就可以看到效果啦！</p>
+
             
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-01-26/test.html">测试</a></li>
+        <li class="pre">上一篇：<a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a></a></li>
+        <li class="next">下一篇：<a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
@@ -344,7 +371,7 @@ $ Jekyll server
 </script>
 -->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-19/2" data-title="安装Jekyll" data-url="/blog/2015-01-19/2.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/2015-01-19/jekyll" data-title="安装Jekyll" data-url="/blog/2015-01-19/jekyll.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

@@ -42,3 +42,22 @@ h1,h2,h3,h4,h5,h6{
 .pre-next .next{
 	float: right;
 }
+
+
+
+/*Table of contents*/
+#markdown-toc {
+	position: absolute;
+	right: 100px;
+	top: 175px;
+	width: 200px;
+	padding: 20px;
+	background-color: #fff;
+	opacity: 0.9;
+	font-size: 14px;
+}
+#markdown-toc ul{
+	margin-left: 15px;
+	font-size: 12px;
+	display: none;
+}

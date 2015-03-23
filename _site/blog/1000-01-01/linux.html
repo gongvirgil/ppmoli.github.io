@@ -54,13 +54,11 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
     
-    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
     
-    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
     
     <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
@@ -72,17 +70,9 @@
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
     
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    
     <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="随笔"><span>1</span>随笔</a>
-  </div>
-  <div class="随笔 y ">
-    <a class="list_head"><h3>随笔</h3></a>
-    
-    <a href="/blog/2015-01-26/test.html">测试</a>
     
   </div>
   
@@ -122,10 +112,17 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+      <a id="笔记" title="笔记"><span>7</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="php" title="php"><span>1</span>php</a>
+    </div>
+    <div class="php y " tag="php">
+      <a href="#">php</a>
     </div>
   
     <div class="x">
@@ -182,13 +179,6 @@
     </div>
     <div class="Jekyll y " tag="Jekyll">
       <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="test" title="test"><span>1</span>test</a>
-    </div>
-    <div class="test y " tag="test">
-      <a href="#">test</a>
     </div>
   
     <div class="x">
@@ -262,43 +252,43 @@
             </span>
         </div>
         <div class="post_content">
-            <h2>简单速记命令：</h2>
+            <h2 id="section">简单速记命令：</h2>
 
 <ul>
-<li>查看时间： date</li>
-<li>重启httpd:       service httpd restart</li>
-<li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
-<li>修改权限 chmod -R 777 /home/aaa/*</li>
-<li>删除文件 rm -rf /home/aaa/*</li>
-<li>查看当前规则：cat  /etc/sysconfig/iptables</li>
+  <li>查看时间： date</li>
+  <li>重启httpd:		 service httpd restart</li>
+  <li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
+  <li>修改权限 chmod -R 777 /home/aaa/*</li>
+  <li>删除文件 rm -rf /home/aaa/*</li>
+  <li>查看当前规则：cat  /etc/sysconfig/iptables</li>
 </ul>
 
-
-<h2>复杂操作笔记：</h2>
+<h2 id="section-1">复杂操作笔记：</h2>
 
 <ul>
-<li>替换字符串: <a href="http://localhost:4000/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
-<li>linux服务器之间文件传输：<a href="http://localhost:4000/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
-<li>打包/压缩目录：<a href="http://localhost:4000/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a>
-
-<h2>查找目录下的所有文件中是否含有某个字符串</h2>
-
-<p>  find .|xargs grep -ri "XXXX"</p></li>
+  <li>替换字符串: <a href="http://localhost:4000/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
+  <li>linux服务器之间文件传输：<a href="http://localhost:4000/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
+  <li>打包/压缩目录：<a href="http://localhost:4000/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a></li>
 </ul>
 
+<h2 id="section-2">查找目录下的所有文件中是否含有某个字符串</h2>
 
-<h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
+<pre><code>find .|xargs grep -ri "XXXX" 
+</code></pre>
+
+<h2 id="section-3">查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
 
 <pre><code>find .|xargs grep -ri "XXXX" -l 
 service iptables stop
 service iptables start
 </code></pre>
+
             
         </div>
     </div>
     <div class="pre-next">
         <li class="pre">上一篇：<a href="#">没有了</a></li>
-        <li class="next">下一篇：<a href="/blog/1000-01-01/template.html">Template</a></li>
+        <li class="next">下一篇：<a href="/blog/1000-01-01/php.html">php知识笔记</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>

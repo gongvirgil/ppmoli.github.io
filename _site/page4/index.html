@@ -54,13 +54,11 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
     
-    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
     
-    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
     
     <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
@@ -72,17 +70,9 @@
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
     
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    
     <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="随笔"><span>1</span>随笔</a>
-  </div>
-  <div class="随笔 y ">
-    <a class="list_head"><h3>随笔</h3></a>
-    
-    <a href="/blog/2015-01-26/test.html">测试</a>
     
   </div>
   
@@ -122,10 +112,17 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+      <a id="笔记" title="笔记"><span>7</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="php" title="php"><span>1</span>php</a>
+    </div>
+    <div class="php y " tag="php">
+      <a href="#">php</a>
     </div>
   
     <div class="x">
@@ -182,13 +179,6 @@
     </div>
     <div class="Jekyll y " tag="Jekyll">
       <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="test" title="test"><span>1</span>test</a>
-    </div>
-    <div class="test y " tag="test">
-      <a href="#">test</a>
     </div>
   
     <div class="x">
@@ -249,54 +239,8 @@
   <ul class="artical-list"  id="post_list">
     
 <li>
-    <h2><a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a></h2>
-    <div class="title-desc"><p><h1>soft</h1>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-01-01/soft.html">2015-01-01</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-01-01/soft.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/soft" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-01-01/soft.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/soft" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● 软件，笔记</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-01-01/js.html">js笔记</a></h2>
-    <div class="title-desc"><p><h2>js简介</h2>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-01-01/js.html">2015-01-01</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● js</a>
-            
-            <a href="">● 笔记</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
     <h2><a href="/blog/2015-01-01/jquery.html">jquery笔记</a></h2>
-    <div class="title-desc"><p><h2>jquery简介</h2>
+    <div class="title-desc"><p><h2 id="jquery">jquery简介</h2>
 </p></div>
     <div class="post_meta">
       <div  class="date">
@@ -320,7 +264,7 @@
 
 <li>
     <h2><a href="/blog/2015-01-01/html.html">html笔记</a></h2>
-    <div class="title-desc"><p><h2>简介</h2>
+    <div class="title-desc"><p><h2 id="section">简介</h2>
 </p></div>
     <div class="post_meta">
       <div  class="date">
@@ -337,6 +281,56 @@
             <a href="">● html</a>
             
             <a href="">● 笔记</a>
+            
+      </div>
+</div>
+</li> 
+
+<li>
+    <h2><a href="/blog/2015-01-01/css.html">css笔记</a></h2>
+    <div class="title-desc"><p><h2 id="section">简介</h2>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/2015-01-01/css.html">2015-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/2015-01-01/css.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/css" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/2015-01-01/css.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/css" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● css</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
+</div>
+</li> 
+
+<li>
+    <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
+    <div class="title-desc"><p><hr />
+<p>layout: post
+title: 
+description: 
+category: 
+tags: []
+date: 2015-01-01</p>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
             
       </div>
 </div>
@@ -358,7 +352,7 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 <div class=""></div>
 <div class="page">
 <a href="/page3" class="pre_page">上一页</a>
-<span>4/7</span>
+<span>4/6</span>
 <a href="/page5" class="next_page">下一页</a>
 </div>  
   <!--           

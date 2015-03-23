@@ -54,13 +54,11 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
     
-    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
     
-    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
     
     <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
@@ -72,17 +70,9 @@
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
     
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    
     <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="随笔"><span>1</span>随笔</a>
-  </div>
-  <div class="随笔 y ">
-    <a class="list_head"><h3>随笔</h3></a>
-    
-    <a href="/blog/2015-01-26/test.html">测试</a>
     
   </div>
   
@@ -122,10 +112,17 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+      <a id="笔记" title="笔记"><span>7</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="php" title="php"><span>1</span>php</a>
+    </div>
+    <div class="php y " tag="php">
+      <a href="#">php</a>
     </div>
   
     <div class="x">
@@ -182,13 +179,6 @@
     </div>
     <div class="Jekyll y " tag="Jekyll">
       <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="test" title="test"><span>1</span>test</a>
-    </div>
-    <div class="test y " tag="test">
-      <a href="#">test</a>
     </div>
   
     <div class="x">
@@ -249,7 +239,7 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-02-09/3.html" title="自定义滚动条样式">自定义滚动条样式</a></h1>
+            <h1><a href="/blog/2015-02-09/scroller.html" title="自定义滚动条样式">自定义滚动条样式</a></h1>
         </div>
         <div class="post_relate">
             <span class="post_date">2015-02-09</span>
@@ -260,10 +250,12 @@
             </span>
         </div>
         <div class="post_content">
-            <p>其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</p>
+            <ul id="markdown-toc">
+  <li><a href="#webkit">webkit内核浏览器</a></li>
+</ul>
+<p>其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</p>
 
-<h2>webkit内核浏览器</h2>
-
+<h2 id="webkit">webkit内核浏览器</h2>
 <pre><code>/* 设置滚动条的样式 */
 ::-webkit-scrollbar {
     height: 10px;
@@ -281,12 +273,8 @@
 }
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(255,0,0,0.4);
-}
-</code></pre>
-
-<h2>IE浏览器</h2>
-
-<pre><code>scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
+} ##IE浏览器
+scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
 scrollbar-face-color: #333; /*图5,立体滚动条的颜色*/
 scrollbar-3dlight-color: #666; /*图1,立体滚动条亮边的颜色*/
 scrollbar-highlight-color: #666; /*图2,滚动条空白部分的颜色*/
@@ -294,7 +282,7 @@ scrollbar-shadow-color: #999; /*图3,立体滚动条阴影的颜色*/
 scrollbar-darkshadow-color: #666; /*图4,立体滚动条强阴影的颜色*/
 scrollbar-track-color: #666; /*图7,立体滚动条背景颜色*/
 scrollbar-base-color:#f8f8f8; /*滚动条的基本颜色*/
-Cursor:url(mouse.cur); /*自定义个性鼠标*/
+Cursor:url(mouse.cur); /*自定义个性鼠标*/ [1]:    /blog/2015-02-09/scroller.html  (自定义滚动条样式)
 </code></pre>
             
         </div>
@@ -317,7 +305,7 @@ Cursor:url(mouse.cur); /*自定义个性鼠标*/
 </script>
 -->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-02-09/3" data-title="自定义滚动条样式" data-url="/blog/2015-02-09/3.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/2015-02-09/scroller" data-title="自定义滚动条样式" data-url="/blog/2015-02-09/scroller.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

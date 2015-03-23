@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>site of gongvirgil</title>
+    <title>php知识笔记 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -54,13 +54,11 @@
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
-    <a href="/blog/2015-02-09/3.html">自定义滚动条样式</a>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
     
-    <a href="/blog/2015-01-19/2.html">安装Jekyll</a>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
     
-    <a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/template.html"></a>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
     
     <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
     
@@ -72,17 +70,9 @@
     
     <a href="/blog/2015-01-01/css.html">css笔记</a>
     
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    
     <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="随笔"><span>1</span>随笔</a>
-  </div>
-  <div class="随笔 y ">
-    <a class="list_head"><h3>随笔</h3></a>
-    
-    <a href="/blog/2015-01-26/test.html">测试</a>
     
   </div>
   
@@ -122,10 +112,17 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>6</span>笔记</a>
+      <a id="笔记" title="笔记"><span>7</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
+    </div>
+  
+    <div class="x">
+      <a id="php" title="php"><span>1</span>php</a>
+    </div>
+    <div class="php y " tag="php">
+      <a href="#">php</a>
     </div>
   
     <div class="x">
@@ -182,13 +179,6 @@
     </div>
     <div class="Jekyll y " tag="Jekyll">
       <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="test" title="test"><span>1</span>test</a>
-    </div>
-    <div class="test y " tag="test">
-      <a href="#">test</a>
     </div>
   
     <div class="x">
@@ -249,22 +239,52 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-01-01/template.html" title=""></a></h1>
+            <h1><a href="/blog/1000-01-01/php.html" title="php知识笔记">php知识笔记</a></h1>
         </div>
         <div class="post_relate">
-            <span class="post_date">2015-01-01</span>
+            <span class="post_date">1000-01-01</span>
             <span class="post_tags">
+                
+                    <a href="/tags/?tag=php" title="php">php</a>
+                
+                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
                 
             </span>
         </div>
         <div class="post_content">
-            <h1>template</h1>
+            <h2 id="section">写入文件</h2>
+
+<pre><code>$fp = fopen($_SERVER['DOCUMENT_ROOT']."/xxx.txt","a+");
+fwrite($fp,date("Y-m-d H:i:s",time())."\r\n");
+fclose($fp); 
+</code></pre>
+
+<h2 id="section-1">查找文件下所有文件名</h2>
+
+<pre><code>$str = '';
+$dir = "../Tpl/";
+$preg2 = '/[A-Za-z]/';
+if (is_dir ( $dir )) {
+	if ($dh = opendir ( $dir )) {
+		while ( ($file = readdir ( $dh )) !== false ) {
+			if (preg_match ( $preg2, $file )) {
+				$zt = '';
+				if ($info ['theme'] == $file) {
+					$zt = 'selected';
+				}
+				$str .= '&lt;option value=' . $file . ' ' . $zt . '&gt;' . $file . '&lt;/option&gt;';
+			}
+		}
+		closedir ( $dh );
+	}
+}
+</code></pre>
             
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-01-19/1.html">使用Github Pages建独立博客</a></li>
+        <li class="pre">上一篇：<a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a></a></li>
+        <li class="next">下一篇：<a href="/blog/1000-01-01/template.html">Template</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
@@ -275,12 +295,12 @@
         $('.技术').css({
             left: 0
         });
-        $('.技术').find("a:contains()").addClass('on');
+        $('.技术').find("a:contains(php知识笔记)").addClass('on');
 
 </script>
 -->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-01/template" data-title="" data-url="/blog/2015-01-01/template.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/1000-01-01/php" data-title="php知识笔记" data-url="/blog/1000-01-01/php.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

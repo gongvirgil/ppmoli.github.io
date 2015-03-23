@@ -62,20 +62,21 @@ function(data) {
 	  $('.tags .'+tagstr).append(content);       
 	})           
 }) 
-//左侧封顶
+//左侧分类导航封顶、文章页文章导航封顶
 $(document).ready(function(){
-  function fixed(id){
+  function fixed(id,position,top){
     var navH = $(id).offset().top;
     $(window).scroll(function(){
       var scroH = $(this).scrollTop();
       if(scroH>=navH){
-        $(id).css({"position":"fixed","top":0});
+        $(id).css({"position":"fixed","top":top});
       }else if(scroH<navH){
-        $(id).css({"position":"static"});
+        $(id).css({"position":position,"top":top});
       }
     })
   }
-  fixed("#home");      
+  fixed("#home","static",0);
+  fixed("#markdown-toc","absolute","175px");     
 })
 //左侧切换
 function toggle(index){
@@ -110,6 +111,7 @@ $(window).scroll(function(){
         $('#goTop').hide();
 });
 $('#goTop a.goTop_btn').click(function(){
+	alert("11");
     $('html, body').animate({
         scrollTop: 0
     }, 600);

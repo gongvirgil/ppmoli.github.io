@@ -7,7 +7,7 @@ highlighter: pygments
 paginate: 4
 permalink: /blog/:year-:month-:day/:title.html
 title: site of gongvirgil
-url: http://localhost:4000
+url: http://gongvirgil.github.io
 feed: /atom.xml
-author_info: <a href="http://gongvirgil.hithub.io/">GongVirgil</a>
+author_info: <a href="http://gongvirgil.github.io/">GongVirgil</a>
 short_name: gongvirgil
