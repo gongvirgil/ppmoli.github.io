@@ -282,12 +282,15 @@
 
 <li>
     <h2><a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a></h2>
-    <div class="title-desc"><p><ul id="markdown-toc">
-  <li><a href="#webkit">webkit内核浏览器</a></li>
+    <div class="title-desc"><p><ul>
+<li>目录
+{:toc}
+其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</li>
 </ul>
-<p>其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</p>
 
-<h2 id="webkit">webkit内核浏览器</h2>
+
+<h2>webkit内核浏览器</h2>
+
 <pre><code>/* 设置滚动条的样式 */
 ::-webkit-scrollbar {
     height: 10px;
@@ -305,8 +308,12 @@
 }
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(255,0,0,0.4);
-} ##IE浏览器
-scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
+}
+</code></pre>
+
+<h2>IE浏览器</h2>
+
+<pre><code>scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
 scrollbar-face-color: #333; /*图5,立体滚动条的颜色*/
 scrollbar-3dlight-color: #666; /*图1,立体滚动条亮边的颜色*/
 scrollbar-highlight-color: #666; /*图2,滚动条空白部分的颜色*/
@@ -314,7 +321,7 @@ scrollbar-shadow-color: #999; /*图3,立体滚动条阴影的颜色*/
 scrollbar-darkshadow-color: #666; /*图4,立体滚动条强阴影的颜色*/
 scrollbar-track-color: #666; /*图7,立体滚动条背景颜色*/
 scrollbar-base-color:#f8f8f8; /*滚动条的基本颜色*/
-Cursor:url(mouse.cur); /*自定义个性鼠标*/ [1]:    /blog/2015-02-09/scroller.html  (自定义滚动条样式)
+Cursor:url(mouse.cur); /*自定义个性鼠标*/
 </code></pre>
 </p></div>
     <div class="post_meta">
@@ -337,32 +344,31 @@ Cursor:url(mouse.cur); /*自定义个性鼠标*/ [1]:    /blog/2015-02-09/scroll
 
 <li>
     <h2><a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a></h2>
-    <div class="title-desc"><p><h2 id="section">这是一个文章题目</h2>
+    <div class="title-desc"><p><h2>这是一个文章题目</h2>
+
 <p>第一段</p>
 
 <p>第二段.</p>
 
-<h4 id="section-1">一个小标题</h4>
+<h4>一个小标题</h4>
+
 <p>第三段</p>
 
 <p>第四段</p>
 
-<h4 id="section-2">又一个小标题</h4>
-<blockquote>
-  <p>引用的文字第一段</p>
-</blockquote>
+<h4>又一个小标题</h4>
 
-<blockquote>
-  <p>引用的文字第二段</p>
-</blockquote>
+<blockquote><p>引用的文字第一段</p>
 
-<h4 id="section-3">还是一个小标题</h4>
+<p>引用的文字第二段</p></blockquote>
+
+<h4>还是一个小标题</h4>
+
 <pre><code>这是一段代码（前面tab或者四个空格）
 哈哈哈
 </code></pre>
 
-<h4 id="section-4">继续一个小标题</h4>
-
+<h4>继续一个小标题</h4>
 </p></div>
     <div class="post_meta">
       <div  class="date">

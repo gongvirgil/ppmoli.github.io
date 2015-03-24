@@ -62,7 +62,7 @@ function(data) {
 	  $('.tags .'+tagstr).append(content);       
 	})           
 }) 
-//左侧分类导航封顶、文章页文章导航封顶
+//左侧分类导航封顶
 $(document).ready(function(){
   function fixed(id,position,top){
     var navH = $(id).offset().top;
@@ -75,8 +75,7 @@ $(document).ready(function(){
       }
     })
   }
-  fixed("#home","static",0);
-  fixed("#markdown-toc","absolute","175px");     
+  fixed("#home","static",0);     
 })
 //左侧切换
 function toggle(index){
