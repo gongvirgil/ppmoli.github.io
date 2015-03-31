@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>随笔 | site of gongvirgil</title>
+    <title>bootstrap笔记 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -248,16 +248,157 @@
 <div id="content">
     <div class="post">
         <div class="post_title">
-            <h1><a href="/blog/2015-03-04/2.html" title="随笔">随笔</a></h1>
+            <h1><a href="/blog/2015-03-26/bootstrap.html" title="bootstrap笔记">bootstrap笔记</a></h1>
         </div>
         <div class="post_relate">
-            <span class="post_date">2015-03-04</span>
+            <span class="post_date">2015-03-26</span>
             <span class="post_tags">
+                
+                    <a href="/tags/?tag=bootstrap" title="bootstrap">bootstrap</a>
+                
+                    <a href="/tags/?tag=css" title="css">css</a>
+                
+                    <a href="/tags/?tag=笔记" title="笔记">笔记</a>
                 
             </span>
         </div>
         <div class="post_content">
-            <p>1111</p>
+            <h2>简介</h2>
+
+<h2>基本页面HTML：<a href="http://gongvirgil.github.io/demo/demo1/">demo戳这里</a></h2>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;你好，世界！&lt;/h1&gt;
+    &lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>顶部导航栏</h2>
+
+<h3>Static navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-static-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Static top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-fixed-top/"&gt;Fixed top&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3>Fixed navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-static-top/"&gt;Static top&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Fixed top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h2>栅栏布局</h2>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>表单</h2>
+
+<pre><code>  &lt;form class="form-signin"&gt;
+    &lt;h2 class="form-signin-heading"&gt;Please sign in&lt;/h2&gt;
+    &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
+    &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
+    &lt;div class="checkbox"&gt;
+      &lt;label&gt;
+        &lt;input type="checkbox" value="remember-me"&gt; Remember me
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<h2>表格</h2>
             
         </div>
         <div class="BlogAnchor">
@@ -266,24 +407,24 @@
         </div>
     </div>
     <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/2015-02-28/1.html">sublime常用快捷键</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></li>
+        <li class="pre">上一篇：<a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></a></li>
+        <li class="next">下一篇：<a href="#">没有了</a></li>
     </div>
 </div>
 <script type="text/javascript" src="/public/js/post.js"></script>
 <!--
 <script type="text/javascript">
         toggle($('#cate'));
-        toggle($('#生活'));
-        $('.生活').css({
+        toggle($('#技术'));
+        $('.技术').css({
             left: 0
         });
-        $('.生活').find("a:contains(随笔)").addClass('on');
+        $('.技术').find("a:contains(bootstrap笔记)").addClass('on');
 
 </script>
 -->
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-03-04/2" data-title="随笔" data-url="/blog/2015-03-04/2.html"></div>
+    <div class="ds-thread" data-thread-key="/blog/2015-03-26/bootstrap" data-title="bootstrap笔记" data-url="/blog/2015-03-26/bootstrap.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

@@ -47,10 +47,12 @@
 <div class="cate y">
   
   <div class="x">
-    <a id="技术"><span>11</span>技术</a>
+    <a id="技术"><span>12</span>技术</a>
   </div>
   <div class="技术 y  scrollContent ">
     <a class="list_head"><h3>技术</h3></a>
+    
+    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
@@ -112,7 +114,7 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>7</span>笔记</a>
+      <a id="笔记" title="笔记"><span>8</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
@@ -126,7 +128,7 @@
     </div>
   
     <div class="x">
-      <a id="css" title="css"><span>1</span>css</a>
+      <a id="css" title="css"><span>2</span>css</a>
     </div>
     <div class="css y " tag="css">
       <a href="#">css</a>
@@ -230,6 +232,13 @@
       <a href="#">linux</a>
     </div>
   
+    <div class="x">
+      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
+    </div>
+    <div class="bootstrap y " tag="bootstrap">
+      <a href="#">bootstrap</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -238,6 +247,167 @@
 <div class="posts">
   <ul class="artical-list"  id="post_list">
     
+<li>
+    <h2><a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a></h2>
+    <div class="title-desc"><p><h2>简介</h2>
+
+<h2>基本页面HTML：<a href="http://gongvirgil.github.io/demo/demo1/">demo戳这里</a></h2>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;你好，世界！&lt;/h1&gt;
+    &lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>顶部导航栏</h2>
+
+<h3>Static navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-static-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Static top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-fixed-top/"&gt;Fixed top&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3>Fixed navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-static-top/"&gt;Static top&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Fixed top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h2>栅栏布局</h2>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>表单</h2>
+
+<pre><code>  &lt;form class="form-signin"&gt;
+    &lt;h2 class="form-signin-heading"&gt;Please sign in&lt;/h2&gt;
+    &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
+    &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
+    &lt;div class="checkbox"&gt;
+      &lt;label&gt;
+        &lt;input type="checkbox" value="remember-me"&gt; Remember me
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<h2>表格</h2>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/2015-03-26/bootstrap.html">2015-03-26</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● bootstrap</a>
+            
+            <a href="">● css</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
+</div>
+</li> 
+
 <li>
     <h2><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></h2>
     <div class="title-desc"><p><h2>打包/压缩目录</h2>
@@ -354,73 +524,6 @@ scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
       </div>
 </div>
 </li> 
-
-<li>
-    <h2><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></h2>
-    <div class="title-desc"><p><h2>简介</h2>
-
-<p>ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。</p>
-
-<h2>全面的WEB开发特性支持</h2>
-
-<p>最新的ThinkPHP为WEB应用开发提供了强有力的支持，这些支持包括：</p>
-
-<ul>
-<li>MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式</li>
-<li>ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库</li>
-<li>模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎</li>
-<li>RESTFul支持-REST模式提供了RESTFul支持，为你打造全新的URL设计和访问体验</li>
-<li>云引擎支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。</li>
-<li>CLI支持-支持基于命令行的应用开发</li>
-<li>AMF支持-支持Flex开发和Flash通讯，打造互联网富应用</li>
-<li>PHPRPC支持-提供基于PHPRpc的WEBService解决方案</li>
-<li>MongoDb支持-提供NoSQL的支持</li>
-<li>缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持</li>
-</ul>
-
-
-<h2>大道至简的开发理念</h2>
-
-<p>ThinkPHP从诞生以来一直秉承大道至简的开发理念，无论从底层实现还是应用开发，我们都倡导用最少的代码完成相同的功能，正是由于对简单的执着和代码的修炼，让我们长期保持出色的性能和极速的开发体验。在主流PHP开发框架的评测数据中表现卓越，简单和快速开发是我们不变的宗旨。</p>
-
-<h2>安全性</h2>
-
-<p>框架在系统层面提供了众多的安全特性，确保你的网站和产品安全无忧。这些特性包括：</p>
-
-<ul>
-<li>XSS安全防护</li>
-<li>表单自动验证</li>
-<li>强制数据类型转换</li>
-<li>输入数据过滤</li>
-<li>表单令牌验证</li>
-<li>防SQL注入</li>
-<li>图像上传检测</li>
-</ul>
-
-
-<h2>商业友好的开源协议</h2>
-
-<p>ThinkPHP遵循Apache2开源协议发布。Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再作为开源或商业软件发布。</p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html">2015-03-15</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● ThinkPHP</a>
-            
-            <a href="">● 笔记</a>
-            
-      </div>
-</div>
-</li> 
                               
 <!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
@@ -438,7 +541,7 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 <div class=""></div>
 <div class="page">
 <a href="" class="pre_page">上一页</a>
-<span>1/6</span>
+<span>1/7</span>
 <a href="/page2" class="next_page">下一页</a>
 </div>  
   <!--           

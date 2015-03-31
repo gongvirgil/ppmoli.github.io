@@ -47,10 +47,12 @@
 <div class="cate y">
   
   <div class="x">
-    <a id="技术"><span>11</span>技术</a>
+    <a id="技术"><span>12</span>技术</a>
   </div>
   <div class="技术 y  scrollContent ">
     <a class="list_head"><h3>技术</h3></a>
+    
+    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
@@ -112,7 +114,7 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>7</span>笔记</a>
+      <a id="笔记" title="笔记"><span>8</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
@@ -126,7 +128,7 @@
     </div>
   
     <div class="x">
-      <a id="css" title="css"><span>1</span>css</a>
+      <a id="css" title="css"><span>2</span>css</a>
     </div>
     <div class="css y " tag="css">
       <a href="#">css</a>
@@ -230,6 +232,13 @@
       <a href="#">linux</a>
     </div>
   
+    <div class="x">
+      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
+    </div>
+    <div class="bootstrap y " tag="bootstrap">
+      <a href="#">bootstrap</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -238,6 +247,33 @@
 <div class="posts">
   <ul class="artical-list"  id="post_list">
     
+<li>
+    <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
+    <div class="title-desc"><p><hr />
+
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+      </div>
+</div>
+</li> 
+
 <li>
     <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
     <div class="title-desc"><p><hr />
@@ -341,61 +377,6 @@ if (is_dir ( $dir )) {
       </div>
 </div>
 </li> 
-
-<li>
-    <h2><a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a></h2>
-    <div class="title-desc"><p><h2>简单速记命令：</h2>
-
-<ul>
-<li>查看时间： date</li>
-<li>重启httpd:       service httpd restart</li>
-<li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
-<li>修改权限 chmod -R 777 /home/aaa/*</li>
-<li>删除文件 rm -rf /home/aaa/*</li>
-<li>查看当前规则：cat  /etc/sysconfig/iptables</li>
-</ul>
-
-
-<h2>复杂操作笔记：</h2>
-
-<ul>
-<li>替换字符串: <a href="http://gongvirgil.github.io/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
-<li>linux服务器之间文件传输：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
-<li>打包/压缩目录：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a></li>
-</ul>
-
-
-<h2>查找目录下的所有文件中是否含有某个字符串</h2>
-
-<pre><code>find .|xargs grep -ri "XXXX" 
-</code></pre>
-
-<h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
-
-<pre><code>find .|xargs grep -ri "XXXX" -l 
-service iptables stop
-service iptables start
-</code></pre>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/1000-01-01/linux.html">1000-01-01</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● Linux</a>
-            
-            <a href="">● 笔记</a>
-            
-      </div>
-</div>
-</li> 
                               
 <!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
@@ -413,8 +394,8 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 <div class=""></div>
 <div class="page">
 <a href="/page5" class="pre_page">上一页</a>
-<span>6/6</span>
-<a href="" class="next_page">下一页</a>
+<span>6/7</span>
+<a href="/page7" class="next_page">下一页</a>
 </div>  
   <!--           
   <script type="text/javascript">

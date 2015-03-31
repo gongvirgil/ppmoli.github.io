@@ -243,16 +243,101 @@
 </div>
       </div>
       <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/about.css">
-<div id="content">
-	<object width="780" height="308" name="radioPlayer" id="radioPlayer" type="application/x-shockwave-flash" data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879">
-	<param value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879" name="movie">
-	<param value="high" name="quality">
-	<param value="Opaque" name="wmode">
-	<param value="always" name="allowScriptAccess">
-	<param value="dataUrl=/radio/xml/type/8/id/0&amp;helpUrl=http://www.xiami.com/websitehelp#help6_1&amp;changeRadioUrl=http://www.xiami.com/radio&amp;unlikeartist=1&amp;ctNum=20000&amp;srNum=120" name="FlashVars">
-	</object>
+      <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="posts">
+  <ul class="artical-list"  id="post_list">
+    
+<li>
+    <h2><a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a></h2>
+    <div class="title-desc"><p><h2>简单速记命令：</h2>
+
+<ul>
+<li>查看时间： date</li>
+<li>重启httpd:       service httpd restart</li>
+<li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
+<li>修改权限 chmod -R 777 /home/aaa/*</li>
+<li>删除文件 rm -rf /home/aaa/*</li>
+<li>查看当前规则：cat  /etc/sysconfig/iptables</li>
+</ul>
+
+
+<h2>复杂操作笔记：</h2>
+
+<ul>
+<li>替换字符串: <a href="http://gongvirgil.github.io/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
+<li>linux服务器之间文件传输：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
+<li>打包/压缩目录：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a></li>
+</ul>
+
+
+<h2>查找目录下的所有文件中是否含有某个字符串</h2>
+
+<pre><code>find .|xargs grep -ri "XXXX" 
+</code></pre>
+
+<h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
+
+<pre><code>find .|xargs grep -ri "XXXX" -l 
+service iptables stop
+service iptables start
+</code></pre>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/1000-01-01/linux.html">1000-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/1000-01-01/linux.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/linux" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● Linux</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
 </div>
+</li> 
+                              
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gongvirgil"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>                               
+  </ul>
+</div>
+<div class=""></div>
+<div class="page">
+<a href="/page6" class="pre_page">上一页</a>
+<span>7/7</span>
+<a href="" class="next_page">下一页</a>
+</div>  
+  <!--           
+  <script type="text/javascript">
+    function TriggerPost(i){
+      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
+      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
+    }
+    var scrollFun=function(e){
+      e=e || window.event;
+      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
+      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
+    }
+    if(document.addEventListener){
+        document.addEventListener('DOMMouseScroll',scrollFun,false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFun;
+  </script> 
+  -->
       </div>
       <div class="right"></div>
       <div style="clear:both;"></div>

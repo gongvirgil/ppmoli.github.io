@@ -47,10 +47,12 @@
 <div class="cate y">
   
   <div class="x">
-    <a id="技术"><span>11</span>技术</a>
+    <a id="技术"><span>12</span>技术</a>
   </div>
   <div class="技术 y  scrollContent ">
     <a class="list_head"><h3>技术</h3></a>
+    
+    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
     
     <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
     
@@ -112,7 +114,7 @@
     </div>
   
     <div class="x">
-      <a id="笔记" title="笔记"><span>7</span>笔记</a>
+      <a id="笔记" title="笔记"><span>8</span>笔记</a>
     </div>
     <div class="笔记 y " tag="笔记">
       <a href="#">笔记</a>
@@ -126,7 +128,7 @@
     </div>
   
     <div class="x">
-      <a id="css" title="css"><span>1</span>css</a>
+      <a id="css" title="css"><span>2</span>css</a>
     </div>
     <div class="css y " tag="css">
       <a href="#">css</a>
@@ -230,6 +232,13 @@
       <a href="#">linux</a>
     </div>
   
+    <div class="x">
+      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
+    </div>
+    <div class="bootstrap y " tag="bootstrap">
+      <a href="#">bootstrap</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -238,6 +247,60 @@
 <div class="posts">
   <ul class="artical-list"  id="post_list">
     
+<li>
+    <h2><a href="/blog/2015-01-01/js.html">js笔记</a></h2>
+    <div class="title-desc"><p><h2>js简介</h2>
+
+<h2>点击全屏</h2>
+
+<pre><code>var fullscreen=function(){
+    elem=document.body;
+    if(elem.webkitRequestFullScreen){
+        elem.webkitRequestFullScreen();   
+    }else if(elem.mozRequestFullScreen){
+        elem.mozRequestFullScreen();
+    }else if(elem.requestFullScreen){
+        elem.requestFullscreen();
+    }else{
+        //浏览器不支持全屏API或已被禁用
+    }
+}
+var exitFullscreen=function(){
+    var elem=document;
+    if(elem.webkitCancelFullScreen){
+        elem.webkitCancelFullScreen();    
+    }else if(elem.mozCancelFullScreen){
+        elem.mozCancelFullScreen();
+    }else if(elem.cancelFullScreen){
+        elem.cancelFullScreen();
+    }else if(elem.exitFullscreen){
+        elem.exitFullscreen();
+    }else{
+        //浏览器不支持全屏API或已被禁用
+    }
+}
+</code></pre>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/2015-01-01/js.html">2015-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● js</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
+</div>
+</li> 
+
 <li>
     <h2><a href="/blog/2015-01-01/jquery.html">jquery笔记</a></h2>
     <div class="title-desc"><p><h2>jquery简介</h2>
@@ -309,33 +372,6 @@
       </div>
 </div>
 </li> 
-
-<li>
-    <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
-    <div class="title-desc"><p><hr />
-
-<p>layout: post
-title:
-description:
-category:
-tags: []
-date: 2015-01-01</p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-      </div>
-</div>
-</li> 
                               
 <!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
@@ -353,7 +389,7 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 <div class=""></div>
 <div class="page">
 <a href="/page3" class="pre_page">上一页</a>
-<span>4/6</span>
+<span>4/7</span>
 <a href="/page5" class="next_page">下一页</a>
 </div>  
   <!--           
