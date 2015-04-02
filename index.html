@@ -1,9 +1,11 @@
 ---
 layout: index
 ---
+<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 {% for post in paginator.posts %}
 <li>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="title-desc"><p>{{ post.excerpt }}</p></div>
     <div class="title-desc"><p>{{ post.content }}</p></div>
     <div class="post_meta">
       <div  class="date">
