@@ -226,7 +226,7 @@
     </div>
   
     <div class="x">
-      <a id="linux" title="linux"><span>3</span>linux</a>
+      <a id="linux" title="linux"><span>4</span>linux</a>
     </div>
     <div class="linux y " tag="linux">
       <a href="#">linux</a>
@@ -239,6 +239,13 @@
       <a href="#">bootstrap</a>
     </div>
   
+    <div class="x">
+      <a id="vi" title="vi"><span>1</span>vi</a>
+    </div>
+    <div class="vi y " tag="vi">
+      <a href="#">vi</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -246,9 +253,19 @@
       <link rel="stylesheet" type="text/css" href="/public/css/index.css">
 <div class="posts">
   <ul class="artical-list"  id="post_list">
-    
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+
 <li>
     <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
+    <div class="title-desc"><p><hr />
+
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
+</p></div>
     <div class="title-desc"><p><hr />
 
 <p>layout: post
@@ -285,6 +302,15 @@ category:
 tags: []
 date: 2015-01-01</p>
 </p></div>
+    <div class="title-desc"><p><hr />
+
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
+</p></div>
     <div class="post_meta">
       <div  class="date">
         <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
@@ -312,6 +338,15 @@ category:
 tags: []
 date: 2015-01-01</p>
 </p></div>
+    <div class="title-desc"><p><hr />
+
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
+</p></div>
     <div class="post_meta">
       <div  class="date">
         <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
@@ -329,50 +364,36 @@ date: 2015-01-01</p>
 </li> 
 
 <li>
-    <h2><a href="/blog/1000-01-01/php.html">php知识笔记</a></h2>
-    <div class="title-desc"><p><h2>写入文件</h2>
+    <h2><a href="/blog/1000-01-01/template.html">Template</a></h2>
+    <div class="title-desc"><p><hr />
 
-<pre><code>$fp = fopen($_SERVER['DOCUMENT_ROOT']."/xxx.txt","a+");
-fwrite($fp,date("Y-m-d H:i:s",time())."\r\n");
-fclose($fp); 
-</code></pre>
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
+</p></div>
+    <div class="title-desc"><p><hr />
 
-<h2>查找文件下所有文件名</h2>
-
-<pre><code>$str = '';
-$dir = "../Tpl/";
-$preg2 = '/[A-Za-z]/';
-if (is_dir ( $dir )) {
-    if ($dh = opendir ( $dir )) {
-        while ( ($file = readdir ( $dh )) !== false ) {
-            if (preg_match ( $preg2, $file )) {
-                $zt = '';
-                if ($info ['theme'] == $file) {
-                    $zt = 'selected';
-                }
-                $str .= '&lt;option value=' . $file . ' ' . $zt . '&gt;' . $file . '&lt;/option&gt;';
-            }
-        }
-        closedir ( $dh );
-    }
-}
-</code></pre>
+<p>layout: post
+title:
+description:
+category:
+tags: []
+date: 2015-01-01</p>
 </p></div>
     <div class="post_meta">
       <div  class="date">
-        <span></span><a href="/blog/1000-01-01/php.html">1000-01-01</a>
+        <span></span><a href="/blog/1000-01-01/template.html">1000-01-01</a>
       </div>
       <div class="comment">
-        <span></span><a href="/blog/1000-01-01/php.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/php" data-count-type="comments"></a>
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="comments"></a>
       </div>
       <div class="repost">
-        <span></span><a href="/blog/1000-01-01/php.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/php" data-count-type="reposts"></a>
+        <span></span><a href="/blog/1000-01-01/template.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/template" data-count-type="reposts"></a>
       </div>
       <div class="post_tags">
-            
-            <a href="">● php</a>
-            
-            <a href="">● 笔记</a>
             
       </div>
 </div>

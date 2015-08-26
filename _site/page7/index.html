@@ -226,7 +226,7 @@
     </div>
   
     <div class="x">
-      <a id="linux" title="linux"><span>3</span>linux</a>
+      <a id="linux" title="linux"><span>4</span>linux</a>
     </div>
     <div class="linux y " tag="linux">
       <a href="#">linux</a>
@@ -239,6 +239,13 @@
       <a href="#">bootstrap</a>
     </div>
   
+    <div class="x">
+      <a id="vi" title="vi"><span>1</span>vi</a>
+    </div>
+    <div class="vi y " tag="vi">
+      <a href="#">vi</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -246,13 +253,69 @@
       <link rel="stylesheet" type="text/css" href="/public/css/index.css">
 <div class="posts">
   <ul class="artical-list"  id="post_list">
-    
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+
+<li>
+    <h2><a href="/blog/1000-01-01/php.html">php知识笔记</a></h2>
+    <div class="title-desc"><p><h2>写入文件</h2>
+</p></div>
+    <div class="title-desc"><p><h2>写入文件</h2>
+
+<pre><code>$fp = fopen($_SERVER['DOCUMENT_ROOT']."/xxx.txt","a+");
+fwrite($fp,date("Y-m-d H:i:s",time())."\r\n");
+fclose($fp); 
+</code></pre>
+
+<h2>查找文件下所有文件名</h2>
+
+<pre><code>$str = '';
+$dir = "../Tpl/";
+$preg2 = '/[A-Za-z]/';
+if (is_dir ( $dir )) {
+    if ($dh = opendir ( $dir )) {
+        while ( ($file = readdir ( $dh )) !== false ) {
+            if (preg_match ( $preg2, $file )) {
+                $zt = '';
+                if ($info ['theme'] == $file) {
+                    $zt = 'selected';
+                }
+                $str .= '&lt;option value=' . $file . ' ' . $zt . '&gt;' . $file . '&lt;/option&gt;';
+            }
+        }
+        closedir ( $dh );
+    }
+}
+</code></pre>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/1000-01-01/php.html">1000-01-01</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/1000-01-01/php.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/php" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/1000-01-01/php.html" class="ds-thread-count" data-thread-key="/blog/1000-01-01/php" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● php</a>
+            
+            <a href="">● 笔记</a>
+            
+      </div>
+</div>
+</li> 
+
 <li>
     <h2><a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a></h2>
+    <div class="title-desc"><p><h2>简单速记命令：</h2>
+</p></div>
     <div class="title-desc"><p><h2>简单速记命令：</h2>
 
 <ul>
 <li>查看时间： date</li>
+<li>更新Internet时间： ntpdate time.windows.com</li>
 <li>重启httpd:       service httpd restart</li>
 <li>复制文件夹下文件  cp -r /home/aaa/* /home/sss</li>
 <li>修改权限 chmod -R 777 /home/aaa/*</li>
@@ -267,20 +330,34 @@
 <li>替换字符串: <a href="http://gongvirgil.github.io/blog/2015-03-19/linux-1.html" title="替换字符串">戳这里</a></li>
 <li>linux服务器之间文件传输：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-2.html" title="linux服务器之间文件传输">戳这里</a></li>
 <li>打包/压缩目录：<a href="http://gongvirgil.github.io/blog/2015-03-19/linux-3.html" title="打包/压缩目录">戳这里</a></li>
+<li>vi编辑器使用命令：<a href="http://gongvirgil.github.io/blog/2015-04-03/linux-4.html" title="vi编辑器使用命令">戳这里</a></li>
 </ul>
 
 
 <h2>查找目录下的所有文件中是否含有某个字符串</h2>
 
-<pre><code>find .|xargs grep -ri "XXXX" 
+<pre><code>find .| xargs grep -ri "XXXX" 
 </code></pre>
 
 <h2>查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名</h2>
 
-<pre><code>find .|xargs grep -ri "XXXX" -l 
+<pre><code>find .| xargs grep -ri "XXXX" -l 
 service iptables stop
 service iptables start
 </code></pre>
+
+<h2>crontab定时执行任务</h2>
+
+<ul>
+<li>编辑：crontab -e</li>
+<li>列出：crontab -l</li>
+<li>退出编辑：ctrl+c</li>
+<li><p>保存：:wp</p>
+
+<p>  分 时 日 月 周 命令
+  0 */3 * * * wget http://www.992you.com/Auto/rebate</p></li>
+</ul>
+
 </p></div>
     <div class="post_meta">
       <div  class="date">

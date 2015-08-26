@@ -226,7 +226,7 @@
     </div>
   
     <div class="x">
-      <a id="linux" title="linux"><span>3</span>linux</a>
+      <a id="linux" title="linux"><span>4</span>linux</a>
     </div>
     <div class="linux y " tag="linux">
       <a href="#">linux</a>
@@ -239,6 +239,13 @@
       <a href="#">bootstrap</a>
     </div>
   
+    <div class="x">
+      <a id="vi" title="vi"><span>1</span>vi</a>
+    </div>
+    <div class="vi y " tag="vi">
+      <a href="#">vi</a>
+    </div>
+  
 </div>
 </div>
       </div>
@@ -246,9 +253,39 @@
       <link rel="stylesheet" type="text/css" href="/public/css/index.css">
 <div class="posts">
   <ul class="artical-list"  id="post_list">
-    
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+
+<li>
+    <h2><a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></h2>
+    <div class="title-desc"><p><h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+</p></div>
+    <div class="title-desc"><p><h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+
+<pre><code>sed -i "s/XXXX/YYYY/g" `grep XXXX -rl /www/../..`
+</code></pre>
+</p></div>
+    <div class="post_meta">
+      <div  class="date">
+        <span></span><a href="/blog/2015-03-19/linux-1.html">2015-03-19</a>
+      </div>
+      <div class="comment">
+        <span></span><a href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="comments"></a>
+      </div>
+      <div class="repost">
+        <span></span><a href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="reposts"></a>
+      </div>
+      <div class="post_tags">
+            
+            <a href="">● linux</a>
+            
+      </div>
+</div>
+</li> 
+
 <li>
     <h2><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></h2>
+    <div class="title-desc"><p><h2>简介</h2>
+</p></div>
     <div class="title-desc"><p><h2>简介</h2>
 
 <p>ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。</p>
@@ -318,6 +355,8 @@
     <h2><a href="/blog/2015-03-04/2.html">随笔</a></h2>
     <div class="title-desc"><p><p>1111</p>
 </p></div>
+    <div class="title-desc"><p><p>1111</p>
+</p></div>
     <div class="post_meta">
       <div  class="date">
         <span></span><a href="/blog/2015-03-04/2.html">2015-03-04</a>
@@ -338,6 +377,8 @@
     <h2><a href="/blog/2015-02-28/1.html">sublime常用快捷键</a></h2>
     <div class="title-desc"><p>
 </p></div>
+    <div class="title-desc"><p>
+</p></div>
     <div class="post_meta">
       <div  class="date">
         <span></span><a href="/blog/2015-02-28/1.html">2015-02-28</a>
@@ -351,63 +392,6 @@
       <div class="post_tags">
             
             <a href="">● sublime</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a></h2>
-    <div class="title-desc"><p><p>其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</p>
-
-<h2>webkit内核浏览器</h2>
-
-<pre><code>/* 设置滚动条的样式 */
-::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
-}
-/* 滚动槽 */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.1);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4);
-}
-</code></pre>
-
-<h2>IE浏览器</h2>
-
-<pre><code>scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
-scrollbar-face-color: #333; /*图5,立体滚动条的颜色*/
-scrollbar-3dlight-color: #666; /*图1,立体滚动条亮边的颜色*/
-scrollbar-highlight-color: #666; /*图2,滚动条空白部分的颜色*/
-scrollbar-shadow-color: #999; /*图3,立体滚动条阴影的颜色*/
-scrollbar-darkshadow-color: #666; /*图4,立体滚动条强阴影的颜色*/
-scrollbar-track-color: #666; /*图7,立体滚动条背景颜色*/
-scrollbar-base-color:#f8f8f8; /*滚动条的基本颜色*/
-Cursor:url(mouse.cur); /*自定义个性鼠标*/
-</code></pre>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-02-09/scroller.html">2015-02-09</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-02-09/scroller.html" class="ds-thread-count" data-thread-key="/blog/2015-02-09/scroller" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-02-09/scroller.html" class="ds-thread-count" data-thread-key="/blog/2015-02-09/scroller" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● CSS</a>
             
       </div>
 </div>
