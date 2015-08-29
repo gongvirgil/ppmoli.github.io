@@ -20,16 +20,19 @@
   <body>
     <!--Nav-->
     <div class="navbar navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
+          <div id="logo">
+            <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
+          </div>
           <ul class="nav navbar-nav">
-            <li id="blog"><a href="/"><span>HOME</span></a></li>
-            <li id="demo"><a href="/demo/"><span>DEMO</span></a></li>
-            <li id="about"><a href="/about/"><span>ABOUT</span></a></li>
+            <li id="blog"><a href="/">首页</a></li>
+            <li id="list"><a href="/list.html">归档</a></li>
+            <li id="about"><a href="/about.html">关于</a></li>
           </ul>
-        </div>
-        <div class="cate_select">
-          <span id="cate_on"></span>
+          <div id="search">
+            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          </div>
         </div>
       </div>
     </div>
@@ -39,236 +42,27 @@
     <!--Main-->
     <div class="main">
       <div class="left">
-        <div class=""></div>
-<div class="home" id="home">
-<div class="my_cate x">
-  <a id="cate">目录树</a>
 </div>
-<div class="cate y">
-  
-  <div class="x">
-    <a id="技术"><span>12</span>技术</a>
-  </div>
-  <div class="技术 y  scrollContent ">
-    <a class="list_head"><h3>技术</h3></a>
-    
-    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
-    
-    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
-    
-    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
-    
-    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
-    
-    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
-    
-    <a href="/blog/2015-01-01/js.html">js笔记</a>
-    
-    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
-    
-    <a href="/blog/2015-01-01/html.html">html笔记</a>
-    
-    <a href="/blog/2015-01-01/css.html">css笔记</a>
-    
-    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
-    
-    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="生活"><span>2</span>生活</a>
-  </div>
-  <div class="生活 y ">
-    <a class="list_head"><h3>生活</h3></a>
-    
-    <a href="/blog/2015-03-04/2.html">随笔</a>
-    
-    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="工具"><span>1</span>工具</a>
-  </div>
-  <div class="工具 y ">
-    <a class="list_head"><h3>工具</h3></a>
-    
-    <a href="/blog/2015-02-28/1.html">sublime常用快捷键</a>
-    
-  </div>
-  
-</div>   
-<div class="my_tags x">
-  <a id="tags">标签云</a>
-</div>
-<div class="tags y">
-  
-    <div class="x">
-      <a id="Linux" title="Linux"><span>1</span>Linux</a>
-    </div>
-    <div class="Linux y " tag="Linux">
-      <a href="#">Linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="笔记" title="笔记"><span>8</span>笔记</a>
-    </div>
-    <div class="笔记 y " tag="笔记">
-      <a href="#">笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="php" title="php"><span>1</span>php</a>
-    </div>
-    <div class="php y " tag="php">
-      <a href="#">php</a>
-    </div>
-  
-    <div class="x">
-      <a id="css" title="css"><span>2</span>css</a>
-    </div>
-    <div class="css y " tag="css">
-      <a href="#">css</a>
-    </div>
-  
-    <div class="x">
-      <a id="html" title="html"><span>1</span>html</a>
-    </div>
-    <div class="html y " tag="html">
-      <a href="#">html</a>
-    </div>
-  
-    <div class="x">
-      <a id="jquery" title="jquery"><span>1</span>jquery</a>
-    </div>
-    <div class="jquery y " tag="jquery">
-      <a href="#">jquery</a>
-    </div>
-  
-    <div class="x">
-      <a id="js" title="js"><span>1</span>js</a>
-    </div>
-    <div class="js y " tag="js">
-      <a href="#">js</a>
-    </div>
-  
-    <div class="x">
-      <a id="软件，笔记" title="软件，笔记"><span>1</span>软件，笔记</a>
-    </div>
-    <div class="软件，笔记 y " tag="软件，笔记">
-      <a href="#">软件，笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="Github" title="Github"><span>1</span>Github</a>
-    </div>
-    <div class="Github y " tag="Github">
-      <a href="#">Github</a>
-    </div>
-  
-    <div class="x">
-      <a id="Blog" title="Blog"><span>2</span>Blog</a>
-    </div>
-    <div class="Blog y " tag="Blog">
-      <a href="#">Blog</a>
-    </div>
-  
-    <div class="x">
-      <a id="Jekyll" title="Jekyll"><span>1</span>Jekyll</a>
-    </div>
-    <div class="Jekyll y " tag="Jekyll">
-      <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="工作" title="工作"><span>1</span>工作</a>
-    </div>
-    <div class="工作 y " tag="工作">
-      <a href="#">工作</a>
-    </div>
-  
-    <div class="x">
-      <a id="责任" title="责任"><span>1</span>责任</a>
-    </div>
-    <div class="责任 y " tag="责任">
-      <a href="#">责任</a>
-    </div>
-  
-    <div class="x">
-      <a id="心态" title="心态"><span>1</span>心态</a>
-    </div>
-    <div class="心态 y " tag="心态">
-      <a href="#">心态</a>
-    </div>
-  
-    <div class="x">
-      <a id="CSS" title="CSS"><span>1</span>CSS</a>
-    </div>
-    <div class="CSS y " tag="CSS">
-      <a href="#">CSS</a>
-    </div>
-  
-    <div class="x">
-      <a id="sublime" title="sublime"><span>1</span>sublime</a>
-    </div>
-    <div class="sublime y " tag="sublime">
-      <a href="#">sublime</a>
-    </div>
-  
-    <div class="x">
-      <a id="ThinkPHP" title="ThinkPHP"><span>1</span>ThinkPHP</a>
-    </div>
-    <div class="ThinkPHP y " tag="ThinkPHP">
-      <a href="#">ThinkPHP</a>
-    </div>
-  
-    <div class="x">
-      <a id="linux" title="linux"><span>4</span>linux</a>
-    </div>
-    <div class="linux y " tag="linux">
-      <a href="#">linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
-    </div>
-    <div class="bootstrap y " tag="bootstrap">
-      <a href="#">bootstrap</a>
-    </div>
-  
-    <div class="x">
-      <a id="vi" title="vi"><span>1</span>vi</a>
-    </div>
-    <div class="vi y " tag="vi">
-      <a href="#">vi</a>
-    </div>
-  
-</div>
-</div>
-      </div>
-      <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-<div id="content">
-    <div class="post">
-        <div class="post_title">
-            <h1><a href="/blog/2015-01-19/github-blog.html" title="使用Github Pages建独立博客">使用Github Pages建独立博客</a></h1>
-        </div>
-        <div class="post_relate">
-            <span class="post_date">2015-01-19</span>
-            <span class="post_tags">
-                
-                    <a href="/tags/?tag=Github" title="Github">Github</a>
-                
-                    <a href="/tags/?tag=Blog" title="Blog">Blog</a>
-                
-            </span>
-        </div>
-        <div class="post_content">
-            <p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
+<div class="middle">
+    <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <div id="content">
+        <div class="post">
+            <div class="post_title">
+                <h1><a href="/blog/2015-01-19/github-blog.html" title="使用Github Pages建独立博客">使用Github Pages建独立博客</a></h1>
+            </div>
+            <div class="post_relate">
+                <span class="post_date">2015-01-19</span>
+                <span class="post_tags">
+                    
+                        <a href="/tags/?tag=Github" title="Github">Github</a>
+                    
+                        <a href="/tags/?tag=Blog" title="Blog">Blog</a>
+                    
+                </span>
+            </div>
+            <div class="post_content">
+                <p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 
 <p>Github Pages有以下几个优点：</p>
 
@@ -657,49 +451,41 @@ sudo gem sources -a http://ruby.taobao.org/
 
 <p>如果你跟着这篇不那么详尽的教程，成功搭建了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。</p>
             
+            </div>
+            <div class="BlogAnchor">
+                <p><a id="AnchorContentToggle" title="收起" style="cursor:pointer;">Table of contens[<span>-</span>]</a></p>
+                <div class="AnchorContent" id="AnchorContent"> </div>
+            </div>
         </div>
-        <div class="BlogAnchor">
-            <p><a id="AnchorContentToggle" title="收起" style="cursor:pointer;">Table of contens[<span>-</span>]</a></p>
-            <div class="AnchorContent" id="AnchorContent"> </div>
+        <div class="pre-next">
+            <li class="pre">上一篇：<a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a></a></li>
+            <li class="next">下一篇：<a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a></li>
         </div>
     </div>
-    <div class="pre-next">
-        <li class="pre">上一篇：<a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a></a></li>
-        <li class="next">下一篇：<a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a></li>
-    </div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="/blog/2015-01-19/github-blog" data-title="使用Github Pages建独立博客" data-url="/blog/2015-01-19/github-blog.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"gongvirgil"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end -->
 </div>
-<script type="text/javascript" src="/public/js/post.js"></script>
-<!--
-<script type="text/javascript">
-        toggle($('#cate'));
-        toggle($('#技术'));
-        $('.技术').css({
-            left: 0
-        });
-        $('.技术').find("a:contains(使用Github Pages建独立博客)").addClass('on');
+<div class="right">
 
-</script>
--->
-<!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/blog/2015-01-19/github-blog" data-title="使用Github Pages建独立博客" data-url="/blog/2015-01-19/github-blog.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gongvirgil"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
+</div>
+<div style="clear:both;"></div>
+
     
-      </div>
-      <div class="right"></div>
-      <div style="clear:both;"></div>
     </div>
     <!--Main End-->
     <div class="goTop" id="goTop">
@@ -707,10 +493,24 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     </div>
     <!--Footer-->
     <div class="footer">
-      <div class="footer_info">
-	<p>© 2012-2014 gongvirgil.github.io</p>
-</div>      
-<div class="tj"></div>
+      <div class="footer-inner">
+    <div class="footer-category">
+      
+      <a href="/category.html#分类-技术">技术</a>
+      
+      <a href="/category.html#分类-生活">生活</a>
+      
+      <a href="/category.html#分类-工具">工具</a>
+      
+    </div>
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span><a>1111</a><em>|</em><a>22222222</a>
+        </div>
+    	<p>© 2012-2014 gongvirgil.github.io</p>
+    </div>      
+    <div class="tj"></div>
+</div>
     </div>
     <!--Footer End-->
   </body>

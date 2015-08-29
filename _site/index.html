@@ -20,16 +20,19 @@
   <body>
     <!--Nav-->
     <div class="navbar navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
+          <div id="logo">
+            <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
+          </div>
           <ul class="nav navbar-nav">
-            <li id="blog"><a href="/"><span>HOME</span></a></li>
-            <li id="demo"><a href="/demo/"><span>DEMO</span></a></li>
-            <li id="about"><a href="/about/"><span>ABOUT</span></a></li>
+            <li id="blog"><a href="/">首页</a></li>
+            <li id="list"><a href="/list.html">归档</a></li>
+            <li id="about"><a href="/about.html">关于</a></li>
           </ul>
-        </div>
-        <div class="cate_select">
-          <span id="cate_on"></span>
+          <div id="search">
+            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          </div>
         </div>
       </div>
     </div>
@@ -39,225 +42,56 @@
     <!--Main-->
     <div class="main">
       <div class="left">
-        <div class=""></div>
-<div class="home" id="home">
-<div class="my_cate x">
-  <a id="cate">目录树</a>
 </div>
-<div class="cate y">
-  
-  <div class="x">
-    <a id="技术"><span>12</span>技术</a>
-  </div>
-  <div class="技术 y  scrollContent ">
-    <a class="list_head"><h3>技术</h3></a>
-    
-    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
-    
-    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
-    
-    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
-    
-    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
-    
-    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
-    
-    <a href="/blog/2015-01-01/js.html">js笔记</a>
-    
-    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
-    
-    <a href="/blog/2015-01-01/html.html">html笔记</a>
-    
-    <a href="/blog/2015-01-01/css.html">css笔记</a>
-    
-    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
-    
-    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="生活"><span>2</span>生活</a>
-  </div>
-  <div class="生活 y ">
-    <a class="list_head"><h3>生活</h3></a>
-    
-    <a href="/blog/2015-03-04/2.html">随笔</a>
-    
-    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="工具"><span>1</span>工具</a>
-  </div>
-  <div class="工具 y ">
-    <a class="list_head"><h3>工具</h3></a>
-    
-    <a href="/blog/2015-02-28/1.html">sublime常用快捷键</a>
-    
-  </div>
-  
-</div>   
-<div class="my_tags x">
-  <a id="tags">标签云</a>
-</div>
-<div class="tags y">
-  
-    <div class="x">
-      <a id="Linux" title="Linux"><span>1</span>Linux</a>
-    </div>
-    <div class="Linux y " tag="Linux">
-      <a href="#">Linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="笔记" title="笔记"><span>8</span>笔记</a>
-    </div>
-    <div class="笔记 y " tag="笔记">
-      <a href="#">笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="php" title="php"><span>1</span>php</a>
-    </div>
-    <div class="php y " tag="php">
-      <a href="#">php</a>
-    </div>
-  
-    <div class="x">
-      <a id="css" title="css"><span>2</span>css</a>
-    </div>
-    <div class="css y " tag="css">
-      <a href="#">css</a>
-    </div>
-  
-    <div class="x">
-      <a id="html" title="html"><span>1</span>html</a>
-    </div>
-    <div class="html y " tag="html">
-      <a href="#">html</a>
-    </div>
-  
-    <div class="x">
-      <a id="jquery" title="jquery"><span>1</span>jquery</a>
-    </div>
-    <div class="jquery y " tag="jquery">
-      <a href="#">jquery</a>
-    </div>
-  
-    <div class="x">
-      <a id="js" title="js"><span>1</span>js</a>
-    </div>
-    <div class="js y " tag="js">
-      <a href="#">js</a>
-    </div>
-  
-    <div class="x">
-      <a id="软件，笔记" title="软件，笔记"><span>1</span>软件，笔记</a>
-    </div>
-    <div class="软件，笔记 y " tag="软件，笔记">
-      <a href="#">软件，笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="Github" title="Github"><span>1</span>Github</a>
-    </div>
-    <div class="Github y " tag="Github">
-      <a href="#">Github</a>
-    </div>
-  
-    <div class="x">
-      <a id="Blog" title="Blog"><span>2</span>Blog</a>
-    </div>
-    <div class="Blog y " tag="Blog">
-      <a href="#">Blog</a>
-    </div>
-  
-    <div class="x">
-      <a id="Jekyll" title="Jekyll"><span>1</span>Jekyll</a>
-    </div>
-    <div class="Jekyll y " tag="Jekyll">
-      <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="工作" title="工作"><span>1</span>工作</a>
-    </div>
-    <div class="工作 y " tag="工作">
-      <a href="#">工作</a>
-    </div>
-  
-    <div class="x">
-      <a id="责任" title="责任"><span>1</span>责任</a>
-    </div>
-    <div class="责任 y " tag="责任">
-      <a href="#">责任</a>
-    </div>
-  
-    <div class="x">
-      <a id="心态" title="心态"><span>1</span>心态</a>
-    </div>
-    <div class="心态 y " tag="心态">
-      <a href="#">心态</a>
-    </div>
-  
-    <div class="x">
-      <a id="CSS" title="CSS"><span>1</span>CSS</a>
-    </div>
-    <div class="CSS y " tag="CSS">
-      <a href="#">CSS</a>
-    </div>
-  
-    <div class="x">
-      <a id="sublime" title="sublime"><span>1</span>sublime</a>
-    </div>
-    <div class="sublime y " tag="sublime">
-      <a href="#">sublime</a>
-    </div>
-  
-    <div class="x">
-      <a id="ThinkPHP" title="ThinkPHP"><span>1</span>ThinkPHP</a>
-    </div>
-    <div class="ThinkPHP y " tag="ThinkPHP">
-      <a href="#">ThinkPHP</a>
-    </div>
-  
-    <div class="x">
-      <a id="linux" title="linux"><span>4</span>linux</a>
-    </div>
-    <div class="linux y " tag="linux">
-      <a href="#">linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
-    </div>
-    <div class="bootstrap y " tag="bootstrap">
-      <a href="#">bootstrap</a>
-    </div>
-  
-    <div class="x">
-      <a id="vi" title="vi"><span>1</span>vi</a>
-    </div>
-    <div class="vi y " tag="vi">
-      <a href="#">vi</a>
-    </div>
-  
-</div>
-</div>
-      </div>
-      <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="middle">
+<link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 <div class="posts">
   <ul class="artical-list"  id="post_list">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    
+    <li>
+        <h2><a href="/blog/2015-08-20/template.html">解决子级float浮动父级无高度没有自适应问题</a></h2>
+        <!-- <div class="title-desc"><p><p>当在对象内的盒子使用了float后，导致对象本身不能被撑开自适应高度，这个是由于浮动产生原因。</p>
 
-<li>
-    <h2><a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a></h2>
-    <div class="title-desc"><p><p>高级一些的编辑器，都会包含宏功能，vim当然不能缺少了，在vim中使用宏是非常方便的：
+<h4>方法一：clear:both 清除浮动</h4>
+
+<pre><code>&lt;div class="father"&gt; 
+    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
+    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt; 
+    &lt;div style="clear:both;"&gt;&lt;/div&gt; 
+&lt;/div&gt; 
+</code></pre>
+
+<h4>方法二：对父级样式加overflow样式</h4>
+
+<pre><code>&lt;div class="father" style="over-flow:hidden;"&gt; 
+    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
+    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt; 
+&lt;/div&gt; 
+</code></pre>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-08-20/template.html">2015-08-20</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-08-20/template.html" class="ds-thread-count" data-thread-key="/blog/2015-08-20/template" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-08-20/template.html" class="ds-thread-count" data-thread-key="/blog/2015-08-20/template" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● CSS</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a></h2>
+        <!-- <div class="title-desc"><p><p>高级一些的编辑器，都会包含宏功能，vim当然不能缺少了，在vim中使用宏是非常方便的：
 *    :qx     开始记录宏，并将结果存入寄存器x
 *    q     退出记录模式
 *    @x     播放记录在x寄存器中的宏命令
@@ -414,446 +248,180 @@
 <li>~     切换块中内容的大小写</li>
 </ul>
 
-</p></div>
-    <div class="title-desc"><p><p>高级一些的编辑器，都会包含宏功能，vim当然不能缺少了，在vim中使用宏是非常方便的：
-*    :qx     开始记录宏，并将结果存入寄存器x
-*    q     退出记录模式
-*    @x     播放记录在x寄存器中的宏命令
-稍微解释一下，当在normal模式下输入:qx后，你对文本的所有编辑动作将会被记录下来，再次输入q即退出了记录模
-式，然后输入@x对刚才记录下来的命令进行重复，此命令后可跟数字，表示要重复多少次，比如@x20，可以重复20次。这个在文本的批处理中是非常有用的。
-同时编辑多个文件
-在vim众多的插件中，有一个叫minibuffer的插件，就是下面所说的标签页功能了，可以支持同时编辑多个文件。</p>
-
-<h2>标签命令</h2>
-
-<ul>
-<li>:tabe fn     在一个新的标签页中编辑文件fn</li>
-<li>gt     切换到下一个标签页</li>
-<li>gT     切换到上一个标签页</li>
-<li>:tabr     切换到第一个标签页</li>
-<li>:tabl     切换到最后一个标签页</li>
-<li>:tabm [N]     把当前tab移动到第N个tab之后
-对，正如你所想象的那样，跟eclipse, ue等的标签页是一个意思！
-
-<h2>窗口命令</h2></li>
-<li>ctrl+w s     水平分割窗口</li>
-<li>ctrl+w w     切换窗口</li>
-<li>ctrl+w q     退出当前窗口(由于同时有多个文件，此命令不会影响其他窗口)</li>
-<li>ctrl+w v     垂直分割窗口
-
-<h2>其他</h2>
-
-<p>vim在保存之前不会对文件做实际的修改，只是加载到缓冲区中，对文件的编辑其实是对缓冲区的编辑，直到:w时才会存入物理文件。</p></li>
-<li>:e file     把file加载到新的缓冲区中</li>
-<li>:bn     跳转到下一个缓冲区</li>
-<li>:bd     删除缓冲区(关闭文件)</li>
-<li>:sp fn     分割窗口，并将fn加载到新的窗口中
-
-<h2>退出编辑器</h2></li>
-<li>:w     将缓冲区写入文件，即保存修改</li>
-<li>:wq     保存修改并退出</li>
-<li>:x     保存修改并退出</li>
-<li>:q     退出，如果对缓冲区进行过修改，则会提示</li>
-<li>:q!     强制退出，放弃修改
-
-<h2>查找替换</h2></li>
-<li>/pattern     向后搜索字符串pattern</li>
-<li>?pattern     向前搜索字符串pattern</li>
-<li>n     下一个匹配(如果是/搜索，则是向下的下一个，?搜索则是向上的下一个)</li>
-<li>N     上一个匹配(同上)</li>
-<li>:%s/old/new/g     搜索整个文件，将所有的old替换为new</li>
-<li>:%s/old/new/gc     搜索整个文件，将所有的old替换为new，每次都要你确认是否替换
-
-<h2>复制粘贴</h2></li>
-<li>dd     删除光标所在行</li>
-<li>dw     删除一个字(word)</li>
-<li>x     删除当前字符</li>
-<li>X     删除前一个字符</li>
-<li>D     删除到行末</li>
-<li>yy     复制一行，此命令前可跟数字，标识复制多行，如6yy，表示从当前行开始复制6行</li>
-<li>yw     复制一个字</li>
-<li>y$     复制到行末</li>
-<li>p     粘贴粘贴板的内容到当前行的下面</li>
-<li>P     粘贴粘贴板的内容到当前行的上面</li>
-<li>]p     有缩进的粘贴，vim会自动调节代码的缩进</li>
-<li>"a     将内容放入/存入a寄存器，可以支持多粘贴板
-附：比如常用的一个寄存器就是系统寄存器，名称为+，所以从系统粘贴板粘贴到vim中的命令为"+p,注意此处的+不表示操作符，二十一个寄存器。
-
-<h2>移动光标</h2>
-
-<p>在vim中移动光标跟其他的编辑器中有很大的区别，不过一旦学会了，就会飞速的在文本中移动了。</p></li>
-<li>h,j,k,l     上，下，左，右</li>
-<li>ctrl-f     上翻一页</li>
-<li>ctrl-b     下翻一页</li>
-<li>%     跳到与当前括号匹配的括号处，如当前在{，则跳转到与之匹配的}处</li>
-<li>w     跳到下一个字首，按标点或单词分割</li>
-<li>W     跳到下一个字首，长跳，如end-of-line被认为是一个字</li>
-<li>e     跳到下一个字尾</li>
-<li>E     跳到下一个字尾，长跳</li>
-<li>b     跳到上一个字</li>
-<li>B     跳到上一个字，长跳</li>
-<li>0     跳至行首，不管有无缩进，就是跳到第0个字符</li>
-<li>^     跳至行首的第一个字符</li>
-<li>$     跳至行尾</li>
-<li>gg     跳至文件的第一行</li>
-<li>gd     跳至当前光标所在的变量的声明处</li>
-<li>[N]G     跳到第N行，如0G，就等价于gg，100G就是第100行</li>
-<li>fx     在当前行中找x字符，找到了就跳转至</li>
-<li>;     重复上一个f命令，而不用重复的输入fx</li>
-<li>tx     与fx类似，但是只是跳转到x的前一个字符处</li>
-<li>Fx     跟fx的方向相反*</li>
-<li>),(     跳转到上/下一个语句*</li>
-<li><ul>
-<li>  查找光标所在处的单词，向下查找</li>
-</ul>
-</li>
-<li><h1>查找光标所在处的单词，向上查找</h1></li>
-<li>`.     跳转至上次编辑位置
-
-<h2>在屏幕上移动</h2></li>
-<li>H     移动光标到当前屏幕上最上边的一行</li>
-<li>M     移动光标到当前屏幕上中间的一行</li>
-<li>L     移动光标到当前屏幕上最下边的一行
-
-<h2>书签</h2></li>
-<li>ma     把当前位置存成标签a</li>
-<li>`a     跳转到标签a处
-
-<h2>编辑</h2></li>
-<li>r     替换一个字符</li>
-<li>J     将下一行和当前行连接为一行</li>
-<li>cc     删除当前行并进入编辑模式</li>
-<li>cw     删除当前字，并进入编辑模式</li>
-<li>c$     擦除从当前位置至行末的内容，并进入编辑模式</li>
-<li>s     删除当前字符并进入编辑模式</li>
-<li>S     删除光标所在行并进入编辑模式</li>
-<li>xp     交换当前字符和下一个字符</li>
-<li>u     撤销</li>
-<li>ctrl+r     重做</li>
-<li>.     重复上一个编辑命令</li>
-<li>~     切换大小写，当前字符*</li>
-<li>g~iw     切换当前字的大小写</li>
-<li>gUiw     将当前字变成大写</li>
-<li>guiw     将当前字变成小写</li>
-<li><blockquote><blockquote><pre><code>将当前行右移一个单位
-</code></pre></blockquote></blockquote></li>
-<li>&lt;&lt;     将当前行左移一个单位(一个tab符)</li>
-<li>==     自动缩进当前行</li>
-<li>插入模式</li>
-<li>i     从当前光标处进入插入模式</li>
-<li>I     进入插入模式，并置光标于行首</li>
-<li>a     追加模式，置光标于当前光标之后</li>
-<li>A     追加模式，置光标于行末</li>
-<li>o     在当前行之下新加一行，并进入插入模式</li>
-<li>O     在当前行之上新加一行，并进入插入模式</li>
-<li>Esc     退出插入模式
-
-<h2>可视模式</h2>
-
-<h3>标记文本</h3></li>
-<li>v     进入可视模式，单字符模式</li>
-<li>V     进入可视模式，行模式*</li>
-<li>ctrl+v     进入可视模式，列模式，类似于UE的列模式</li>
-<li>o     跳转光标到选中块的另一个端点</li>
-<li>U     将选中块中的内容转成大写</li>
-<li>O     跳转光标到块的另一个端点</li>
-<li>aw     选中一个字</li>
-<li>ab     选中括号中的所有内容，包括括号本身</li>
-<li>aB     选中{}括号中的所有内容</li>
-<li>ib     选中括号中的内容，不含括号</li>
-<li>iB     选中{}中的内容，不含{}
-
-<h3>对标记进行动作</h3></li>
-<li><blockquote><pre><code>块右移
-</code></pre></blockquote></li>
-<li>&lt;     块左移</li>
-<li>y     复制块</li>
-<li>d     删除块</li>
-<li>~     切换块中内容的大小写</li>
-</ul>
-
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-04-03/linux-4.html">2015-04-03</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-04-03/linux-4.html" class="ds-thread-count" data-thread-key="/blog/2015-04-03/linux-4" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-04-03/linux-4.html" class="ds-thread-count" data-thread-key="/blog/2015-04-03/linux-4" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● linux</a>
-            
-            <a href="">● vi</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a></h2>
-    <div class="title-desc"><p><h2>简介</h2>
-</p></div>
-    <div class="title-desc"><p><h2>简介</h2>
-
-<h2>基本页面HTML：<a href="http://gongvirgil.github.io/demo/demo1/">demo戳这里</a></h2>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
-    &lt;link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
-      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;你好，世界！&lt;/h1&gt;
-    &lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2>顶部导航栏</h2>
-
-<h3>Static navbar</h3>
-
-<pre><code>&lt;nav class="navbar navbar-default navbar-static-top"&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="navbar-header"&gt;
-      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
-        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
-      &lt;ul class="nav navbar-nav"&gt;
-        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="dropdown"&gt;
-          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-          &lt;ul class="dropdown-menu" role="menu"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="divider"&gt;&lt;/li&gt;
-            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class="nav navbar-nav navbar-right"&gt;
-        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="active"&gt;&lt;a href="./"&gt;Static top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="../navbar-fixed-top/"&gt;Fixed top&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
-
-<h3>Fixed navbar</h3>
-
-<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="navbar-header"&gt;
-      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
-        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
-      &lt;ul class="nav navbar-nav"&gt;
-        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="dropdown"&gt;
-          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-          &lt;ul class="dropdown-menu" role="menu"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="divider"&gt;&lt;/li&gt;
-            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class="nav navbar-nav navbar-right"&gt;
-        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="../navbar-static-top/"&gt;Static top&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="active"&gt;&lt;a href="./"&gt;Fixed top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
-
-<h2>栅栏布局</h2>
-
-<pre><code>&lt;div class="row"&gt;
-    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
-    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
-    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h2>表单</h2>
-
-<pre><code>  &lt;form class="form-signin"&gt;
-    &lt;h2 class="form-signin-heading"&gt;Please sign in&lt;/h2&gt;
-    &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
-    &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
-    &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
-    &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
-    &lt;div class="checkbox"&gt;
-      &lt;label&gt;
-        &lt;input type="checkbox" value="remember-me"&gt; Remember me
-      &lt;/label&gt;
-    &lt;/div&gt;
-    &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
-  &lt;/form&gt;
-</code></pre>
-
-<h2>表格</h2>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-26/bootstrap.html">2015-03-26</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● bootstrap</a>
-            
-            <a href="">● css</a>
-            
-            <a href="">● 笔记</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></h2>
-    <div class="title-desc"><p><h2>打包/压缩目录</h2>
-</p></div>
-    <div class="title-desc"><p><h2>打包/压缩目录</h2>
-
-<p>范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar</p>
-
-<pre><code>[root@linux ~]# tar -cvf /tmp/etc.tar /etc &lt;==仅打包，不压缩！
-[root@linux ~]# tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩
-[root@linux ~]# tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩
-</code></pre>
-
-<p>将 /tmp/etc.tar.gz 文件解压缩在 /usr/local/src 底下</p>
-
-<pre><code>[root@linux ~]# cd /usr/local/src
-[root@linux src]# tar -zxvf /tmp/etc.tar.gz
-</code></pre>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-19/linux-3.html">2015-03-19</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-19/linux-3.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-3" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-19/linux-3.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-3" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● linux</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-03-19/linux-2.html">linux批量替换字符串</a></h2>
-    <div class="title-desc"><p><h2>Linux服务器间文件传输</h2>
+</p></div> -->
+        <div class="title-desc"><p>linux之vi编辑器命令使用</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-04-03/linux-4.html">2015-04-03</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-04-03/linux-4.html" class="ds-thread-count" data-thread-key="/blog/2015-04-03/linux-4" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-04-03/linux-4.html" class="ds-thread-count" data-thread-key="/blog/2015-04-03/linux-4" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● linux</a>
+                
+                <a href="">● vi</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a></h2>
+        <!-- <div class="title-desc"><p><h2>简介</h2>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-26/bootstrap.html">2015-03-26</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-26/bootstrap.html" class="ds-thread-count" data-thread-key="/blog/2015-03-26/bootstrap" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● bootstrap</a>
+                
+                <a href="">● css</a>
+                
+                <a href="">● 笔记</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></h2>
+        <!-- <div class="title-desc"><p><h2>打包/压缩目录</h2>
+</p></div> -->
+        <div class="title-desc"><p>打包/压缩目录</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-19/linux-3.html">2015-03-19</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-19/linux-3.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-3" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-19/linux-3.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-3" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● linux</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-19/linux-2.html">linux批量替换字符串</a></h2>
+        <!-- <div class="title-desc"><p><h2>Linux服务器间文件传输</h2>
 
 <p>不同的Linux之间copy文件常用有3种方法：</p>
-</p></div>
-    <div class="title-desc"><p><h2>Linux服务器间文件传输</h2>
-
-<p>不同的Linux之间copy文件常用有3种方法：</p>
-
-<p>第一种就是ftp，也就是其中一台Linux安装ftp Server，这样可以另外一台使用ftp的client程序来进行文件的copy。</p>
-
-<p>第二种方法就是采用samba服务，类似Windows文件copy 的方式来操作，比较简洁方便。</p>
-
-<p>第三种就是利用scp命令来进行文件复制。</p>
-
-<p>1、将服务器上的目录下载到当前登录的服务器的指定目录：
-scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
-
-<p>使用实例：
- scp -P 端口号 -r root@192.168.1.240:/zsk/hollykm /home/hollykm    <br/>
-实现将linux 服务器192.168.1.240上/zsk/hollykm 目录复制到用户当前登录服务器的 /home/hollykm 目录下。  www.2cto.com<br/>
-备注：SSH 端口默认的是 22，如果修改了，则更改为修改后的端口号；如果端口号默认是22 ，则可以不用写 -P。
-其中-r 是循环复制。</p>
-
-<p>2、将服务器上的文件下载到当前登录的服务器的指定目录下，并命名：</p>
-
-<p>使用实例：
- scp  root@192.168.1.240:/zsk/hollykm/test.txt  /home/test_copy.txt<br/>
-将linux 服务器192.168.1.240上/zsk/hollykm/test.txt 文件复制到登录服务器的/home/下并重命名为 test_copy.txt</p>
-
-<p>可能有用的几个参数 :</p>
-
-<p>-v 和大多数 linux 命令中的 -v 意思一样 , 用来显示进度 . 可以用来查看连接 , 认证 , 或是配置错误 .</p>
-
-<p>-C 使能压缩选项 .</p>
-
-<p>-P 选择端口 . 注意 -p 已经被 rcp 使用 .</p>
-
-<p>-4 强行使用 IPV4 地址 .</p>
-
-<p>-6 强行使用 IPV6 地址 .</p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-19/linux-2.html">2015-03-19</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-19/linux-2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-2" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-19/linux-2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-2" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● linux</a>
-            
-      </div>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-19/linux-2.html">2015-03-19</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-19/linux-2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-2" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-19/linux-2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-2" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● linux</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></h2>
+        <!-- <div class="title-desc"><p><h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-19/linux-1.html">2015-03-19</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● linux</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></h2>
+        <!-- <div class="title-desc"><p><h2>简介</h2>
+</p></div> -->
+        <div class="title-desc"><p>ThinkPHP笔记</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-15/thinkphp.html">2015-03-15</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● ThinkPHP</a>
+                
+                <a href="">● 笔记</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-03-04/2.html">随笔</a></h2>
+        <!-- <div class="title-desc"><p><p>1111</p>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-03-04/2.html">2015-03-04</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-03-04/2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-04/2" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-03-04/2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-04/2" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+          </div>
+    </div>
+    </li> 
+       
+  </ul>
 </div>
-</li> 
-                              
+<div class=""></div>
+<div class="page">
+<a href="" class="pre_page">上一页</a>
+<span>1/4</span>
+<a href="/page2" class="next_page">下一页</a>
+</div>                           
 <!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"gongvirgil"};
@@ -864,35 +432,272 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     ds.charset = 'UTF-8';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
-</script>                               
-  </ul>
+</script>
 </div>
-<div class=""></div>
-<div class="page">
-<a href="" class="pre_page">上一页</a>
-<span>1/7</span>
-<a href="/page2" class="next_page">下一页</a>
-</div>  
-  <!--           
-  <script type="text/javascript">
-    function TriggerPost(i){
-      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
-      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
-    }
-    var scrollFun=function(e){
-      e=e || window.event;
-      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
-      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
-    }
-    if(document.addEventListener){
-        document.addEventListener('DOMMouseScroll',scrollFun,false);
-    }
-    window.onmousewheel=document.onmousewheel=scrollFun;
-  </script> 
-  -->
-      </div>
-      <div class="right"></div>
-      <div style="clear:both;"></div>
+<div class="right">
+    <div id="side-bar">
+        <div id="category">
+            <h4>文章分类</h4>
+            <div class="list-content">
+              
+              <li><a href="/category.html#分类-技术">技术<span class="cate-size">13</span></a></li>
+              
+              <li><a href="/category.html#分类-生活">生活<span class="cate-size">2</span></a></li>
+              
+              <li><a href="/category.html#分类-工具">工具<span class="cate-size">1</span></a></li>
+              
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="tag">
+            <h4>标签</h4>
+            <div  class="tag-cloud">
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Linux" title="1" style="font-size: 9.5pt; color: #999;">Linux</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-笔记" title="8" style="font-size: 11pt; color: #777;">笔记</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-php" title="1" style="font-size: 9.5pt; color: #999;">php</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-css" title="2" style="font-size: 9.5pt; color: #888;">css</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-html" title="1" style="font-size: 9.5pt; color: #999;">html</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-jquery" title="1" style="font-size: 9.5pt; color: #999;">jquery</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-js" title="1" style="font-size: 9.5pt; color: #999;">js</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-软件，笔记" title="1" style="font-size: 9.5pt; color: #999;">软件，笔记</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Github" title="1" style="font-size: 9.5pt; color: #999;">Github</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Blog" title="2" style="font-size: 9.5pt; color: #888;">Blog</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Jekyll" title="1" style="font-size: 9.5pt; color: #999;">Jekyll</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-工作" title="1" style="font-size: 9.5pt; color: #999;">工作</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-责任" title="1" style="font-size: 9.5pt; color: #999;">责任</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-心态" title="1" style="font-size: 9.5pt; color: #999;">心态</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-CSS" title="2" style="font-size: 9.5pt; color: #888;">CSS</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-sublime" title="1" style="font-size: 9.5pt; color: #999;">sublime</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-ThinkPHP" title="1" style="font-size: 9.5pt; color: #999;">ThinkPHP</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-linux" title="4" style="font-size: 10pt; color: #888;">linux</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-bootstrap" title="1" style="font-size: 9.5pt; color: #999;">bootstrap</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-vi" title="1" style="font-size: 9.5pt; color: #999;">vi</a>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="comment">
+            <h4>最近评论</h4>
+            <!-- 多说最新评论 start -->
+              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
+            <!-- 多说最新评论 end -->
+            <div class="clear"></div>
+        </div>
+    </div
+
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gongvirgil"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+<div style="clear:both;"></div>
     </div>
     <!--Main End-->
     <div class="goTop" id="goTop">
@@ -900,10 +705,24 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     </div>
     <!--Footer-->
     <div class="footer">
-      <div class="footer_info">
-	<p>© 2012-2014 gongvirgil.github.io</p>
-</div>      
-<div class="tj"></div>
+      <div class="footer-inner">
+    <div class="footer-category">
+      
+      <a href="/category.html#分类-技术">技术</a>
+      
+      <a href="/category.html#分类-生活">生活</a>
+      
+      <a href="/category.html#分类-工具">工具</a>
+      
+    </div>
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span><a>1111</a><em>|</em><a>22222222</a>
+        </div>
+    	<p>© 2012-2014 gongvirgil.github.io</p>
+    </div>      
+    <div class="tj"></div>
+</div>
     </div>
     <!--Footer End-->
   </body>

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="posts">
+  <ul class="artical-list"  id="post_list">
+    {{ content }}                               
+  </ul>
+</div>
+<div class=""></div>
+<div class="page">
+<a href="{{ paginator.previous_page_path }}" class="pre_page">上一页</a>
+<span>{{ paginator.page }}/{{ paginator.total_pages }}</span>
+<a href="{{ paginator.next_page_path }}" class="next_page">下一页</a>
+</div>  
+  <!--           
+  <script type="text/javascript">
+    function TriggerPost(i){
+      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
+      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
+    }
+    var scrollFun=function(e){
+      e=e || window.event;
+      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
+      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
+    }
+    if(document.addEventListener){
+        document.addEventListener('DOMMouseScroll',scrollFun,false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFun;
+  </script> 
+  -->

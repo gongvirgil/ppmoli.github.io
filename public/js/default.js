@@ -1,9 +1,9 @@
 //当前版块
 $(document).ready(function(){
-	$(".nav li").width(100/$(".nav li").length+"%");
+	//$(".nav li").width(100/$(".nav li").length+"%");
 	document.getElementById(document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1])!=undefined?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";	
 })
-//切换版块
+/*//切换版块
 $(document).ready(function(){
   function animateBar($item,noAni){
     var spanLeft = $item.find('span').offset().left;
@@ -86,22 +86,16 @@ $(document).ready(function(){
     $('.x').on('click', 'a', function(){
       toggle($(this));
     });
-/*    $('.cate .y').on({
-      'mouseenter':function(){
-        $(this).find('p').show(1000);
-      },
-      'mouseleave':function(){
-        $(this).find('p').hide(); 
-      }
-    },'a');    */
 })
 //滚动条插件
 $(document).ready(function(){
   $(".scrollContent").mCustomScrollbar({
-/*    theme:"rounded-dark",
-    setWidth:$(".scrollContent").width()+"px"*/
   })        
-})
+})*/
+
+
+
+
 //返回顶部
 $(window).scroll(function(){
     if ($(document).scrollTop() != 0) 
@@ -116,6 +110,7 @@ $('#goTop a.goTop_btn').click(function(){
     }, 600);
 });
 //背景轮换
+/*
 function change_bg(){
 $("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
 }
@@ -123,3 +118,4 @@ $(document).ready(function(){
 	change_bg();
 	window.setInterval(change_bg, 1000*60*5);	
 })
+*/

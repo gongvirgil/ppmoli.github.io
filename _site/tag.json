@@ -1,5 +1,10 @@
 [
 
+  {"title":"解决子级float浮动父级无高度没有自适应问题",
+  "url":"http://gongvirgil.github.io/blog/2015-08-20/template.html",
+  "date":"2015-08-20",
+  "tags":["CSS"]}
+  ,
   {"title":"linux之vi编辑器命令使用",
   "url":"http://gongvirgil.github.io/blog/2015-04-03/linux-4.html",
   "date":"2015-04-03",
@@ -84,11 +89,6 @@
   "url":"http://gongvirgil.github.io/blog/2015-01-01/css.html",
   "date":"2015-01-01",
   "tags":["css" ,"笔记"]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
   ,
   {"title":"Template",
   "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",

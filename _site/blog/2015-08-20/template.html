@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>打包/压缩目录 | site of gongvirgil</title>
+    <title>解决子级float浮动父级无高度没有自适应问题 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -49,30 +49,34 @@
     <div id="content">
         <div class="post">
             <div class="post_title">
-                <h1><a href="/blog/2015-03-19/linux-3.html" title="打包/压缩目录">打包/压缩目录</a></h1>
+                <h1><a href="/blog/2015-08-20/template.html" title="解决子级float浮动父级无高度没有自适应问题">解决子级float浮动父级无高度没有自适应问题</a></h1>
             </div>
             <div class="post_relate">
-                <span class="post_date">2015-03-19</span>
+                <span class="post_date">2015-08-20</span>
                 <span class="post_tags">
                     
-                        <a href="/tags/?tag=linux" title="linux">linux</a>
+                        <a href="/tags/?tag=CSS" title="CSS">CSS</a>
                     
                 </span>
             </div>
             <div class="post_content">
-                <h2>打包/压缩目录</h2>
+                <p>当在对象内的盒子使用了float后，导致对象本身不能被撑开自适应高度，这个是由于浮动产生原因。</p>
 
-<p>范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar</p>
+<h4>方法一：clear:both 清除浮动</h4>
 
-<pre><code>[root@linux ~]# tar -cvf /tmp/etc.tar /etc &lt;==仅打包，不压缩！
-[root@linux ~]# tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩
-[root@linux ~]# tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩
+<pre><code>&lt;div class="father"&gt; 
+    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
+    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt; 
+    &lt;div style="clear:both;"&gt;&lt;/div&gt; 
+&lt;/div&gt; 
 </code></pre>
 
-<p>将 /tmp/etc.tar.gz 文件解压缩在 /usr/local/src 底下</p>
+<h4>方法二：对父级样式加overflow样式</h4>
 
-<pre><code>[root@linux ~]# cd /usr/local/src
-[root@linux src]# tar -zxvf /tmp/etc.tar.gz
+<pre><code>&lt;div class="father" style="over-flow:hidden;"&gt; 
+    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
+    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt; 
+&lt;/div&gt; 
 </code></pre>
             
             </div>
@@ -82,13 +86,13 @@
             </div>
         </div>
         <div class="pre-next">
-            <li class="pre">上一篇：<a href="/blog/2015-03-19/linux-2.html">linux批量替换字符串</a></a></li>
-            <li class="next">下一篇：<a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a></li>
+            <li class="pre">上一篇：<a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a></a></li>
+            <li class="next">下一篇：<a href="#">没有了</a></li>
         </div>
     </div>
     <script type="text/javascript" src="/public/js/post.js"></script>
     <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-3" data-title="打包/压缩目录" data-url="/blog/2015-03-19/linux-3.html"></div>
+        <div class="ds-thread" data-thread-key="/blog/2015-08-20/template" data-title="解决子级float浮动父级无高度没有自适应问题" data-url="/blog/2015-08-20/template.html"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">

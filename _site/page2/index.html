@@ -20,16 +20,19 @@
   <body>
     <!--Nav-->
     <div class="navbar navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
+          <div id="logo">
+            <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
+          </div>
           <ul class="nav navbar-nav">
-            <li id="blog"><a href="/"><span>HOME</span></a></li>
-            <li id="demo"><a href="/demo/"><span>DEMO</span></a></li>
-            <li id="about"><a href="/about/"><span>ABOUT</span></a></li>
+            <li id="blog"><a href="/">首页</a></li>
+            <li id="list"><a href="/list.html">归档</a></li>
+            <li id="about"><a href="/about.html">关于</a></li>
           </ul>
-        </div>
-        <div class="cate_select">
-          <span id="cate_on"></span>
+          <div id="search">
+            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          </div>
         </div>
       </div>
     </div>
@@ -39,364 +42,221 @@
     <!--Main-->
     <div class="main">
       <div class="left">
-        <div class=""></div>
-<div class="home" id="home">
-<div class="my_cate x">
-  <a id="cate">目录树</a>
 </div>
-<div class="cate y">
-  
-  <div class="x">
-    <a id="技术"><span>12</span>技术</a>
-  </div>
-  <div class="技术 y  scrollContent ">
-    <a class="list_head"><h3>技术</h3></a>
-    
-    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
-    
-    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
-    
-    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
-    
-    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
-    
-    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
-    
-    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
-    
-    <a href="/blog/2015-01-01/js.html">js笔记</a>
-    
-    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
-    
-    <a href="/blog/2015-01-01/html.html">html笔记</a>
-    
-    <a href="/blog/2015-01-01/css.html">css笔记</a>
-    
-    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
-    
-    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="生活"><span>2</span>生活</a>
-  </div>
-  <div class="生活 y ">
-    <a class="list_head"><h3>生活</h3></a>
-    
-    <a href="/blog/2015-03-04/2.html">随笔</a>
-    
-    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
-    
-  </div>
-  
-  <div class="x">
-    <a id="工具"><span>1</span>工具</a>
-  </div>
-  <div class="工具 y ">
-    <a class="list_head"><h3>工具</h3></a>
-    
-    <a href="/blog/2015-02-28/1.html">sublime常用快捷键</a>
-    
-  </div>
-  
-</div>   
-<div class="my_tags x">
-  <a id="tags">标签云</a>
-</div>
-<div class="tags y">
-  
-    <div class="x">
-      <a id="Linux" title="Linux"><span>1</span>Linux</a>
-    </div>
-    <div class="Linux y " tag="Linux">
-      <a href="#">Linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="笔记" title="笔记"><span>8</span>笔记</a>
-    </div>
-    <div class="笔记 y " tag="笔记">
-      <a href="#">笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="php" title="php"><span>1</span>php</a>
-    </div>
-    <div class="php y " tag="php">
-      <a href="#">php</a>
-    </div>
-  
-    <div class="x">
-      <a id="css" title="css"><span>2</span>css</a>
-    </div>
-    <div class="css y " tag="css">
-      <a href="#">css</a>
-    </div>
-  
-    <div class="x">
-      <a id="html" title="html"><span>1</span>html</a>
-    </div>
-    <div class="html y " tag="html">
-      <a href="#">html</a>
-    </div>
-  
-    <div class="x">
-      <a id="jquery" title="jquery"><span>1</span>jquery</a>
-    </div>
-    <div class="jquery y " tag="jquery">
-      <a href="#">jquery</a>
-    </div>
-  
-    <div class="x">
-      <a id="js" title="js"><span>1</span>js</a>
-    </div>
-    <div class="js y " tag="js">
-      <a href="#">js</a>
-    </div>
-  
-    <div class="x">
-      <a id="软件，笔记" title="软件，笔记"><span>1</span>软件，笔记</a>
-    </div>
-    <div class="软件，笔记 y " tag="软件，笔记">
-      <a href="#">软件，笔记</a>
-    </div>
-  
-    <div class="x">
-      <a id="Github" title="Github"><span>1</span>Github</a>
-    </div>
-    <div class="Github y " tag="Github">
-      <a href="#">Github</a>
-    </div>
-  
-    <div class="x">
-      <a id="Blog" title="Blog"><span>2</span>Blog</a>
-    </div>
-    <div class="Blog y " tag="Blog">
-      <a href="#">Blog</a>
-    </div>
-  
-    <div class="x">
-      <a id="Jekyll" title="Jekyll"><span>1</span>Jekyll</a>
-    </div>
-    <div class="Jekyll y " tag="Jekyll">
-      <a href="#">Jekyll</a>
-    </div>
-  
-    <div class="x">
-      <a id="工作" title="工作"><span>1</span>工作</a>
-    </div>
-    <div class="工作 y " tag="工作">
-      <a href="#">工作</a>
-    </div>
-  
-    <div class="x">
-      <a id="责任" title="责任"><span>1</span>责任</a>
-    </div>
-    <div class="责任 y " tag="责任">
-      <a href="#">责任</a>
-    </div>
-  
-    <div class="x">
-      <a id="心态" title="心态"><span>1</span>心态</a>
-    </div>
-    <div class="心态 y " tag="心态">
-      <a href="#">心态</a>
-    </div>
-  
-    <div class="x">
-      <a id="CSS" title="CSS"><span>1</span>CSS</a>
-    </div>
-    <div class="CSS y " tag="CSS">
-      <a href="#">CSS</a>
-    </div>
-  
-    <div class="x">
-      <a id="sublime" title="sublime"><span>1</span>sublime</a>
-    </div>
-    <div class="sublime y " tag="sublime">
-      <a href="#">sublime</a>
-    </div>
-  
-    <div class="x">
-      <a id="ThinkPHP" title="ThinkPHP"><span>1</span>ThinkPHP</a>
-    </div>
-    <div class="ThinkPHP y " tag="ThinkPHP">
-      <a href="#">ThinkPHP</a>
-    </div>
-  
-    <div class="x">
-      <a id="linux" title="linux"><span>4</span>linux</a>
-    </div>
-    <div class="linux y " tag="linux">
-      <a href="#">linux</a>
-    </div>
-  
-    <div class="x">
-      <a id="bootstrap" title="bootstrap"><span>1</span>bootstrap</a>
-    </div>
-    <div class="bootstrap y " tag="bootstrap">
-      <a href="#">bootstrap</a>
-    </div>
-  
-    <div class="x">
-      <a id="vi" title="vi"><span>1</span>vi</a>
-    </div>
-    <div class="vi y " tag="vi">
-      <a href="#">vi</a>
-    </div>
-  
-</div>
-</div>
-      </div>
-      <div class="middle">
-      <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<div class="middle">
+<link rel="stylesheet" type="text/css" href="/public/css/index.css">
+<link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 <div class="posts">
   <ul class="artical-list"  id="post_list">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    
+    <li>
+        <h2><a href="/blog/2015-02-28/1.html">sublime常用快捷键</a></h2>
+        <!-- <div class="title-desc"><p>
+</p></div> -->
+        <div class="title-desc"><p>sublime常用快捷键</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-02-28/1.html">2015-02-28</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-02-28/1.html" class="ds-thread-count" data-thread-key="/blog/2015-02-28/1" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-02-28/1.html" class="ds-thread-count" data-thread-key="/blog/2015-02-28/1" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● sublime</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a></h2>
+        <!-- <div class="title-desc"><p><p>其中的一中方案是使用jQuery插件，jquery-custom-content-scroller。使用插件的好处是显而易见的，但是坏处也多得去了。要是您想了解jQuery-custom-content-scroller的具体使用方法，请移步到：http://manos.malihu.gr/jquery-custom-content-scroller/</p>
+</p></div> -->
+        <div class="title-desc"><p>自定义滚动条样式</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-02-09/scroller.html">2015-02-09</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-02-09/scroller.html" class="ds-thread-count" data-thread-key="/blog/2015-02-09/scroller" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-02-09/scroller.html" class="ds-thread-count" data-thread-key="/blog/2015-02-09/scroller" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● CSS</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a></h2>
+        <!-- <div class="title-desc"><p><h2>这是一个文章题目</h2>
 
-<li>
-    <h2><a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></h2>
-    <div class="title-desc"><p><h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
-</p></div>
-    <div class="title-desc"><p><h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+<p>第一段</p>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-30/1.html">2015-01-30</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-30/1.html" class="ds-thread-count" data-thread-key="/blog/2015-01-30/1" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-30/1.html" class="ds-thread-count" data-thread-key="/blog/2015-01-30/1" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● 工作</a>
+                
+                <a href="">● 责任</a>
+                
+                <a href="">● 心态</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a></h2>
+        <!-- <div class="title-desc"><p><h2>安装ruby环境</h2>
 
-<pre><code>sed -i "s/XXXX/YYYY/g" `grep XXXX -rl /www/../..`
-</code></pre>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-19/linux-1.html">2015-03-19</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-19/linux-1.html" class="ds-thread-count" data-thread-key="/blog/2015-03-19/linux-1" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● linux</a>
-            
-      </div>
+<p>安装Jekyll，下载地址：[http://rubyinstaller.org/downloads/][]</p>
+</p></div> -->
+        <div class="title-desc"><p>安装Jekyll，下载地址：http://rubyinstaller.org/downloads/</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-19/jekyll.html">2015-01-19</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-19/jekyll.html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/jekyll" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-19/jekyll.html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/jekyll" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● Jekyll</a>
+                
+                <a href="">● Blog</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a></h2>
+        <!-- <div class="title-desc"><p><p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
+</p></div> -->
+        <div class="title-desc"><p>Github本身就是不错的代码社区，他也提供了一些其他的服务，比如Github Pages，使用它可以很方便的建立自己的独立博客，并且免费。</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-19/github-blog.html">2015-01-19</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-19/github-blog.html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/github-blog" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-19/github-blog.html" class="ds-thread-count" data-thread-key="/blog/2015-01-19/github-blog" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● Github</a>
+                
+                <a href="">● Blog</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a></h2>
+        <!-- <div class="title-desc"><p><h1>soft</h1>
+</p></div> -->
+        <div class="title-desc"><p>常用软件list和用法笔记</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-01/soft.html">2015-01-01</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-01/soft.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/soft" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-01/soft.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/soft" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● 软件，笔记</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-01/js.html">js笔记</a></h2>
+        <!-- <div class="title-desc"><p><h2>js简介</h2>
+</p></div> -->
+        <div class="title-desc"><p>js笔记</p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-01/js.html">2015-01-01</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-01/js.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/js" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● js</a>
+                
+                <a href="">● 笔记</a>
+                
+          </div>
+    </div>
+    </li> 
+    
+    <li>
+        <h2><a href="/blog/2015-01-01/jquery.html">jquery笔记</a></h2>
+        <!-- <div class="title-desc"><p><h2>jquery简介</h2>
+</p></div> -->
+        <div class="title-desc"><p></p></div>
+        <div class="post_meta">
+          <div  class="date">
+            <span></span><a href="/blog/2015-01-01/jquery.html">2015-01-01</a>
+          </div>
+          <div class="comment">
+            <span>评论</span><span href="/blog/2015-01-01/jquery.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/jquery" data-count-type="comments"></span>
+          </div>
+          <div class="repost">
+            <span>转发</span><span href="/blog/2015-01-01/jquery.html" class="ds-thread-count" data-thread-key="/blog/2015-01-01/jquery" data-count-type="reposts"></span>
+          </div>
+          <div class="post_tags">
+                
+                <a href="">● jquery</a>
+                
+                <a href="">● 笔记</a>
+                
+          </div>
+    </div>
+    </li> 
+       
+  </ul>
 </div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></h2>
-    <div class="title-desc"><p><h2>简介</h2>
-</p></div>
-    <div class="title-desc"><p><h2>简介</h2>
-
-<p>ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。</p>
-
-<h2>全面的WEB开发特性支持</h2>
-
-<p>最新的ThinkPHP为WEB应用开发提供了强有力的支持，这些支持包括：</p>
-
-<ul>
-<li>MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式</li>
-<li>ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库</li>
-<li>模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎</li>
-<li>RESTFul支持-REST模式提供了RESTFul支持，为你打造全新的URL设计和访问体验</li>
-<li>云引擎支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。</li>
-<li>CLI支持-支持基于命令行的应用开发</li>
-<li>AMF支持-支持Flex开发和Flash通讯，打造互联网富应用</li>
-<li>PHPRPC支持-提供基于PHPRpc的WEBService解决方案</li>
-<li>MongoDb支持-提供NoSQL的支持</li>
-<li>缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持</li>
-</ul>
-
-
-<h2>大道至简的开发理念</h2>
-
-<p>ThinkPHP从诞生以来一直秉承大道至简的开发理念，无论从底层实现还是应用开发，我们都倡导用最少的代码完成相同的功能，正是由于对简单的执着和代码的修炼，让我们长期保持出色的性能和极速的开发体验。在主流PHP开发框架的评测数据中表现卓越，简单和快速开发是我们不变的宗旨。</p>
-
-<h2>安全性</h2>
-
-<p>框架在系统层面提供了众多的安全特性，确保你的网站和产品安全无忧。这些特性包括：</p>
-
-<ul>
-<li>XSS安全防护</li>
-<li>表单自动验证</li>
-<li>强制数据类型转换</li>
-<li>输入数据过滤</li>
-<li>表单令牌验证</li>
-<li>防SQL注入</li>
-<li>图像上传检测</li>
-</ul>
-
-
-<h2>商业友好的开源协议</h2>
-
-<p>ThinkPHP遵循Apache2开源协议发布。Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再作为开源或商业软件发布。</p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html">2015-03-15</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-15/thinkphp.html" class="ds-thread-count" data-thread-key="/blog/2015-03-15/thinkphp" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● ThinkPHP</a>
-            
-            <a href="">● 笔记</a>
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-03-04/2.html">随笔</a></h2>
-    <div class="title-desc"><p><p>1111</p>
-</p></div>
-    <div class="title-desc"><p><p>1111</p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-03-04/2.html">2015-03-04</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-03-04/2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-04/2" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-03-04/2.html" class="ds-thread-count" data-thread-key="/blog/2015-03-04/2" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-      </div>
-</div>
-</li> 
-
-<li>
-    <h2><a href="/blog/2015-02-28/1.html">sublime常用快捷键</a></h2>
-    <div class="title-desc"><p>
-</p></div>
-    <div class="title-desc"><p>
-</p></div>
-    <div class="post_meta">
-      <div  class="date">
-        <span></span><a href="/blog/2015-02-28/1.html">2015-02-28</a>
-      </div>
-      <div class="comment">
-        <span></span><a href="/blog/2015-02-28/1.html" class="ds-thread-count" data-thread-key="/blog/2015-02-28/1" data-count-type="comments"></a>
-      </div>
-      <div class="repost">
-        <span></span><a href="/blog/2015-02-28/1.html" class="ds-thread-count" data-thread-key="/blog/2015-02-28/1" data-count-type="reposts"></a>
-      </div>
-      <div class="post_tags">
-            
-            <a href="">● sublime</a>
-            
-      </div>
-</div>
-</li> 
-                              
+<div class=""></div>
+<div class="page">
+<a href="/index.html" class="pre_page">上一页</a>
+<span>2/4</span>
+<a href="/page3" class="next_page">下一页</a>
+</div>                           
 <!-- 多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"gongvirgil"};
@@ -407,35 +267,272 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     ds.charset = 'UTF-8';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
-</script>                               
-  </ul>
+</script>
 </div>
-<div class=""></div>
-<div class="page">
-<a href="/index.html" class="pre_page">上一页</a>
-<span>2/7</span>
-<a href="/page3" class="next_page">下一页</a>
-</div>  
-  <!--           
-  <script type="text/javascript">
-    function TriggerPost(i){
-      if(i && $("#post_list li[class!='out']").length>2) $("#post_list li[class!='out']").eq(0).addClass('out').fadeOut(600)
-      else if(!i) $("#post_list li.out").eq($("#post_list li.out").length-1).removeClass('out').fadeIn(600)
-    }
-    var scrollFun=function(e){
-      e=e || window.event;
-      if(arguments.callee.timer) clearTimeout(arguments.callee.timer);
-      arguments.callee.timer = setTimeout("TriggerPost("+(e.detail?e.detail>0:e.wheelDelta<0)+")",1);
-    }
-    if(document.addEventListener){
-        document.addEventListener('DOMMouseScroll',scrollFun,false);
-    }
-    window.onmousewheel=document.onmousewheel=scrollFun;
-  </script> 
-  -->
-      </div>
-      <div class="right"></div>
-      <div style="clear:both;"></div>
+<div class="right">
+    <div id="side-bar">
+        <div id="category">
+            <h4>文章分类</h4>
+            <div class="list-content">
+              
+              <li><a href="/category.html#分类-技术">技术<span class="cate-size">13</span></a></li>
+              
+              <li><a href="/category.html#分类-生活">生活<span class="cate-size">2</span></a></li>
+              
+              <li><a href="/category.html#分类-工具">工具<span class="cate-size">1</span></a></li>
+              
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="tag">
+            <h4>标签</h4>
+            <div  class="tag-cloud">
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Linux" title="1" style="font-size: 9.5pt; color: #999;">Linux</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-笔记" title="8" style="font-size: 11pt; color: #777;">笔记</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-php" title="1" style="font-size: 9.5pt; color: #999;">php</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-css" title="2" style="font-size: 9.5pt; color: #888;">css</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-html" title="1" style="font-size: 9.5pt; color: #999;">html</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-jquery" title="1" style="font-size: 9.5pt; color: #999;">jquery</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-js" title="1" style="font-size: 9.5pt; color: #999;">js</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-软件，笔记" title="1" style="font-size: 9.5pt; color: #999;">软件，笔记</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Github" title="1" style="font-size: 9.5pt; color: #999;">Github</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Blog" title="2" style="font-size: 9.5pt; color: #888;">Blog</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-Jekyll" title="1" style="font-size: 9.5pt; color: #999;">Jekyll</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-工作" title="1" style="font-size: 9.5pt; color: #999;">工作</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-责任" title="1" style="font-size: 9.5pt; color: #999;">责任</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-心态" title="1" style="font-size: 9.5pt; color: #999;">心态</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-CSS" title="2" style="font-size: 9.5pt; color: #888;">CSS</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-sublime" title="1" style="font-size: 9.5pt; color: #999;">sublime</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-ThinkPHP" title="1" style="font-size: 9.5pt; color: #999;">ThinkPHP</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-linux" title="4" style="font-size: 10pt; color: #888;">linux</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-bootstrap" title="1" style="font-size: 9.5pt; color: #999;">bootstrap</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html#标签-vi" title="1" style="font-size: 9.5pt; color: #999;">vi</a>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="comment">
+            <h4>最近评论</h4>
+            <!-- 多说最新评论 start -->
+              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
+            <!-- 多说最新评论 end -->
+            <div class="clear"></div>
+        </div>
+    </div
+
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gongvirgil"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+<div style="clear:both;"></div>
     </div>
     <!--Main End-->
     <div class="goTop" id="goTop">
@@ -443,10 +540,24 @@ var duoshuoQuery = {short_name:"gongvirgil"};
     </div>
     <!--Footer-->
     <div class="footer">
-      <div class="footer_info">
-	<p>© 2012-2014 gongvirgil.github.io</p>
-</div>      
-<div class="tj"></div>
+      <div class="footer-inner">
+    <div class="footer-category">
+      
+      <a href="/category.html#分类-技术">技术</a>
+      
+      <a href="/category.html#分类-生活">生活</a>
+      
+      <a href="/category.html#分类-工具">工具</a>
+      
+    </div>
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span><a>1111</a><em>|</em><a>22222222</a>
+        </div>
+    	<p>© 2012-2014 gongvirgil.github.io</p>
+    </div>      
+    <div class="tj"></div>
+</div>
     </div>
     <!--Footer End-->
   </body>
