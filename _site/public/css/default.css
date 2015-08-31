@@ -189,13 +189,20 @@ a:hover {
     color: #000;
     text-align: center;
 }
-.friendly-links a {
-    color: #fff;
+
+.friendly-links {
+    font-size: 14px;
 }
+
+.friendly-links span {
+    margin-right: 5px;
+}
+
 .friendly-links em {
-    padding: 0 5px;
+    padding: 0 10px;
     font-style: normal;
 }
+
 .left .home {
     position: absolute;
 }
@@ -367,8 +374,7 @@ a:hover {
     line-height: 20px;
 }
 
-.list-content li a {
-}
+.list-content li a {}
 
 .list-content li a span {
     margin-left: 2px;
