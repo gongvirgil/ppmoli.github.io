@@ -46,6 +46,7 @@ body {
     font: 14px/200% "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
     word-wrap: break-word;
     background-color: #fff;
+    overflow: hidden;
     /* background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 / 100% 100% #fff; */
 }
 
