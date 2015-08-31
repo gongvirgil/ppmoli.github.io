@@ -1,75 +1,96 @@
 #content {
-	font-family:Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
-	color: #3333;
-	font-size: 16px;
-	letter-spacing: 0.01rem;
-	line-height: 1.8;
-	background-color: #fff;
-	opacity: 0.9;
-	padding: 50px;
+    font-family: Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    color: #3333;
+    font-size: 16px;
+    letter-spacing: 0.01rem;
+    line-height: 1.8;
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 50px 0;
 }
-h1,h2,h3,h4,h5,h6{
-	font-family: inherit;
-	font-weight: 500;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
 }
+
 .ds-thread {
-	background-color: #fff;opacity: 0.9;padding: 20px;	
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 20px 0;
 }
+
 #content p {
-	margin-bottom: 1em;
+    margin-bottom: 0.1em;
 }
-.post .post_title{
-	height: 80px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #e5e5e5;
+
+.post .post_title {
+    height: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
-.post .post_content{
-	min-height: 100px;
-	padding: 20px 0;
-	overflow: hidden;
+
+.post .post_content {
+    min-height: 100px;
+    padding: 20px 0;
+    overflow: hidden;
 }
+
 .post_relate {
-	color: #a7aab1;
-	font-size: 13px;
-}
-.post_tags a {margin-left: 10px;}
-.pre-next {
-
-}
-.pre-next .pre{
-	float: left;
-}
-.pre-next .next{
-	float: right;
+    color: #a7aab1;
+    font-size: 13px;
 }
 
+.post_tags a {
+    margin-left: 10px;
+}
+
+.pre-next {}
+
+.pre-next .pre {
+    float: left;
+}
+
+.pre-next .next {
+    float: right;
+}
 
 
 /*Table of contents*/
+
 .BlogAnchor {
     line-height: 180%;
-	position: absolute;
-	right: 100px;
-	top: 175px;
-	width: 200px;
-	padding: 20px;
-	background-color: #fff;
-	opacity: 0.9;
-	font-size: 14px;
+    position: absolute;
+    right: 100px;
+    top: 175px;
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    opacity: 0.9;
+    font-size: 14px;
     list-style-type: none;
 }
+
 .BlogAnchor p {
     font-size: 18px;
     color: #15a230;
     margin-bottom: 0.3em;
 }
+
 .BlogAnchor .AnchorContent {
     padding: 5px 0px;
 }
-.BlogAnchor li{
-   /*  text-indent: 20px; */
+
+.BlogAnchor li {
+    /*  text-indent: 20px; */
     font-size: 14px;
 }
+
 #AnchorContentToggle {
     font-size: 13px;
     font-weight: normal;
