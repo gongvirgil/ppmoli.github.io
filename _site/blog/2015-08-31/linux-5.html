@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>打包/压缩目录 | site of gongvirgil</title>
+    <title>Linux中cp直接覆盖不提示的方法 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -49,10 +49,10 @@
     <div id="content">
         <div class="post">
             <div class="post_title">
-                <h1><a href="/blog/2015-03-19/linux-3.html" title="打包/压缩目录">打包/压缩目录</a></h1>
+                <h1><a href="/blog/2015-08-31/linux-5.html" title="Linux中cp直接覆盖不提示的方法">Linux中cp直接覆盖不提示的方法</a></h1>
             </div>
             <div class="post_relate">
-                <span class="post_date">2015-03-19</span>
+                <span class="post_date">2015-08-31</span>
                 <span class="post_tags">
                     
                         <a href="/tags/?tag=linux" title="linux">linux</a>
@@ -60,20 +60,31 @@
                 </span>
             </div>
             <div class="post_content">
-                <h2>打包/压缩目录</h2>
+                <p>　　cp覆盖时，无论加什么参数-f之类的还是提示是否覆盖，这在大量cp覆盖操作的时候是不能忍受的。</p>
 
-<p>范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar</p>
+<p>　　把a目录下的文件复制到b目录</p>
 
-<pre><code>[root@linux ~]# tar -cvf /tmp/etc.tar /etc &lt;==仅打包，不压缩！
-[root@linux ~]# tar -zcvf /tmp/etc.tar.gz /etc &lt;==打包后，以 gzip 压缩
-[root@linux ~]# tar -jcvf /tmp/etc.tar.bz2 /etc &lt;==打包后，以 bzip2 压缩
-</code></pre>
+<p>　　cp –r a/* b</p>
 
-<p>将 /tmp/etc.tar.gz 文件解压缩在 /usr/local/src 底下</p>
+<p>　　执行上面的命令时，b存在的每个文件都会提示是否覆盖;</p>
 
-<pre><code>[root@linux ~]# cd /usr/local/src
-[root@linux src]# tar -zxvf /tmp/etc.tar.gz
-</code></pre>
+<p>　　cp –r –f a/* b</p>
+
+<p>　　执行上面的命令时，b存在的每个文件都不再会提示;</p>
+
+<p>　　这是我们希望的理想状态，但是有时加了-f了，怎么还会有提示呢？原来一些服务器会默认增加别名 alias cp='cp -i'，当你执行cp时，其实执行的是cp –i。</p>
+
+<p>　　在终端执行alias就可以看出来了。</p>
+
+<p>　　[root@devdb ~]# alias</p>
+
+<p>　　alias cp='cp -i'</p>
+
+<p>　　可以这样解决</p>
+
+<p>　　[root@devdb ~]# vi ~/.bashrc</p>
+
+<p>　　在alias cp='cp -i'前加上"#"注释掉这行，：wq!保存推出，然后重新登陆就可以了。</p>
             
             </div>
             <div class="BlogAnchor">
@@ -82,13 +93,13 @@
             </div>
         </div>
         <div class="pre-next">
-            <li class="pre">上一篇：<a href="/blog/2015-03-19/linux-2.html">linux批量替换字符串</a></a></li>
-            <li class="next">下一篇：<a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a></li>
+            <li class="pre">上一篇：<a href="/blog/2015-08-20/div-float.html">解决子级float浮动父级无高度没有自适应问题</a></a></li>
+            <li class="next">下一篇：<a href="#">没有了</a></li>
         </div>
     </div>
     <script type="text/javascript" src="/public/js/post.js"></script>
     <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-3" data-title="打包/压缩目录" data-url="/blog/2015-03-19/linux-3.html"></div>
+        <div class="ds-thread" data-thread-key="/blog/2015-08-31/linux-5" data-title="Linux中cp直接覆盖不提示的方法" data-url="/blog/2015-08-31/linux-5.html"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">

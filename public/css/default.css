@@ -56,7 +56,7 @@ li {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: #000;
+    color: #3e3b3f;
 }
 
 a:hover {
@@ -178,9 +178,15 @@ a:hover {
     line-height: 25px;
     border: 1px solid #666666;
     border-radius: 3px;
-    color: #cccccc;
+    color: #ccc;
     margin-right: 5px;
     margin-bottom: 8px;
+}
+
+.footer-category a:hover {
+    background-color: #2fa691;
+    border-color: #2fa691;
+    box-shadow: 0 0 6px #2fa691;
 }
 
 .footer_info {
@@ -196,6 +202,14 @@ a:hover {
 
 .friendly-links span {
     margin-right: 5px;
+}
+
+.friendly-links a {
+    color: #000;
+}
+
+.friendly-links a:hover {
+    color: #2fa691;
 }
 
 .friendly-links em {
@@ -342,14 +356,14 @@ a:hover {
     display: none;
 }
 
-.goTop_btn {
+#goTop_btn {
     background: url("../images/goTop.jpg") no-repeat scroll -50px 0 rgba(0, 0, 0, 0);
     display: block;
     height: 50px;
     width: 50px;
 }
 
-.goTop .goTop_btn:hover {
+#goTop_btn:hover {
     background-position: 0 0;
 }
 

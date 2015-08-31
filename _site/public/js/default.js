@@ -1,8 +1,32 @@
 //当前版块
 $(document).ready(function(){
-	//$(".nav li").width(100/$(".nav li").length+"%");
 	document.getElementById(document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1])!=undefined?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";	
 })
+
+
+//返回顶部
+$(window).scroll(function(){
+    if ($(document).scrollTop() != 0) 
+        $('.goTop').show();
+    else 
+        $('.goTop').hide();
+});
+$(document).ready(function() {
+  $('#goTop_btn').click(function(){
+      $('html, body').animate({scrollTop: 0}, 600);
+  });
+});
+
+//背景轮换
+/*function change_bg(){
+$("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
+}
+$(document).ready(function(){
+	change_bg();
+	window.setInterval(change_bg, 1000*60*5);	
+})*/
+
+
 /*//切换版块
 $(document).ready(function(){
   function animateBar($item,noAni){
@@ -46,21 +70,21 @@ $(document).ready(function(){
 $.ajax.async = false;
 $.getJSON("/tag.json",
 function(data) {
-	$('.tags .y').each(function(index, el) {
-	  var tagstr = $(this).attr('tag');
-	  $('.tags .'+tagstr).empty();
-	  var content = "<a class=\"list_head\"><h3>文章列表</h3></a>";
-	  $.each(data,
-	  function(i, item) {
-	    $.each(item.tags,
-	    function(j, tag) {
-	      if (tag == tagstr) {
-	        content += "<a href=\"" + item.url + "\">" + item.title + "</a>";
-	      }
-	    });
-	  });
-	  $('.tags .'+tagstr).append(content);       
-	})           
+  $('.tags .y').each(function(index, el) {
+    var tagstr = $(this).attr('tag');
+    $('.tags .'+tagstr).empty();
+    var content = "<a class=\"list_head\"><h3>文章列表</h3></a>";
+    $.each(data,
+    function(i, item) {
+      $.each(item.tags,
+      function(j, tag) {
+        if (tag == tagstr) {
+          content += "<a href=\"" + item.url + "\">" + item.title + "</a>";
+        }
+      });
+    });
+    $('.tags .'+tagstr).append(content);       
+  })           
 }) 
 //左侧分类导航封顶
 $(document).ready(function(){
@@ -92,30 +116,3 @@ $(document).ready(function(){
   $(".scrollContent").mCustomScrollbar({
   })        
 })*/
-
-
-
-
-//返回顶部
-$(window).scroll(function(){
-    if ($(document).scrollTop() != 0) 
-        $('#goTop').show();
-    else 
-        $('#goTop').hide();
-});
-$('#goTop a.goTop_btn').click(function(){
-	alert("11");
-    $('html, body').animate({
-        scrollTop: 0
-    }, 600);
-});
-//背景轮换
-/*
-function change_bg(){
-$("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
-}
-$(document).ready(function(){
-	change_bg();
-	window.setInterval(change_bg, 1000*60*5);	
-})
-*/

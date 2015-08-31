@@ -25,7 +25,7 @@
 .title-desc p,
 .introduce p {
     text-indent: 2em;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .post_meta {
@@ -34,6 +34,7 @@
     padding-top: 8px;
     height: 20px;
     color: #999;
+    overflow: hidden;
 }
 
 .post_meta a {

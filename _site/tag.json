@@ -1,7 +1,12 @@
 [
 
+  {"title":"Linux中cp直接覆盖不提示的方法",
+  "url":"http://gongvirgil.github.io/blog/2015-08-31/linux-5.html",
+  "date":"2015-08-31",
+  "tags":["linux"]}
+  ,
   {"title":"解决子级float浮动父级无高度没有自适应问题",
-  "url":"http://gongvirgil.github.io/blog/2015-08-20/template.html",
+  "url":"http://gongvirgil.github.io/blog/2015-08-20/div-float.html",
   "date":"2015-08-20",
   "tags":["CSS"]}
   ,
@@ -89,31 +94,6 @@
   "url":"http://gongvirgil.github.io/blog/2015-01-01/css.html",
   "date":"2015-01-01",
   "tags":["css" ,"笔记"]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
-  ,
-  {"title":"Template",
-  "url":"http://gongvirgil.github.io/blog/1000-01-01/template.html",
-  "date":"1000-01-01",
-  "tags":[]}
   ,
   {"title":"php知识笔记",
   "url":"http://gongvirgil.github.io/blog/1000-01-01/php.html",
