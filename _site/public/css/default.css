@@ -373,7 +373,7 @@ a:hover {
 
 /*side-bar*/
 
-#category h4, #tag h4, #comment h4, #BlogAnchor h4{
+#category h4, #tag h4, #comment h4{
     border-bottom: 1px solid #ddd;
     color: #2FA691;
     font-weight: normal;

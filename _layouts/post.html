@@ -34,50 +34,12 @@ comments: true
         </div>
     </div>
     <div class="right">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="收起" style="cursor:pointer;">[<span>-</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-        <div id="category">
-            <h4>文章分类</h4>
-            <div class="list-content">
-              {% for category in site.categories %}
-              <li><a href="/category.html#{{ site.pre-cate }}{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a></li>
-              {% endfor %}
-            </div>
-            <div class="clear"></div>
+        <div class="post-anchor">
+            <div id="BlogAnchor">
+                <h4>目录<a id="AnchorContentToggle" title="收起" style="cursor:pointer;">[<span>-</span>]</a></h4>
+                <div class="AnchorContent" id="AnchorContent"></div>
+            </div> 
         </div>
-        <div id="tag">
-            <h4>标签</h4>
-            <div  class="tag-cloud">
-                {% for tag in site.tags %}
-                  {% assign temp = tag[1].size %}
-                  {% assign base = temp | divided_by: 4 %}
-                  {% assign remain = temp | modulo: 4 %}
-                  {% if remain == 0 %}
-                    {% assign size = base | plus: 9 %}
-                  {% elsif remain == 1 or remain == 2 %}
-                    {% assign size = base | plus: 9 | append: '.5' %}
-                  {% else %}
-                    {% assign size = base | plus: 10 %}
-                  {% endif %}
-                  {% if remain == 0 or remain == 1 %}
-                    {% assign color = 9 | minus: base %}
-                  {% else %}
-                    {% assign color = 8 | minus: base %}
-                  {% endif %}
-                  <a href="/tag.html#{{ site.pre-tag }}{{ tag[0] }}" title="{{ tag[1].size }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
-                {% endfor %}
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div id="comment">
-            <h4>最近评论</h4>
-            <!-- 多说最新评论 start -->
-              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
-            <!-- 多说最新评论 end -->
-            <div class="clear"></div>
-        </div> 
     </div>
     <div style="clear:both;"></div>
     <script type="text/javascript" src="/public/js/post.js"></script>

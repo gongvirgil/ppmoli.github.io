@@ -61,20 +61,23 @@ h6 {
 
 /*Table of contents*/
 
-.BlogAnchor {
+.post-anchor {
     line-height: 180%;
     position: absolute;
-    right: 100px;
+    right: 2%;
     top: 175px;
-    width: 200px;
-    padding: 20px;
+    padding: 5%;
     background-color: #fff;
-    opacity: 0.9;
-    font-size: 14px;
     list-style-type: none;
 }
-
-.BlogAnchor p {
+#BlogAnchor h4{
+    border-bottom: 1px solid #ddd;
+    color: #2FA691;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 5px 0;
+}
+/* .BlogAnchor p {
     font-size: 18px;
     color: #15a230;
     margin-bottom: 0.3em;
@@ -85,11 +88,11 @@ h6 {
 }
 
 .BlogAnchor li {
-    /*  text-indent: 20px; */
+    text-indent: 20px;
     font-size: 12px;
 }
 
-/* #AnchorContentToggle {
+#AnchorContentToggle {
     font-size: 13px;
     font-weight: normal;
     color: #FFF;
