@@ -1,5 +1,10 @@
 [
 
+  {"title":"git常用的一些命令",
+  "url":"http://gongvirgil.github.io/blog/2015-09-01/git-do.html",
+  "date":"2015-09-01",
+  "tags":["git"]}
+  ,
   {"title":"Linux中cp直接覆盖不提示的方法",
   "url":"http://gongvirgil.github.io/blog/2015-08-31/linux-5.html",
   "date":"2015-08-31",

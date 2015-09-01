@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Linux中cp直接覆盖不提示的方法 | site of gongvirgil</title>
+    <title>git常用的一些命令 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -49,51 +49,48 @@
         <div id="content">
             <div class="post">
                 <div class="post_title">
-                    <h1><a href="/blog/2015-08-31/linux-5.html" title="Linux中cp直接覆盖不提示的方法">Linux中cp直接覆盖不提示的方法</a></h1>
+                    <h1><a href="/blog/2015-09-01/git-do.html" title="git常用的一些命令">git常用的一些命令</a></h1>
                 </div>
                 <div class="post_relate">
-                    <span class="post_date">2015-08-31</span>
+                    <span class="post_date">2015-09-01</span>
                     <span class="post_tags">
                         
-                            <a href="/tags/?tag=linux" title="linux">linux</a>
+                            <a href="/tags/?tag=git" title="git">git</a>
                         
                     </span>
                 </div>
                 <div class="post_content">
-                    <p>　　cp覆盖时，无论加什么参数-f之类的还是提示是否覆盖，这在大量cp覆盖操作的时候是不能忍受的。</p>
+                    <pre><code>$ git status
 
-<p>　　把a目录下的文件复制到b目录</p>
+$ git add .
+</code></pre>
 
-<p>　　cp –r a/* b</p>
+<h2>自动追踪文件，包括你已经手动删除的，状态为Deleted的文件</h2>
 
-<p>　　执行上面的命令时，b存在的每个文件都会提示是否覆盖;</p>
+<pre><code>$ git add -u 
 
-<p>　　cp –r –f a/* b</p>
+$ git rm .../... -r -f
 
-<p>　　执行上面的命令时，b存在的每个文件都不再会提示;</p>
+$ git checkout . 
 
-<p>　　这是我们希望的理想状态，但是有时加了-f了，怎么还会有提示呢？原来一些服务器会默认增加别名 alias cp='cp -i'，当你执行cp时，其实执行的是cp –i。</p>
+$ git commit -m "..."
 
-<p>　　在终端执行alias就可以看出来了。</p>
+$ git push origin master
 
-<p>　　[root@devdb ~]# alias</p>
 
-<p>　　alias cp='cp -i'</p>
-
-<p>　　可以这样解决</p>
-
-<p>　　[root@devdb ~]# vi ~/.bashrc</p>
-
-<p>　　在alias cp='cp -i'前加上"#"注释掉这行，：wq!保存推出，然后重新登陆就可以了。</p>
+rake post title="文章标题"
+rake page name="页面名称.md"
+rake page name="pages/页面名称.md"
+</code></pre>
             
                 </div>
             </div>
             <div class="pre-next">
-                <li class="pre">上一篇：<a href="/blog/2015-08-20/div-float.html">解决子级float浮动父级无高度没有自适应问题</a></a></li>
-                <li class="next">下一篇：<a href="/blog/2015-09-01/git-do.html">git常用的一些命令</a></li>
+                <li class="pre">上一篇：<a href="/blog/2015-08-31/linux-5.html">Linux中cp直接覆盖不提示的方法</a></a></li>
+                <li class="next">下一篇：<a href="#">没有了</a></li>
             </div>
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-08-31/linux-5" data-title="Linux中cp直接覆盖不提示的方法" data-url="/blog/2015-08-31/linux-5.html"></div>
+            <div class="ds-thread" data-thread-key="/blog/2015-09-01/git-do" data-title="git常用的一些命令" data-url="/blog/2015-09-01/git-do.html"></div>
             <!-- 多说评论框 end -->
         </div>
     </div>
