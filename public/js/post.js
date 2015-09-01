@@ -3,6 +3,16 @@ $(document).ready(function(){
     $.getScript('/public/js/prettify.js',function(){
         prettyPrint();
     });
+	$(".post_content").find("h2,h3,h4,h5,h6").each(function(i,item){
+	    var tag = $(item).get(0).localName;
+	    $(item).attr("id","wow"+i);
+	    $("#AnchorContent").append('<li><a class="new'+tag+' anchor-link" onclick="return false;" href="#" link="#wow'+i+'">'+(i+1)+" · "+$(this).text()+'</a></li>');
+	    $(".newh2").css("margin-left",0);
+	    $(".newh3").css("margin-left",5);
+	    $(".newh4").css("margin-left",10);
+	    $(".newh5").css("margin-left",15);
+	    $(".newh6").css("margin-left",20);
+	});
     //文章页文章导航封顶
 	function fixed(id,position,top){
 		var navH = $(id).offset().top;
@@ -17,16 +27,6 @@ $(document).ready(function(){
 	}
   	fixed($(".BlogAnchor"),"absolute","50px");
 	//在文章中查找title并填充到div AnchorContent中
-	$(".post_content").find("h2,h3,h4,h5,h6").each(function(i,item){
-	    var tag = $(item).get(0).localName;
-	    $(item).attr("id","wow"+i);
-	    $("#AnchorContent").append('<li><a class="new'+tag+' anchor-link" onclick="return false;" href="#" link="#wow'+i+'">'+(i+1)+" · "+$(this).text()+'</a></li>');
-	    $(".newh2").css("margin-left",0);
-	    $(".newh3").css("margin-left",20);
-	    $(".newh4").css("margin-left",40);
-	    $(".newh5").css("margin-left",60);
-	    $(".newh6").css("margin-left",80);
-	});
 	$("#AnchorContentToggle").click(function(){
 		var obj = $(this).find('span');
 	    var text = obj.html();

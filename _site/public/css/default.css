@@ -73,6 +73,7 @@ a:hover {
     height: 50px;
     border-top: 5px solid #2fa691;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
     overflow: hidden;
 }
 
@@ -136,7 +137,7 @@ a:hover {
 }
 
 .main {
-    padding: 50px 0;
+    margin-bottom: 5px;
     min-height: 500px;
 }
 
@@ -372,7 +373,7 @@ a:hover {
 
 /*side-bar*/
 
-#side-bar h4 {
+#category h4, #tag h4, #comment h4, #BlogAnchor h4{
     border-bottom: 1px solid #ddd;
     color: #2FA691;
     font-weight: normal;
