@@ -22,47 +22,27 @@
     <div class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
-          <div id="logo">
+          <div class="logo">
             <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
           </div>
-          <ul class="nav navbar-nav">
-            <li id="blog"><a href="/">首页</a></li>
-            <li id="list"><a href="/list.html">归档</a></li>
-            <li id="about"><a href="/about.html">关于</a></li>
-          </ul>
-          <!--
-          <div id="search">
-            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          <div class="menu">
+            <a id="side-bar-btn">MENU</a>
           </div>
-          -->
         </div>
       </div>
     </div>
     <!--Nav End-->
     <div class="notice"></div>
-    <div class="side_bar"></div>
-    <!--Main-->
-    <div class="main">
-      <div class="left">
-</div>
-<div class="middle">
-<div class="main-article main-article-page">
-    <div class="violet-title">
-        <h3 class="violet-title-item">404 Not Found!</h3>
-    </div>
-    <div class="violet-post">
-        <div class="main-article-contant">
-            <h4>很抱歉：</h4>
-            <p>您访问的页面不存在！<a href="/">【返回首页】</a></p>
+    <div class="shadow-screen"></div>
+    <div class="side-bar">
+      <a id="side-bar-close-btn">X</a>
+              <div id="menu-pages">
+          <li><a>HOME</a></li>
+          <li><a>ALL POSTS</a></li>
+          <li><a>CONTACT ME</a></li>
         </div>
-    </div>
-</div>
-
-</div>
-<div class="right">
-
         <div id="category">
-            <h4>文章分类</h4>
+            <h4>CATEGORY</h4>
             <div class="list-content">
               
               <li><a href="/category.html#分类-技术">技术<span class="cate-size">14</span></a></li>
@@ -75,7 +55,7 @@
             <div class="clear"></div>
         </div>
         <div id="tag">
-            <h4>标签</h4>
+            <h4>TAGS</h4>
             <div  class="tag-cloud">
                 
                   
@@ -312,26 +292,30 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="comment">
-            <h4>最近评论</h4>
-            <!-- 多说最新评论 start -->
-              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
-            <!-- 多说最新评论 end -->
-            <div class="clear"></div>
+
+
+
+    </div>
+    <!--Main-->
+    <div class="main">
+      <div class="left">
+</div>
+<div class="middle">
+<div class="main-article main-article-page">
+    <div class="violet-title">
+        <h3 class="violet-title-item">404 Not Found!</h3>
+    </div>
+    <div class="violet-post">
+        <div class="main-article-contant">
+            <h4>很抱歉：</h4>
+            <p>您访问的页面不存在！<a href="/">【返回首页】</a></p>
         </div>
+    </div>
+</div>
 
+</div>
+<div class="right">
 
-<!-- 多说js加载开始，一个页面只需要加载一次 -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gongvirgil"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
 </div>
 <div style="clear:both;"></div>
     </div>
@@ -361,5 +345,16 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 </div>
     </div>
     <!--Footer End-->
+    <!-- 多说js加载开始，一个页面只需要加载一次 -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"gongvirgil"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   </body>
 </html>

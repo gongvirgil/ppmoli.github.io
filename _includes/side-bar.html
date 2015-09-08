@@ -1,6 +1,10 @@
-
+        <div id="menu-pages">
+          <li><a>HOME</a></li>
+          <li><a>ALL POSTS</a></li>
+          <li><a>CONTACT ME</a></li>
+        </div>
         <div id="category">
-            <h4>文章分类</h4>
+            <h4>CATEGORY</h4>
             <div class="list-content">
               {% for category in site.categories %}
               <li><a href="/category.html#{{ site.pre-cate }}{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a></li>
@@ -9,7 +13,7 @@
             <div class="clear"></div>
         </div>
         <div id="tag">
-            <h4>标签</h4>
+            <h4>TAGS</h4>
             <div  class="tag-cloud">
                 {% for tag in site.tags %}
                   {% assign temp = tag[1].size %}
@@ -32,23 +36,5 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="comment">
-            <h4>最近评论</h4>
-            <!-- 多说最新评论 start -->
-              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
-            <!-- 多说最新评论 end -->
-            <div class="clear"></div>
-        </div>
 
 
-<!-- 多说js加载开始，一个页面只需要加载一次 -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ site.short_name }}"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>

@@ -22,25 +22,22 @@
     <div class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
-          <div id="logo">
+          <div class="logo">
             <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
           </div>
-          <ul class="nav navbar-nav">
-            <li id="blog"><a href="/">首页</a></li>
-            <li id="list"><a href="/list.html">归档</a></li>
-            <li id="about"><a href="/about.html">关于</a></li>
-          </ul>
-          <!--
-          <div id="search">
-            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          <div class="menu">
+            <a id="side-bar-btn">MENU</a>
           </div>
-          -->
         </div>
       </div>
     </div>
     <!--Nav End-->
     <div class="notice"></div>
-    <div class="side_bar"></div>
+    <div class="shadow-screen"></div>
+    <div class="side-bar">
+      <a id="side-bar-close-btn">X</a>
+      {% include side-bar.html  %}
+    </div>
     <!--Main-->
     <div class="main">
       {{ content }}
@@ -54,5 +51,16 @@
       {% include footer.html  %}
     </div>
     <!--Footer End-->
+    <!-- 多说js加载开始，一个页面只需要加载一次 -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.short_name }}"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   </body>
 </html>

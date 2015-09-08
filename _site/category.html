@@ -22,139 +22,27 @@
     <div class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
-          <div id="logo">
+          <div class="logo">
             <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
           </div>
-          <ul class="nav navbar-nav">
-            <li id="blog"><a href="/">首页</a></li>
-            <li id="list"><a href="/list.html">归档</a></li>
-            <li id="about"><a href="/about.html">关于</a></li>
-          </ul>
-          <!--
-          <div id="search">
-            <input name="search" type="text" autocomplete="off" placeholder="搜索" >
+          <div class="menu">
+            <a id="side-bar-btn">MENU</a>
           </div>
-          -->
         </div>
       </div>
     </div>
     <!--Nav End-->
     <div class="notice"></div>
-    <div class="side_bar"></div>
-    <!--Main-->
-    <div class="main">
-      <div class="left">
-</div>
-<div class="middle">
-<link rel="stylesheet" type="text/css" href="/public/css/cate-tag.css">
-<div class="cate-list">
-
-  <div class="category">
-  <h2 id="分类-技术">技术<span class="cate-size">14</span></h2>
-  
-  <li>
-    <a href="/blog/2015-09-01/git-do.html">git常用的一些命令</a>
-    <span class="post-date">2015-09-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-08-20/div-float.html">解决子级float浮动父级无高度没有自适应问题</a>
-    <span class="post-date">2015-08-20</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
-    <span class="post-date">2015-03-26</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
-    <span class="post-date">2015-03-15</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
-    <span class="post-date">2015-02-09</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
-    <span class="post-date">2015-01-19</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
-    <span class="post-date">2015-01-19</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
-    <span class="post-date">2015-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-01/js.html">js笔记</a>
-    <span class="post-date">2015-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
-    <span class="post-date">2015-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-01/html.html">html笔记</a>
-    <span class="post-date">2015-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-01/css.html">css笔记</a>
-    <span class="post-date">2015-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
-    <span class="post-date">1000-01-01</span>
-  </li>
-  
-  <li>
-    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
-    <span class="post-date">1000-01-01</span>
-  </li>
-  
-  </div>
-
-  <div class="category">
-  <h2 id="分类-生活">生活<span class="cate-size">2</span></h2>
-  
-  <li>
-    <a href="/blog/2015-03-04/2.html">随笔</a>
-    <span class="post-date">2015-03-04</span>
-  </li>
-  
-  <li>
-    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
-    <span class="post-date">2015-01-30</span>
-  </li>
-  
-  </div>
-
-  <div class="category">
-  <h2 id="分类-工具">工具<span class="cate-size">1</span></h2>
-  
-  <li>
-    <a href="/blog/2015-02-28/1.html">sublime常用快捷键</a>
-    <span class="post-date">2015-02-28</span>
-  </li>
-  
-  </div>
-  
-</div>                       
-</div>
-<div class="right">
-
+    <div class="shadow-screen"></div>
+    <div class="side-bar">
+      <a id="side-bar-close-btn">X</a>
+              <div id="menu-pages">
+          <li><a>HOME</a></li>
+          <li><a>ALL POSTS</a></li>
+          <li><a>CONTACT ME</a></li>
+        </div>
         <div id="category">
-            <h4>文章分类</h4>
+            <h4>CATEGORY</h4>
             <div class="list-content">
               
               <li><a href="/category.html#分类-技术">技术<span class="cate-size">14</span></a></li>
@@ -167,7 +55,7 @@
             <div class="clear"></div>
         </div>
         <div id="tag">
-            <h4>标签</h4>
+            <h4>TAGS</h4>
             <div  class="tag-cloud">
                 
                   
@@ -404,26 +292,122 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="comment">
-            <h4>最近评论</h4>
-            <!-- 多说最新评论 start -->
-              <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="67"></div>
-            <!-- 多说最新评论 end -->
-            <div class="clear"></div>
-        </div>
 
 
-<!-- 多说js加载开始，一个页面只需要加载一次 -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gongvirgil"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
+
+    </div>
+    <!--Main-->
+    <div class="main">
+      <div class="left">
+</div>
+<div class="middle">
+<link rel="stylesheet" type="text/css" href="/public/css/cate-tag.css">
+<div class="cate-list">
+
+  <div class="category">
+  <h2 id="分类-技术">技术<span class="cate-size">14</span></h2>
+  
+  <li>
+    <a href="/blog/2015-09-01/git-do.html">git常用的一些命令</a>
+    <span class="post-date">2015-09-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-08-20/div-float.html">解决子级float浮动父级无高度没有自适应问题</a>
+    <span class="post-date">2015-08-20</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-03-26/bootstrap.html">bootstrap笔记</a>
+    <span class="post-date">2015-03-26</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a>
+    <span class="post-date">2015-03-15</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-02-09/scroller.html">自定义滚动条样式</a>
+    <span class="post-date">2015-02-09</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-19/jekyll.html">安装Jekyll</a>
+    <span class="post-date">2015-01-19</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a>
+    <span class="post-date">2015-01-19</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-01/soft.html">常用软件list用法笔记</a>
+    <span class="post-date">2015-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-01/js.html">js笔记</a>
+    <span class="post-date">2015-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-01/jquery.html">jquery笔记</a>
+    <span class="post-date">2015-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-01/html.html">html笔记</a>
+    <span class="post-date">2015-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-01/css.html">css笔记</a>
+    <span class="post-date">2015-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/1000-01-01/php.html">php知识笔记</a>
+    <span class="post-date">1000-01-01</span>
+  </li>
+  
+  <li>
+    <a href="/blog/1000-01-01/linux.html">各种常用的Linux操作命令</a>
+    <span class="post-date">1000-01-01</span>
+  </li>
+  
+  </div>
+
+  <div class="category">
+  <h2 id="分类-生活">生活<span class="cate-size">2</span></h2>
+  
+  <li>
+    <a href="/blog/2015-03-04/2.html">随笔</a>
+    <span class="post-date">2015-03-04</span>
+  </li>
+  
+  <li>
+    <a href="/blog/2015-01-30/1.html">标准的markdown格式练习</a>
+    <span class="post-date">2015-01-30</span>
+  </li>
+  
+  </div>
+
+  <div class="category">
+  <h2 id="分类-工具">工具<span class="cate-size">1</span></h2>
+  
+  <li>
+    <a href="/blog/2015-02-28/1.html">sublime常用快捷键</a>
+    <span class="post-date">2015-02-28</span>
+  </li>
+  
+  </div>
+  
+</div>                       
+</div>
+<div class="right">
+
 </div>
 <div style="clear:both;"></div>
     </div>
@@ -453,5 +437,16 @@ var duoshuoQuery = {short_name:"gongvirgil"};
 </div>
     </div>
     <!--Footer End-->
+    <!-- 多说js加载开始，一个页面只需要加载一次 -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"gongvirgil"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
   </body>
 </html>

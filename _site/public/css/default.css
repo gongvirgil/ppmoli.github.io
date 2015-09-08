@@ -86,11 +86,32 @@ a:hover {
 
 #navbar {}
 
-#navbar #logo {
+#navbar .logo {
     float: left;
     margin: 5px 0 0;
 }
 
+#navbar .menu {
+    float: right;
+    margin: 12px 0 0;
+}
+.menu a {
+    padding: 0 12px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.menu a:hover {
+    color: #ccc;
+    background-color: #2fa691;
+    border-color: #2fa691;
+    box-shadow: 0 0 6px #2fa691;
+}
 #navbar .nav {
     float: left;
     margin: 12px 4px 12px 10px;
@@ -373,17 +394,81 @@ a:hover {
 
 /*side-bar*/
 
-#category h4, #tag h4, #comment h4{
-    border-bottom: 1px solid #ddd;
+.shadow-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    visibility: hidden;
+    z-index: 6;
+    transition: all 500ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s;
+}
+
+.shadow-screen.on {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.side-bar {
+    height: 100%;
+    background-color: #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px 20px 0 10%;
+    z-index: 9999;
+    text-align: right;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 20%;
+    visibility: hidden;
+    transition: all 500ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s;
+}
+
+.side-bar.on {
+    visibility: visible;
+}
+
+.side-bar a {
+    color: #fff;
+}
+
+.side-bar a:hover {
+    color: #2FA691;
+}
+
+#side-bar-close-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+#menu-pages {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#menu-pages li {
+    line-height: 30px;
+}
+
+#category h4,
+#tag h4,
+#comment h4 {
     color: #2FA691;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 0;
 }
 
 #category {
     min-height: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .list-content li {
@@ -406,7 +491,12 @@ a:hover {
 
 #tag {
     min-height: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tag-cloud {
+    max-width: 200px;
+    float: right;
 }
 
 .tag-cloud a {
@@ -415,5 +505,9 @@ a:hover {
 
 #comment {
     min-height: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#comment li {
+    display: inline-block;
 }

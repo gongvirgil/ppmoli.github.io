@@ -1,8 +1,3 @@
-//当前版块
-$(document).ready(function(){
-	document.getElementById(document.getElementById(window.location.href.replace('http://','').replace('https://','').split('/')[1])!=undefined?window.location.href.replace('http://','').replace('https://','').split('/')[1]:'blog').className="on";	
-})
-
 
 //返回顶部
 $(window).scroll(function(){
@@ -15,6 +10,15 @@ $(document).ready(function() {
   $('#goTop_btn').click(function(){
       $('html, body').animate({scrollTop: 0}, 600);
   });
+  var hide_side_bar = function(){
+    $('.shadow-screen,.side-bar').removeClass('on');
+    $('').hide();
+  }
+  var show_side_bar = function(){
+    $('.shadow-screen,.side-bar').addClass('on');
+  }
+  $('#side-bar-close-btn,.shadow-screen').on('click', hide_side_bar);
+  $('#side-bar-btn').on('click', show_side_bar);
 });
 
 //背景轮换
