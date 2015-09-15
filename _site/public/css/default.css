@@ -264,134 +264,6 @@ a:hover {
     font-style: normal;
 }
 
-.left .home {
-    position: absolute;
-}
-
-.my_cate,
-.my_tags,
-.cate,
-.tags {
-    padding: 0 15px;
-    text-align: center;
-    position: relative;
-}
-
-.y {
-    display: none;
-}
-
-.x {
-    width: 120px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.x a {
-    padding: 5px 15px;
-    margin-bottom: 1px;
-    background-color: rgba(30, 30, 30, 0.03);
-    display: block;
-}
-
-.x a.on {
-    background-color: rgba(30, 30, 30, 0.3);
-    color: #da6426;
-}
-
-.x a span {
-    background-color: rgba(30, 30, 30, 0.4);
-    color: #ccc;
-    padding: 0px 7px;
-    min-width: 10px;
-    border-radius: 15px;
-    float: right;
-    font-size: 12px;
-    text-align: center;
-}
-
-.delta,
-.delta1 {
-    border-style: dashed dashed solid dashed;
-    border-width: 10px;
-    left: 30px;
-    overflow: hidden;
-    position: absolute;
-    height: 0;
-    width: 0;
-    display: none;
-}
-
-.delta {
-    border-color: transparent transparent white transparent;
-    top: 38px;
-}
-
-.delta1 {
-    border-color: transparent transparent white transparent;
-    top: 39px;
-}
-
-.y .y {
-    position: absolute;
-    left: 150px;
-    top: -40px;
-    text-align: middle;
-    font-weight: normal;
-    font-size: 12px;
-    max-height: 260px;
-    width: 280px;
-    overflow: auto;
-    z-index: 99;
-}
-
-.y .y a {
-    padding: 5px 2px;
-    display: block;
-    border-bottom: 1px solid #eee;
-    color: #999;
-    background-color: white;
-}
-
-.y .y a.on,
-.y .y a:hover {
-    color: #da6426;
-    background-color: #f6f6f6;
-}
-
-.y .y a.list_head {
-    color: #fff;
-    background-color: #666;
-}
-
-.info .avatar,
-.info .introduce {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding-top: 10px;
-}
-
-.avatar a:hover {
-    border-color: #da6426;
-}
-
-#avatar {
-    display: block;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px #2fa691, 0 0 3px 3px #eee;
-    margin: 0 auto;
-    width: 120px;
-    height: 120px;
-    background: url('../images/avator.jpg');
-}
-
-.avatar h3 {
-    color: #da6426
-}
-
-.introduce .cont {
-    color: #ddd;
-}
-
 .goTop {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
     height: 50px;
@@ -562,22 +434,22 @@ a:hover {
     margin-bottom: 5%;
 }
 
-.category,
-.tag {
+.categories,
+.tags {
     margin-top: 20px;
     overflow: hidden;
     background-color: #fff;
 }
 
-.category h2,
-.tag h2 {
+.categories h2,
+.tags h2 {
     padding: 8px 10px;
     background-color: #fbfbfb;
 }
 
 .posts li,
-.category li,
-.tag li {
+.categories li,
+.tags li {
     background-color: #fff;
     width: 100%;
     display: inline;

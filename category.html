@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="cate-list">
 {% for category in site.categories %}
-  <div class="category">
+  <div class="categories">
       <h2 id="{{ site.pre-cate }}{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></h2>
       {% for post in category.last %}
         <li><a class="post-title" href="{{ post.url }}">{{ post.title }}<span class="post-date">{{ post.date | date:"%Y-%m-%d"}}</span></a>

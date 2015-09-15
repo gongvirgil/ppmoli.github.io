@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="tag-list">
 {% for tag in site.tags %}
-  <div class="tag">
+  <div class="tags">
       <h2 id="{{ site.pre-tag }}{{ tag | first }}">{{ tag | first }}<span class="cate-size">{{ tag | last | size }}</span></h2>
       {% for post in tag.last %}
         <li><a class="post-title" href="{{ post.url }}">{{ post.title }}<span class="post-date">{{ post.date | date:"%Y-%m-%d"}}</span></a>
