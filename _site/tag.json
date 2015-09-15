@@ -1,5 +1,15 @@
 [
 
+  {"title":"【laravel学习笔记】二、路由、控制器及视图简介",
+  "url":"http://gongvirgil.github.io/blog/2015-09-11/route-controller-view.html",
+  "date":"2015-09-11",
+  "tags":["laravel"]}
+  ,
+  {"title":"【laravel学习笔记】一、安装",
+  "url":"http://gongvirgil.github.io/blog/2015-09-11/laravel-build.html",
+  "date":"2015-09-11",
+  "tags":["laravel" ,"笔记"]}
+  ,
   {"title":"git常用的一些命令",
   "url":"http://gongvirgil.github.io/blog/2015-09-01/git-do.html",
   "date":"2015-09-01",
@@ -45,15 +55,15 @@
   "date":"2015-03-15",
   "tags":["ThinkPHP" ,"笔记"]}
   ,
-  {"title":"随笔",
+  {"title":"生活用品购物/备用清单",
   "url":"http://gongvirgil.github.io/blog/2015-03-04/2.html",
   "date":"2015-03-04",
-  "tags":[]}
+  "tags":["购物" ,"品牌" ,"日用品"]}
   ,
   {"title":"sublime常用快捷键",
-  "url":"http://gongvirgil.github.io/blog/2015-02-28/1.html",
+  "url":"http://gongvirgil.github.io/blog/2015-02-28/sublime-text.html",
   "date":"2015-02-28",
-  "tags":["sublime"]}
+  "tags":["sublime" ,"work" ,"code" ,"soft"]}
   ,
   {"title":"自定义滚动条样式",
   "url":"http://gongvirgil.github.io/blog/2015-02-09/scroller.html",
@@ -61,9 +71,9 @@
   "tags":["CSS"]}
   ,
   {"title":"标准的markdown格式练习",
-  "url":"http://gongvirgil.github.io/blog/2015-01-30/1.html",
+  "url":"http://gongvirgil.github.io/blog/2015-01-30/markdown.html",
   "date":"2015-01-30",
-  "tags":["工作" ,"责任" ,"心态"]}
+  "tags":["markdown" ,"page"]}
   ,
   {"title":"安装Jekyll",
   "url":"http://gongvirgil.github.io/blog/2015-01-19/jekyll.html",

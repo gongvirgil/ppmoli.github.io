@@ -47,7 +47,27 @@ body {
     word-wrap: break-word;
     background-color: #fff;
     overflow-x: hidden;
+    background-color: #EDEDEF;
     /* background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 / 100% 100% #fff; */
+}
+
+code {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    color: #2FA691;
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 3px 5px;
+}
+
+pre code {
+    background: #000;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
 }
 
 li {
@@ -78,10 +98,9 @@ a:hover {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 1090px;
-    width: 72%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
 }
 
 #navbar {}
@@ -92,20 +111,28 @@ a:hover {
 }
 
 #navbar .menu {
-    position: absolute;
-    right: 5%;
-    top: 17px;
+    float: right;
+    margin: 10px 15px 0 0;
 }
+
 .menu a {
     padding: 0 12px;
     display: inline-block;
     height: 25px;
     line-height: 25px;
-    border: 1px solid #666666;
+    border: 1px solid #2FA691;
     border-radius: 3px;
     margin-right: 5px;
     margin-bottom: 8px;
+    background-color: #2FA691;
+    color: #fff;
 }
+
+.menu a:hover {
+    background-color: #1ABC9C;
+    border-color: #1ABC9C;
+}
+
 #navbar .nav {
     float: left;
     margin: 12px 4px 12px 10px;
@@ -152,8 +179,10 @@ a:hover {
 }
 
 .main {
-    margin-bottom: 5px;
+    margin: 0 auto;
     min-height: 500px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .left {
@@ -505,4 +534,89 @@ a:hover {
 
 #comment li {
     display: inline-block;
+}
+
+
+/*index-category-tag*/
+
+.posts {
+    overflow: hidden;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.page {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.page a,
+.page span {
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.cate-list,
+.tag-list {
+    margin-bottom: 5%;
+}
+
+.category,
+.tag {
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.category h2,
+.tag h2 {
+    padding: 8px 10px;
+    background-color: #fbfbfb;
+}
+
+.posts li,
+.category li,
+.tag li {
+    background-color: #fff;
+    width: 100%;
+    display: inline;
+    float: left;
+    border: 1px solid #eaeaea;
+    margin-bottom: -1px;
+    transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.post-title {
+    color: #555;
+    padding: 8px 10px;
+    border-left: 5px solid #fff;
+    float: left;
+}
+
+.post-title:hover {
+    border-color: #2fa691;
+    color: #2fa691;
+}
+
+.post-date {
+    color: #aaa;
+    font-size: 12px;
+    float: left;
+    margin-right: 15px;
+}
+
+.post-tags {
+    float: right;
+    margin-right: 15px;
+    padding: 8px 0;
+}
+
+.post-tags a {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.post-tags a:hover {
+    color: #555;
 }

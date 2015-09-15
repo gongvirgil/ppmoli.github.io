@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$(".post_content").find("h2,h3,h4,h5,h6").each(function(i,item){
 	    var tag = $(item).get(0).localName;
 	    $(item).attr("id","wow"+i);
-	    $("#AnchorContent").append('<li><a class="new'+tag+' anchor-link" onclick="return false;" href="#" link="#wow'+i+'">'+(i+1)+" · "+$(this).text()+'</a></li>');
+	    $("#AnchorContent").append('<li><a class="new'+tag+' anchor-link" onclick="return false;" href="#" link="#wow'+i+'">'/*+(i+1)+" · "*/+$(this).text()+'</a></li>');
 	    $(".newh2").css("margin-left",0);
 	    $(".newh3").css("margin-left",5);
 	    $(".newh4").css("margin-left",10);

@@ -4,7 +4,7 @@ encoding : utf-8
 timezone: Asia/Shanghai
 markdown: rdiscount
 highlighter: pygments
-paginate: 8
+paginate: 12
 permalink: /blog/:year-:month-:day/:title.html
 title: site of gongvirgil
 url: http://gongvirgil.github.io
