@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>常用软件list用法笔记 | site of gongvirgil</title>
+    <title>PHPExcel类库的各种使用方法总结 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -402,29 +402,235 @@
         <div id="content">
             <div class="post">
                 <div class="post_title">
-                    <h1><a href="/blog/2015-01-01/soft.html" title="常用软件list用法笔记">常用软件list用法笔记</a></h1>
+                    <h1><a href="/blog/2015-09-21/PHPExcel.html" title="PHPExcel类库的各种使用方法总结">PHPExcel类库的各种使用方法总结</a></h1>
                 </div>
                 <div class="post_relate">
-                    <span class="post_date">2015-01-01</span>
+                    <span class="post_date">2015-09-21</span>
                     <span class="post_tags">
                         
-                            <a href="/tags/?tag=软件" title="软件">软件</a>
+                            <a href="/tags/?tag=PHPExcel" title="PHPExcel">PHPExcel</a>
                         
-                            <a href="/tags/?tag=笔记" title="笔记">笔记</a>
+                            <a href="/tags/?tag=Excel" title="Excel">Excel</a>
                         
                     </span>
                 </div>
                 <div class="post_content">
-                    <h1>soft</h1>
+                    <p>导入PHPExcel类库</p>
+
+<pre><code>include 'PHPExcel.php';
+include 'PHPExcel/Writer/Excel2007.php';
+//或者include 'PHPExcel/Writer/Excel5.php'; 用于输出.xls的
+</code></pre>
+
+<p>创建一个excel</p>
+
+<pre><code>$objPHPExcel = new PHPExcel();
+</code></pre>
+
+<p>保存excel—2007格式</p>
+
+<pre><code>$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
+//或者$objWriter = new PHPExcel_Writer_Excel5($objPHPExcel); 非2007格式
+$objWriter-&gt;save("xxx.xlsx");
+</code></pre>
+
+<p>直接输出到浏览器</p>
+
+<pre><code>$objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
+header("Pragma: public");
+header("Expires: 0″);
+header("Cache-Control:must-revalidate, post-check=0, pre-check=0″);
+header("Content-Type:application/force-download");
+header("Content-Type:application/vnd.ms-execl");
+header("Content-Type:application/octet-stream");
+header("Content-Type:application/download");;
+header('Content-Disposition:attachment;filename="resume.xls"');
+header("Content-Transfer-Encoding:binary");
+$objWriter-&gt;save('php://output');
+</code></pre>
+
+<p>——————————————————————————————————————–</p>
+
+<p>设置excel的属性：</p>
+
+<pre><code>//创建人
+$objPHPExcel-&gt;getProperties()-&gt;setCreator("Maarten Balliauw");
+//最后修改人
+$objPHPExcel-&gt;getProperties()-&gt;setLastModifiedBy("Maarten Balliauw");
+//标题
+$objPHPExcel-&gt;getProperties()-&gt;setTitle("Office 2007 XLSX Test Document");
+//题目
+$objPHPExcel-&gt;getProperties()-&gt;setSubject("Office 2007 XLSX Test Document");
+//描述
+$objPHPExcel-&gt;getProperties()-&gt;setDescription("Test document for Office 2007 XLSX, generated using PHP classes.");
+//关键字
+$objPHPExcel-&gt;getProperties()-&gt;setKeywords("office 2007 openxml php");
+//种类
+$objPHPExcel-&gt;getProperties()-&gt;setCategory("Test result file");
+</code></pre>
+
+<p>——————————————————————————————————————–</p>
+
+<p>设置当前的sheet</p>
+
+<pre><code>$objPHPExcel-&gt;setActiveSheetIndex(0);
+</code></pre>
+
+<p>设置sheet的name</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;setTitle('Simple');
+</code></pre>
+
+<p>设置单元格的值</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('A1', 'String');
+$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('A2', 12);
+$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('A3', true);
+$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('C5', '=SUM(C2:C4)');
+$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('B8', '=MIN(B2:C5)');
+</code></pre>
+
+<p>合并单元格</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;mergeCells('A18:E22');
+</code></pre>
+
+<p>分离单元格</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;unmergeCells('A28:B28');
+</code></pre>
+
+<p>保护cell</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getProtection()-&gt;setSheet(true); // Needs to be set to true in order to enable any worksheet protection!
+$objPHPExcel-&gt;getActiveSheet()-&gt;protectCells('A3:E13', 'PHPExcel');
+</code></pre>
+
+<p>设置格式</p>
+
+<pre><code>// Set cell number formats
+echo date('H:i:s') . " Set cell number formats\n";
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E4')-&gt;getNumberFormat()-&gt;setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_CURRENCY_EUR_SIMPLE);
+$objPHPExcel-&gt;getActiveSheet()-&gt;duplicateStyle( $objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E4'), 'E5:E13' );
+</code></pre>
+
+<p>设置宽width</p>
+
+<pre><code>// Set column widths
+$objPHPExcel-&gt;getActiveSheet()-&gt;getColumnDimension('B')-&gt;setAutoSize(true);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getColumnDimension('D')-&gt;setWidth(12);
+</code></pre>
+
+<p>设置font</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFont()-&gt;setName('Candara');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFont()-&gt;setSize(20);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFont()-&gt;setBold(true);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFont()-&gt;setUnderline(PHPExcel_Style_Font::UNDERLINE_SINGLE);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFont()-&gt;getColor()-&gt;setARGB(PHPExcel_Style_Color::COLOR_WHITE);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E1')-&gt;getFont()-&gt;getColor()-&gt;setARGB(PHPExcel_Style_Color::COLOR_WHITE);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D13')-&gt;getFont()-&gt;setBold(true);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E13')-&gt;getFont()-&gt;setBold(true);
+</code></pre>
+
+<p>设置align</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D11')-&gt;getAlignment()-&gt;setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_RIGHT);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D12')-&gt;getAlignment()-&gt;setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_RIGHT);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D13')-&gt;getAlignment()-&gt;setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_RIGHT);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('A18')-&gt;getAlignment()-&gt;setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_JUSTIFY);
+//垂直居中
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('A18')-&gt;getAlignment()-&gt;setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+</code></pre>
+
+<p>设置column的border</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('A4')-&gt;getBorders()-&gt;getTop()-&gt;setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B4')-&gt;getBorders()-&gt;getTop()-&gt;setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('C4')-&gt;getBorders()-&gt;getTop()-&gt;setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D4')-&gt;getBorders()-&gt;getTop()-&gt;setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E4')-&gt;getBorders()-&gt;getTop()-&gt;setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+</code></pre>
+
+<p>设置border的color</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D13')-&gt;getBorders()-&gt;getLeft()-&gt;getColor()-&gt;setARGB('FF993300');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D13')-&gt;getBorders()-&gt;getTop()-&gt;getColor()-&gt;setARGB('FF993300');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('D13')-&gt;getBorders()-&gt;getBottom()-&gt;getColor()-&gt;setARGB('FF993300');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E13')-&gt;getBorders()-&gt;getTop()-&gt;getColor()-&gt;setARGB('FF993300');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E13')-&gt;getBorders()-&gt;getBottom()-&gt;getColor()-&gt;setARGB('FF993300');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('E13')-&gt;getBorders()-&gt;getRight()-&gt;getColor()-&gt;setARGB('FF993300');
+</code></pre>
+
+<p>设置填充颜色</p>
+
+<pre><code>$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('A1')-&gt;getFill()-&gt;setFillType(PHPExcel_Style_Fill::FILL_SOLID);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('A1')-&gt;getFill()-&gt;getStartColor()-&gt;setARGB('FF808080');
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFill()-&gt;setFillType(PHPExcel_Style_Fill::FILL_SOLID);
+$objPHPExcel-&gt;getActiveSheet()-&gt;getStyle('B1')-&gt;getFill()-&gt;getStartColor()-&gt;setARGB('FF808080');
+</code></pre>
+
+<p>加图片</p>
+
+<pre><code>$objDrawing = new PHPExcel_Worksheet_Drawing();
+$objDrawing-&gt;setName('Logo');
+$objDrawing-&gt;setDescription('Logo');
+$objDrawing-&gt;setPath('./images/officelogo.jpg');
+$objDrawing-&gt;setHeight(36);
+$objDrawing-&gt;setWorksheet($objPHPExcel-&gt;getActiveSheet());
+$objDrawing = new PHPExcel_Worksheet_Drawing();
+$objDrawing-&gt;setName('Paid');
+$objDrawing-&gt;setDescription('Paid');
+$objDrawing-&gt;setPath('./images/paid.png');
+$objDrawing-&gt;setCoordinates('B15');
+$objDrawing-&gt;setOffsetX(110);
+$objDrawing-&gt;setRotation(25);
+$objDrawing-&gt;getShadow()-&gt;setVisible(true);
+$objDrawing-&gt;getShadow()-&gt;setDirection(45);
+$objDrawing-&gt;setWorksheet($objPHPExcel-&gt;getActiveSheet());
+//处理中文输出问题
+需要将字符串转化为UTF-8编码，才能正常输出，否则中文字符将输出为空白，如下处理：
+ $str  = iconv('gb2312', 'utf-8', $str);
+或者你可以写一个函数专门处理中文字符串：
+function convertUTF8($str)
+{
+   if(empty($str)) return '';
+   return  iconv('gb2312', 'utf-8', $str);
+}
+//从数据库输出数据处理方式
+从数据库读取数据如：
+$db = new Mysql($dbconfig);
+$sql = "SELECT * FROM  表名";
+$row = $db-&gt;GetAll($sql);  // $row 为二维数组
+$count = count($row);
+for ($i = 2; $i &lt;= $count+1; $i++) {
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('A' . $i, convertUTF8($row[$i-2][1]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('B' . $i, convertUTF8($row[$i-2][2]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('C' . $i, convertUTF8($row[$i-2][3]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('D' . $i, convertUTF8($row[$i-2][4]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('E' . $i, convertUTF8(date("Y-m-d", $row[$i-2][5])));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('F' . $i, convertUTF8($row[$i-2][6]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('G' . $i, convertUTF8($row[$i-2][7]));
+ $objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue('H' . $i, convertUTF8($row[$i-2][8]));
+}
+</code></pre>
+
+<p>在默认sheet后，创建一个worksheet</p>
+
+<pre><code>echo date('H:i:s') . " Create new Worksheet object\n";
+$objPHPExcel-&gt;createSheet();
+$objWriter = PHPExcel_IOFactory::createWriter($objExcel, 'Excel5');
+$objWriter-save('php://output');
+</code></pre>
             
                 </div>
             </div>
             <div class="pre-next">
-                <li class="pre">上一篇：<a href="/blog/2015-01-01/js.html">js笔记</a></a></li>
-                <li class="next">下一篇：<a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a></li>
+                <li class="pre">上一篇：<a href="/blog/2015-09-15/task-list.html">任务清单之实现功能</a></a></li>
+                <li class="next">下一篇：<a href="#">没有了</a></li>
             </div>
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-01-01/soft" data-title="常用软件list用法笔记" data-url="/blog/2015-01-01/soft.html"></div>
+            <div class="ds-thread" data-thread-key="/blog/2015-09-21/PHPExcel" data-title="PHPExcel类库的各种使用方法总结" data-url="/blog/2015-09-21/PHPExcel.html"></div>
             <!-- 多说评论框 end -->
         </div>
     </div>
