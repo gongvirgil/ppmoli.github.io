@@ -91,10 +91,18 @@ a:hover {
 .navbar {
     background-color: #fcfcfc;
     height: 50px;
+    width: 100%;
     border-top: 5px solid #2fa691;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    margin-bottom: 5px;
     overflow: hidden;
+    z-index: 99;
+    opacity: 0.8;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .container {
@@ -126,6 +134,7 @@ a:hover {
     margin-bottom: 8px;
     background-color: #2FA691;
     color: #fff;
+    position: relative;
 }
 
 .menu a:hover {
@@ -179,10 +188,11 @@ a:hover {
 }
 
 .main {
-    margin: 0 auto;
+    margin: 65px auto;
     min-height: 500px;
     width: 100%;
     max-width: 800px;
+    opacity: 0.9;
 }
 
 .left {
@@ -206,6 +216,7 @@ a:hover {
     width: 100%;
     background-color: #333;
     box-shadow: 0 0 6px #333;
+    opacity: 0.8;
 }
 
 .footer-inner {
@@ -218,7 +229,9 @@ a:hover {
     padding: 35px 95px 25px 100px;
 }
 
-.footer-category a {
+.footer-category a,
+.friendly-links a,
+.friendly-links span {
     padding: 0 12px;
     display: inline-block;
     height: 25px;
@@ -230,7 +243,8 @@ a:hover {
     margin-bottom: 8px;
 }
 
-.footer-category a:hover {
+.footer-category a:hover,
+.friendly-links a:hover {
     background-color: #2fa691;
     border-color: #2fa691;
     box-shadow: 0 0 6px #2fa691;
@@ -244,46 +258,29 @@ a:hover {
 }
 
 .friendly-links {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .friendly-links span {
-    margin-right: 5px;
-}
-
-.friendly-links a {
-    color: #000;
-}
-
-.friendly-links a:hover {
-    color: #2fa691;
-}
-
-.friendly-links em {
-    padding: 0 10px;
-    font-style: normal;
+    margin-right: 15px;
 }
 
 .goTop {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    height: 50px;
-    width: 50px;
     overflow: hidden;
     position: fixed;
     right: 30px;
     bottom: 100px;
-    display: none;
+    z-index: 99;
+    opacity: 0.8;
 }
 
 #goTop_btn {
-    background: url("../images/goTop.jpg") no-repeat scroll -50px 0 rgba(0, 0, 0, 0);
     display: block;
-    height: 50px;
-    width: 50px;
+    color: #fff;
 }
 
 #goTop_btn:hover {
-    background-position: 0 0;
+    color: #2FA691;
 }
 
 
@@ -297,7 +294,7 @@ a:hover {
     right: 0;
     background: none;
     visibility: hidden;
-    z-index: 6;
+    z-index: 999;
     transition: all 500ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s;
 }
 
@@ -308,7 +305,7 @@ a:hover {
 
 .side-bar {
     height: 100%;
-    background-color: #000;
+    background-color: #fff;
     position: fixed;
     right: 0;
     top: 0;
@@ -325,14 +322,6 @@ a:hover {
 
 .side-bar.on {
     visibility: visible;
-}
-
-.side-bar a {
-    color: #fff;
-}
-
-.side-bar a:hover {
-    color: #2FA691;
 }
 
 #side-bar-close-btn {
@@ -391,7 +380,7 @@ a:hover {
 }
 
 .tag-cloud {
-    max-width: 200px;
+    max-width: 300px;
     float: right;
 }
 
@@ -456,18 +445,23 @@ a:hover {
     float: left;
     border: 1px solid #eaeaea;
     margin-bottom: -1px;
+    border-left: 5px solid #fff;
     transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.posts li:hover,
+.categories li:hover,
+.tags li:hover {
+    border-left-color: #2fa691;
 }
 
 .post-title {
     color: #555;
     padding: 8px 10px;
-    border-left: 5px solid #fff;
     float: left;
 }
 
 .post-title:hover {
-    border-color: #2fa691;
     color: #2fa691;
 }
 
@@ -492,3 +486,4 @@ a:hover {
 .post-tags a:hover {
     color: #555;
 }
+

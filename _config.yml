@@ -12,5 +12,5 @@ feed: /atom.xml
 author_info: <a href="http://gongvirgil.github.io/">GongVirgil</a>
 short_name: gongvirgil
 pre-site: gong-
-pre-cate: 分类-
-pre-tag: 标签-
+param-cate: CATE
+param-tag: TAG

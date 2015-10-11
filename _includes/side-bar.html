@@ -7,7 +7,7 @@
             <h4>CATEGORY</h4>
             <div class="list-content">
               {% for category in site.categories %}
-              <li><a href="/category.html#{{ site.pre-cate }}{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a></li>
+              <li><a href="/category.html?{{ site.param-cate }}={{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a></li>
               {% endfor %}
             </div>
             <div class="clear"></div>
@@ -31,7 +31,7 @@
                   {% else %}
                     {% assign color = 8 | minus: base %}
                   {% endif %}
-                  <a href="/tag.html#{{ site.pre-tag }}{{ tag[0] }}" title="{{ tag[1].size }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+                  <a href="/tag.html?{{ site.param-tag }}={{ tag[0] }}" title="{{ tag[1].size }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
                 {% endfor %}
             </div>
             <div class="clear"></div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ThinkPHP笔记 | site of gongvirgil</title>
+    <title>PHP设计模式之单例模式 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -479,72 +479,156 @@
         <div id="content">
             <div class="post">
                 <div class="post_title">
-                    <h1><a href="/blog/2015-03-15/thinkphp.html" title="ThinkPHP笔记">ThinkPHP笔记</a></h1>
+                    <h1><a href="/blog/2015-10-09/PHP%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html" title="PHP设计模式之单例模式">PHP设计模式之单例模式</a></h1>
                 </div>
                 <div class="post_relate">
-                    <span class="post_date">2015-03-15</span>
+                    <span class="post_date">2015-10-09</span>
                     <span class="post_tags">
                         
-                            <a href="/tags/?tag=ThinkPHP" title="ThinkPHP">ThinkPHP</a>
+                            <a href="/tags/?tag=PHP" title="PHP">PHP</a>
                         
-                            <a href="/tags/?tag=笔记" title="笔记">笔记</a>
+                            <a href="/tags/?tag=单例模式" title="单例模式">单例模式</a>
                         
                     </span>
                 </div>
                 <div class="post_content">
-                    <h2>简介</h2>
+                    <p>单例模式（职责模式）：</p>
 
-<p>ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。</p>
+<p>简单的说，一个对象（在学习设计模式之前，需要比较了解面向对象思想）只负责一个特定的任务；</p>
 
-<h2>全面的WEB开发特性支持</h2>
+<p>单例类：</p>
 
-<p>最新的ThinkPHP为WEB应用开发提供了强有力的支持，这些支持包括：</p>
+<p>1、构造函数需要标记为private（访问控制：防止外部代码使用new操作符创建对象），单例类不能在其他类中实例化，只能被其自身实例化；</p>
 
-<ul>
-<li>MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式</li>
-<li>ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库</li>
-<li>模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎</li>
-<li>RESTFul支持-REST模式提供了RESTFul支持，为你打造全新的URL设计和访问体验</li>
-<li>云引擎支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。</li>
-<li>CLI支持-支持基于命令行的应用开发</li>
-<li>AMF支持-支持Flex开发和Flash通讯，打造互联网富应用</li>
-<li>PHPRPC支持-提供基于PHPRpc的WEBService解决方案</li>
-<li>MongoDb支持-提供NoSQL的支持</li>
-<li>缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持</li>
-</ul>
+<p>2、拥有一个保存类的实例的静态成员变量</p>
+
+<p>3、拥有一个访问这个实例的公共的静态方法（常用getInstance()方法进行实例化单例类，通过instanceof操作符可以检测到类是否已经被实例化）</p>
+
+<p>另外，需要创建__clone()方法防止对象被复制（克隆）</p>
+
+<p>为什么要使用PHP单例模式？</p>
+
+<p>1、php的应用主要在于数据库应用, 所以一个应用中会存在大量的数据库操作, 使用单例模式, 则可以避免大量的new 操作消耗的资源。</p>
+
+<p>2、如果系统中需要有一个类来全局控制某些配置信息, 那么使用单例模式可以很方便的实现. 这个可以参看ZF的FrontController部分。</p>
+
+<p>3、在一次页面请求中, 便于进行调试, 因为所有的代码(例如数据库操作类db)都集中在一个类中, 我们可以在类中设置钩子, 输出日志，从而避免到处var_dump, echo。</p>
+
+<p>代码实现：</p>
+
+<pre><code>&lt;?php
+
+/*
+
+* 设计模式之单例模式
+
+* $_instance必须声明为静态的私有变量
+
+* 构造函数和析构函数必须声明为私有,防止外部程序new
+
+* 类从而失去单例模式的意义
+
+* getInstance()方法必须设置为公有的,必须调用此方法
+
+* 以返回实例的一个引用
+
+* ::操作符只能访问静态变量和静态函数
+
+* new对象都会消耗内存
+
+* 使用场景:最常用的地方是数据库连接。 
+
+* 使用单例模式生成一个对象后，
+
+* 该对象可以被其它众多对象所使用。 
+
+*/
+
+class Danli {
 
 
-<h2>大道至简的开发理念</h2>
 
-<p>ThinkPHP从诞生以来一直秉承大道至简的开发理念，无论从底层实现还是应用开发，我们都倡导用最少的代码完成相同的功能，正是由于对简单的执着和代码的修炼，让我们长期保持出色的性能和极速的开发体验。在主流PHP开发框架的评测数据中表现卓越，简单和快速开发是我们不变的宗旨。</p>
+//保存类实例的静态成员变量
 
-<h2>安全性</h2>
-
-<p>框架在系统层面提供了众多的安全特性，确保你的网站和产品安全无忧。这些特性包括：</p>
-
-<ul>
-<li>XSS安全防护</li>
-<li>表单自动验证</li>
-<li>强制数据类型转换</li>
-<li>输入数据过滤</li>
-<li>表单令牌验证</li>
-<li>防SQL注入</li>
-<li>图像上传检测</li>
-</ul>
+private static $_instance;
 
 
-<h2>商业友好的开源协议</h2>
 
-<p>ThinkPHP遵循Apache2开源协议发布。Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再作为开源或商业软件发布。</p>
+//private标记的构造方法
+
+private function __construct(){
+
+echo 'This is a Constructed method;';
+
+}
+
+
+
+//创建__clone方法防止对象被复制克隆
+
+public function __clone(){
+
+trigger_error('Clone is not allow!',E_USER_ERROR);
+
+}
+
+
+
+//单例方法,用于访问实例的公共的静态方法
+
+public static function getInstance(){
+
+if(!(self::$_instance instanceof self)){
+
+self::$_instance = new self;
+
+}
+
+return self::$_instance;
+
+}
+
+
+
+public function test(){
+
+echo '调用方法成功';
+
+}
+
+
+
+}
+
+
+
+//用new实例化private标记构造函数的类会报错
+
+//$danli = new Danli();
+
+
+
+//正确方法,用双冒号::操作符访问静态方法获取实例
+
+$danli = Danli::getInstance();
+
+$danli-&gt;test();
+
+
+
+//复制(克隆)对象将导致一个E_USER_ERROR
+
+$danli_clone = clone $danli; 
+</code></pre>
             
                 </div>
             </div>
             <div class="pre-next">
-                <li class="pre">上一篇：<a href="/blog/2015-03-04/2.html">生活用品购物/备用清单</a></a></li>
-                <li class="next">下一篇：<a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></li>
+                <li class="pre">上一篇：<a href="/blog/2015-09-21/PHPExcel.html">PHPExcel类库的各种使用方法总结</a></a></li>
+                <li class="next">下一篇：<a href="/blog/2015-10-09/%E9%87%8D%E5%AE%9A%E5%90%91%E6%8F%92%E4%BB%B6.html">Firefox域名重定向插件——Mason</a></li>
             </div>
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-03-15/thinkphp" data-title="ThinkPHP笔记" data-url="/blog/2015-03-15/thinkphp.html"></div>
+            <div class="ds-thread" data-thread-key="/blog/2015-10-09/PHP设计模式之单例模式" data-title="PHP设计模式之单例模式" data-url="/blog/2015-10-09/PHP%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html"></div>
             <!-- 多说评论框 end -->
         </div>
     </div>

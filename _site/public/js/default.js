@@ -1,15 +1,23 @@
-
+var getQueryParm =  function(name){
+  var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+  if(result == null || result.length < 1){
+  return "";
+  }
+  return decodeURI(result[1]);
+}
 //返回顶部
-$(window).scroll(function(){
-    if ($(document).scrollTop() != 0) 
-        $('.goTop').show();
-    else 
-        $('.goTop').hide();
-});
-$(document).ready(function() {
+$(document).ready(function(){
+  $(window).scroll(function(){
+      if ($(document).scrollTop() != 0) 
+          $('.goTop').show();
+      else 
+          $('.goTop').hide();
+  });
   $('#goTop_btn').click(function(){
       $('html, body').animate({scrollTop: 0}, 600);
   });
+})
+$(document).ready(function(){
   var hide_side_bar = function(){
     $('.shadow-screen,.side-bar').removeClass('on');
     $('').hide();
@@ -19,16 +27,24 @@ $(document).ready(function() {
   }
   $('#side-bar-close-btn,.shadow-screen').on('click', hide_side_bar);
   $('#side-bar-btn').on('click', show_side_bar);
-});
-
+})
+$(document).ready(function(){
+  var ID = getQueryParm("TAG")||getQueryParm("CATE");
+  var one = $("#"+ID).parent();
+  one.clone().prependTo(one.parent()).show();
+  one.remove();
+})
 //背景轮换
-/*function change_bg(){
-$("body").css('background','url("/public/images/bg'+Math.round(new Date().getMinutes()/5)+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
+var n=0;
+function change_bg(){
+  $("body").css('background','url("/public/images/bg'+n%12+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
+  n++;
 }
 $(document).ready(function(){
+  n = Math.round(new Date().getMinutes()/5);
 	change_bg();
-	window.setInterval(change_bg, 1000*60*5);	
-})*/
+	window.setInterval('change_bg()', 1000*60*5);	
+})
 
 
 /*//切换版块

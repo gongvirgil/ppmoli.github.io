@@ -1,5 +1,20 @@
 [
 
+  {"title":"简单实用的PHP函数",
+  "url":"http://gongvirgil.github.io/blog/2015-10-10/PHP%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0.html",
+  "date":"2015-10-10",
+  "tags":["PHP" ,"函数"]}
+  ,
+  {"title":"Firefox域名重定向插件——Mason",
+  "url":"http://gongvirgil.github.io/blog/2015-10-09/%E9%87%8D%E5%AE%9A%E5%90%91%E6%8F%92%E4%BB%B6.html",
+  "date":"2015-10-09",
+  "tags":["firefox" ,"插件" ,"域名" ,"重定向"]}
+  ,
+  {"title":"PHP设计模式之单例模式",
+  "url":"http://gongvirgil.github.io/blog/2015-10-09/PHP%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html",
+  "date":"2015-10-09",
+  "tags":["PHP" ,"单例模式"]}
+  ,
   {"title":"PHPExcel类库的各种使用方法总结",
   "url":"http://gongvirgil.github.io/blog/2015-09-21/PHPExcel.html",
   "date":"2015-09-21",
@@ -100,21 +115,6 @@
   "date":"2015-01-01",
   "tags":["软件" ,"笔记"]}
   ,
-  {"title":"js笔记",
-  "url":"http://gongvirgil.github.io/blog/2015-01-01/js.html",
-  "date":"2015-01-01",
-  "tags":["js" ,"笔记"]}
-  ,
-  {"title":"jquery笔记",
-  "url":"http://gongvirgil.github.io/blog/2015-01-01/jquery.html",
-  "date":"2015-01-01",
-  "tags":["jquery" ,"笔记"]}
-  ,
-  {"title":"html笔记",
-  "url":"http://gongvirgil.github.io/blog/2015-01-01/html.html",
-  "date":"2015-01-01",
-  "tags":["html" ,"笔记"]}
-  ,
   {"title":"css笔记",
   "url":"http://gongvirgil.github.io/blog/2015-01-01/css.html",
   "date":"2015-01-01",
@@ -129,5 +129,20 @@
   "url":"http://gongvirgil.github.io/blog/1000-01-01/linux.html",
   "date":"1000-01-01",
   "tags":["Linux" ,"笔记"]}
+  ,
+  {"title":"js笔记",
+  "url":"http://gongvirgil.github.io/blog/1000-01-01/js.html",
+  "date":"1000-01-01",
+  "tags":["js" ,"笔记"]}
+  ,
+  {"title":"jquery笔记",
+  "url":"http://gongvirgil.github.io/blog/1000-01-01/jquery.html",
+  "date":"1000-01-01",
+  "tags":["jquery" ,"笔记"]}
+  ,
+  {"title":"html笔记",
+  "url":"http://gongvirgil.github.io/blog/1000-01-01/html.html",
+  "date":"1000-01-01",
+  "tags":["html" ,"笔记"]}
   
 ]
