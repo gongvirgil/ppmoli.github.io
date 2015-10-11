@@ -17,7 +17,7 @@ $(document).ready(function() {
   var show_side_bar = function(){
     $('.shadow-screen,.side-bar').addClass('on');
   }
-  $('#side-bar-close-btn,.shadow-screen').on('click', hide_side_bar);
+  $('#side-bar-close-btn,.side-bar.on a,.shadow-screen').on('click', hide_side_bar);
   $('#side-bar-btn').on('click', show_side_bar);
 });
 
