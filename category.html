@@ -6,7 +6,7 @@ layout: default
   <div class="categories">
       <h2 id="{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></h2>
       {% for post in category.last %}
-        <li><a class="post-title" href="{{ post.url }}">{{ post.title }}<span class="post-date">{{ post.date | date:"%Y-%m-%d"}}</span></a>
+        <li><span class="post-date">{{ post.date | date:"%Y-%m-%d"}}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
           <div class="post-tags">
                 {% for tag in post.tags %}
                 <a href="">{{ tag }}</a>

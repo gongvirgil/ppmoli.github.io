@@ -99,11 +99,11 @@ a:hover {
     opacity: 0.8;
 }
 
-.navbar-fixed-top {
+/* .navbar-fixed-top {
     position: fixed;
     top: 0;
     left: 0;
-}
+} */
 
 .container {
     margin: 0 auto;
@@ -188,7 +188,7 @@ a:hover {
 }
 
 .main {
-    margin: 65px auto;
+    margin: 0 auto;
     min-height: 500px;
     width: 100%;
     max-width: 800px;
@@ -401,8 +401,6 @@ a:hover {
 
 .posts {
     overflow: hidden;
-    border-radius: 4px;
-    margin-top: 20px;
 }
 
 .page {
