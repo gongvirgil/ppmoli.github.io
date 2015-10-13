@@ -4,7 +4,7 @@ layout: default
 <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 <div class="posts">
     {% for post in paginator.posts %}
-    <li><a class="post-title" href="{{ post.url }}">{{ post.title }}<span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span></a>
+    <li><span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
       <div class="post-tags">
             {% for tag in post.tags %}
             <a href="/tag.html?{{ site.param-tag }}={{ tag }}">{{ tag }}</a>

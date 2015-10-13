@@ -469,6 +469,7 @@ a:hover {
     font-size: 12px;
     float: left;
     margin-right: 15px;
+    padding: 8px 10px;
 }
 
 .post-tags {
