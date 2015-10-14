@@ -43,12 +43,12 @@ section {
 }
 
 body {
-    font: 14px/200% "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
+    font-family: "opensans","Optima","Microsoft Yahei",sans-serif;
+    font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
     overflow-x: hidden;
     background-color: #EDEDEF;
-    /* background: url("/public/images/bg9.jpg") no-repeat fixed 0 0 / 100% 100% #fff; */
 }
 
 code {
@@ -90,35 +90,32 @@ a:hover {
 
 .navbar {
     background-color: #fcfcfc;
-    height: 50px;
+    min-height: 70px;
     width: 100%;
-    border-top: 5px solid #2fa691;
+    border-top: 6px solid #2fa691;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     z-index: 99;
-    opacity: 0.8;
 }
 
-/* .navbar-fixed-top {
+.navbar-fixed-top {
     position: fixed;
     top: 0;
-    left: 0;
-} */
+}
 
 .container {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
+    padding: 0 15px;
     max-width: 1000px;
 }
 
-#navbar {}
-
-#navbar .logo {
+.logo {
     float: left;
     margin: 5px 0 0;
 }
 
-#navbar .menu {
+.menu {
     float: right;
     margin: 10px 15px 0 0;
 }
@@ -142,24 +139,24 @@ a:hover {
     border-color: #1ABC9C;
 }
 
-#navbar .nav {
+.nav {
     float: left;
     margin: 12px 4px 12px 10px;
 }
 
-#navbar #search {
+#search {
     float: right;
     margin: 13px 10px 0 0;
 }
 
-#navbar .nav li {
+.nav li {
     float: left;
     text-align: center;
     padding: 0 15px;
     font-size: 16px;
 }
 
-#navbar .nav li.on a {
+.nav li.on a {
     color: #2FA691;
     font-weight: bold;
 }
@@ -179,6 +176,9 @@ a:hover {
     width: 210px;
 }
 
+.header-content-wrap {
+    padding: 285px 0 210px;
+}
 .notice {
     height: 50px;
     width: 200px;
@@ -187,12 +187,22 @@ a:hover {
     display: none;
 }
 
+
+.header {
+    width: 33.3%;
+    height: 100%;
+    background-color: #ddd;
+    position: fixed;
+    background-image: url("/public/images/overlay.png"),url("/public/images/bg18.jpg");
+    background-size: cover;
+}
+
+
+
 .main {
-    margin: 0 auto;
-    min-height: 500px;
-    width: 100%;
-    max-width: 800px;
-    opacity: 0.9;
+    margin-left: 33.3%;
+    max-width: 66.6%;
+    width: calc(100% - 33.3%);
 }
 
 .left {
@@ -213,7 +223,9 @@ a:hover {
 }
 
 .footer {
-    width: 100%;
+    margin-left: 33.3%;
+    max-width: 66.6%;
+    width: calc(100% - 33.3%);
     background-color: #333;
     box-shadow: 0 0 6px #333;
     opacity: 0.8;
@@ -438,6 +450,7 @@ a:hover {
 .tags li {
     background-color: #fff;
     width: 100%;
+    line-height: 35px;
     display: inline;
     float: left;
     border: 1px solid #eaeaea;
@@ -454,8 +467,7 @@ a:hover {
 
 .post-title {
     color: #555;
-    padding: 8px 10px;
-    float: left;
+    margin-left: 8px;
 }
 
 .post-title:hover {
@@ -465,15 +477,11 @@ a:hover {
 .post-date {
     color: #aaa;
     font-size: 12px;
-    float: left;
     margin-right: 15px;
-    padding: 8px 10px;
 }
 
 .post-tags {
-    float: right;
     margin-right: 15px;
-    padding: 8px 0;
 }
 
 .post-tags a {

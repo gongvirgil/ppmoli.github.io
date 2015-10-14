@@ -35,6 +35,7 @@ $(document).ready(function(){
   one.remove();
 })
 //背景轮换
+/*
 var n=0;
 function change_bg(){
   $("body").css('background','url("/public/images/bg'+n%12+'.jpg") no-repeat fixed 0 0 / 100% 100% #fff');
@@ -45,6 +46,7 @@ $(document).ready(function(){
 	change_bg();
 	window.setInterval('change_bg()', 1000*60*5);	
 })
+*/
 
 
 /*//切换版块
