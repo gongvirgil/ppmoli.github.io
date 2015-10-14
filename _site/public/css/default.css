@@ -493,3 +493,21 @@ a:hover {
     color: #555;
 }
 
+@media only screen and (max-width : 650px){
+    .header {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        padding: 7.5em 5em;
+        text-align: center;
+        background-size: auto, cover;
+        background-attachment: scroll;
+        background-position: top left, center 30%!important;
+    }
+    .main {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
