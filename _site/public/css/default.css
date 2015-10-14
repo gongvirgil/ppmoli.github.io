@@ -47,7 +47,7 @@ body {
     font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #EDEDEF;
 }
 
@@ -506,6 +506,11 @@ a:hover {
         background-position: top left, center 30%!important;
     }
     .main {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .footer {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
