@@ -498,9 +498,6 @@ a:hover {
     .header {
         position: relative;
         width: 100%;
-        top: auto;
-        left: auto;
-        padding: 7.5em 5em;
         text-align: center;
     }
     .main {
