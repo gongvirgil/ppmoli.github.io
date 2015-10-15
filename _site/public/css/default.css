@@ -47,7 +47,6 @@ body {
     font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
-    overflow: hidden;
     background-color: #EDEDEF;
 }
 
@@ -195,7 +194,6 @@ a:hover {
     position: fixed;
     background-image: url("/public/images/overlay.png"),url("/public/images/bg18.jpg");
     background-size: cover;
-    overflow: hidden;
 }
 
 
@@ -498,11 +496,13 @@ a:hover {
     .header {
         position: relative;
         width: 100%;
+        height: 20em;
         top: auto;
         left: auto;
-        padding: 7.5em 5em;
         text-align: center;
         background-size: cover;
+        background-attachment: scroll;
+        background-position: top left, center 30%!important;
     }
     .main {
         width: 100%;
