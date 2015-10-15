@@ -411,7 +411,7 @@ a:hover {
 
 .posts {
     overflow: hidden;
-    padding-left: 35px;
+    padding: 0 4em;
 }
 
 .page {
@@ -426,7 +426,7 @@ a:hover {
 
 .cate-list,
 .tag-list {
-    padding-left: 35px;
+    padding: 0 4em;
 }
 
 .categories,
