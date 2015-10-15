@@ -195,6 +195,7 @@ a:hover {
     position: fixed;
     background-image: url("/public/images/overlay.png"),url("/public/images/bg18.jpg");
     background-size: cover;
+    overflow: hidden;
 }
 
 
