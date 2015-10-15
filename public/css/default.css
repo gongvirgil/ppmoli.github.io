@@ -496,6 +496,8 @@ a:hover {
 @media only screen and (max-width : 650px){
     .header {
         position: relative;
+        top: auto;
+        left: auto;
         width: 100%;
         text-align: center;
     }
