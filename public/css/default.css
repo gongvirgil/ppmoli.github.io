@@ -502,8 +502,6 @@ a:hover {
         padding: 7.5em 5em;
         text-align: center;
         background-size: cover;
-        background-attachment: scroll;
-        background-position: top left, center 30%!important;
     }
     .main {
         width: 100%;
