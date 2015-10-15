@@ -43,11 +43,10 @@ section {
 }
 
 body {
-    font-family: "opensans","Optima","Microsoft Yahei",sans-serif;
+    font-family: Georgia,"Times New Roman",Times,serif;
     font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
-    background-color: #EDEDEF;
 }
 
 code {
@@ -287,7 +286,7 @@ a:hover {
 
 #goTop_btn {
     display: block;
-    color: #fff;
+    color: #333;
 }
 
 #goTop_btn:hover {
@@ -412,6 +411,7 @@ a:hover {
 
 .posts {
     overflow: hidden;
+    padding-left: 35px;
 }
 
 .page {
@@ -422,18 +422,15 @@ a:hover {
 .page a,
 .page span {
     padding: 10px;
-    background-color: #fff;
-    opacity: 0.9;
 }
 
 .cate-list,
 .tag-list {
-    margin-bottom: 5%;
+    padding-left: 35px;
 }
 
 .categories,
 .tags {
-    margin-top: 20px;
     overflow: hidden;
     background-color: #fff;
 }
@@ -441,7 +438,7 @@ a:hover {
 .categories h2,
 .tags h2 {
     padding: 8px 10px;
-    background-color: #fbfbfb;
+    background-color: #999;
 }
 
 .posts li,
@@ -452,21 +449,17 @@ a:hover {
     line-height: 35px;
     display: inline;
     float: left;
-    border: 1px solid #eaeaea;
-    margin-bottom: -1px;
-    border-left: 5px solid #fff;
+    border-bottom: 1px solid #eaeaea;
     transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
 }
 
 .posts li:hover,
 .categories li:hover,
 .tags li:hover {
-    border-left-color: #2fa691;
 }
 
 .post-title {
     color: #555;
-    margin-left: 8px;
 }
 
 .post-title:hover {
@@ -474,22 +467,19 @@ a:hover {
 }
 
 .post-date {
-    color: #aaa;
-    font-size: 12px;
-    margin-right: 15px;
+    color: #717171;
 }
 
 .post-tags {
-    margin-right: 15px;
 }
 
 .post-tags a {
-    color: #aaa;
-    font-size: 12px;
+    color: #999;
+    margin-right: 10px;
 }
 
 .post-tags a:hover {
-    color: #555;
+    color: #717171;
 }
 
 @media only screen and (max-width : 650px){
