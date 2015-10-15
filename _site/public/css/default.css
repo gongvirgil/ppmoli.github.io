@@ -47,6 +47,7 @@ body {
     font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 code {
@@ -191,10 +192,38 @@ a:hover {
     height: 100%;
     background-color: #ddd;
     position: fixed;
-    background-image: url("/public/images/overlay.png"), url("/public/images/bg18.jpg");
+    background-image: url("/public/images/overlay.png"), url("/public/images/bg19.jpg");
     background-size: cover;
 }
-
+.avatar {
+    text-align: center;
+    padding-top: 2em;
+}
+.circle {
+    background-color: #DCD8CC;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white, 0 0 4px 4px #999;
+}
+.links {
+    margin-bottom: -0.75em;
+    margin-top: 1.75em;
+    text-align: center;
+}
+.links a {
+    border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.55);
+    border-image: none;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 18px rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.25em;
+    padding: 5px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease 0s;
+}
 .main {
     margin-left: 33.3%;
     max-width: 66.6%;
@@ -238,7 +267,7 @@ a:hover {
 
 .footer-category {
     border-bottom: 1px solid #000000;
-    padding: 35px 95px 25px 100px;
+    padding: 15px 0;
 }
 
 .footer-category a,
@@ -252,7 +281,6 @@ a:hover {
     border-radius: 3px;
     color: #ccc;
     margin-right: 5px;
-    margin-bottom: 8px;
 }
 
 .footer-category a:hover,
@@ -264,19 +292,16 @@ a:hover {
 
 .footer_info {
     border-top: 1px solid #484848;
-    padding: 2px 50px;
+    padding: 15px 0;
     color: #000;
-    text-align: center;
-}
-
-.friendly-links {
-    font-size: 12px;
 }
 
 .friendly-links span {
     margin-right: 15px;
 }
-
+.site-info {
+    margin-top: 15px;
+}
 .goTop {
     overflow: hidden;
     position: fixed;

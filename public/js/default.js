@@ -8,7 +8,7 @@ var getQueryParm =  function(name){
 //返回顶部
 $(document).ready(function(){
   $(window).scroll(function(){
-      if ($(document).scrollTop() != 0) 
+      if ($(document).scrollTop() > 200 ) 
           $('.goTop').show();
       else 
           $('.goTop').hide();
