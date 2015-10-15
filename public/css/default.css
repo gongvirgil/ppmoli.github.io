@@ -43,7 +43,7 @@ section {
 }
 
 body {
-    font-family: Georgia,"Times New Roman",Times,serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 12px;
     word-wrap: break-word;
     background-color: #fff;
@@ -177,6 +177,7 @@ a:hover {
 .header-content-wrap {
     padding: 285px 0 210px;
 }
+
 .notice {
     height: 50px;
     width: 200px;
@@ -185,22 +186,23 @@ a:hover {
     display: none;
 }
 
-
 .header {
     width: 33.3%;
     height: 100%;
     background-color: #ddd;
     position: fixed;
-    background-image: url("/public/images/overlay.png"),url("/public/images/bg18.jpg");
+    background-image: url("/public/images/overlay.png"), url("/public/images/bg18.jpg");
     background-size: cover;
 }
-
-
 
 .main {
     margin-left: 33.3%;
     max-width: 66.6%;
     width: calc(100% - 33.3%);
+}
+
+.main-content {
+    padding: 0 4em;
 }
 
 .left {
@@ -411,7 +413,6 @@ a:hover {
 
 .posts {
     overflow: hidden;
-    padding: 0 4em;
 }
 
 .page {
@@ -425,9 +426,7 @@ a:hover {
 }
 
 .cate-list,
-.tag-list {
-    padding: 0 4em;
-}
+.tag-list {}
 
 .categories,
 .tags {
@@ -455,8 +454,7 @@ a:hover {
 
 .posts li:hover,
 .categories li:hover,
-.tags li:hover {
-}
+.tags li:hover {}
 
 .post-title {
     color: #555;
@@ -470,8 +468,7 @@ a:hover {
     color: #717171;
 }
 
-.post-tags {
-}
+.post-tags {}
 
 .post-tags a {
     color: #999;
@@ -482,7 +479,7 @@ a:hover {
     color: #717171;
 }
 
-@media only screen and (max-width : 650px){
+@media only screen and (max-width: 650px) {
     .header {
         position: relative;
         width: 100%;
@@ -498,6 +495,9 @@ a:hover {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
+    }
+    .main-content {
+        padding: 0;
     }
     .footer {
         width: 100%;
