@@ -1,32 +1,8 @@
 ---
 layout: default
 ---
-  <div class="year-list">
-    <div class="year"><h2>2015</h2></div>
-    <div class="month-list">
-      <div class="month"><h2>01</h2></div>
-      <div class="day-list">
-        <div class="day">
-          <h2>10</h2>
-          <li><a>afgdgdfgrtgeth</a></li>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div class="cate-list">
-{% for category in site.categories %}
-  <div class="categories">
-      <h2 id="{{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></h2>
-      {% for post in category.last %}
-        <li><a class="post-title" href="{{ post.url }}">{{ post.title }}<span class="post-date">{{ post.date | date:"%Y-%m-%d"}}</span></a>
-          <div class="post-tags">
-                {% for tag in post.tags %}
-                <a href="">{{ tag }}</a>
-                {% endfor %}
-          </div>
-        </li> 
-      {% endfor %}
-  </div>
-{% endfor %}  
-</div>                       
+  <script>
+    $.getJSON('/public/json/t.json',function(json, textStatus) {
+        console.log(json+"dddd");
+    });
+  </script>                 
