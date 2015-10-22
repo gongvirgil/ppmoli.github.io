@@ -87,106 +87,6 @@ a:hover {
     clear: both;
 }
 
-.navbar {
-    background-color: #fcfcfc;
-    min-height: 70px;
-    width: 100%;
-    border-top: 6px solid #2fa691;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    z-index: 99;
-}
-
-.navbar-fixed-top {
-    position: fixed;
-    top: 0;
-}
-
-.container {
-    margin: 0 auto;
-    width: 80%;
-    padding: 0 15px;
-    max-width: 1000px;
-}
-
-.logo {
-    float: left;
-    margin: 5px 0 0;
-}
-
-.menu {
-    float: right;
-    margin: 10px 15px 0 0;
-}
-
-.menu a {
-    padding: 0 12px;
-    display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    border: 1px solid #2FA691;
-    border-radius: 3px;
-    margin-right: 5px;
-    margin-bottom: 8px;
-    background-color: #2FA691;
-    color: #fff;
-    position: relative;
-}
-
-.menu a:hover {
-    background-color: #1ABC9C;
-    border-color: #1ABC9C;
-}
-
-.nav {
-    float: left;
-    margin: 12px 4px 12px 10px;
-}
-
-#search {
-    float: right;
-    margin: 13px 10px 0 0;
-}
-
-.nav li {
-    float: left;
-    text-align: center;
-    padding: 0 15px;
-    font-size: 16px;
-}
-
-.nav li.on a {
-    color: #2FA691;
-    font-weight: bold;
-}
-
-#search input {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    color: #555;
-    display: inline-block;
-    font-size: 13px;
-    height: 18px;
-    line-height: 18px;
-    margin-bottom: 9px;
-    padding: 4px;
-    width: 210px;
-}
-
-.header-content-wrap {
-    padding: 285px 0 210px;
-}
-
-.notice {
-    height: 50px;
-    width: 200px;
-    margin: 0 auto;
-    background: rgba(30, 30, 30, 0.3);
-    display: none;
-}
-
 .header {
     width: 33.3%;
     height: 100%;
@@ -204,9 +104,8 @@ a:hover {
     border-radius: 50%;
     box-shadow: 0 0 0 1px white, 0 0 4px 4px #999;
 }
-.links {
-    margin-bottom: -0.75em;
-    margin-top: 1.75em;
+.links, .calculates {
+    margin-top: 1em;
     text-align: center;
 }
 .links a {
@@ -220,9 +119,27 @@ a:hover {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.25em;
-    padding: 5px;
+    padding: 4px 5px;
     letter-spacing: 0.5px;
     transition: all 0.2s ease 0s;
+}
+.calculate-item {
+    border-left: 1px solid #333;
+    padding: 0 15px;
+    display: inline-block;
+}
+.calculate-item:first-child {
+    border: none;
+}
+.calculate-item a {
+    display: block;
+}
+.calculate-item-count {
+    display: block;
+    font-size: 18px;
+}
+.calculate-item-name {
+    font-size: 13px;
 }
 .main {
     margin-left: 33.3%;
@@ -234,30 +151,8 @@ a:hover {
     padding: 0 2em;
 }
 
-.left {
-    float: left;
-    width: 10%;
-    height: 100px;
-}
-
-.middle {
-    float: left;
-    width: 60%;
-    margin-right: 8%;
-}
-
-.right {
-    float: left;
-    width: 15%;
-}
-
 .footer {
-    margin-left: 33.3%;
-    max-width: 66.6%;
-    width: calc(100% - 33.3%);
-    background-color: #333;
-    box-shadow: 0 0 6px #333;
-    opacity: 0.8;
+    width: 100%;
 }
 
 .footer-inner {
@@ -265,33 +160,16 @@ a:hover {
     width: 80%;
 }
 
-.footer-category {
-    border-bottom: 1px solid #000000;
-    padding: 15px 0;
-}
-
-.footer-category a,
 .friendly-links a,
 .friendly-links span {
-    padding: 0 12px;
     display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    border: 1px solid #666666;
-    border-radius: 3px;
     color: #ccc;
     margin-right: 5px;
 }
-
-.footer-category a:hover,
 .friendly-links a:hover {
-    background-color: #2fa691;
-    border-color: #2fa691;
-    box-shadow: 0 0 6px #2fa691;
+    color: #2FA691;
 }
-
 .footer_info {
-    border-top: 1px solid #484848;
     padding: 15px 0;
     color: #000;
 }
@@ -302,21 +180,32 @@ a:hover {
 .site-info {
     margin-top: 15px;
 }
-.goTop {
+
+.sitebar-toggle, .goTop {
     overflow: hidden;
     position: fixed;
+    padding: 2px;
+    width: 15px;
+    height: 15px;
     right: 30px;
-    bottom: 100px;
-    z-index: 99;
-    opacity: 0.8;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 99;  
+}
+.sitebar-toggle {
+   bottom: 45px; 
+}
+.goTop {
+    bottom: 25px;
 }
 
-#goTop_btn {
+#sitebar-toggle-btn, #goTop_btn {
     display: block;
-    color: #333;
+    color: #fff;
 }
 
-#goTop_btn:hover {
+#sitebar-toggle-btn:hover, #goTop_btn:hover {
     color: #2FA691;
 }
 

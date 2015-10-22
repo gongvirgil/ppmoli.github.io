@@ -82,6 +82,9 @@ h6 {
     padding: 5px 0;
 }
 
+#AnchorContent {
+    display: none;
+}
 
 /* .BlogAnchor p {
     font-size: 18px;

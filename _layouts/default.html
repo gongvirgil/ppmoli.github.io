@@ -49,28 +49,45 @@
       <div class="avatar">
         <img width="80" height="80" src="/public/images/me.png" class="circle">
         <a title="Virgil's Blog" href="/"><h2>Virgil's Blog</h2></a>
-      </div>
-      <!--       
+      </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
       </div> 
-      -->
+      <div class="calculates">  
+        <div class="calculate-item">
+          <a href="/archive.html"><span class="calculate-item-count">{{ site.posts.size }}</span><span class="calculate-item-name">归档</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/category.html"><span class="calculate-item-count">{{ site.categories.size }}</span><span class="calculate-item-name">分类</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/tag.html"><span class="calculate-item-count">{{ site.tags.size }}</span><span class="calculate-item-name">标签</span></a>
+        </div>
+      </div>
     </header>
     <!--Main-->
     <div class="main">
       <div class="main-content">
         {{ content }}
       </div>
+      <!--Footer-->
+      <div class="footer">
+        {% include footer.html  %}
+      </div>
+      <!--Footer End-->
     </div>
     <!--Main End-->
+    <div class="sitebar-toggle">
+      <a id="sitebar-toggle-btn"><i class="fa fa-navicon"></i></a>
+    </div>
     <div class="goTop" >
-      <a title="回到顶部" id="goTop_btn"><i class="fa fa-3x fa-caret-square-o-up"></i></a>
+      <a title="回到顶部" id="goTop_btn"><i class="fa fa-chevron-up"></i></a>
     </div>
-    <!--Footer-->
-    <div class="footer">
-      {% include footer.html  %}
-    </div>
-    <!--Footer End-->
+
     <!-- 多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"{{ site.short_name }}"};
