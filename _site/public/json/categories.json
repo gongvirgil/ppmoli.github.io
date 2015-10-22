@@ -43,14 +43,6 @@
         ,
     
         {
-            "title":"任务清单之实现功能",
-            "url":"http://gongvirgil.github.io/blog/2015-09-15/task-list.html",
-            "date":"2015-09-15",
-            "tags":["随笔" ,"任务"]
-        }
-        ,
-    
-        {
             "title":"【laravel学习笔记】二、路由、控制器及视图简介",
             "url":"http://gongvirgil.github.io/blog/2015-09-11/route-controller-view.html",
             "date":"2015-09-11",
@@ -203,6 +195,18 @@
             "url":"http://gongvirgil.github.io/blog/2015-03-04/2.html",
             "date":"2015-03-04",
             "tags":["购物" ,"品牌" ,"日用品"]
+        }
+        
+    
+    ]},
+    
+    {"随笔":[
+        
+        {
+            "title":"任务清单之实现功能",
+            "url":"http://gongvirgil.github.io/blog/2015-09-15/task-list.html",
+            "date":"2015-09-15",
+            "tags":["随笔" ,"任务"]
         }
         
     

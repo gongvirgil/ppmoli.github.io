@@ -384,9 +384,9 @@ a:hover {
 
 .post-tags {}
 
-.post-tags a {
+.post-tags span, .post-tags a {
     color: #999;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .post-tags a:hover {
