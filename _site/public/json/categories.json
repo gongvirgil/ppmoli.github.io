@@ -203,6 +203,14 @@
     {"随笔":[
         
         {
+            "title":"英语生词本",
+            "url":"http://gongvirgil.github.io/blog/2015-10-23/english-words-book.html",
+            "date":"2015-10-23",
+            "tags":["随笔" ,"英语" ,"生词本"]
+        }
+        ,
+    
+        {
             "title":"任务清单之实现功能",
             "url":"http://gongvirgil.github.io/blog/2015-09-15/task-list.html",
             "date":"2015-09-15",
