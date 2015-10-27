@@ -15,7 +15,7 @@ comments: true
                     <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
                     <span class="post_tags">
                         {% for tag in page.tags %}
-                            <a href="{{site.baseurl}}/tags/?tag={{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                            <a href="{{site.baseurl}}/tag.html?{{ site.param-tag }}={{ tag }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </span>
                 </div>
