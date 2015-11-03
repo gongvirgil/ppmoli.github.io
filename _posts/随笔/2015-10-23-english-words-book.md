@@ -10,6 +10,7 @@ date: 2015-10-23
 `asset` 资产 优点  
 ##B
 ##C
+`continent` 洲  
 `crucial` 重要的 决定性的  
 ##D
 ##E
