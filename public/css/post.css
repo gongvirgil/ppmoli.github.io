@@ -1,11 +1,17 @@
+body {
+    font-family: Lato,"Microsoft Jhenghei","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: inherit;
-    font-weight: 500;
+    font-family: Cambria,Georgia,"Microsoft Jhenghei","Hiragino Sans GB","Microsoft YaHei","Times New Roman",serif;
+    font-weight: bold;
+    line-height: 1;
 }
 
 .ds-thread {
@@ -13,24 +19,16 @@ h6 {
     padding: 20px 0;
 }
 
-.post-main {}
-
-#content {
-    font-family: Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-    color: #333;
-    font-size: 14px;
-    letter-spacing: 0.01rem;
-    line-height: 1.8;
-    background-color: #fff;
+.post-main {
+    color: #555;
 }
 
 #content p {
     margin-bottom: 0.1em;
-    color: rgba(0, 0, 0, 0.6);
 }
 
 .post .post_title {
-    margin-bottom: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -42,23 +40,40 @@ h6 {
 
 .post_relate {
     color: #a7aab1;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .post_tags a {
     margin-left: 10px;
 }
-
-.pre-next {}
-
-.pre-next .pre {
-    float: left;
+.pre-next {
+    font-size: 13px;
+    white-space:nowrap;
 }
-
-.pre-next .next {
-    float: right;
+.pre-next li {
+    display: inline-block;
+    width: 50%;
 }
-
+.pre {
+    text-align: left;
+}
+.next {
+    text-align: right;
+}
+.pre a {
+    margin-left: 0.5em;
+}
+.next a {
+    margin-right: 0.5em;
+}
+.pre a, .pre i, .next a ,.next i{
+    color: #999;
+}
+.pre:hover a, .pre:hover i, .next:hover a, .next:hover i{
+    opacity: 1;
+    color: #222;
+    font-weight: bold;
+}
 
 /*Table of contents*/
 

@@ -19,32 +19,7 @@
     <script type="text/javascript" src="/public/js/default.js"></script>
   </head>
   <body>
-    <!--
-    <header id="home">
-      <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="logo">
-              <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
-            </div>
-            <div class="menu">
-              <a id="side-bar-btn"><i class="fa fa-navicon"></i></a>
-            </div>
-        </div>
-      </div>
-      <div class="header-content-wrap">
-        <div class="container">
-          
-        </div>
-      </div>
-    </header>
-
-    <div class="notice"></div>
-    <div class="shadow-screen"></div>
-    <div class="side-bar">
-      <a id="side-bar-close-btn"><i class="fa fa-times"></i></a>
-      {% include side-bar.html  %}
-    </div>
-    -->
+    <!--Header-->
     <header class="header">
       <div class="avatar">
         <img width="80" height="80" src="/public/images/me.png" class="circle">
@@ -52,12 +27,15 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
+        <div class="calculate-item">
+          <a href="/"><span class="calculate-item-count"><i class="fa fa-home"></i></span><span class="calculate-item-name">首页</span></a>
+        </div>
         <div class="calculate-item">
           <a href="/archive.html"><span class="calculate-item-count">{{ site.posts.size }}</span><span class="calculate-item-name">归档</span></a>
         </div>
@@ -69,6 +47,7 @@
         </div>
       </div>
     </header>
+    <!--Header End-->
     <!--Main-->
     <div class="main">
       <div class="main-content">
@@ -81,13 +60,40 @@
       <!--Footer End-->
     </div>
     <!--Main End-->
+    <!--Sidebar-->
+    <div class="sidebar">
+      {% include side-bar.html  %}
+    </div>
+    <!--Sidebar End-->
+    <script>
+    $(function(){
+      $("#sitebar-toggle-btn").click(function(event) {
+        if($(this).hasClass('active')){
+          $(".sidebar").fadeOut('50000');
+          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+            $(".header").fadeIn('500');
+          });
+          $(this).removeClass('active');
+          $(this).html('<i class="fa fa-navicon"></i>');
+        }else{
+          $(".header").fadeOut('50000');
+          $(".main").animate({marginLeft: "0px"},1000,function(){
+            $(".sidebar").fadeIn('500');
+          });
+          $(this).addClass('active');
+          $(this).html('<i class="fa fa-close"></i>');
+        }
+      });
+    })
+    </script>
+    <!--Float Btns-->
     <div class="sitebar-toggle">
       <a id="sitebar-toggle-btn"><i class="fa fa-navicon"></i></a>
     </div>
     <div class="goTop" >
       <a title="回到顶部" id="goTop_btn"><i class="fa fa-chevron-up"></i></a>
     </div>
-
+    <!--Float Btns End-->
     <!-- 多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"{{ site.short_name }}"};

@@ -1,5 +1,29 @@
 [
     
+      {"title":"全部国家列表",
+      "url":"http://gongvirgil.github.io/blog/2015-11-02/all-country-list.html",
+      "date":"2015-11-02",
+      "tags":["国家" ,"笔记" ,"小知识"]
+    }
+    ,
+      {"title":"各种API",
+      "url":"http://gongvirgil.github.io/blog/2015-11-02/all-api.html",
+      "date":"2015-11-02",
+      "tags":["API" ,"接口"]
+    }
+    ,
+      {"title":"curl模拟登陆",
+      "url":"http://gongvirgil.github.io/blog/2015-10-29/curl-login.html",
+      "date":"2015-10-29",
+      "tags":["php" ,"curl"]
+    }
+    ,
+      {"title":"如何解决msvcr100.dll丢失问题",
+      "url":"http://gongvirgil.github.io/blog/2015-10-27/msvcr100u-dll.html",
+      "date":"2015-10-27",
+      "tags":["软件" ,"安装"]
+    }
+    ,
       {"title":"英语生词本",
       "url":"http://gongvirgil.github.io/blog/2015-10-23/english-words-book.html",
       "date":"2015-10-23",

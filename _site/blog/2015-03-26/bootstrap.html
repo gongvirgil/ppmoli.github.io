@@ -19,29 +19,238 @@
     <script type="text/javascript" src="/public/js/default.js"></script>
   </head>
   <body>
-    <!--
-    <header id="home">
-      <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="logo">
-              <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
-            </div>
-            <div class="menu">
-              <a id="side-bar-btn"><i class="fa fa-navicon"></i></a>
-            </div>
+    <!--Header-->
+    <header class="header">
+      <div class="avatar">
+        <img width="80" height="80" src="/public/images/me.png" class="circle">
+        <a title="Virgil's Blog" href="/"><h2>Virgil's Blog</h2></a>
+      </div>   
+      <div class="links">
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+      </div> 
+      <div class="calculates">  
+        <div class="calculate-item">
+          <a href="/"><span class="calculate-item-count"><i class="fa fa-home"></i></span><span class="calculate-item-name">首页</span></a>
         </div>
-      </div>
-      <div class="header-content-wrap">
-        <div class="container">
-          
+        <div class="calculate-item">
+          <a href="/archive.html"><span class="calculate-item-count">36</span><span class="calculate-item-name">归档</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/category.html"><span class="calculate-item-count">4</span><span class="calculate-item-name">分类</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/tag.html"><span class="calculate-item-count">48</span><span class="calculate-item-name">标签</span></a>
         </div>
       </div>
     </header>
+    <!--Header End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
+    <div class="post-main">
+        <div id="content">
+            <div class="post">
+                <div class="post_title">
+                    <h1>bootstrap笔记</h1>
+                </div>
+                <div class="post_relate">
+                    <span class="post_date">2015-03-26</span>
+                    <span class="post_tags">
+                        
+                            <a href="/tag.html?TAG=bootstrap" title="bootstrap">#bootstrap</a>
+                        
+                            <a href="/tag.html?TAG=css" title="css">#css</a>
+                        
+                            <a href="/tag.html?TAG=笔记" title="笔记">#笔记</a>
+                        
+                    </span>
+                </div>
+                <div class="post_content">
+                    <h2>简介</h2>
 
-    <div class="notice"></div>
-    <div class="shadow-screen"></div>
-    <div class="side-bar">
-      <a id="side-bar-close-btn"><i class="fa fa-times"></i></a>
+<h2>基本页面HTML：<a href="http://gongvirgil.github.io/demo/demo1/">demo戳这里</a></h2>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;你好，世界！&lt;/h1&gt;
+    &lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>顶部导航栏</h2>
+
+<h3>Static navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-static-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Static top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-fixed-top/"&gt;Fixed top&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3>Fixed navbar</h3>
+
+<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../navbar-static-top/"&gt;Static top&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="./"&gt;Fixed top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h2>栅栏布局</h2>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>表单</h2>
+
+<pre><code>  &lt;form class="form-signin"&gt;
+    &lt;h2 class="form-signin-heading"&gt;Please sign in&lt;/h2&gt;
+    &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
+    &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
+    &lt;div class="checkbox"&gt;
+      &lt;label&gt;
+        &lt;input type="checkbox" value="remember-me"&gt; Remember me
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<h2>表格</h2>
+            
+                </div>
+            </div>
+            <div class="pre-next">
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></a></li>
+                <li class="next"><a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a><i class="fa fa-angle-right"></i></li>
+            </div>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="/blog/2015-03-26/bootstrap" data-title="bootstrap笔记" data-url="/blog/2015-03-26/bootstrap.html"></div>
+            <!-- 多说评论框 end -->
+        </div>
+    </div>
+    <div class="post-anchor">
+        <div id="BlogAnchor">
+            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
+            <div class="AnchorContent" id="AnchorContent"></div>
+        </div> 
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+
+    
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
+    <!--Sidebar-->
+    <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
@@ -51,11 +260,13 @@
             <h4>CATEGORY</h4>
             <div class="list-content">
               
-              <li><a href="/category.html?CATE=技术">技术<span class="cate-size">23</span></a></li>
+              <li><a href="/category.html?CATE=技术">技术<span class="cate-size">25</span></a></li>
               
               <li><a href="/category.html?CATE=生活">生活<span class="cate-size">1</span></a></li>
               
-              <li><a href="/category.html?CATE=随笔">随笔<span class="cate-size">2</span></a></li>
+              <li><a href="/category.html?CATE=随笔">随笔<span class="cate-size">3</span></a></li>
+              
+              <li><a href="/category.html?CATE=资源">资源<span class="cate-size">1</span></a></li>
               
             </div>
             <div class="clear"></div>
@@ -84,7 +295,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=笔记" title="11" style="font-size: 12pt; color: #666;">笔记</a>
+                  <a href="/tag.html?TAG=笔记" title="12" style="font-size: 12pt; color: #666;">笔记</a>
                 
                   
                   
@@ -128,7 +339,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=php" title="1" style="font-size: 9.5pt; color: #999;">php</a>
+                  <a href="/tag.html?TAG=php" title="2" style="font-size: 9.5pt; color: #888;">php</a>
                 
                   
                   
@@ -150,7 +361,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=软件" title="1" style="font-size: 9.5pt; color: #999;">软件</a>
+                  <a href="/tag.html?TAG=软件" title="2" style="font-size: 9.5pt; color: #888;">软件</a>
                 
                   
                   
@@ -526,6 +737,72 @@
                   
                   <a href="/tag.html?TAG=生词本" title="1" style="font-size: 9.5pt; color: #999;">生词本</a>
                 
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=安装" title="1" style="font-size: 9.5pt; color: #999;">安装</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=curl" title="1" style="font-size: 9.5pt; color: #999;">curl</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=API" title="1" style="font-size: 9.5pt; color: #999;">API</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=接口" title="1" style="font-size: 9.5pt; color: #999;">接口</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=国家" title="1" style="font-size: 9.5pt; color: #999;">国家</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=小知识" title="1" style="font-size: 9.5pt; color: #999;">小知识</a>
+                
             </div>
             <div class="clear"></div>
         </div>
@@ -533,252 +810,36 @@
 
 
     </div>
-    -->
-    <header class="header">
-      <div class="avatar">
-        <img width="80" height="80" src="/public/images/me.png" class="circle">
-        <a title="Virgil's Blog" href="/"><h2>Virgil's Blog</h2></a>
-      </div>   
-      <div class="links">
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-      </div> 
-      <div class="calculates">  
-        <div class="calculate-item">
-          <a href="/archive.html"><span class="calculate-item-count">32</span><span class="calculate-item-name">归档</span></a>
-        </div>
-        <div class="calculate-item">
-          <a href="/category.html"><span class="calculate-item-count">3</span><span class="calculate-item-name">分类</span></a>
-        </div>
-        <div class="calculate-item">
-          <a href="/tag.html"><span class="calculate-item-count">42</span><span class="calculate-item-name">标签</span></a>
-        </div>
-      </div>
-    </header>
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1><a href="/blog/2015-03-26/bootstrap.html" title="bootstrap笔记">bootstrap笔记</a></h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-03-26</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tags/?tag=bootstrap" title="bootstrap">bootstrap</a>
-                        
-                            <a href="/tags/?tag=css" title="css">css</a>
-                        
-                            <a href="/tags/?tag=笔记" title="笔记">笔记</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <h2>简介</h2>
-
-<h2>基本页面HTML：<a href="http://gongvirgil.github.io/demo/demo1/">demo戳这里</a></h2>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
-    &lt;link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
-      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;你好，世界！&lt;/h1&gt;
-    &lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2>顶部导航栏</h2>
-
-<h3>Static navbar</h3>
-
-<pre><code>&lt;nav class="navbar navbar-default navbar-static-top"&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="navbar-header"&gt;
-      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
-        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
-      &lt;ul class="nav navbar-nav"&gt;
-        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="dropdown"&gt;
-          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-          &lt;ul class="dropdown-menu" role="menu"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="divider"&gt;&lt;/li&gt;
-            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class="nav navbar-nav navbar-right"&gt;
-        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="active"&gt;&lt;a href="./"&gt;Static top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="../navbar-fixed-top/"&gt;Fixed top&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
-
-<h3>Fixed navbar</h3>
-
-<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="navbar-header"&gt;
-      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
-        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;a class="navbar-brand" href="#"&gt;Project name&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id="navbar" class="navbar-collapse collapse"&gt;
-      &lt;ul class="nav navbar-nav"&gt;
-        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="dropdown"&gt;
-          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-          &lt;ul class="dropdown-menu" role="menu"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="divider"&gt;&lt;/li&gt;
-            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class="nav navbar-nav navbar-right"&gt;
-        &lt;li&gt;&lt;a href="../navbar/"&gt;Default&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="../navbar-static-top/"&gt;Static top&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="active"&gt;&lt;a href="./"&gt;Fixed top &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
-
-<h2>栅栏布局</h2>
-
-<pre><code>&lt;div class="row"&gt;
-    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
-    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
-    &lt;div class="col-md-3"&gt;.col-md-3&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h2>表单</h2>
-
-<pre><code>  &lt;form class="form-signin"&gt;
-    &lt;h2 class="form-signin-heading"&gt;Please sign in&lt;/h2&gt;
-    &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
-    &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
-    &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
-    &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
-    &lt;div class="checkbox"&gt;
-      &lt;label&gt;
-        &lt;input type="checkbox" value="remember-me"&gt; Remember me
-      &lt;/label&gt;
-    &lt;/div&gt;
-    &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
-  &lt;/form&gt;
-</code></pre>
-
-<h2>表格</h2>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-                <li class="pre">上一篇：<a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a></a></li>
-                <li class="next">下一篇：<a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-03-26/bootstrap" data-title="bootstrap笔记" data-url="/blog/2015-03-26/bootstrap.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"gongvirgil"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-        </script>
-    <!-- 多说公共JS代码 end -->
-
-    
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
+    <!--Sidebar End-->
+    <script>
+    $(function(){
+      $("#sitebar-toggle-btn").click(function(event) {
+        if($(this).hasClass('active')){
+          $(".sidebar").fadeOut('50000');
+          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+            $(".header").fadeIn('500');
+          });
+          $(this).removeClass('active');
+          $(this).html('<i class="fa fa-navicon"></i>');
+        }else{
+          $(".header").fadeOut('50000');
+          $(".main").animate({marginLeft: "0px"},1000,function(){
+            $(".sidebar").fadeIn('500');
+          });
+          $(this).addClass('active');
+          $(this).html('<i class="fa fa-close"></i>');
+        }
+      });
+    })
+    </script>
+    <!--Float Btns-->
     <div class="sitebar-toggle">
       <a id="sitebar-toggle-btn"><i class="fa fa-navicon"></i></a>
     </div>
     <div class="goTop" >
       <a title="回到顶部" id="goTop_btn"><i class="fa fa-chevron-up"></i></a>
     </div>
-
+    <!--Float Btns End-->
     <!-- 多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"gongvirgil"};

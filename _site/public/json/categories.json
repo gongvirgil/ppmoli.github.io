@@ -3,6 +3,22 @@
     {"技术":[
         
         {
+            "title":"curl模拟登陆",
+            "url":"http://gongvirgil.github.io/blog/2015-10-29/curl-login.html",
+            "date":"2015-10-29",
+            "tags":["php" ,"curl"]
+        }
+        ,
+    
+        {
+            "title":"如何解决msvcr100.dll丢失问题",
+            "url":"http://gongvirgil.github.io/blog/2015-10-27/msvcr100u-dll.html",
+            "date":"2015-10-27",
+            "tags":["软件" ,"安装"]
+        }
+        ,
+    
+        {
             "title":"PHP 判断设备是否是手机/平板的方法",
             "url":"http://gongvirgil.github.io/blog/2015-10-14/PHP-is-mobile.html",
             "date":"2015-10-14",
@@ -203,6 +219,14 @@
     {"随笔":[
         
         {
+            "title":"全部国家列表",
+            "url":"http://gongvirgil.github.io/blog/2015-11-02/all-country-list.html",
+            "date":"2015-11-02",
+            "tags":["国家" ,"笔记" ,"小知识"]
+        }
+        ,
+    
+        {
             "title":"英语生词本",
             "url":"http://gongvirgil.github.io/blog/2015-10-23/english-words-book.html",
             "date":"2015-10-23",
@@ -215,6 +239,18 @@
             "url":"http://gongvirgil.github.io/blog/2015-09-15/task-list.html",
             "date":"2015-09-15",
             "tags":["随笔" ,"任务"]
+        }
+        
+    
+    ]},
+    
+    {"资源":[
+        
+        {
+            "title":"各种API",
+            "url":"http://gongvirgil.github.io/blog/2015-11-02/all-api.html",
+            "date":"2015-11-02",
+            "tags":["API" ,"接口"]
         }
         
     

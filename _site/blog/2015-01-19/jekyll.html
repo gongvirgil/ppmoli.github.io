@@ -19,29 +19,185 @@
     <script type="text/javascript" src="/public/js/default.js"></script>
   </head>
   <body>
-    <!--
-    <header id="home">
-      <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="logo">
-              <a href="/"><img src="/public/images/a.png" alt="GongVirgil" /></a>
-            </div>
-            <div class="menu">
-              <a id="side-bar-btn"><i class="fa fa-navicon"></i></a>
-            </div>
+    <!--Header-->
+    <header class="header">
+      <div class="avatar">
+        <img width="80" height="80" src="/public/images/me.png" class="circle">
+        <a title="Virgil's Blog" href="/"><h2>Virgil's Blog</h2></a>
+      </div>   
+      <div class="links">
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+      </div> 
+      <div class="calculates">  
+        <div class="calculate-item">
+          <a href="/"><span class="calculate-item-count"><i class="fa fa-home"></i></span><span class="calculate-item-name">首页</span></a>
         </div>
-      </div>
-      <div class="header-content-wrap">
-        <div class="container">
-          
+        <div class="calculate-item">
+          <a href="/archive.html"><span class="calculate-item-count">36</span><span class="calculate-item-name">归档</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/category.html"><span class="calculate-item-count">4</span><span class="calculate-item-name">分类</span></a>
+        </div>
+        <div class="calculate-item">
+          <a href="/tag.html"><span class="calculate-item-count">48</span><span class="calculate-item-name">标签</span></a>
         </div>
       </div>
     </header>
+    <!--Header End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
+    <div class="post-main">
+        <div id="content">
+            <div class="post">
+                <div class="post_title">
+                    <h1>安装Jekyll</h1>
+                </div>
+                <div class="post_relate">
+                    <span class="post_date">2015-01-19</span>
+                    <span class="post_tags">
+                        
+                            <a href="/tag.html?TAG=Jekyll" title="Jekyll">#Jekyll</a>
+                        
+                            <a href="/tag.html?TAG=Blog" title="Blog">#Blog</a>
+                        
+                    </span>
+                </div>
+                <div class="post_content">
+                    <h2>安装ruby环境</h2>
 
-    <div class="notice"></div>
-    <div class="shadow-screen"></div>
-    <div class="side-bar">
-      <a id="side-bar-close-btn"><i class="fa fa-times"></i></a>
+<p>安装Jekyll，下载地址：[http://rubyinstaller.org/downloads/][]</p>
+
+<h2>下载DevKit并解压</h2>
+
+<p>  DevKit 是 windows 平台下编译和使用本地 C/C++ 扩展包的工具。它就是用来模拟 Linux 平 台下的 make,gcc,sh 来进行编译。但是这个方法目前仅支持通过 RubyInstaller 安装的 Ruby 。
+下载地址：http://rubyinstaller.org/downloads/</p>
+
+<h2>git下安装Devkit</h2>
+
+<h3>3.1</h3>
+
+<p>git下（cmd下各种问题）进入Devkit解压的目录，执行以下命令</p>
+
+<h4>3.1.1</h4>
+
+<pre><code>$ Ruby dk.rb init
+$ Ruby dk.rb install
+</code></pre>
+
+<p>如果config.yml有报错，找到这个文件，按里面的说明添加两行路径</p>
+
+<pre><code>- E:\Ruby21-x64 
+- E:\Ruby21-x64
+</code></pre>
+
+<h4>3.1.2</h4>
+
+<pre><code>$ ruby -v
+</code></pre>
+
+<p>出现版本号，证明安装成功</p>
+
+<h3>3.2</h3>
+
+<pre><code>$ Gem install Jekyll
+</code></pre>
+
+<p>这一步安装Jekyll，由于天朝网络的关系，可能会出现Unable to download data的错误，解决方法：</p>
+
+<pre><code>$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://ruby.taobao.org/
+$ gem sources -l
+
+*** CURRENT SOURCES ***
+
+https://ruby.taobao.org
+（请确保只有 ruby.taobao.org）
+$ gem install rails
+</code></pre>
+
+<p>参考这篇文章http://ruby.taobao.org/</p>
+
+<p>等待安装完毕...</p>
+
+<h3>3.3</h3>
+
+<pre><code>$ Jekyll –v
+</code></pre>
+
+<p>检查安装成功。</p>
+
+<h3>3.4</h3>
+
+<p>安装Rdiscount</p>
+
+<pre><code>$ gem install rdiscount
+</code></pre>
+
+<p>这个是用来解析Markdown标记的解析包，如果你使用Textile的话，就需要安装Kramdown。</p>
+
+<h3>3.5</h3>
+
+<pre><code>$ git clone git://github.com/test/test.github.com.git
+</code></pre>
+
+<p>将代码克隆到本地</p>
+
+<pre><code>$ cd test.github.com
+$ Jekyll server
+</code></pre>
+
+<p>进入到刚才的目录，启动Jekyll。
+访问http://localhost:4000/  就可以看到效果啦！</p>
+            
+                </div>
+            </div>
+            <div class="pre-next">
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a></a></li>
+                <li class="next"><a href="/blog/2015-01-30/markdown.html">标准的markdown格式练习</a><i class="fa fa-angle-right"></i></li>
+            </div>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="/blog/2015-01-19/jekyll" data-title="安装Jekyll" data-url="/blog/2015-01-19/jekyll.html"></div>
+            <!-- 多说评论框 end -->
+        </div>
+    </div>
+    <div class="post-anchor">
+        <div id="BlogAnchor">
+            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
+            <div class="AnchorContent" id="AnchorContent"></div>
+        </div> 
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+
+    
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
+    <!--Sidebar-->
+    <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
@@ -51,11 +207,13 @@
             <h4>CATEGORY</h4>
             <div class="list-content">
               
-              <li><a href="/category.html?CATE=技术">技术<span class="cate-size">23</span></a></li>
+              <li><a href="/category.html?CATE=技术">技术<span class="cate-size">25</span></a></li>
               
               <li><a href="/category.html?CATE=生活">生活<span class="cate-size">1</span></a></li>
               
-              <li><a href="/category.html?CATE=随笔">随笔<span class="cate-size">2</span></a></li>
+              <li><a href="/category.html?CATE=随笔">随笔<span class="cate-size">3</span></a></li>
+              
+              <li><a href="/category.html?CATE=资源">资源<span class="cate-size">1</span></a></li>
               
             </div>
             <div class="clear"></div>
@@ -84,7 +242,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=笔记" title="11" style="font-size: 12pt; color: #666;">笔记</a>
+                  <a href="/tag.html?TAG=笔记" title="12" style="font-size: 12pt; color: #666;">笔记</a>
                 
                   
                   
@@ -128,7 +286,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=php" title="1" style="font-size: 9.5pt; color: #999;">php</a>
+                  <a href="/tag.html?TAG=php" title="2" style="font-size: 9.5pt; color: #888;">php</a>
                 
                   
                   
@@ -150,7 +308,7 @@
                   
                     
                   
-                  <a href="/tag.html?TAG=软件" title="1" style="font-size: 9.5pt; color: #999;">软件</a>
+                  <a href="/tag.html?TAG=软件" title="2" style="font-size: 9.5pt; color: #888;">软件</a>
                 
                   
                   
@@ -526,6 +684,72 @@
                   
                   <a href="/tag.html?TAG=生词本" title="1" style="font-size: 9.5pt; color: #999;">生词本</a>
                 
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=安装" title="1" style="font-size: 9.5pt; color: #999;">安装</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=curl" title="1" style="font-size: 9.5pt; color: #999;">curl</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=API" title="1" style="font-size: 9.5pt; color: #999;">API</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=接口" title="1" style="font-size: 9.5pt; color: #999;">接口</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=国家" title="1" style="font-size: 9.5pt; color: #999;">国家</a>
+                
+                  
+                  
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/tag.html?TAG=小知识" title="1" style="font-size: 9.5pt; color: #999;">小知识</a>
+                
             </div>
             <div class="clear"></div>
         </div>
@@ -533,199 +757,36 @@
 
 
     </div>
-    -->
-    <header class="header">
-      <div class="avatar">
-        <img width="80" height="80" src="/public/images/me.png" class="circle">
-        <a title="Virgil's Blog" href="/"><h2>Virgil's Blog</h2></a>
-      </div>   
-      <div class="links">
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-      </div> 
-      <div class="calculates">  
-        <div class="calculate-item">
-          <a href="/archive.html"><span class="calculate-item-count">32</span><span class="calculate-item-name">归档</span></a>
-        </div>
-        <div class="calculate-item">
-          <a href="/category.html"><span class="calculate-item-count">3</span><span class="calculate-item-name">分类</span></a>
-        </div>
-        <div class="calculate-item">
-          <a href="/tag.html"><span class="calculate-item-count">42</span><span class="calculate-item-name">标签</span></a>
-        </div>
-      </div>
-    </header>
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1><a href="/blog/2015-01-19/jekyll.html" title="安装Jekyll">安装Jekyll</a></h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-01-19</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tags/?tag=Jekyll" title="Jekyll">Jekyll</a>
-                        
-                            <a href="/tags/?tag=Blog" title="Blog">Blog</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <h2>安装ruby环境</h2>
-
-<p>安装Jekyll，下载地址：[http://rubyinstaller.org/downloads/][]</p>
-
-<h2>下载DevKit并解压</h2>
-
-<p>  DevKit 是 windows 平台下编译和使用本地 C/C++ 扩展包的工具。它就是用来模拟 Linux 平 台下的 make,gcc,sh 来进行编译。但是这个方法目前仅支持通过 RubyInstaller 安装的 Ruby 。
-下载地址：http://rubyinstaller.org/downloads/</p>
-
-<h2>git下安装Devkit</h2>
-
-<h3>3.1</h3>
-
-<p>git下（cmd下各种问题）进入Devkit解压的目录，执行以下命令</p>
-
-<h4>3.1.1</h4>
-
-<pre><code>$ Ruby dk.rb init
-$ Ruby dk.rb install
-</code></pre>
-
-<p>如果config.yml有报错，找到这个文件，按里面的说明添加两行路径</p>
-
-<pre><code>- E:\Ruby21-x64 
-- E:\Ruby21-x64
-</code></pre>
-
-<h4>3.1.2</h4>
-
-<pre><code>$ ruby -v
-</code></pre>
-
-<p>出现版本号，证明安装成功</p>
-
-<h3>3.2</h3>
-
-<pre><code>$ Gem install Jekyll
-</code></pre>
-
-<p>这一步安装Jekyll，由于天朝网络的关系，可能会出现Unable to download data的错误，解决方法：</p>
-
-<pre><code>$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ gem sources -l
-
-*** CURRENT SOURCES ***
-
-https://ruby.taobao.org
-（请确保只有 ruby.taobao.org）
-$ gem install rails
-</code></pre>
-
-<p>参考这篇文章http://ruby.taobao.org/</p>
-
-<p>等待安装完毕...</p>
-
-<h3>3.3</h3>
-
-<pre><code>$ Jekyll –v
-</code></pre>
-
-<p>检查安装成功。</p>
-
-<h3>3.4</h3>
-
-<p>安装Rdiscount</p>
-
-<pre><code>$ gem install rdiscount
-</code></pre>
-
-<p>这个是用来解析Markdown标记的解析包，如果你使用Textile的话，就需要安装Kramdown。</p>
-
-<h3>3.5</h3>
-
-<pre><code>$ git clone git://github.com/test/test.github.com.git
-</code></pre>
-
-<p>将代码克隆到本地</p>
-
-<pre><code>$ cd test.github.com
-$ Jekyll server
-</code></pre>
-
-<p>进入到刚才的目录，启动Jekyll。
-访问http://localhost:4000/  就可以看到效果啦！</p>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-                <li class="pre">上一篇：<a href="/blog/2015-01-19/github-blog.html">使用Github Pages建独立博客</a></a></li>
-                <li class="next">下一篇：<a href="/blog/2015-01-30/markdown.html">标准的markdown格式练习</a></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-01-19/jekyll" data-title="安装Jekyll" data-url="/blog/2015-01-19/jekyll.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"gongvirgil"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-        </script>
-    <!-- 多说公共JS代码 end -->
-
-    
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
+    <!--Sidebar End-->
+    <script>
+    $(function(){
+      $("#sitebar-toggle-btn").click(function(event) {
+        if($(this).hasClass('active')){
+          $(".sidebar").fadeOut('50000');
+          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+            $(".header").fadeIn('500');
+          });
+          $(this).removeClass('active');
+          $(this).html('<i class="fa fa-navicon"></i>');
+        }else{
+          $(".header").fadeOut('50000');
+          $(".main").animate({marginLeft: "0px"},1000,function(){
+            $(".sidebar").fadeIn('500');
+          });
+          $(this).addClass('active');
+          $(this).html('<i class="fa fa-close"></i>');
+        }
+      });
+    })
+    </script>
+    <!--Float Btns-->
     <div class="sitebar-toggle">
       <a id="sitebar-toggle-btn"><i class="fa fa-navicon"></i></a>
     </div>
     <div class="goTop" >
       <a title="回到顶部" id="goTop_btn"><i class="fa fa-chevron-up"></i></a>
     </div>
-
+    <!--Float Btns End-->
     <!-- 多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"gongvirgil"};

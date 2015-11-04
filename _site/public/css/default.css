@@ -1,4 +1,6 @@
-html {overflow-x:hidden;}
+html {
+    overflow-x: hidden;
+}
 
 body,
 div,
@@ -43,11 +45,21 @@ section {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 12px;
-    word-wrap: break-word;
-    background-color: #fff;
+    font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
     overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Cambria, Georgia, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif;
+    font-weight: bold;
+    line-height: 1;
 }
 
 code {
@@ -87,6 +99,9 @@ a:hover {
     clear: both;
 }
 
+
+/*-----Header-----*/
+
 .header {
     width: 33.3%;
     height: 100%;
@@ -95,19 +110,24 @@ a:hover {
     background-image: url("/public/images/overlay.png"), url("/public/images/bg19.jpg");
     background-size: cover;
 }
+
 .avatar {
     text-align: center;
     padding-top: 2em;
 }
+
 .circle {
     background-color: #DCD8CC;
     border-radius: 50%;
     box-shadow: 0 0 0 1px white, 0 0 4px 4px #999;
 }
-.links, .calculates {
+
+.links,
+.calculates {
     margin-top: 1em;
     text-align: center;
 }
+
 .links a {
     border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.55);
     border-image: none;
@@ -119,41 +139,80 @@ a:hover {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.25em;
-    padding: 4px 5px;
+    padding: 0px 6px;
     letter-spacing: 0.5px;
     transition: all 0.2s ease 0s;
 }
+
+.links a:hover {
+    color: #2FA68F;
+    border-color: #2FA68F;
+}
+
 .calculate-item {
     border-left: 1px solid rgba(255, 255, 255, 0.35);
     padding: 0 15px;
     display: inline-block;
 }
+
 .calculate-item:first-child {
     border: none;
 }
+
 .calculate-item a {
     display: block;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .calculate-item a:hover {
     color: #fff;
 }
+
 .calculate-item-count {
     display: block;
     font-size: 18px;
 }
+
 .calculate-item-name {
     font-size: 13px;
 }
+
+
+/*-----Header End-----*/
+
+
+/*-----Main-----*/
+
 .main {
     margin-left: 33.3%;
-    max-width: 66.6%;
     width: calc(100% - 33.3%);
 }
 
 .main-content {
     padding: 0 2em;
 }
+
+
+/*-----Main End-----*/
+
+
+/*-----Sidebar-----*/
+
+.sidebar {
+    background-color: #000;
+    width: 33.3%;
+    margin-left: calc(100% - 33.3%);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+
+/*-----Sidebar End-----*/
+
+
+/*-----Footer-----*/
 
 .footer {
     width: 100%;
@@ -170,9 +229,11 @@ a:hover {
     color: #ccc;
     margin-right: 5px;
 }
+
 .friendly-links a:hover {
     color: #2FA691;
 }
+
 .footer_info {
     padding: 15px 0;
     color: #000;
@@ -181,150 +242,53 @@ a:hover {
 .friendly-links span {
     margin-right: 15px;
 }
+
 .site-info {
     margin-top: 15px;
 }
 
-.sitebar-toggle, .goTop {
+
+/*-----Footer End-----*/
+
+
+/*-----Float Btns-----*/
+
+.sitebar-toggle,
+.goTop {
     overflow: hidden;
     position: fixed;
-    padding: 2px;
-    width: 15px;
-    height: 15px;
+    font-size: 12px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
     right: 30px;
     text-align: center;
     background-color: #000;
     color: #fff;
-    z-index: 99;  
+    z-index: 99;
 }
+
 .sitebar-toggle {
-   bottom: 45px; 
+    bottom: 50px;
 }
+
 .goTop {
     bottom: 25px;
 }
 
-#sitebar-toggle-btn, #goTop_btn {
+#sitebar-toggle-btn,
+#goTop_btn {
     display: block;
     color: #fff;
 }
 
-#sitebar-toggle-btn:hover, #goTop_btn:hover {
+#sitebar-toggle-btn:hover,
+#goTop_btn:hover {
     color: #2FA691;
 }
 
 
-/*side-bar*/
-
-.shadow-screen {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: none;
-    visibility: hidden;
-    z-index: 999;
-    transition: all 500ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s;
-}
-
-.shadow-screen.on {
-    visibility: visible;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.side-bar {
-    height: 100%;
-    background-color: #fff;
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding: 10px 20px 0 10%;
-    z-index: 9999;
-    text-align: right;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 20%;
-    min-width: 200px;
-    visibility: hidden;
-    transition: all 500ms cubic-bezier(0.86, 0.01, 0.77, 0.78) 0s;
-}
-
-.side-bar.on {
-    visibility: visible;
-}
-
-#side-bar-close-btn {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-#menu-pages {
-    font-size: 20px;
-    font-weight: 800;
-}
-
-#menu-pages li {
-    line-height: 30px;
-}
-
-#category h4,
-#tag h4,
-#comment h4 {
-    color: #2FA691;
-    font-weight: normal;
-    font-size: 20px;
-    padding: 5px 0;
-}
-
-#category {
-    min-height: 20px;
-    margin-top: 20px;
-}
-
-.list-content li {
-    margin: 10px 15px 5px 0;
-    line-height: 20px;
-}
-
-.list-content li a {}
-
-.list-content li a span {
-    margin-left: 2px;
-    color: #999;
-}
-
-.cate-size {
-    position: absolute;
-    font-size: 8px;
-    color: #999;
-}
-
-#tag {
-    min-height: 20px;
-    margin-top: 20px;
-}
-
-.tag-cloud {
-    max-width: 300px;
-    float: right;
-}
-
-.tag-cloud a {
-    display: inline-block;
-}
-
-#comment {
-    min-height: 20px;
-    margin-top: 20px;
-}
-
-#comment li {
-    display: inline-block;
-}
+/*-----Float Btns End-----*/
 
 
 /*index-category-tag*/
@@ -335,6 +299,7 @@ a:hover {
 
 .page {
     text-align: center;
+    font-size: 12px;
     margin: 5% 0;
 }
 
@@ -356,6 +321,16 @@ a:hover {
 .tags h2 {
     padding: 8px 10px;
     background-color: #999;
+    border-left: 6px solid #000;
+    position: relative;
+}
+
+.post-num {
+    font-weight: normal;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 0;
 }
 
 .posts li,
@@ -363,9 +338,8 @@ a:hover {
 .tags li {
     background-color: #fff;
     width: 100%;
-    line-height: 35px;
-    display: inline;
-    float: left;
+    line-height: 3em;
+    text-align: left;
     border-bottom: 1px solid #eaeaea;
     transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
 }
@@ -382,19 +356,20 @@ a:hover {
     color: #2fa691;
 }
 
-.post-date {
-    color: #717171;
+.post-date,
+.post-tags {
+    font-size: 12px;
+    color: #999;
 }
 
-.post-tags {}
-
-.post-tags span, .post-tags a {
+.post-tags span,
+.post-tags a {
     color: #999;
     margin-right: 5px;
 }
 
 .post-tags a:hover {
-    color: #717171;
+    color: #000;
 }
 
 @media only screen and (max-width: 650px) {

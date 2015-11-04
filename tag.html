@@ -4,16 +4,20 @@ layout: default
 <div class="tag-list">
 {% for tag in site.tags %}
   <div class="tags">
-      <h2 id="{{ tag | first }}">{{ tag | first }}<span class="cate-size">{{ tag | last | size }}</span></h2>
+      <h2 id="{{ tag | first }}">{{ tag | first }}<span class="post-num">{{ tag | last | size }}</span></h2>
       {% for post in tag.last %}
       <li>
           <div>
-              <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-              <h3><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="post-date">
+                <span><i class="fa fa-clock-o"></i></span>
+                {{ post.date | date: "%Y-%m-%d" }}
+              </div>
+              <a class="post-title" href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
               <div class="post-tags">
-                  {% for tag in post.tags %}
-                  <a href="/tag.html?{{ site.param-tag }}={{ tag }}">{{ tag }}</a>
-                  {% endfor %}
+                <span><i class="fa fa-tags"></i></span>
+                {% for tag in post.tags %}
+                <a href="/tag.html?{{ site.param-tag }}={{ tag }}">#{{ tag }}</a>
+                {% endfor %}
               </div>  
           </div>
       </li> 

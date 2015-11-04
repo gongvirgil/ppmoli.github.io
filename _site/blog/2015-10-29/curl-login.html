@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP设计模式之单例模式 | site of gongvirgil</title>
+    <title>curl模拟登陆 | site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -58,156 +58,98 @@
         <div id="content">
             <div class="post">
                 <div class="post_title">
-                    <h1>PHP设计模式之单例模式</h1>
+                    <h1>curl模拟登陆</h1>
                 </div>
                 <div class="post_relate">
-                    <span class="post_date">2015-10-09</span>
+                    <span class="post_date">2015-10-29</span>
                     <span class="post_tags">
                         
-                            <a href="/tag.html?TAG=PHP" title="PHP">#PHP</a>
+                            <a href="/tag.html?TAG=php" title="php">#php</a>
                         
-                            <a href="/tag.html?TAG=单例模式" title="单例模式">#单例模式</a>
+                            <a href="/tag.html?TAG=curl" title="curl">#curl</a>
                         
                     </span>
                 </div>
                 <div class="post_content">
-                    <p>单例模式（职责模式）：</p>
+                    <p>用PHP开发模拟浏览器的应用,首选技术是CURL函数库。但是php官方提供的技术文档资料很少，相关的示例代码也很少。</p>
 
-<p>简单的说，一个对象（在学习设计模式之前，需要比较了解面向对象思想）只负责一个特定的任务；</p>
+<p>最 近由于项目需要，开发了一系列免费邮箱的导出用户自己联系人的功能，包括国内外知名邮 箱，163，sina，sohu,yahoo,hotmail,gmail,qq mail等。还开发了一些方便用户嵌入代码到各大博客，个人门户的应用。比如嵌入flash代码到Qzone，网易的blog，百度的个人门户等。</p>
 
-<p>单例类：</p>
+<p>当然，最原始的技术手段是采用fsockopen函数，然后深入去学习http协议，写出标准的http头信息，也是可以完成开发的。不过麻烦的地方就出在标准。如果对http协议标准认识不深，经常会因碰到少了一个空格或者少了一个换行符号而debug很久。</p>
 
-<p>1、构造函数需要标记为private（访问控制：防止外部代码使用new操作符创建对象），单例类不能在其他类中实例化，只能被其自身实例化；</p>
+<p>OK， 还是进入正题。工欲善其事，必先利其器。要模拟浏览器访问网站，首选要学会观察浏览器是如何发送http报文的，以及网站服务器返回给浏览器 是什么样的内容。我推荐安装一个国外人开发的httpwatch的软件，最好搞个破解的版本，否则有些功能是使用不了的。这个软件安装完成之后是嵌入在 IE里的，启动Record，在地址栏输入网址后回车，它就会将浏览器和服务器之间的所有通讯扫描出来，让你一览无遗。关于这个软件的使用在本文不做介 绍。</p>
 
-<p>2、拥有一个保存类的实例的静态成员变量</p>
+<p>模拟浏览器登陆应用开发，最关键的地方是突破登陆验证。CURL技术不只支持http，还支持https。区别就在多了一层SSL加密传输。如果是要登陆 https网站，php记得要支持openssl。还是先拿一个例子来分析。</p>
 
-<p>3、拥有一个访问这个实例的公共的静态方法（常用getInstance()方法进行实例化单例类，通过instanceof操作符可以检测到类是否已经被实例化）</p>
+<pre><code>// 用户名
+$login = ‘username’;
+//密码
+$password = ‘password’;
 
-<p>另外，需要创建__clone()方法防止对象被复制（克隆）</p>
+//163的用户登陆地址
+$url = “https://reg.163.com/logins.jsp”;
 
-<p>为什么要使用PHP单例模式？</p>
+//post 要提交的数据
+$fields = “verifycookie=1&amp;style=16&amp;product=mail163&amp;username=”.$login.”&amp;password=”.$password.”&amp;selType=jy&amp;remUser=&amp;secure=on&amp;%B5%C7%C2%BC%D3%CA%CF%E4=%B5%C7%C2%BC%D3%CA%CF%E4″;
 
-<p>1、php的应用主要在于数据库应用, 所以一个应用中会存在大量的数据库操作, 使用单例模式, 则可以避免大量的new 操作消耗的资源。</p>
+// 用来存放cookie的文件
+$cookie_file = dirname(__FILE__).”/cookie.txt”;
 
-<p>2、如果系统中需要有一个类来全局控制某些配置信息, 那么使用单例模式可以很方便的实现. 这个可以参看ZF的FrontController部分。</p>
+// 启动一个CURL会话
+$ch = curl_init();
 
-<p>3、在一次页面请求中, 便于进行调试, 因为所有的代码(例如数据库操作类db)都集中在一个类中, 我们可以在类中设置钩子, 输出日志，从而避免到处var_dump, echo。</p>
+// 要访问的地址
+curl_setopt($ch, CURLOPT_URL, $url);
 
-<p>代码实现：</p>
+// 对认证证书来源的检查，0表示阻止对证书的合法性的检查。
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
-<pre><code>&lt;?php
+// 从证书中检查SSL加密算法是否存在
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 1);
 
-/*
+//模拟用户使用的浏览器，在HTTP请求中包含一个”user-agent”头的字符串。
+curl_setopt($ch, CURLOPT_USERAGENT, “Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)”);
 
-* 设计模式之单例模式
+// 发送一个常规的POST请求，类型为：application/x-www-form-urlencoded，就像表单提交的一样。
+curl_setopt($ch, CURLOPT_POST, 1);
 
-* $_instance必须声明为静态的私有变量
+//要传送的所有数据，如果要传送一个文件，需要一个@开头的文件名
+curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
 
-* 构造函数和析构函数必须声明为私有,防止外部程序new
+//连接关闭以后，存放cookie信息的文件名称
+curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);
 
-* 类从而失去单例模式的意义
+// 包含cookie信息的文件名称，这个cookie文件可以是Netscape格式或者HTTP风格的header信息。
+curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file);
 
-* getInstance()方法必须设置为公有的,必须调用此方法
+// 设置curl允许执行的最长秒数
+//curl_setopt($ch, CURLOPT_TIMEOUT, 6);
 
-* 以返回实例的一个引用
+// 获取的信息以文件流的形式返回，而不是直接输出。
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 
-* ::操作符只能访问静态变量和静态函数
+// 执行操作
+$result = curl_exec($ch);
 
-* new对象都会消耗内存
-
-* 使用场景:最常用的地方是数据库连接。 
-
-* 使用单例模式生成一个对象后，
-
-* 该对象可以被其它众多对象所使用。 
-
-*/
-
-class Danli {
-
-
-
-//保存类实例的静态成员变量
-
-private static $_instance;
-
-
-
-//private标记的构造方法
-
-private function __construct(){
-
-echo 'This is a Constructed method;';
-
+if ($result == NULL) {
+echo “Error:
+“;
+echo curl_errno($ch) . ” – ” . curl_error($ch) . ”
+“;
 }
 
-
-
-//创建__clone方法防止对象被复制克隆
-
-public function __clone(){
-
-trigger_error('Clone is not allow!',E_USER_ERROR);
-
-}
-
-
-
-//单例方法,用于访问实例的公共的静态方法
-
-public static function getInstance(){
-
-if(!(self::$_instance instanceof self)){
-
-self::$_instance = new self;
-
-}
-
-return self::$_instance;
-
-}
-
-
-
-public function test(){
-
-echo '调用方法成功';
-
-}
-
-
-
-}
-
-
-
-//用new实例化private标记构造函数的类会报错
-
-//$danli = new Danli();
-
-
-
-//正确方法,用双冒号::操作符访问静态方法获取实例
-
-$danli = Danli::getInstance();
-
-$danli-&gt;test();
-
-
-
-//复制(克隆)对象将导致一个E_USER_ERROR
-
-$danli_clone = clone $danli; 
+// 关闭CURL会话
+curl_close($ch); 
 </code></pre>
             
                 </div>
             </div>
             <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-09-21/PHPExcel.html">PHPExcel类库的各种使用方法总结</a></a></li>
-                <li class="next"><a href="/blog/2015-10-09/%E9%87%8D%E5%AE%9A%E5%90%91%E6%8F%92%E4%BB%B6.html">Firefox域名重定向插件——Mason</a><i class="fa fa-angle-right"></i></li>
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-10-27/msvcr100u-dll.html">如何解决msvcr100.dll丢失问题</a></a></li>
+                <li class="next"><a href="/blog/2015-11-02/all-api.html">各种API</a><i class="fa fa-angle-right"></i></li>
             </div>
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-10-09/PHP-singleton-pattern" data-title="PHP设计模式之单例模式" data-url="/blog/2015-10-09/PHP-singleton-pattern.html"></div>
+            <div class="ds-thread" data-thread-key="/blog/2015-10-29/curl-login" data-title="curl模拟登陆" data-url="/blog/2015-10-29/curl-login.html"></div>
             <!-- 多说评论框 end -->
         </div>
     </div>

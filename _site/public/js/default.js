@@ -31,7 +31,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   var ID = getQueryParm("TAG")||getQueryParm("CATE");
   var one = $("#"+ID).parent();
-  one.clone().prependTo(one.parent()).show();
+  one.clone().prependTo(one.parent()).show().siblings().children("li").hide();
   one.remove();
 })
 //背景轮换
