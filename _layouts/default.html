@@ -27,10 +27,10 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
-        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
@@ -48,6 +48,11 @@
       </div>
     </header>
     <!--Header End-->
+    <!--Sidebar-->
+    <div class="sidebar">
+      {% include side-bar.html  %}
+    </div>
+    <!--Sidebar End-->
     <!--Main-->
     <div class="main">
       <div class="main-content">
@@ -60,17 +65,12 @@
       <!--Footer End-->
     </div>
     <!--Main End-->
-    <!--Sidebar-->
-    <div class="sidebar">
-      {% include side-bar.html  %}
-    </div>
-    <!--Sidebar End-->
     <script>
     $(function(){
       $("#sitebar-toggle-btn").click(function(event) {
         if($(this).hasClass('active')){
           $(".sidebar").fadeOut('50000');
-          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+          $(".main").animate({marginLeft: $(window).width()>650?"33.3%":"0px"},1000,function(){
             $(".header").fadeIn('500');
           });
           $(this).removeClass('active');

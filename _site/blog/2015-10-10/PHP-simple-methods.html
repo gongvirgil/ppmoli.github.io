@@ -27,10 +27,10 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
-        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
@@ -48,146 +48,15 @@
       </div>
     </header>
     <!--Header End-->
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1>简单实用的PHP函数</h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-10-10</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tag.html?TAG=PHP" title="PHP">#PHP</a>
-                        
-                            <a href="/tag.html?TAG=函数" title="函数">#函数</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <h3>对象到数组转换</h3>
-
-<pre><code>function objToArr($obj){
-    if(!is_object($obj) &amp;&amp; !is_array($obj)) {
-        return $obj;
-    }
-    $arr = array();
-    foreach($obj as $k =&gt; $v){
-        $arr[$k] = $this-&gt;objToArr($v);
-    }
-    return $arr;
-}
-</code></pre>
-
-<h3>json到php数组转换</h3>
-
-<pre><code>function simple_json_parser($json){
-    $json = str_replace("{","",str_replace("}","", $json));
-    $jsonValue = explode(",", $json);
-    $arr = array();
-    foreach($jsonValue as $v){
-        $jValue = explode(":", $v);
-        $arr[str_replace('"',"", $jValue[0])] = (str_replace('"', "", $jValue[1]));
-    }
-    return $arr;
-}
-</code></pre>
-
-<h3>curl 实现 GET / POST</h3>
-
-<pre><code>function oauth_http($method,$header,$url,$data){
-    $method = $method ? $method : 'get';
-    if( $method == 'get') {
-        $ch = curl_init ();
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, TRUE );
-        curl_setopt ( $ch, CURLOPT_URL, $url );
-        $result = curl_exec ( $ch );
-        curl_close ( $ch );
-        return $result;
-    } elseif ( $method == 'post' ) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, TRUE );
-        curl_setopt ( $ch, CURLOPT_POST, TRUE );
-        curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data );
-        curl_setopt ( $ch, CURLOPT_URL, $url );
-        curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-        $ret = curl_exec ( $ch );
-        curl_close ( $ch );
-        return $ret;
-    }
-}
-</code></pre>
-
-<h3>获取链接内容(不存在file_get_contents() 时使用curl方法)</h3>
-
-<pre><code>function get_url_contents($url)
-{
-    if (ini_get("allow_url_fopen") == "1")
-        return file_get_contents($url);
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($ch, CURLOPT_URL, $url);
-    $result =  curl_exec($ch);
-    curl_close($ch);
-
-    return $result;
-}
-</code></pre>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-10-09/%E9%87%8D%E5%AE%9A%E5%90%91%E6%8F%92%E4%BB%B6.html">Firefox域名重定向插件——Mason</a></a></li>
-                <li class="next"><a href="/blog/2015-10-14/PHP-is-mobile.html">PHP 判断设备是否是手机/平板的方法</a><i class="fa fa-angle-right"></i></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-10-10/PHP简单实用的函数" data-title="简单实用的PHP函数" data-url="/blog/2015-10-10/PHP%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-
-    
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
     <!--Sidebar-->
     <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
           <li><a href="/contact.html">CONTACT ME</a></li>
+        </div>
+        <div id="search">
+          <input value="站内搜索" name="search">
         </div>
         <div id="category">
             <h4>CATEGORY</h4>
@@ -744,12 +613,147 @@
 
     </div>
     <!--Sidebar End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
+    <div class="post-main">
+        <div id="content">
+            <div class="post">
+                <div class="post_title">
+                    <h1>简单实用的PHP函数</h1>
+                </div>
+                <div class="post_relate">
+                    <span class="post_date">2015-10-10</span>
+                    <span class="post_categories">技术</span>
+                    <span class="post_tags">
+                        
+                            <a href="/tag.html?TAG=PHP" title="PHP">#PHP</a>
+                        
+                            <a href="/tag.html?TAG=函数" title="函数">#函数</a>
+                        
+                    </span>
+                </div>
+                <div class="post_content">
+                    <h3>对象到数组转换</h3>
+
+<pre><code>function objToArr($obj){
+    if(!is_object($obj) &amp;&amp; !is_array($obj)) {
+        return $obj;
+    }
+    $arr = array();
+    foreach($obj as $k =&gt; $v){
+        $arr[$k] = $this-&gt;objToArr($v);
+    }
+    return $arr;
+}
+</code></pre>
+
+<h3>json到php数组转换</h3>
+
+<pre><code>function simple_json_parser($json){
+    $json = str_replace("{","",str_replace("}","", $json));
+    $jsonValue = explode(",", $json);
+    $arr = array();
+    foreach($jsonValue as $v){
+        $jValue = explode(":", $v);
+        $arr[str_replace('"',"", $jValue[0])] = (str_replace('"', "", $jValue[1]));
+    }
+    return $arr;
+}
+</code></pre>
+
+<h3>curl 实现 GET / POST</h3>
+
+<pre><code>function oauth_http($method,$header,$url,$data){
+    $method = $method ? $method : 'get';
+    if( $method == 'get') {
+        $ch = curl_init ();
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, TRUE );
+        curl_setopt ( $ch, CURLOPT_URL, $url );
+        $result = curl_exec ( $ch );
+        curl_close ( $ch );
+        return $result;
+    } elseif ( $method == 'post' ) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, TRUE );
+        curl_setopt ( $ch, CURLOPT_POST, TRUE );
+        curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data );
+        curl_setopt ( $ch, CURLOPT_URL, $url );
+        curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        $ret = curl_exec ( $ch );
+        curl_close ( $ch );
+        return $ret;
+    }
+}
+</code></pre>
+
+<h3>获取链接内容(不存在file_get_contents() 时使用curl方法)</h3>
+
+<pre><code>function get_url_contents($url)
+{
+    if (ini_get("allow_url_fopen") == "1")
+        return file_get_contents($url);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $result =  curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+}
+</code></pre>
+            
+                </div>
+            </div>
+            <div class="pre-next">
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-10-09/%E9%87%8D%E5%AE%9A%E5%90%91%E6%8F%92%E4%BB%B6.html">Firefox域名重定向插件——Mason</a></a></li>
+                <li class="next"><a href="/blog/2015-10-14/PHP-is-mobile.html">PHP 判断设备是否是手机/平板的方法</a><i class="fa fa-angle-right"></i></li>
+            </div>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="/blog/2015-10-10/PHP-simple-methods" data-title="简单实用的PHP函数" data-url="/blog/2015-10-10/PHP-simple-methods.html"></div>
+            <!-- 多说评论框 end -->
+        </div>
+    </div>
+    <div class="post-anchor">
+        <div id="BlogAnchor">
+            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
+            <div class="AnchorContent" id="AnchorContent"></div>
+        </div> 
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+
+    
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
     <script>
     $(function(){
       $("#sitebar-toggle-btn").click(function(event) {
         if($(this).hasClass('active')){
           $(".sidebar").fadeOut('50000');
-          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+          $(".main").animate({marginLeft: $(window).width()>650?"33.3%":"0px"},1000,function(){
             $(".header").fadeIn('500');
           });
           $(this).removeClass('active');

@@ -13,6 +13,7 @@ comments: true
                 </div>
                 <div class="post_relate">
                     <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
+                    <span class="post_categories">{{ page.categories }}</span>
                     <span class="post_tags">
                         {% for tag in page.tags %}
                             <a href="{{site.baseurl}}/tag.html?{{ site.param-tag }}={{ tag }}" title="{{ tag }}">#{{ tag }}</a>

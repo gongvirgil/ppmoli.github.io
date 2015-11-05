@@ -13,6 +13,7 @@ date: 2015-10-23
 `continent` 洲  
 `crucial` 重要的 决定性的  
 ##D
+`decimal` 十进位的 小数的  
 ##E
 ##F
 `frankly` 坦白地 坦率地  

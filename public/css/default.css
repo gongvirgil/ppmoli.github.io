@@ -62,7 +62,17 @@ h6 {
     line-height: 1;
 }
 
-code {
+pre {
+    font-size: 13px;
+    line-height: 1.5 !important;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 300px;
+}
+
+p code {
     background: #f8f8f8 none repeat scroll 0 0;
     border: 1px solid #e1e1e1;
     border-radius: 4px;
@@ -70,15 +80,6 @@ code {
     font-weight: bold;
     margin: 0 5px;
     padding: 3px 5px;
-}
-
-pre code {
-    background: #000;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-weight: normal;
 }
 
 li {
@@ -107,7 +108,7 @@ a:hover {
     height: 100%;
     background-color: #ddd;
     position: fixed;
-    background-image: url("/public/images/overlay.png"), url("/public/images/bg19.jpg");
+    background-image: url("/public/images/overlay.png"), url("/public/images/sb-bg.jpg");
     background-size: cover;
 }
 
@@ -145,8 +146,8 @@ a:hover {
 }
 
 .links a:hover {
-    color: #2FA68F;
-    border-color: #2FA68F;
+    color: #fff;
+    border-color: #fff;
 }
 
 .calculate-item {
@@ -190,6 +191,7 @@ a:hover {
 
 .main-content {
     padding: 0 2em;
+    min-height: 450px;
 }
 
 
@@ -216,6 +218,7 @@ a:hover {
 
 .footer {
     width: 100%;
+    font-size: 13px;
 }
 
 .footer-inner {
@@ -320,8 +323,7 @@ a:hover {
 .categories h2,
 .tags h2 {
     padding: 8px 10px;
-    background-color: #999;
-    border-left: 6px solid #000;
+    border-bottom: 1px solid #999;
     position: relative;
 }
 
@@ -373,25 +375,26 @@ a:hover {
 }
 
 @media only screen and (max-width: 650px) {
-    .header, .sidebar {
+    .header,
+    .sidebar {
         position: relative;
         width: 100%;
         height: 20em;
-        top: auto;
-        left: auto;
+        margin: 0;
+        top: 0;
+        left: 0;
         text-align: center;
         background-size: cover;
         background-attachment: scroll;
         background-position: top left, center 30%!important;
     }
     .main {
+        position: relative;
         width: 100%;
         max-width: 100%;
         margin-left: 0;
     }
-    .footer {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
+    .main-content {
+        min-height: 0;
     }
 }

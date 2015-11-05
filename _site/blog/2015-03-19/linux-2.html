@@ -27,10 +27,10 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
-        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
@@ -48,109 +48,15 @@
       </div>
     </header>
     <!--Header End-->
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1>Linux服务器间文件传输</h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-03-19</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tag.html?TAG=linux" title="linux">#linux</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <h2>Linux服务器间文件传输</h2>
-
-<p>不同的Linux之间copy文件常用有3种方法：</p>
-
-<p>第一种就是ftp，也就是其中一台Linux安装ftp Server，这样可以另外一台使用ftp的client程序来进行文件的copy。</p>
-
-<p>第二种方法就是采用samba服务，类似Windows文件copy 的方式来操作，比较简洁方便。</p>
-
-<p>第三种就是利用scp命令来进行文件复制。</p>
-
-<p>1、将服务器上的目录下载到当前登录的服务器的指定目录：
-scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
-
-<p>使用实例：
- scp -P 端口号 -r root@192.168.1.240:/zsk/hollykm /home/hollykm    <br/>
-实现将linux 服务器192.168.1.240上/zsk/hollykm 目录复制到用户当前登录服务器的 /home/hollykm 目录下。  www.2cto.com<br/>
-备注：SSH 端口默认的是 22，如果修改了，则更改为修改后的端口号；如果端口号默认是22 ，则可以不用写 -P。
-其中-r 是循环复制。</p>
-
-<p>2、将服务器上的文件下载到当前登录的服务器的指定目录下，并命名：</p>
-
-<p>使用实例：
- scp  root@192.168.1.240:/zsk/hollykm/test.txt  /home/test_copy.txt<br/>
-将linux 服务器192.168.1.240上/zsk/hollykm/test.txt 文件复制到登录服务器的/home/下并重命名为 test_copy.txt</p>
-
-<p>可能有用的几个参数 :</p>
-
-<p>-v 和大多数 linux 命令中的 -v 意思一样 , 用来显示进度 . 可以用来查看连接 , 认证 , 或是配置错误 .</p>
-
-<p>-C 使能压缩选项 .</p>
-
-<p>-P 选择端口 . 注意 -p 已经被 rcp 使用 .</p>
-
-<p>-4 强行使用 IPV4 地址 .</p>
-
-<p>-6 强行使用 IPV6 地址 .</p>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></a></li>
-                <li class="next"><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a><i class="fa fa-angle-right"></i></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-2" data-title="Linux服务器间文件传输" data-url="/blog/2015-03-19/linux-2.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-
-    
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
     <!--Sidebar-->
     <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
           <li><a href="/contact.html">CONTACT ME</a></li>
+        </div>
+        <div id="search">
+          <input value="站内搜索" name="search">
         </div>
         <div id="category">
             <h4>CATEGORY</h4>
@@ -707,12 +613,110 @@ scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
 
     </div>
     <!--Sidebar End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
+    <div class="post-main">
+        <div id="content">
+            <div class="post">
+                <div class="post_title">
+                    <h1>Linux服务器间文件传输</h1>
+                </div>
+                <div class="post_relate">
+                    <span class="post_date">2015-03-19</span>
+                    <span class="post_categories"></span>
+                    <span class="post_tags">
+                        
+                            <a href="/tag.html?TAG=linux" title="linux">#linux</a>
+                        
+                    </span>
+                </div>
+                <div class="post_content">
+                    <h2>Linux服务器间文件传输</h2>
+
+<p>不同的Linux之间copy文件常用有3种方法：</p>
+
+<p>第一种就是ftp，也就是其中一台Linux安装ftp Server，这样可以另外一台使用ftp的client程序来进行文件的copy。</p>
+
+<p>第二种方法就是采用samba服务，类似Windows文件copy 的方式来操作，比较简洁方便。</p>
+
+<p>第三种就是利用scp命令来进行文件复制。</p>
+
+<p>1、将服务器上的目录下载到当前登录的服务器的指定目录：
+scp -P 端口号 -r 用户名@服务器IP:/目录名 本地目录名</p>
+
+<p>使用实例：
+ scp -P 端口号 -r root@192.168.1.240:/zsk/hollykm /home/hollykm    <br/>
+实现将linux 服务器192.168.1.240上/zsk/hollykm 目录复制到用户当前登录服务器的 /home/hollykm 目录下。  www.2cto.com<br/>
+备注：SSH 端口默认的是 22，如果修改了，则更改为修改后的端口号；如果端口号默认是22 ，则可以不用写 -P。
+其中-r 是循环复制。</p>
+
+<p>2、将服务器上的文件下载到当前登录的服务器的指定目录下，并命名：</p>
+
+<p>使用实例：
+ scp  root@192.168.1.240:/zsk/hollykm/test.txt  /home/test_copy.txt<br/>
+将linux 服务器192.168.1.240上/zsk/hollykm/test.txt 文件复制到登录服务器的/home/下并重命名为 test_copy.txt</p>
+
+<p>可能有用的几个参数 :</p>
+
+<p>-v 和大多数 linux 命令中的 -v 意思一样 , 用来显示进度 . 可以用来查看连接 , 认证 , 或是配置错误 .</p>
+
+<p>-C 使能压缩选项 .</p>
+
+<p>-P 选择端口 . 注意 -p 已经被 rcp 使用 .</p>
+
+<p>-4 强行使用 IPV4 地址 .</p>
+
+<p>-6 强行使用 IPV6 地址 .</p>
+            
+                </div>
+            </div>
+            <div class="pre-next">
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-03-19/linux-1.html">linux批量替换字符串</a></a></li>
+                <li class="next"><a href="/blog/2015-03-19/linux-3.html">打包/压缩目录</a><i class="fa fa-angle-right"></i></li>
+            </div>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-2" data-title="Linux服务器间文件传输" data-url="/blog/2015-03-19/linux-2.html"></div>
+            <!-- 多说评论框 end -->
+        </div>
+    </div>
+    <div class="post-anchor">
+        <div id="BlogAnchor">
+            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
+            <div class="AnchorContent" id="AnchorContent"></div>
+        </div> 
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+
+    
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
     <script>
     $(function(){
       $("#sitebar-toggle-btn").click(function(event) {
         if($(this).hasClass('active')){
           $(".sidebar").fadeOut('50000');
-          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+          $(".main").animate({marginLeft: $(window).width()>650?"33.3%":"0px"},1000,function(){
             $(".header").fadeIn('500');
           });
           $(this).removeClass('active');

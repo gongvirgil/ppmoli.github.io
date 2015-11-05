@@ -27,10 +27,10 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
-        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
@@ -48,43 +48,15 @@
       </div>
     </header>
     <!--Header End-->
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-        <link rel="stylesheet" type="text/css" href="/public/css/about.css">
-<div id="content">
-	<object width="780" height="308" name="radioPlayer" id="radioPlayer" type="application/x-shockwave-flash" data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879">
-	<param value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879" name="movie">
-	<param value="high" name="quality">
-	<param value="Opaque" name="wmode">
-	<param value="always" name="allowScriptAccess">
-	<param value="dataUrl=/radio/xml/type/8/id/0&amp;helpUrl=http://www.xiami.com/websitehelp#help6_1&amp;changeRadioUrl=http://www.xiami.com/radio&amp;unlikeartist=1&amp;ctNum=20000&amp;srNum=120" name="FlashVars">
-	</object>
-</div>
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
     <!--Sidebar-->
     <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
           <li><a href="/contact.html">CONTACT ME</a></li>
+        </div>
+        <div id="search">
+          <input value="站内搜索" name="search">
         </div>
         <div id="category">
             <h4>CATEGORY</h4>
@@ -641,12 +613,43 @@
 
     </div>
     <!--Sidebar End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+        <link rel="stylesheet" type="text/css" href="/public/css/about.css">
+<div id="content">
+	<object width="780" height="308" name="radioPlayer" id="radioPlayer" type="application/x-shockwave-flash" data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879">
+	<param value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1427078879" name="movie">
+	<param value="high" name="quality">
+	<param value="Opaque" name="wmode">
+	<param value="always" name="allowScriptAccess">
+	<param value="dataUrl=/radio/xml/type/8/id/0&amp;helpUrl=http://www.xiami.com/websitehelp#help6_1&amp;changeRadioUrl=http://www.xiami.com/radio&amp;unlikeartist=1&amp;ctNum=20000&amp;srNum=120" name="FlashVars">
+	</object>
+</div>
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
     <script>
     $(function(){
       $("#sitebar-toggle-btn").click(function(event) {
         if($(this).hasClass('active')){
           $(".sidebar").fadeOut('50000');
-          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+          $(".main").animate({marginLeft: $(window).width()>650?"33.3%":"0px"},1000,function(){
             $(".header").fadeIn('500');
           });
           $(this).removeClass('active');

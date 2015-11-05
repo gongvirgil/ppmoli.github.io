@@ -27,10 +27,10 @@
       </div>   
       <div class="links">
         <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="github" href="https://github.com/gongvirgil"><i class="fa fa-github"></i></a>
-        <a title="weibo" href="http://weibo.com/ppmoli"><i class="fa fa-weibo"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
-        <a title="返回主页" href="/"><i class="fa fa-home"></i></a>
+        <a title="github" href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+        <a title="weibo" href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
+        <a title="返回主页" href="/" target="_blank"><i class="fa fa-home"></i></a>
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
@@ -48,77 +48,15 @@
       </div>
     </header>
     <!--Header End-->
-    <!--Main-->
-    <div class="main">
-      <div class="main-content">
-            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1>linux批量替换字符串</h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-03-19</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tag.html?TAG=linux" title="linux">#linux</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
-
-<pre><code>sed -i "s/XXXX/YYYY/g" `grep XXXX -rl /www/../..`
-</code></pre>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></a></li>
-                <li class="next"><a href="/blog/2015-03-19/linux-2.html">Linux服务器间文件传输</a><i class="fa fa-angle-right"></i></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-1" data-title="linux批量替换字符串" data-url="/blog/2015-03-19/linux-1.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-
-    
-      </div>
-      <!--Footer-->
-      <div class="footer">
-        <div class="footer-inner">
-    <div class="footer_info">
-        <div class="friendly-links">
-            <span>友好链接</span>
-        </div>
-        <div class="site-info">
-          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
-        </div>
-    </div>      
-    <div class="tj"></div>
-</div>
-      </div>
-      <!--Footer End-->
-    </div>
-    <!--Main End-->
     <!--Sidebar-->
     <div class="sidebar">
               <div id="menu-pages">
           <li><a href="/">HOME</a></li>
           <li><a href="/archive.html">ALL POSTS</a></li>
           <li><a href="/contact.html">CONTACT ME</a></li>
+        </div>
+        <div id="search">
+          <input value="站内搜索" name="search">
         </div>
         <div id="category">
             <h4>CATEGORY</h4>
@@ -675,12 +613,78 @@
 
     </div>
     <!--Sidebar End-->
+    <!--Main-->
+    <div class="main">
+      <div class="main-content">
+            <link rel="stylesheet" type="text/css" href="/public/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
+    <div class="post-main">
+        <div id="content">
+            <div class="post">
+                <div class="post_title">
+                    <h1>linux批量替换字符串</h1>
+                </div>
+                <div class="post_relate">
+                    <span class="post_date">2015-03-19</span>
+                    <span class="post_categories"></span>
+                    <span class="post_tags">
+                        
+                            <a href="/tag.html?TAG=linux" title="linux">#linux</a>
+                        
+                    </span>
+                </div>
+                <div class="post_content">
+                    <h2>批量替换文件夹下全部文件中某字符串XXXX为YYYY</h2>
+
+<pre><code>sed -i "s/XXXX/YYYY/g" `grep XXXX -rl /www/../..`
+</code></pre>
+            
+                </div>
+            </div>
+            <div class="pre-next">
+            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-03-15/thinkphp.html">ThinkPHP笔记</a></a></li>
+                <li class="next"><a href="/blog/2015-03-19/linux-2.html">Linux服务器间文件传输</a><i class="fa fa-angle-right"></i></li>
+            </div>
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="/blog/2015-03-19/linux-1" data-title="linux批量替换字符串" data-url="/blog/2015-03-19/linux-1.html"></div>
+            <!-- 多说评论框 end -->
+        </div>
+    </div>
+    <div class="post-anchor">
+        <div id="BlogAnchor">
+            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
+            <div class="AnchorContent" id="AnchorContent"></div>
+        </div> 
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="/public/js/post.js"></script>
+
+    
+      </div>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-inner">
+    <div class="footer_info">
+        <div class="friendly-links">
+            <span>友好链接</span>
+        </div>
+        <div class="site-info">
+          <p>Copyright © 2012-2015 gongvirgil.github.io <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256615808'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256615808%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+        </div>
+    </div>      
+    <div class="tj"></div>
+</div>
+      </div>
+      <!--Footer End-->
+    </div>
+    <!--Main End-->
     <script>
     $(function(){
       $("#sitebar-toggle-btn").click(function(event) {
         if($(this).hasClass('active')){
           $(".sidebar").fadeOut('50000');
-          $(".main").animate({marginLeft: "33.3%"},1000,function(){
+          $(".main").animate({marginLeft: $(window).width()>650?"33.3%":"0px"},1000,function(){
             $(".header").fadeIn('500');
           });
           $(this).removeClass('active');
