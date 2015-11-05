@@ -373,7 +373,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 650px) {
-    .header {
+    .header, .sidebar {
         position: relative;
         width: 100%;
         height: 20em;
