@@ -108,7 +108,7 @@ a:hover {
     height: 100%;
     background-color: #ddd;
     position: fixed;
-    background-image: url("/public/images/overlay.png"), url("/public/images/sb-bg.jpg");
+    background-image: url("/public/images/sb-bg1.jpg");
     background-size: cover;
 }
 
@@ -128,7 +128,8 @@ a:hover {
     margin-top: 1em;
     text-align: center;
 }
-
+/*#fff*/
+/*
 .links a {
     border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.55);
     border-image: none;
@@ -149,7 +150,6 @@ a:hover {
     color: #fff;
     border-color: #fff;
 }
-
 .calculate-item {
     border-left: 1px solid rgba(255, 255, 255, 0.35);
     padding: 0 15px;
@@ -167,6 +167,56 @@ a:hover {
 
 .calculate-item a:hover {
     color: #fff;
+}
+
+.calculate-item-count {
+    display: block;
+    font-size: 18px;
+}
+
+.calculate-item-name {
+    font-size: 13px;
+}
+*/
+/*#000*/
+.links a {
+    border-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.55);
+    border-image: none;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.25em;
+    padding: 0px 6px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease 0s;
+}
+
+.links a:hover {
+    color: #2fa691;
+    border-color: #2fa691;
+}
+
+.calculate-item {
+    border-left: 1px solid rgba(0, 0, 0, 0.35);
+    padding: 0 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.calculate-item:first-child {
+    border: none;
+}
+
+.calculate-item a {
+    display: block;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.calculate-item a:hover {
+    color: #2fa691;
 }
 
 .calculate-item-count {
@@ -201,7 +251,11 @@ a:hover {
 /*-----Sidebar-----*/
 
 .sidebar {
-    background-color: #000;
+    background-image: url("/public/images/overlay.png"), url("/public/images/side-bg3.jpg");
+    background-size: cover;
+    background-color: #ddd;
+    color: #fff;
+    box-shadow: 1px 0px 10px #1f1f1f;
     width: 33.3%;
     margin-left: calc(100% - 33.3%);
     height: 100%;
@@ -209,8 +263,37 @@ a:hover {
     top: 0;
     display: none;
 }
-
-
+.sidebar a {
+    color: #fff;
+}
+.sidebar a:hover {
+    color: #2FA691;
+}
+#search, #menu-pages, #category, #tag{
+    text-align: left;
+}
+#category h4, #tag h4 {
+    border-bottom: 2px solid #eee;
+    text-align: right;
+}
+#category h4 {
+    width: 35%;
+}
+#tag h4 {
+    width: 75%;
+}
+#search input {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    padding: 7px 11px 7px 28px;
+}
+.tag-cloud {
+    word-break:keep-all;
+    width: 75%;
+}
 /*-----Sidebar End-----*/
 
 

@@ -34,9 +34,6 @@
       </div> 
       <div class="calculates">  
         <div class="calculate-item">
-          <a href="/"><span class="calculate-item-count"><i class="fa fa-home"></i></span><span class="calculate-item-name">首页</span></a>
-        </div>
-        <div class="calculate-item">
           <a href="/archive.html"><span class="calculate-item-count">{{ site.posts.size }}</span><span class="calculate-item-name">归档</span></a>
         </div>
         <div class="calculate-item">
@@ -84,6 +81,7 @@
           $(this).html('<i class="fa fa-close"></i>');
         }
       });
+      $("#sitebar-toggle-btn").trigger('click');
     })
     </script>
     <!--Float Btns-->
