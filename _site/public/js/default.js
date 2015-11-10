@@ -18,15 +18,28 @@ $(document).ready(function(){
   });
 })
 $(document).ready(function(){
-  var hide_side_bar = function(){
-    $('.shadow-screen,.side-bar').removeClass('on');
-    $('').hide();
-  }
-  var show_side_bar = function(){
-    $('.shadow-screen,.side-bar').addClass('on');
-  }
-  $('#side-bar-close-btn,.shadow-screen').on('click', hide_side_bar);
-  $('#side-bar-btn').on('click', show_side_bar);
+  $("#sitebar-toggle-btn").click(function(event) {
+    $(".sidebar").fadeToggle('50000');
+    $(".main").fadeToggle('50000');
+    $(this).toggleClass('active');
+    $(this).find('i').toggleClass('fa-close').toggleClass('fa-navicon');
+  });
+})
+$(document).ready(function(){
+    $('#search input').bind({
+      focus:function(){
+        if (this.value == this.defaultValue){
+          this.value="";
+          $(this).css("color","#000");
+        }
+      },
+      blur:function(){
+        if (this.value == ""){
+          this.value = this.defaultValue;
+          $(this).css("color","#999");
+        }
+      }
+    });
 })
 $(document).ready(function(){
   var ID = getQueryParm("TAG")||getQueryParm("CATE");
