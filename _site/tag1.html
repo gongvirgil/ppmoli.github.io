@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>解决子级float浮动父级无高度没有自适应问题 | site of gongvirgil</title>
+    <title>site of gongvirgil</title>
     <meta name="author" content="gongvirgil" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="gongvirgil's Blog" />
@@ -616,69 +616,270 @@
 
     <!--Sidebar End-->
     <!--Main-->
-    <div class="main container">
-  <div class="main-content">
-        <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
-    <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1>解决子级float浮动父级无高度没有自适应问题</h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-08-20</span>
-                    <span class="post_categories">技术</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tag.html?TAG=CSS" title="CSS">#CSS</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <p>当在对象内的盒子使用了float后，导致对象本身不能被撑开自适应高度，这个是由于浮动产生原因。</p>
-
-<h4>方法一：clear:both 清除浮动</h4>
-
-<pre><code>&lt;div class="father"&gt; 
-    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
-    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt; 
-    &lt;div style="clear:both;"&gt;&lt;/div&gt; 
-&lt;/div&gt; 
-</code></pre>
-
-<h4>方法二：对父级样式加overflow样式</h4>
-
-<pre><code>&lt;div class="father" style="over-flow:hidden;"&gt; 
-    &lt;div class="f-l" style="float:left;"&gt;&lt;/div&gt; 
-    &lt;div class="f-r" style="float:right;"&gt;&lt;/div&gt;          
-&lt;/div&gt; 
-</code></pre>
-            
-                </div>
-            </div>
-            <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-04-03/linux-4.html">linux之vi编辑器命令使用</a></a></li>
-                <li class="next"><a href="/blog/2015-08-31/linux-5.html">Linux中cp直接覆盖不提示的方法</a><i class="fa fa-angle-right"></i></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-08-20/div-float" data-title="解决子级float浮动父级无高度没有自适应问题" data-url="/blog/2015-08-20/div-float.html"></div>
-            <!-- 多说评论框 end -->
-        </div>
-    </div>
-    <div class="post-anchor">
-        <div id="BlogAnchor">
-            <h4>目录<a id="AnchorContentToggle" title="展开" style="cursor:pointer;">[<span>+</span>]</a></h4>
-            <div class="AnchorContent" id="AnchorContent"></div>
-        </div> 
-    </div>
-    <div style="clear:both;"></div>
-    <script type="text/javascript" src="/public/js/post.js"></script>
-
+    <div class="other-main container">
+  <div class="other-main-content">
+    <div class="tag-box">
     
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=html">html</a>
+      </div>
+    
+      <div class="tag-round" size="12">
+          <a href="/tag.html?TAG=笔记">笔记</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=jquery">jquery</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=js">js</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=Linux">Linux</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=php">php</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=css">css</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=软件">软件</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=Github">Github</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=Blog">Blog</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=Jekyll">Jekyll</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=markdown">markdown</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=page">page</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=CSS">CSS</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=sublime">sublime</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=work">work</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=code">code</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=soft">soft</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=购物">购物</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=品牌">品牌</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=日用品">日用品</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=ThinkPHP">ThinkPHP</a>
+      </div>
+    
+      <div class="tag-round" size="5">
+          <a href="/tag.html?TAG=linux">linux</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=bootstrap">bootstrap</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=vi">vi</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=git">git</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=laravel">laravel</a>
+      </div>
+    
+      <div class="tag-round" size="2">
+          <a href="/tag.html?TAG=随笔">随笔</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=任务">任务</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=PHPExcel">PHPExcel</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=Excel">Excel</a>
+      </div>
+    
+      <div class="tag-round" size="3">
+          <a href="/tag.html?TAG=PHP">PHP</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=单例模式">单例模式</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=firefox">firefox</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=插件">插件</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=域名">域名</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=重定向">重定向</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=函数">函数</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=mobile">mobile</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=jQuery">jQuery</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=英语">英语</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=生词本">生词本</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=安装">安装</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=curl">curl</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=API">API</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=接口">接口</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=国家">国家</a>
+      </div>
+    
+      <div class="tag-round" size="1">
+          <a href="/tag.html?TAG=小知识">小知识</a>
+      </div>
+      
+    </div>    
   </div>
 </div>
+<script>
+$(function(){
+  $(".tag-round").each(function(){
+    var rand = Math.ceil(Math.random()*10);
+    $(this).addClass('tag-round-'+rand);
+    $(this).css({
+      padding: $(this).attr("size")+'px',
+      margin: ($(this).attr("size")*3+1)+'px'
+    });
+    if(rand>5){
+      $(this).prependTo($(this).parent());
+    }
+  });
+})
+</script>
+<style>
+.other-main {
+  height: 100%;
+
+}
+.tag-round {
+  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 10px;
+  display: inline-block;
+
+}
+.tag-round-1 {
+  background-color: #E07A36;
+}
+.tag-round-2 {
+  background-color: #1CC8A0;
+}
+.tag-round-3 {
+  background-color: #177CB0;
+}
+.tag-round-4 {
+  background-color: #F06963;
+}
+.tag-round-5 {
+  background-color: #3AC3D8;
+}
+.tag-round-6 {
+  background-color: #77A9DD;
+}
+.tag-round-7 {
+  background-color: #B484BC;
+}
+.tag-round-8 {
+  background-color: #99C828;
+}
+.tag-round-9 {
+  background-color: #BCE672;
+}
+.tag-round-10 {
+  background-color: #9C7601;
+}
+.tag-round a {
+  
+}
+</style>
+                       
     <!--Main End-->
     <!--Float Btns-->
     <div class="sitebar-toggle">

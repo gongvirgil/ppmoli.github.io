@@ -99,8 +99,12 @@ a:hover {
 .clear {
     clear: both;
 }
-
-
+/*-----Common-----*/
+.container {
+    margin-left: 33.3%;
+    width: calc(100% - 33.3%);
+}
+/*-----Common End-----*/
 /*-----Header-----*/
 
 .header {
@@ -186,11 +190,6 @@ a:hover {
 
 /*-----Main-----*/
 
-.main {
-    margin-left: 33.3%;
-    width: calc(100% - 33.3%);
-}
-
 .main-content {
     padding: 0 2em;
     min-height: 450px;
@@ -207,8 +206,6 @@ a:hover {
     background-size: cover;
     background-color: #fff;
     color: #000;
-    width: calc(100% - 33.3%);
-    margin-left: 33.3%;
     display: none;
 }
 .sidebar-content {
@@ -424,7 +421,7 @@ a:hover {
         background-attachment: scroll;
         background-position: top left, center 30%!important;
     }
-    .main, .sidebar {
+    .container {
         position: relative;
         width: 100%;
         max-width: 100%;

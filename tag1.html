@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<div class="other-main container">
+  <div class="other-main-content">
+    <div class="tag-box">
+    {% for tag in site.tags %}
+      <div class="tag-round" size="{{ tag | last | size }}">
+          <a href="/tag.html?{{ site.param-tag }}={{ tag | first }}">{{ tag | first }}</a>
+      </div>
+    {% endfor %}  
+    </div>    
+  </div>
+</div>
+<script>
+$(function(){
+  $(".tag-round").each(function(){
+    var rand = Math.ceil(Math.random()*10);
+    $(this).addClass('tag-round-'+rand);
+    $(this).css({
+      padding: $(this).attr("size")+'px',
+      margin: ($(this).attr("size")*3+1)+'px'
+    });
+    if(rand>5){
+      $(this).prependTo($(this).parent());
+    }
+  });
+})
+</script>
+<style>
+.other-main {
+  height: 100%;
+
+}
+.tag-round {
+  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  font-size: 10px;
+  display: inline-block;
+
+}
+.tag-round-1 {
+  background-color: #E07A36;
+}
+.tag-round-2 {
+  background-color: #1CC8A0;
+}
+.tag-round-3 {
+  background-color: #177CB0;
+}
+.tag-round-4 {
+  background-color: #F06963;
+}
+.tag-round-5 {
+  background-color: #3AC3D8;
+}
+.tag-round-6 {
+  background-color: #77A9DD;
+}
+.tag-round-7 {
+  background-color: #B484BC;
+}
+.tag-round-8 {
+  background-color: #99C828;
+}
+.tag-round-9 {
+  background-color: #BCE672;
+}
+.tag-round-10 {
+  background-color: #9C7601;
+}
+.tag-round a {
+  
+}
+</style>
+                       

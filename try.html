@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+       <!-- <script src="http://shanmao.me/f/jquery.min.js"></script>-->
+        <style>
+            .common{
+                background:none;
+                position:absolute;
+                z-index:-999;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+            }
+            #data{
+                position:fixed;
+                _position:absolut;
+                top:0px;
+                left:0px;
+                width:150px;
+                border:1px #ccc solid;
+                z-index:999;
+                text-align: center;
+                line-height: 30px;
+                height:30px;
+                font-size:12px;
+            }
+            input{
+                position:fixed;
+                _position:absolute;
+                top:0px;
+                left:500px;
+                width:80px;
+                border:1px #e8e8e8 solid;
+                box-shadow: 0px 0px 10px #5fffBA;
+                z-index:999;
+                text-align: center;
+                line-height: 30px;
+                height:30px;
+                font-size:12px;
+                background-color:#5CCCBA;
+            }
+        </style>
+ 
+        <script>
+            // 字符集设置，可以随意发挥想象
+            //var chars = new Array(' 1 ',' 0 ',' ',' & ','_','-','hello','world','i','o(︶︿︶)o ','o(∩_∩)o ','囧','$$$','<a href="http://shanmao.me" target=_blank>shanmao.me</a>','LOVE','I','YOU'); // 随机字符集
+            var chars = new Array('.',',','。','0','o');
+            var max_x,max_y;
+            function test(){
+                // $('#data').css("filter", "progid:DXImageTransform.Microsoft.Matrix(M11=" + m11 + ",M12=" + m12 + ",M21=" + m21 + ",M22=" + m22 + ",SizingMethod='auto expand')");
+            }
+             
+            // a-b的随机整数
+            function r(a,b){
+                return a>b?0:Math.round(Math.random()*(b-a)+a);
+            }
+            // a-b 随机字符串
+            function rStr(c,d){
+                var len = r(c,d);
+                var str = '';
+                for(var i = 0;i<len;i++){
+                    str += chars[r(0,chars.length-1)];
+                }
+                return str;
+            }
+            // 随机颜色
+            function rColor(){
+                return 'rgb('+r(0,255)+','+r(0,255)+','+r(0,255)+')';
+            }
+            // 随机角度
+            function rDeg(a,b){
+                return 'rotate('+r(a,b)+'deg)';
+            }
+            // 开始动画
+            function startMove(){
+                $('.common').not(':animated').each(function(){
+                    $(this).animate({
+                        'top':r(10,max_y-100),
+                        'left':r(10,max_x-100),
+                        'opacity':r(0,10)/10,
+                        'color':rColor(),
+                        'font-size':r(10,30),
+                        '-webkit-transform':rDeg(0,360)
+                    },r(5000,10000));
+                });
+            }
+            // 监控正在动画的元素个数
+            function keepAni(){
+                var n = $(':animated').length;
+                var max_n = $('.common').length;
+                $('#data').html('动画数 / 总数 : '+ n + '/' + max_n);
+                // 控制运动的元素不少于某个值
+                if(n <= 2*max_n/3) startMove();
+            }
+             
+            // 初始化
+            $(document).ready(function(){
+                max_y = $(document).height();
+                max_x = $(document).width();
+                for(var i=0;i<r(50,100);i++){
+                    var t_div = document.createElement("div");
+                    $(t_div).addClass('common').css({
+                        'top':r(10,max_y-100),
+                        'left':r(10,max_x-100),
+                        'color':rColor(),
+                        'opacity':r(0,10)/10,
+                        '-webkit-transform':rDeg(0,360)
+                    }).html(rStr(1,3));
+                    $('body').append(t_div);
+                }
+                t = setInterval("keepAni()",'50');
+            });
+             
+            function zoom(obj){
+                var offset = $(this).offset();
+                $(obj).animate({
+                    "opacity":"hide",
+                    "width":$(window).width(),
+                    "height":$(window).height(),
+                    "left":0,
+                    'top':0,
+                    'background-color':'white'
+                },1000,function(){
+                    stopAni();
+                });
+            }
+             
+            function stopAni(){
+                clearInterval(t);
+                $(':animated').stop();
+            }
+             
+        </script>
+<title>jquery实现随机运动动画</title>
+    </head>
+    <body>
+        <div id="data"></div>
+        <input type="button" value='点我' onclick="zoom(this);" />
+    </body>
+</html>
