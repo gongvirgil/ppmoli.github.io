@@ -622,24 +622,25 @@
     <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
     <!-- <link rel="stylesheet" type="text/css" href="/public/css/poole.css"> -->
     <div class="post-main">
-        <div id="content">
-            <div class="post">
-                <div class="post_title">
-                    <h1>PHPExcel类库的各种使用方法总结</h1>
-                </div>
-                <div class="post_relate">
-                    <span class="post_date">2015-09-21</span>
-                    <span class="post_categories">技术</span>
-                    <span class="post_tags">
-                        
-                            <a href="/tag.html?TAG=PHPExcel" title="PHPExcel">#PHPExcel</a>
-                        
-                            <a href="/tag.html?TAG=Excel" title="Excel">#Excel</a>
-                        
-                    </span>
-                </div>
-                <div class="post_content">
-                    <p>导入PHPExcel类库</p>
+        <div class="post-main-inner inner">
+            <div id="content">
+                <div class="post">
+                    <div class="post_title">
+                        <h1>PHPExcel类库的各种使用方法总结</h1>
+                    </div>
+                    <div class="post_relate">
+                        <span class="post_date">2015-09-21</span>
+                        <span class="post_categories">技术</span>
+                        <span class="post_tags">
+                            
+                                <a href="/tag.html?TAG=PHPExcel" title="PHPExcel">#PHPExcel</a>
+                            
+                                <a href="/tag.html?TAG=Excel" title="Excel">#Excel</a>
+                            
+                        </span>
+                    </div>
+                    <div class="post_content">
+                        <p>导入PHPExcel类库</p>
 
 <pre><code>include 'PHPExcel.php';
 include 'PHPExcel/Writer/Excel2007.php';
@@ -847,15 +848,16 @@ $objWriter = PHPExcel_IOFactory::createWriter($objExcel, 'Excel5');
 $objWriter-save('php://output');
 </code></pre>
             
+                    </div>
                 </div>
+                <div class="pre-next">
+                <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-09-15/task-list.html">任务清单之实现功能</a></a></li>
+                    <li class="next"><a href="/blog/2015-10-09/PHP-singleton-pattern.html">PHP设计模式之单例模式</a><i class="fa fa-angle-right"></i></li>
+                </div>
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="/blog/2015-09-21/PHPExcel" data-title="PHPExcel类库的各种使用方法总结" data-url="/blog/2015-09-21/PHPExcel.html"></div>
+                <!-- 多说评论框 end -->
             </div>
-            <div class="pre-next">
-            <li class="pre"><i class="fa fa-angle-left"></i><a href="/blog/2015-09-15/task-list.html">任务清单之实现功能</a></a></li>
-                <li class="next"><a href="/blog/2015-10-09/PHP-singleton-pattern.html">PHP设计模式之单例模式</a><i class="fa fa-angle-right"></i></li>
-            </div>
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="/blog/2015-09-21/PHPExcel" data-title="PHPExcel类库的各种使用方法总结" data-url="/blog/2015-09-21/PHPExcel.html"></div>
-            <!-- 多说评论框 end -->
         </div>
     </div>
     <div class="post-anchor">
@@ -881,7 +883,7 @@ $objWriter-save('php://output');
     <!--Float Btns End-->
     <!--Footer-->
     <div class="footer container">
-    <div class="footer-inner">
+    <div class="footer-inner inner">
         <div class="footer_info">
             <div class="friendly-links">
                 <span>友好链接</span>

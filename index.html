@@ -4,15 +4,16 @@ layout: index
 <link rel="stylesheet" type="text/css" href="/public/css/prettify.css">
 <div class="posts">
     {% for post in paginator.posts %}
-    <li>
-      <div>
-          <div class="post-date">
-            <span><i class="fa fa-clock-o"></i></span>
+    <li class="post-item">
+      <div class="post-item-inner inner">
+          <div class="post-item-date">
             {{ post.date | date: "%Y-%m-%d" }}
           </div>
-          <a class="post-title" href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-          <div class="post-tags">
-            <span><i class="fa fa-tags"></i></span>
+          <div class="post-item-title">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          </div>
+          <div class="post-item-desc"><p>{{ post.description }}</p></div>
+          <div class="post-item-tags">
             {% for tag in post.tags %}
             <a href="/tag.html?{{ site.param-tag }}={{ tag }}">#{{ tag }}</a>
             {% endfor %}

@@ -3,18 +3,23 @@ layout: default
 ---
 <div class="other-main container">
   <div class="other-main-content">
-    <div class="tag-box">
-    {% for tag in site.tags %}
-      <div class="tag-round" size="{{ tag | last | size }}">
-          <a href="/tag.html?{{ site.param-tag }}={{ tag | first }}">{{ tag | first }}</a>
-      </div>
-    {% endfor %}  
+    <div class="box-header"><h2>标签</h2></div>
+    <div id="box-responsive" class="tag-box">
     </div>    
   </div>
 </div>
+<style>
+.box-header {text-align: center;background-color: #D6ECF0;border:2px solid #fff;}
+.box-header h2 {height: 50px;line-height: 50px;}
+.tag-box {height: 500px;position: relative;}
+.box{position:absolute;text-align:center;word-wrap:break-word;/*注意设置word-wrap属性*/overflow:hidden;border:2px solid #fff;opacity: 0.7;} 
+.box a{color:#fff;text-decoration:none;display:inline-block;width:100%;height:100%;opacity: 1;}
+.box:hover {opacity: 1;}
+</style>
+<script type="text/javascript" src="/public/js/wordbox.js"></script>
 <script>
 $(function(){
-  $(".tag-round").each(function(){
+/*  $(".tag-round").each(function(){
     var rand = Math.ceil(Math.random()*10);
     $(this).addClass('tag-round-'+rand);
     $(this).css({
@@ -24,7 +29,25 @@ $(function(){
     if(rand>5){
       $(this).prependTo($(this).parent());
     }
-  });
+  });*/
+    var words = [
+    {% for tag in site.tags %}
+    {
+      'title': "{{ tag | first }}",
+      'url': "/tag.html?{{ site.param-tag }}={{ tag | first }}"
+    },
+    {% endfor %} 
+    ];
+    var colors = ['#49B4E0', '#FCBDA2', '#EBADBD', '#D5C2AF', '#C0BDE5', '#CBCC7F', '#FFDA7F', '#8dd0c3', '#bbbfc6', '#a4d9ef', '#bbdb98'];
+    var wb1 = new WordBox('#box-responsive', {
+        isLead: false,          //是否包含“全部”分类  
+        leadWord: null,
+        words: words,
+        colors: colors,
+        borderWidth: 2,
+        isFixedWidth: false
+    });
+
 })
 </script>
 <style>

@@ -104,6 +104,10 @@ a:hover {
     margin-left: 33.3%;
     width: calc(100% - 33.3%);
 }
+.inner {
+    margin: 0 auto;
+    width: 80%;
+}
 /*-----Common End-----*/
 /*-----Header-----*/
 
@@ -191,10 +195,56 @@ a:hover {
 /*-----Main-----*/
 
 .main-content {
-    padding: 0 2em;
     min-height: 450px;
 }
 
+.post-item {
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.post-item-inner {
+    padding: 20px 0;
+}
+.post-item-title {
+    font-size: 24px;
+}
+.post-item-title a{
+    color: #000;
+}
+
+.post-item-title a:hover {
+    color: #2fa691;
+}
+.post-item-title h3 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.post-item-desc {
+    margin: 30px 0;
+}
+.post-item-desc p {
+    color: #333;
+}
+.post-item-date,
+.post-item-tags {
+    font-size: 13px;
+    color: #a7aab1;
+    margin: 35px 0 30px;
+}
+
+.post-item-tags span,
+.post-item-tags a {
+    color: #a7aab1;
+    margin-right: 5px;
+}
+
+.post-item-tags a:hover {
+    color: #000;
+}
 
 /*-----Main End-----*/
 
@@ -252,13 +302,7 @@ a:hover {
 /*-----Footer-----*/
 
 .footer {
-    width: 100%;
     font-size: 13px;
-}
-
-.footer-inner {
-    margin: 0 auto;
-    width: 80%;
 }
 
 .friendly-links a,
@@ -352,6 +396,7 @@ a:hover {
 .tags {
     overflow: hidden;
     background-color: #fff;
+    padding: 50px 0;
 }
 
 .categories h2,
@@ -369,44 +414,7 @@ a:hover {
     right: 0;
 }
 
-.posts li,
-.categories li,
-.tags li {
-    background-color: #fff;
-    width: 100%;
-    line-height: 3em;
-    text-align: left;
-    border-bottom: 1px solid #eaeaea;
-    transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
-}
 
-.posts li:hover,
-.categories li:hover,
-.tags li:hover {}
-
-.post-title {
-    color: #555;
-}
-
-.post-title:hover {
-    color: #2fa691;
-}
-
-.post-date,
-.post-tags {
-    font-size: 12px;
-    color: #999;
-}
-
-.post-tags span,
-.post-tags a {
-    color: #999;
-    margin-right: 5px;
-}
-
-.post-tags a:hover {
-    color: #000;
-}
 
 @media only screen and (max-width: 650px) {
     .header{

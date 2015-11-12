@@ -3,7 +3,6 @@ $(document).ready(function(){
     $.getScript('/public/js/prettify.js',function(){
         prettyPrint();
     });
-
     //在文章中查找title并填充到div AnchorContent中
 	$(".post_content").find("h2,h3,h4,h5,h6").each(function(i,item){
 	    var tag = $(item).get(0).localName;
