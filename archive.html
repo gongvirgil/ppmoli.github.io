@@ -2,24 +2,21 @@
 layout: default
 ---
 <div class="cate-list">
-  <div class="categories">
-    {% for post in site.posts %}
-      {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-      {% if year != y %}
-        {% assign year = y %}
-        <h2>{{ y }}</h2>
-      {% endif %}
-        <li>
-            <div>
-                <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-                <h3><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h3>
-                <div class="post-tags">
-                    {% for tag in post.tags %}
-                    <a href="/tag.html?{{ site.param-tag }}={{ tag }}">{{ tag }}</a>
-                    {% endfor %}
-                </div>  
-            </div>
-        </li> 
-    {% endfor %}
+  <div class="inner">
+    <div class="categories">
+      {% for post in site.posts %}
+        {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+        {% if year != y %}
+          {% assign year = y %}
+          <h2>{{ y }}</h2>
+        {% endif %}
+          <li>
+              <div>
+                  <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+                  <h3><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+              </div>
+          </li> 
+      {% endfor %}
+    </div>
   </div>
 </div>
