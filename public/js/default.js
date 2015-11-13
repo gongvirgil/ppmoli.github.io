@@ -57,7 +57,19 @@ $(document).ready(function(){
     var keywords = $('#search input').val();
     if(keywords==null) event.preventDefault();
     else {
-      var item = $(".search-posts").html();
+      var item = '
+      <li class="post-item">
+        <div class="post-item-inner">
+            <div class="post-item-date">@date</div>
+            <div class="post-item-title">
+              <h3><a title="@title" href="@url">@title</a></h3>
+            </div>
+            <div class="post-item-tags">
+              <a title="@tag" href="@tag-url">@tag</a>
+            </div>  
+        </div>
+      </li>
+      ';
       $("#search-result").show();
       $(".search-posts").html('');
       $("#search-result h4").append('<span class="dotting"></span>');
