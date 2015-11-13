@@ -5,7 +5,7 @@ timezone: Asia/Shanghai
 markdown: rdiscount
 highlighter: pygments
 paginate: 12
-permalink: /blog/:year-:month-:day/:title.html
+permalink: /:title
 title: site of gongvirgil
 url: http://gongvirgil.github.io
 feed: /atom.xml
