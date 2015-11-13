@@ -57,8 +57,8 @@ $(document).ready(function(){
     var keywords = $('#search input').val();
     if(keywords==null) event.preventDefault();
     else {
-      var item = '
-      <li class="post-item">
+      var item = 
+      '<li class="post-item">
         <div class="post-item-inner">
             <div class="post-item-date">@date</div>
             <div class="post-item-title">
@@ -68,8 +68,7 @@ $(document).ready(function(){
               <a title="@tag" href="@tag-url">@tag</a>
             </div>  
         </div>
-      </li>
-      ';
+      </li>';
       $("#search-result").show();
       $(".search-posts").html('');
       $("#search-result h4").append('<span class="dotting"></span>');
