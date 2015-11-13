@@ -4,7 +4,23 @@
       <h4>搜索</h4>
       <div class="side-bar-content">
         <input value="站内搜索" name="search">
-        <a ><i class="fa fa-search"></i></a>
+        <a id="search-btn"><i class="fa fa-search"></i></a>
+      </div>
+    </div>
+    <div id="search-result">
+      <h4>搜索结果</h4>
+      <div class="search-posts">
+        <li class="post-item">
+          <div class="post-item-inner">
+              <div class="post-item-date">@date</div>
+              <div class="post-item-title">
+                <h3><a title="@title" href="@url">@title</a></h3>
+              </div>
+              <div class="post-item-tags">
+                <a title="@tag" href="@tag-url">@tag</a>
+              </div>  
+          </div>
+        </li> 
       </div>
     </div>
     <div id="category">

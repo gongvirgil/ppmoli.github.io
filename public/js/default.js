@@ -5,6 +5,13 @@ var getQueryParm =  function(name){
   }
   return decodeURI(result[1]);
 }
+//代码高亮
+$(document).ready(function(){
+  $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+  $.getScript('/public/js/prettify.js',function(){
+      prettyPrint();
+  });
+})
 //返回顶部
 $(document).ready(function(){
   $(window).scroll(function(){
@@ -17,6 +24,7 @@ $(document).ready(function(){
       $('html, body').animate({scrollTop: 0}, 600);
   });
 })
+//sitebar悬浮按钮事件
 $(document).ready(function(){
   $("#sitebar-toggle-btn").click(function(event) {
     $(".sidebar").fadeToggle('50000');
@@ -24,23 +32,62 @@ $(document).ready(function(){
     $(this).toggleClass('active');
     $(this).find('i').toggleClass('fa-close').toggleClass('fa-navicon');
   });
+  $("#sitebar-toggle-btn").trigger('click');
 })
+//搜索框
 $(document).ready(function(){
     $('#search input').bind({
       focus:function(){
         if (this.value == this.defaultValue){
           this.value="";
-          $(this).css("color","#000");
+          $(this).css({"color":"#000","width":"150px"});
         }
       },
       blur:function(){
         if (this.value == ""){
           this.value = this.defaultValue;
-          $(this).css("color","#999");
+          $(this).css({"color":"#999","width":"100px"});
         }
       }
     });
 })
+//搜索结果
+$(document).ready(function(){
+  $("#search-btn").click(function(event){
+    var keywords = $('#search input').val();
+    if(keywords==null) event.preventDefault();
+    else {
+      var item = $(".search-posts").html();
+      $("#search-result").show();
+      $(".search-posts").html('');
+      $("#search-result h4").append('<span class="dotting"></span>');
+      $.getJSON('/public/json/posts.json', function(json, jsonStatus) {
+        if(jsonStatus!="success"){
+          console.log("失败");
+        }
+        else{
+          var preg_json = $.grep(json, function(n,i){
+            var text = n.tags + " " +n.title;
+            return text.match(keywords);
+            //return text.match(/[p].+/);
+          });
+          $("#search-result h4").append("["+preg_json.length+"]");
+          $.each(preg_json, function(index, val) {
+            var one = item.replace(/@date/g,val.date)
+                          .replace(/@url/g,val.url)
+                          .replace(/@title/g,val.title);
+            ;
+            $(".search-posts").append(one);
+          });
+          $("#search-result h4 span").remove();
+        }
+      });
+    }
+  });
+  
+
+});
+//
 $(document).ready(function(){
   var ID = getQueryParm("TAG")||getQueryParm("CATE");
   var one = $("#"+ID).parent();

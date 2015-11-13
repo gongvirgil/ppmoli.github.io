@@ -273,7 +273,7 @@ a:hover {
     text-align: left;
     margin-bottom: 20px;
 }
-#search h4, #category h4, #tag h4 {
+#search h4, #search-result h4, #category h4, #tag h4 {
     border-bottom: 2px solid #eee;
     text-align: left;
     width: 50%;
@@ -288,6 +288,9 @@ a:hover {
     padding: 7px 15px;
     width: 100px;
     color: #999;
+}
+#search-result {
+    display: none;
 }
 .side-bar-content {
     padding: 10px 0;
@@ -415,7 +418,31 @@ a:hover {
     right: 0;
 }
 
+/*-----Others-----*/
 
+.dotting {
+    display: inline-block; min-width: 2px; min-height: 2px;
+    box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor; 
+    -webkit-animation: dot 4s infinite step-start both;
+    animation: dot 4s infinite step-start both;
+    *zoom: expression(this.innerHTML = '...'); /* IE7 */
+}
+.dotting:before { content: '...'; } /* IE8 */
+.dotting::before { content: ''; }
+:root .dotting { margin-right: 8px; } /* IE9+,FF,CH,OP,SF */
+
+@-webkit-keyframes dot {
+    25% { box-shadow: none; }
+    50% { box-shadow: 2px 0 currentColor; }
+    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor; }
+}
+@keyframes dot {
+    25% { box-shadow: none; }
+    50% { box-shadow: 2px 0 currentColor; }
+    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor; }
+}
+
+/*-----Others End-----*/
 
 @media only screen and (max-width: 650px) {
     .header{
