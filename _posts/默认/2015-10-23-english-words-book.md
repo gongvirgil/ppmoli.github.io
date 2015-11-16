@@ -20,7 +20,8 @@ date: 2015-10-23
 ##G
 ##H
 ##I
-`impassive` 冷漠的 无感觉的
+`impassive` 冷漠的 无感觉的  
+`inverse` 相反的 逆向的 倒转的  
 ##J
 ##K
 ##L

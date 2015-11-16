@@ -73,11 +73,11 @@ $(document).ready(function(){
           $("#search-result h4 span").remove();
           $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
           $.each(preg_json, function(index, val) {
-            var one = item.replace(/@date/g,val.date)
-                          .replace(/@tags/g,val.tags)
+            var one = item.replace(/@tags/g,val.tags)
+                          .replace(/@title/g,val.title)
                           .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>")
-                          .replace(/@url/g,val.url)
-                          .replace(/@title/g,val.title);
+                          .replace(/@date/g,val.date)
+                          .replace(/@url/g,val.url);
             $(".search-posts").append(one);
           });
         }
