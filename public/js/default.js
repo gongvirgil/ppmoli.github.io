@@ -74,10 +74,10 @@ $(document).ready(function(){
           $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
           $.each(preg_json, function(index, val) {
             var one = item.replace(/@date/g,val.date)
-                          .replace(/@url/g,val.url)
-                          .replace(/@title/g,val.title)
                           .replace(/@tags/g,val.tags)
-                          .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>");
+                          .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>")
+                          .replace(/@url/g,val.url)
+                          .replace(/@title/g,val.title);
             $(".search-posts").append(one);
           });
         }
