@@ -71,6 +71,7 @@ $(document).ready(function(){
             return text.match(keywords);
             //return text.match(/[p].+/);
           });
+          $("#search-result h4 span").remove();
           $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
           $.each(preg_json, function(index, val) {
             var one = item.replace(/@date/g,val.date)
@@ -79,7 +80,6 @@ $(document).ready(function(){
             ;
             $(".search-posts").append(one);
           });
-          $("#search-result h4 span").remove();
         }
       });
     }
