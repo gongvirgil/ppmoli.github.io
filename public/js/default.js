@@ -71,7 +71,7 @@ $(document).ready(function(){
             return text.match(keywords);
             //return text.match(/[p].+/);
           });
-          $("#search-result h4").append("["+preg_json.length+"]");
+          $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
           $.each(preg_json, function(index, val) {
             var one = item.replace(/@date/g,val.date)
                           .replace(/@url/g,val.url)
