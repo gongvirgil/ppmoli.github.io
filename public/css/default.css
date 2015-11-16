@@ -108,6 +108,9 @@ a:hover {
     margin: 0 auto;
     width: 80%;
 }
+.underline {
+    text-decoration: underline;
+}
 /*-----Common End-----*/
 /*-----Header-----*/
 
@@ -291,6 +294,11 @@ a:hover {
 }
 #search-result {
     display: none;
+}
+.search-post-item-date,
+.search-post-item-tags {
+    font-size: 13px;
+    color: #a7aab1;
 }
 .side-bar-content {
     padding: 10px 0;

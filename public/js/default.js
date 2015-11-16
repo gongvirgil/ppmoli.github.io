@@ -32,7 +32,6 @@ $(document).ready(function(){
     $(this).toggleClass('active');
     $(this).find('i').toggleClass('fa-close').toggleClass('fa-navicon');
   });
-  $("#sitebar-toggle-btn").trigger('click');
 })
 //搜索框
 $(document).ready(function(){
@@ -57,7 +56,7 @@ $(document).ready(function(){
     var keywords = $('#search input').val();
     if(keywords==null) event.preventDefault();
     else {
-      var item = '<li class="post-item"><div class="post-item-inner"><div class="post-item-date">@date</div><div class="post-item-title"><h3><a title="@title" href="@url">@title</a></h3></div><div class="post-item-tags"><a title="@tag" href="@tag-url">@tag</a></div></div></li>';
+      var item = '<li class="post-item"><div class="post-item-inner"><div class="search-post-item-date">@date</div><div class="post-item-title"><h3><a title="@title" href="@url">@title</a></h3></div><div class="search-post-item-tags">@tags</div></div></li>';
       $("#search-result").show();
       $(".search-posts").html('');
       $("#search-result h4").append('<span class="dotting"></span>');
@@ -76,16 +75,19 @@ $(document).ready(function(){
           $.each(preg_json, function(index, val) {
             var one = item.replace(/@date/g,val.date)
                           .replace(/@url/g,val.url)
-                          .replace(/@title/g,val.title);
-            ;
+                          .replace(/@title/g,val.title)
+                          .replace(/@tags/g,val.tags)
+                          .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>");
             $(".search-posts").append(one);
           });
         }
       });
     }
   });
-  
-
+  $('#search input').on('keydown', function(e) {
+    if(!e) e = window.event;
+    if((e.keyCode || e.which) == 13){$("#search-btn").trigger('click');}
+  });
 });
 //
 $(document).ready(function(){
