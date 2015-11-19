@@ -15,12 +15,15 @@ date: 2015-10-23
 ##D
 `decimal` 十进位的 小数的  
 ##E
+`estimate` 估计 估价  （under+ over+）
+`extreme` 极端的 极端 极限值
 ##F
 `frankly` 坦白地 坦率地  
 ##G
 ##H
 ##I
 `impassive` 冷漠的 无感觉的  
+`insult` 侮辱  
 `inverse` 相反的 逆向的 倒转的  
 ##J
 ##K
@@ -39,6 +42,7 @@ date: 2015-10-23
 ##R
 ##S
 ##T
+`tornado` 龙卷风  
 ##U
 ##V
 `vacuum` 真空 空虚 清洁  
