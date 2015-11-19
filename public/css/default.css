@@ -99,19 +99,28 @@ a:hover {
 .clear {
     clear: both;
 }
+
+
 /*-----Common-----*/
+
 .container {
     margin-left: 33.3%;
     width: calc(100% - 33.3%);
 }
+
 .inner {
     margin: 0 auto;
     width: 80%;
 }
+
 .underline {
     text-decoration: underline;
 }
+
+
 /*-----Common End-----*/
+
+
 /*-----Header-----*/
 
 .header {
@@ -119,12 +128,13 @@ a:hover {
     height: 100%;
     background-color: #ddd;
     position: fixed;
-    background-image: url("/public/images/overlay.png"),url("/public/images/sb0.jpg");
+    background-image: url("/public/images/overlay.png"), url("/public/images/sb0.jpg");
     background-size: cover;
     padding-top: 2em;
 }
 
-.avatar, .blog-title {
+.avatar,
+.blog-title {
     text-align: center;
     margin-bottom: 1.5em;
 }
@@ -154,7 +164,6 @@ a:hover {
     width: 30px;
     cursor: pointer;
     display: inline-block;
-    
     transition: all 0.2s ease 0s;
 }
 
@@ -212,27 +221,66 @@ a:hover {
 .post-item-inner {
     padding: 20px 0;
 }
+
 .post-item-title {
     font-size: 24px;
 }
-.post-item-title a{
+
+.post-item-title a {
     color: #000;
 }
 
 .post-item-title a:hover {
     color: #2fa691;
 }
+
 .post-item-title h3 {
     font-size: 24px;
     font-weight: normal;
 }
 
+.post-item-desc h1,
+.post-item-desc h2,
+.post-item-desc h3,
+.post-item-desc h4,
+.post-item-desc h5,
+.post-item-desc h6 {
+    font-weight: normal;
+    line-height: 35px;
+}
+
+.post-item-desc h1 {
+    font-size: 24px;
+}
+
+.post-item-desc h2 {
+    font-size: 23px;
+}
+
+.post-item-desc h3 {
+    font-size: 22px;
+}
+
+.post-item-desc h4 {
+    font-size: 21px;
+}
+
+.post-item-desc h5 {
+    font-size: 20px;
+}
+
+.post-item-desc h6 {
+    font-size: 19px;
+}
+
 .post-item-desc {
     margin: 30px 0;
 }
+
 .post-item-desc p {
     color: #333;
 }
+
 .post-item-date,
 .post-item-tags {
     font-size: 13px;
@@ -250,6 +298,7 @@ a:hover {
     color: #000;
 }
 
+
 /*-----Main End-----*/
 
 
@@ -262,26 +311,38 @@ a:hover {
     color: #000;
     display: none;
 }
+
 .sidebar-content {
     padding: 5%;
     background-color: #fff;
 }
+
 .sidebar-content a {
     color: #000;
 }
+
 .sidebar-content a:hover {
     color: #2FA691;
 }
-#search, #menu-pages, #category, #tag{
+
+#search,
+#menu-pages,
+#category,
+#tag {
     text-align: left;
     margin-bottom: 20px;
 }
-#search h4, #search-result h4, #category h4, #tag h4 {
+
+#search h4,
+#search-result h4,
+#category h4,
+#tag h4 {
     border-bottom: 2px solid #eee;
     text-align: left;
     width: 50%;
     min-width: 300px;
 }
+
 #search input {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -292,22 +353,28 @@ a:hover {
     width: 100px;
     color: #999;
 }
+
 #search-result {
     display: none;
 }
+
 .search-post-item-date,
 .search-post-item-tags {
     font-size: 13px;
     color: #a7aab1;
 }
+
 .side-bar-content {
     padding: 10px 0;
 }
+
 .tag-cloud {
-    word-break:keep-all;
+    word-break: keep-all;
     width: 50%;
     min-width: 300px;
 }
+
+
 /*-----Sidebar End-----*/
 
 
@@ -426,34 +493,67 @@ a:hover {
     right: 0;
 }
 
+
 /*-----Others-----*/
 
 .dotting {
-    display: inline-block; min-width: 2px; min-height: 2px;
-    box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor; 
+    display: inline-block;
+    min-width: 2px;
+    min-height: 2px;
+    box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor;
     -webkit-animation: dot 4s infinite step-start both;
     animation: dot 4s infinite step-start both;
-    *zoom: expression(this.innerHTML = '...'); /* IE7 */
+    *zoom: expression(this.innerHTML='...');
+    /* IE7 */
 }
-.dotting:before { content: '...'; } /* IE8 */
-.dotting::before { content: ''; }
-:root .dotting { margin-right: 8px; } /* IE9+,FF,CH,OP,SF */
+
+.dotting:before {
+    content: '...';
+}
+
+
+/* IE8 */
+
+.dotting::before {
+    content: '';
+}
+
+:root .dotting {
+    margin-right: 8px;
+}
+
+
+/* IE9+,FF,CH,OP,SF */
 
 @-webkit-keyframes dot {
-    25% { box-shadow: none; }
-    50% { box-shadow: 2px 0 currentColor; }
-    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor; }
+    25% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 2px 0 currentColor;
+    }
+    75% {
+        box-shadow: 2px 0 currentColor, 6px 0 currentColor;
+    }
 }
+
 @keyframes dot {
-    25% { box-shadow: none; }
-    50% { box-shadow: 2px 0 currentColor; }
-    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor; }
+    25% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 2px 0 currentColor;
+    }
+    75% {
+        box-shadow: 2px 0 currentColor, 6px 0 currentColor;
+    }
 }
+
 
 /*-----Others End-----*/
 
 @media only screen and (max-width: 650px) {
-    .header{
+    .header {
         position: relative;
         width: 100%;
         height: 20em;

@@ -33,6 +33,7 @@ date: 2015-10-10
         return $arr;
     }
 
+<!-- more -->
 ###curl 实现 GET / POST
 
     function oauth_http($method,$header,$url,$data){
