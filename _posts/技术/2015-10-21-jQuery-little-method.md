@@ -13,7 +13,7 @@ date: 2015-10-21
     //查询删除了任何没（:not）有（:has）  
     //包含class为“selected”（.selected）的子节点。  
     .filter(":not(:has(.selected))") 
-
+<!-- more -->
 　　2. 如何重用元素搜索
 
     var allItems = $("div.item");  
