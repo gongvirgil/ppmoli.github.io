@@ -5,12 +5,18 @@ layout: index
   <div class="inner">
     <div class="categories">
       {% for post in site.posts %}
-        {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+        {% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}
+        {% capture m %}{{ post.date | date:"%m" }}{% endcapture %}
         {% if year != y %}
           {% assign year = y %}
-          <h2>{{ y }}</h2>
+          {% assign month = null %}
+          <h2>{{ y }}年</h2>
         {% endif %}
-          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li> 
+        {% if month != m %}
+          {% assign month = m %}
+          <h3>{{ m }}月</h3>
+        {% endif %}
+          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </div>
   </div>
