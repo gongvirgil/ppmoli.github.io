@@ -10,12 +10,7 @@ layout: index
           {% assign year = y %}
           <h2>{{ y }}</h2>
         {% endif %}
-          <li>
-              <div>
-                  <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-                  <h3><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></h3>
-              </div>
-          </li> 
+          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li> 
       {% endfor %}
     </div>
   </div>
