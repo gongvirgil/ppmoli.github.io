@@ -72,14 +72,19 @@ $(document).ready(function(){
           });
           $("#search-result h4 span").remove();
           $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
-          $.each(preg_json, function(index, val) {
-            var one = item.replace(/@tags/g,val.tags)
-                          .replace(/@title/g,val.title)
-                          .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>")
-                          .replace(/@date/g,val.date)
-                          .replace(/@url/g,val.url);
-            $(".search-posts").append(one);
-          });
+          if(preg_json.length>0){
+            $.each(preg_json, function(index, val) {
+              var one = item.replace(/@tags/g,val.tags)
+                            .replace(/@title/g,val.title)
+                            .replace(eval("/"+keywords+"/g"),"<span class='underline'>"+keywords+"</span>")
+                            .replace(/@date/g,val.date)
+                            .replace(/@url/g,val.url);
+              $(".search-posts").append(one);
+            });
+          }else{
+            $(".search-posts").html("没有找到相关文章");
+          }
+
         }
       });
     }
