@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/public/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="box-container">
+    </div>
+<style>
+    .box-container {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+    .line {
+        margin: 0 auto;
+        display: table;
+    }
+    .box {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #999;
+        margin: 1px;
+        float: left;
+    }
+</style>
+<script>
+    $(function(){
+        var creat_box_grid = function(num){
+            for (var i = num - 1; i >= 0; i--) {
+                var row = $('<div class="line"></div>').appendTo($('.box-container'));
+                for (var j = num - 1; j >= 0; j--) {
+                    var box = $('<div class="box"></div>').appendTo(row);
+                };
+            };
+        }
+        var default_n = 5;
+        creat_box_grid(10);
+    })
+</script>
+  </body>
+</html>
