@@ -2,8 +2,8 @@
 layout: post
 title: 打包/压缩目录
 description: 打包/压缩目录
-category: 
-tags: [linux,]
+category: linux
+tags: [linux]
 date: 2015-03-19
 ---
 ##打包/压缩目录

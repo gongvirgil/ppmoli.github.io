@@ -2,7 +2,7 @@
 layout: post
 title: Sublime Text Snippets(代码片段)功能
 description: Sublime Text Snippets(代码片段)功能
-category: 技术
+category: 软件
 tags: ['sublime','work','code','soft']
 date: 2015-02-28
 ---

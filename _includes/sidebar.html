@@ -14,9 +14,9 @@
     </div>
     <div id="category">
         <h4>分类</h4>
-        <div class="side-bar-content">
+        <div class="side-bar-content cate-list">
           {% for category in site.categories %}
-          <li><a href="/category.html?{{ site.param-cate }}={{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a></li>
+          <a class="item-category" href="/category.html?{{ site.param-cate }}={{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a>
           {% endfor %}
         </div>
         <div class="clear"></div>

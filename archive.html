@@ -16,7 +16,7 @@ layout: index
           {% assign month = m %}
           <h3>{{ m }}月</h3>
         {% endif %}
-          <li><span>{{ post.date | date: "%Y-%m-%d" }}</span><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
+          <li><span class="post-item-date">{{ post.date | date:"%Y-%m-%d" }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </div>
   </div>

@@ -13,7 +13,7 @@ date: 2015-11-26
 
     SELECT FLOOR(7 + (RAND() * 6));
 
-以上摘抄自MySQL手册
+<!-- more -->
 
  
 
@@ -31,47 +31,54 @@ date: 2015-11-26
 
     SELECT * FROM      users WHERE userId >= ((SELECT MAX(userId) FROM users)-(SELECT      MIN(userId) FROM users)) * RAND() + (SELECT MIN(userId) FROM users)       LIMIT 1
     
-    执行该sql语句，用时0.039s，效率太给力了！接着我就把”LIMIT 1“改为了”LIMIT 10000“，用时0.063s。经过多次验证，哥对灯发誓，结果肯定是随机的！
+执行该sql语句，用时0.039s，效率太给力了！接着我就把”LIMIT 1“改为了”LIMIT 10000“，用时0.063s。经过多次验证，哥对灯发誓，结果肯定是随机的！
     结论：随机取一条或多条记录，方法都不错！
-    通过sql获得最大值和最小值，然后通过php的rand生成一个随机数randnum，再通过SELECT * FROM users WHERE userId >= randnum LIMIT 1，获得一条记录效率应该还可以，多条应该就不行了。
+    通过sql获得最大值和最小值，然后通过php的rand生成一个随机数randnum，再通过`SELECT * FROM users WHERE userId >= randnum LIMIT 1`，获得一条记录效率应该还可以，多条应该就不行了。
 
-    结论：方法1效率不行，切忌使用；随机获得一条记录，方法2是相当不错的选择，采用JOIN的语法比直接在WHERE中使用函数效率还是要高一些的，不过方法3也不错；随机获得多条记录，方法3没说的！
+结论：方法1效率不行，切忌使用；随机获得一条记录，方法2是相当不错的选择，采用JOIN的语法比直接在WHERE中使用函数效率还是要高一些的，不过方法3也不错；随机获得多条记录，方法3没说的！
 
 从Mysql某一表中随机读取n条数据的SQL查询语句其他相关资料
 
 SQL语句先随机好ID序列，用 IN 查询（飘易推荐这个用法，IO开销小，速度最快）：
-$sql="SELECT MAX(id),MIN(id) FROM content";
-$result=mysql_query($sql,$conn);
-$yi=mysql_fetch_array($result);
-$idmax=$yi[0];
-$idmin=$yi[1];
-$idlist='';   
-for($i=1;$i<=20;$i++){   
-if($i==1){ $idlist=mt_rand($idmin,$idmax); }   
-else{ $idlist=$idlist.','.mt_rand($idmin,$idmax); }   
-} 
-$idlist2="id,".$idlist;
-$sql="select * from content where id in ($idlist) order by field($idlist2) LIMIT 0,12";
-$result=mysql_query($sql,$conn);
-$n=1;
-$rnds='';
-while($row=mysql_fetch_array($result)){
-$rnds=$rnds.$n.". <a href='show".$row['id']."-".strtolower(trim($row['title']))."'>".$row['title']."</a><br />\n";
-$n++;
-}800万数据随机取一条的牛方法
-mysql> select FLOOR(id*rand()) from test_rand where id=(select MAX(id) from test
-_rand);
-+------------------+
-| FLOOR(id*rand()) |
-+------------------+
-| 5225551 |
-+------------------+
-1 row in set (0.00 sec)
-语句简单，速度慢的方法
-SELECT * FROM table_name ORDER BY rand() LIMIT 5;
 
-语句复杂，速度快的方法
-SELECT * FROM table_name AS r1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM table_name)) AS id) AS r2 WHERE r1.id >= r2.id ORDER BY r1.id ASC LIMIT 5;
+    $sql="SELECT MAX(id),MIN(id) FROM content";
+    $result=mysql_query($sql,$conn);
+    $yi=mysql_fetch_array($result);
+    $idmax=$yi[0];
+    $idmin=$yi[1];
+    $idlist='';   
+    for($i=1;$i<=20;$i++){   
+    if($i==1){ $idlist=mt_rand($idmin,$idmax); }   
+    else{ $idlist=$idlist.','.mt_rand($idmin,$idmax); }   
+    } 
+    $idlist2="id,".$idlist;
+    $sql="select * from content where id in ($idlist) order by field($idlist2) LIMIT 0,12";
+    $result=mysql_query($sql,$conn);
+    $n=1;
+    $rnds='';
+    while($row=mysql_fetch_array($result)){
+    $rnds=$rnds.$n.". <a href='show".$row['id']."-".strtolower(trim($row['title']))."'>".$row['title']."</a><br />\n";
+    $n++;
+    }
+
+800万数据随机取一条的牛方法
+
+    mysql> select FLOOR(id*rand()) from test_rand where id=(select MAX(id) from test
+    _rand);
+    +------------------+
+    | FLOOR(id*rand()) |
+    +------------------+
+    | 5225551 |
+    +------------------+
+    1 row in set (0.00 sec)
+
+语句简单，速度慢的方法  
+
+    SELECT * FROM table_name ORDER BY rand() LIMIT 5;
+
+语句复杂，速度快的方法  
+
+    SELECT * FROM table_name AS r1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM table_name)) AS id) AS r2 WHERE r1.id >= r2.id ORDER BY r1.id ASC LIMIT 5;
 
 
 cjc注: ... AS id) AS t2 这里的 id, 也许该换成id2, 后面 WHERE t1.id >= t2.id 改成  WHERE t1.id >= t2.id2

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: bootstrap笔记
-description: 
-category: 技术
+description: bootstrap笔记
+category: css
 tags: ['bootstrap','css','笔记']
 date: 2015-03-26
 ---

@@ -285,7 +285,7 @@ a:hover {
 .post-item-tags {
     font-size: 13px;
     color: #a7aab1;
-    margin: 35px 0 30px;
+    margin: 35px 10px 30px 0;
 }
 
 .post-item-tags span,
@@ -368,14 +368,26 @@ a:hover {
 .side-bar-content {
     padding: 10px 0;
 }
-
-.tag-cloud {
+.cate-list, .tag-cloud {
     word-break: keep-all;
     width: 50%;
     min-width: 300px;
 }
-
-
+.cate-list {
+    line-height: 50px;
+}
+.item-category {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    position: relative;
+}
+.cate-size {
+    color: #a7aab1;
+    font-size: 13px; 
+    position: absolute;
+    top: -10px;
+    right: 2px;
+}
 /*-----Sidebar End-----*/
 
 
