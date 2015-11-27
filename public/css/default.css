@@ -368,12 +368,12 @@ a:hover {
 .side-bar-content {
     padding: 10px 0;
 }
-.cate-list, .tag-cloud {
+.category-box-list, .tag-cloud {
     word-break: keep-all;
     width: 50%;
     min-width: 300px;
 }
-.cate-list {
+.category-box-list {
     line-height: 50px;
 }
 .item-category {
