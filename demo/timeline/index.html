@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TimeLine</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1 class="headline"><span class="btn">TimeLine</span></h1>
+    <div class="main">
+        <div class="year btn">2015</div>
+        <div class="line"></div>
+        
+        <div class="event-li">
+            <span class="date left">October</span>
+            <span class="bullet left"></span>
+            <span class="event right">new things this and that</span>
+        </div>
+
+        <div class="event-li">
+            <span class="date right">October</span>
+            <span class="bullet left"></span>
+            <span class="event left">new things this and that</span>
+        </div>
+
+        <div class="year btn">2014</div>
+    </div>
+    <style>
+    html, body, input {
+        color: #16343b;
+        font-family: "Open Sans",sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .headline {
+        margin-top: 0;
+        position: relative;
+        text-align: center;
+        top: 0px;
+        z-index: 1;
+    }
+    .main {margin:auto;width: 630px;margin-top:40px;position: relative;text-align: center;}
+    .line {
+        background: #e24531 none repeat scroll 0 0;
+        border-left: 1px solid #e14e3c;
+        border-right: 1px solid #e14e3c;
+        display: inline-block;
+        height: 1250px;
+        width: 2px;
+    }
+    .btn {
+        background: #fff none repeat scroll 0 0 padding-box;
+        border-radius: 10px;
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.95) inset, 0 0 8px rgba(0, 0, 0, 0.12) inset, 1px 0 0 rgba(0, 0, 0, 0.25), -1px 0 0 rgba(0, 0, 0, 0.25), 0 1px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.09);
+        font-weight: 700;
+        padding: 6px 12px;
+        position: relative;
+        text-shadow: 0 1px 1px #fff;
+        z-index: 1;
+    }
+    .year {
+        top: 0;
+        position: absolute;
+    }
+    .event-li {
+        position: absolute;
+        right: 234px;
+        top: 100px;
+    }
+    .date {
+        color: #9ea3ab;
+        font-weight: 700;
+        left: 5px;
+        position: relative;
+        text-shadow: 0 1px 1px #fff;
+        top: -14px;
+    }
+    .date.left {
+        left: -5px;
+    }
+    .bullet {
+        background: #e2432f none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        display: inline-block;
+        height: 9px;
+        margin-left: 5px;
+        position: relative;
+        top: -11px;
+        width: 9px;
+    }
+    .bullet.left {
+        left: 0px;
+        margin-left: 0;
+    }
+    .event {
+        position: relative;
+        left: 5px;
+        top: -13px;
+        color: #e2432f;
+        text-shadow: 0 1px 1px #fff;
+    }
+    .event span {
+        background: #fff none repeat scroll 0 0;
+        display: inline-block;
+        left: -3px;
+        position: relative;
+        top: 0;
+    }
+    .event.right span {
+        left: 3px;
+    }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
