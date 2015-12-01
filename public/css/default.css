@@ -484,6 +484,7 @@ a:hover {
 .cate-list,
 .tag-list {}
 
+.archives,
 .categories,
 .tags {
     overflow: hidden;
@@ -491,6 +492,7 @@ a:hover {
     padding: 50px 0;
 }
 
+.archives h2,
 .categories h2,
 .tags h2 {
     padding: 8px 10px;
