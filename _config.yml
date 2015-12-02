@@ -1,5 +1,5 @@
 exclude: []
-include: []
+include: ['feed.xml']
 encoding : utf-8
 timezone: Asia/Shanghai
 markdown: rdiscount
