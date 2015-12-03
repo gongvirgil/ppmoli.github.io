@@ -1,63 +1,8 @@
 <div class="sidebar container">
   <div class="sidebar-content">
-    <div id="search">
-      <h4>搜索</h4>
-      <div class="side-bar-content">
-        <input value="站内搜索" name="search">
-        <a id="search-btn"><i class="fa fa-search"></i></a>
-      </div>
-    </div>
-    <div id="search-result">
-      <h4>搜索结果</h4>
-      <div class="search-posts">
-      </div>
-    </div>
-    <div id="category">
-        <h4>分类</h4>
-        <div class="side-bar-content category-box-list">
-          {% for category in site.categories %}
-          <a class="item-category" href="/category.html?{{ site.param-cate }}={{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a>
-          {% endfor %}
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div id="tag">
-        <h4>标签</h4>
-        <div  class="side-bar-content tag-cloud">
-          <!--
-          <div id="div1">
-          {% for tag in site.tags %}
-          <a title="{{ tag | first }}" href="/tag.html?{{ site.param-tag }}={{ tag | first }}">{{ tag | first }}</a>
-          {% endfor %} 
-          </div>    
-          <style>
-          #div1 {position:relative; width:350px; height:350px; text-align: center;}
-          #div1 a {position:absolute; top:0px; left:0px; font-family: Microsoft YaHei; color:#000; font-weight:bold; text-decoration:none; padding: 3px 6px; }
-          #div1 a:hover {border: 1px solid #333; background: #fff; }
-          </style>
-          <script type="text/javascript" src="/demo/tag-cloud/js/miaov.js"></script>
-          -->
-        {% for tag in site.tags %}
-          {% assign temp = tag[1].size %}
-          {% assign base = temp | divided_by: 4 %}
-          {% assign remain = temp | modulo: 4 %}
-          {% if remain == 0 %}
-            {% assign size = base | plus: 9 %}
-          {% elsif remain == 1 or remain == 2 %}
-            {% assign size = base | plus: 9 | append: '.5' %}
-          {% else %}
-            {% assign size = base | plus: 10 %}
-          {% endif %}
-          {% if remain == 0 or remain == 1 %}
-            {% assign color = 9 | minus: base %}
-          {% else %}
-            {% assign color = 8 | minus: base %}
-          {% endif %}
-          <a href="/tag.html?{{ site.param-tag }}={{ tag[0] }}" title="{{ tag[1].size }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
-        {% endfor %}
-        </div>
-        <div class="clear"></div>
-    </div>
+    {% include search-box.html %}
+    {% include category-box.html %}
+    {% include tag-box.html %}
   </div>
 </div>
 
