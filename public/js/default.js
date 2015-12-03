@@ -30,7 +30,7 @@ $(document).ready(function(){
     $(".sidebar").fadeToggle('50000');
     $(".main").fadeToggle('50000');
     $(this).toggleClass('active');
-    $(this).find('i').toggleClass('fa-close').toggleClass('fa-navicon');
+    $(this).find('i').toggleClass('fa-close').toggleClass('fa-search');
   });
 })
 //搜索框
