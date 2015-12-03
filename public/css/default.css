@@ -150,11 +150,13 @@ a:hover {
 
 .header-inner {
     text-align: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .avatar,
 .blog-title {
-    padding-top: 1em;
+    padding-top: 1.5em;
 }
 
 .blog-description {
@@ -169,7 +171,7 @@ a:hover {
 
 .blog-description p {
     font-size: 12px;
-    color: #999;
+    color: #3e3b3f;
 }
 
 .calculates {
