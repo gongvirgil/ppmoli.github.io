@@ -72,7 +72,8 @@ pre {
     max-height: 300px;
 }
 
-p code {
+p code,
+table code {
     background: #f8f8f8 none repeat scroll 0 0;
     border: 1px solid #e1e1e1;
     border-radius: 4px;
@@ -80,6 +81,32 @@ p code {
     font-weight: bold;
     margin: 0 5px;
     padding: 3px 5px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    border-spacing: 0;
+    border-width: 1px 1px 1px 0;
+    border-style: solid solid solid none;
+    border-color: #ccc;
+    font-size: 14px;
+}
+
+table th,
+table td {
+    border-left: 1px solid #ccc;
+    padding: 4px 5px;
+}
+
+table td {
+    border-top: 1px solid #ccc;
+}
+
+table tbody > tr:nth-child(2n+1) > td,
+table tbody > tr:nth-child(2n+1) > th {
+    background-color: #f9f9f9;
 }
 
 li {
