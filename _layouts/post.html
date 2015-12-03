@@ -9,19 +9,19 @@ comments: true
         <div class="post-main-inner inner">
             <div id="content">
                 <div class="post">
-                    <div class="post_title">
+                    <div class="post-title">
                         <h1>{{ page.title }}</h1>
                     </div>
-                    <div class="post_relate">
-                        <span class="post_date">{{ page.date|date:"%Y-%m-%d" }}</span>
-                        <span class="post_categories">{{ page.categories }}</span>
-                        <span class="post_tags">
+                    <div class="post-relate">
+                        <span class="post-date">{{ page.date|date:"%Y-%m-%d" }}</span>
+                        <span class="post-categories">{{ page.categories }}</span>
+                        <span class="post-tags">
                             {% for tag in page.tags %}
                                 <a href="{{site.baseurl}}/tag.html?{{ site.param-tag }}={{ tag }}" title="{{ tag }}">#{{ tag }}</a>
                             {% endfor %}
                         </span>
                     </div>
-                    <div class="post_content">
+                    <div class="post-content">
                         {{ content }}            
                     </div>
                 </div>

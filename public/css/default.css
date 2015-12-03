@@ -86,6 +86,10 @@ li {
     list-style: none;
 }
 
+.post-content li {
+    list-style: inside none disc;
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -283,9 +287,6 @@ a:hover {
 
 .post-item-desc {
     margin: 30px 0;
-}
-
-.post-item-desc p {
     color: #333;
 }
 

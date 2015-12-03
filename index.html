@@ -12,7 +12,7 @@ layout: index
           <div class="post-item-title">
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           </div>
-          <div class="post-item-desc">
+          <div class="post-item-desc post-content">
             {% if post.content contains "<!-- more -->" %}
             {{ post.content | split:"<!-- more -->" | first % }}
             <h4><a href='{{ post.url }}' title='Read more...'>Read more...</a></h4>

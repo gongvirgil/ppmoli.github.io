@@ -1,30 +1,38 @@
 body {
-    font-family: Lato,"Microsoft Jhenghei","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     font-size: 16px;
     line-height: 1.8;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: Cambria,Georgia,"Microsoft Jhenghei","Hiragino Sans GB","Microsoft YaHei","Times New Roman",serif;
+    font-family: Cambria, Georgia, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif;
     font-weight: bold;
     line-height: 1;
 }
-.post h1{
+
+.post h1 {
     padding: 20px 0;
 }
-.post h2{
+
+.post h2 {
     padding: 15px 0;
 }
-.post h3{
+
+.post h3 {
     padding: 10px 0;
 }
-.post h4,.post h5,.post h6{
+
+.post h4,
+.post h5,
+.post h6 {
     padding: 5px 0;
 }
+
 .ds-thread {
     background-color: #fff;
     padding: 20px 0;
@@ -38,52 +46,67 @@ h6 {
     margin-bottom: 0.1em;
 }
 
-.post .post_title {
+.post .post-title {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.post .post_content {
+.post .post-content {
     min-height: 100px;
     padding: 20px 0;
     overflow: hidden;
 }
 
-.post_relate {
+.post-relate {
     color: #a7aab1;
     font-size: 12px;
 }
 
-.post_tags a {
+.post-tags a {
     margin-left: 10px;
 }
+
 .pre-next {
     font-size: 13px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
+
 .pre-next li {
     display: inline-block;
     width: 50%;
 }
+
 .pre {
     text-align: left;
 }
+
 .next {
     text-align: right;
 }
+
 .pre a {
     margin-left: 0.5em;
 }
+
 .next a {
     margin-right: 0.5em;
 }
-.pre a, .pre i, .next a ,.next i{
+
+.pre a,
+.pre i,
+.next a,
+.next i {
     color: #999;
 }
-.pre:hover a, .pre:hover i, .next:hover a, .next:hover i{
+
+.pre:hover a,
+.pre:hover i,
+.next:hover a,
+.next:hover i {
     opacity: 1;
     color: #222;
     font-weight: bold;
 }
+
 
 /*Table of contents*/
 
@@ -110,6 +133,7 @@ h6 {
 #AnchorContent {
     display: none;
 }
+
 
 /* .BlogAnchor p {
     font-size: 18px;
