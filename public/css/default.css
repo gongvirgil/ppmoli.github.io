@@ -161,7 +161,7 @@ a:hover {
 .item-box h2 {
     border-bottom: 2px solid #eee;
     text-align: left;
-    width: 80%;
+    width: 100%;
     padding: 8px 0;
     min-width: 300px;
 }
@@ -378,8 +378,7 @@ a:hover {
 .category-box-list,
 .tag-cloud {
     word-break: keep-all;
-    width: 80%;
-    min-width: 300px;
+    width: 100%;
 }
 
 .category-box-list {
