@@ -140,7 +140,10 @@ a:hover {
     margin-left: 33.3%;
     width: calc(100% - 33.3%);
 }
-
+.main-content {
+    padding: 5% 0;
+    min-height: 450px;
+}
 .inner {
     margin: 0 auto;
     width: 80%;
@@ -155,10 +158,11 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.item-box h4 {
+.item-box h2 {
     border-bottom: 2px solid #eee;
     text-align: left;
-    width: 50%;
+    width: 100%;
+    padding: 8px 0;
     min-width: 300px;
 }
 
@@ -248,19 +252,11 @@ a:hover {
 
 /*-----Main-----*/
 
-.main-content {
-    min-height: 450px;
-}
-
 .post-item {
     background-color: #fff;
     width: 100%;
     text-align: left;
     transition: background-color 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;
-}
-
-.post-item-inner {
-    padding: 20px 0;
 }
 
 .post-item-title {
@@ -350,10 +346,6 @@ a:hover {
     display: none;
 }
 
-.sidebar-content {
-    padding: 5%;
-}
-
 .sidebar-content a {
     color: #000;
 }
@@ -386,7 +378,7 @@ a:hover {
 .category-box-list,
 .tag-cloud {
     word-break: keep-all;
-    width: 50%;
+    width: 100%;
     min-width: 300px;
 }
 
@@ -485,7 +477,7 @@ a:hover {
 /*-----Float Btns End-----*/
 
 
-/*index-category-tag*/
+/*index-category-tag-archive*/
 
 .posts {
     overflow: hidden;
@@ -503,14 +495,16 @@ a:hover {
 }
 
 .cate-list,
-.tag-list {}
+.tag-list {
+    margin-top: 30px;
+}
 
 .archives,
 .categories,
 .tags {
     overflow: hidden;
     background-color: #fff;
-    padding: 50px 0;
+    margin-bottom: 50px;
 }
 
 .archives h2,
@@ -522,11 +516,7 @@ a:hover {
 }
 
 .post-num {
-    font-weight: normal;
-    color: #fff;
-    position: absolute;
-    top: 5px;
-    right: 0;
+    font-size: 14px;
 }
 
 

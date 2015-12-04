@@ -59,10 +59,11 @@ $(document).ready(function(){
       var item = '<li class="post-item"><div class="post-item-inner"><div class="search-post-item-date">@date</div><div class="post-item-title"><h3><a title="@title" href="@url">@title</a></h3></div><div class="search-post-item-tags">@tags</div></div></li>';
       $("#search-result").show();
       $(".search-posts").html('');
-      $("#search-result h4").append('<span class="dotting"></span>');
+      var $search_result = $("#search-result").find('.search-result');
+      $search_result.append('<span class="dotting"></span>');
       $.getJSON('/public/json/posts.json', function(json, jsonStatus) {
         if(jsonStatus!="success"){
-          console.log("失败");
+          $(".search-posts").html("查询失败");
         }
         else{
           var preg_json = $.grep(json, function(n,i){
@@ -70,8 +71,8 @@ $(document).ready(function(){
             return text.match(keywords);
             //return text.match(/[p].+/);
           });
-          $("#search-result h4 span").remove();
-          $("#search-result h4").append("<span>["+preg_json.length+"]</span>");
+          $search_result.find('span').remove();
+          $search_result.append("<span>["+preg_json.length+"]</span>");
           if(preg_json.length>0){
             $.each(preg_json, function(index, val) {
               var one = item.replace(/@tags/g,val.tags)

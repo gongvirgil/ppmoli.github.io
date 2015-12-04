@@ -1,5 +1,5 @@
 <div id="category" class="item-box">
-    <h4>分类</h4>
+    <h2>分类</h2>
     <div class="item-box-content category-box-list">
       {% for category in site.categories %}
       <a class="item-category" href="/category.html?{{ site.param-cate }}={{ category | first }}">{{ category | first }}<span class="cate-size">{{ category | last | size }}</span></a>
