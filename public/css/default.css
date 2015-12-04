@@ -92,6 +92,8 @@ table {
     border-style: solid solid solid none;
     border-color: #ccc;
     font-size: 14px;
+    table-layout: fixed;
+    word-break: break-all;
 }
 
 table th,
