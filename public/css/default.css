@@ -64,12 +64,11 @@ h6 {
 
 pre {
     font-size: 13px;
-    line-height: 1.5 !important;
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
     overflow: auto;
-    max-height: 300px;
+    max-height: 800px;
 }
 
 p code,
@@ -140,10 +139,12 @@ a:hover {
     margin-left: 33.3%;
     width: calc(100% - 33.3%);
 }
+
 .main-content {
     padding: 5% 0;
     min-height: 450px;
 }
+
 .inner {
     margin: 0 auto;
     width: 80%;

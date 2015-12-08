@@ -4,13 +4,12 @@
 /* Original theme - http://noahfrederick.com/vim-color-scheme-hemisu/ */
 
 .prettyprint {
-    background: white;
+    background-color: #fff;
+    color: #2FA691;
     font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
     font-size: 13px;
-    line-height: 1.5 !important;
     border: 1px solid #ccc;
-    padding: 10px 50px;
-    border-radius: 4px;
+    margin: 10px 0;
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
@@ -111,7 +110,12 @@ ol.linenums {
 }
 
 ol.linenums li {
-    list-style-type: decimal;
+    border-left: 1px solid #ccc;
+    list-style: outside none decimal;
+    margin-left: 38px;
+    padding-left: 6px;
+    background-color: #fafafa;
+    line-height: 1.5 !important;
 }
 
 
