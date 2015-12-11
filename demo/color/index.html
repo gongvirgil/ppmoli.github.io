@@ -710,8 +710,6 @@
     $(function(){
         function clipCallback(client) {
             client.setText($.trim(this.innerHTML.replace('#','')));
-            console.log(client);
-            console.log(this);
             var parent = $(this).parents('li');
             var pos = parent.position();
             var tester = $('#tester');

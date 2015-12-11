@@ -34,7 +34,7 @@ $(document).ready(function(){
 	    }
 	    $("#AnchorContent").toggle();
 	});
-
+    /*
 
 	$('pre').each(function(index, el) {
 		$(this).addClass('c'+index);
@@ -53,6 +53,7 @@ $(document).ready(function(){
             $(this).hide();
          });
     }
+    
     $('.copy').each(function(){
     	var ol = $('ol', $('pre.'+$(this).attr('tag')) );
         var clip = new ZeroClipboard(ol, {moviePath: "/public/js/ZeroClipboard.swf"});
@@ -62,4 +63,5 @@ $(document).ready(function(){
             $(clip.htmlBridge).css('opacity',0);
         }
     });
+    */
 })
