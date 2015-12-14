@@ -2,7 +2,7 @@
 layout: post
 title: 各种常见的UI元素
 description: 各种常见的UI元素
-categories: html,css
+categories: ['html','css']
 tags: [html,css]
 date: 2015-12-10
 ---
