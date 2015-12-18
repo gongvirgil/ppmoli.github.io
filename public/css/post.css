@@ -142,6 +142,8 @@ h6 {
 
 #AnchorContent {
     display: none;
+    height: 400px;
+    overflow: auto;
 }
 
 .newh1 {
