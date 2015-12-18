@@ -4,7 +4,7 @@ encoding : utf-8
 timezone: Asia/Shanghai
 markdown: rdiscount
 highlighter: pygments
-paginate: 12
+paginate: 8
 permalink: /:title
 title: 莫离君的博客
 description: 若问生涯原是梦，除梦里，没人知。
