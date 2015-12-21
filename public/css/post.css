@@ -33,9 +33,6 @@ h6 {
     padding: 5px 0;
 }
 
-
-
-
 .ds-thread {
     background-color: #fff;
     padding: 20px 0;
@@ -57,6 +54,15 @@ h6 {
     min-height: 100px;
     padding: 20px 0;
     overflow: hidden;
+    font-size: 15px;
+}
+
+.post-content a {
+    color: #2fa691;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
 }
 
 .post-relate {
@@ -110,12 +116,15 @@ h6 {
     font-weight: bold;
 }
 
+
 /*----tools----*/
+
 .tools {
     font-size: 12px;
 }
-/*----tools end----*/
 
+
+/*----tools end----*/
 
 
 /*Table of contents*/
@@ -150,25 +159,32 @@ h6 {
     font-size: 16px;
     font-weight: bold;
 }
+
 .newh2 {
     font-size: 16px;
 }
+
 .newh3 {
     font-size: 15px;
     margin-left: 5px;
 }
+
 .newh4 {
     font-size: 14px;
     margin-left: 10px;
 }
+
 .newh5 {
     font-size: 13px;
     margin-left: 15px;
 }
+
 .newh5 {
     font-size: 12px;
     margin-left: 20px;
 }
+
+
 /* .BlogAnchor p {
     font-size: 18px;
     color: #15a230;
