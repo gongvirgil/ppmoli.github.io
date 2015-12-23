@@ -10,12 +10,12 @@ layout: index
             {{ post.date | date: "%Y-%m-%d" }}
           </div>
           <div class="post-item-title">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
           </div>
           <div class="post-item-desc post-content">
             {% if post.content contains "<!-- more -->" %}
             {{ post.content | split:"<!-- more -->" | first % }}
-            <h4><a href='{{ post.url }}' title='Read more...'>Read more...</a></h4>
+            <h4><a href="{{ post.url }}" title="阅读更多" class="more-btn">更多>></a></h4>
             {% else %}
             {{ post.content }}
             {% endif %}
@@ -29,7 +29,6 @@ layout: index
     </li> 
     {% endfor %}   
 </div>
-<div class=""></div>
 <div class="page">
 <a href="{{ paginator.previous_page_path }}" class="pre_page">上一页</a>
 <span>{{ paginator.page }}/{{ paginator.total_pages }}</span>

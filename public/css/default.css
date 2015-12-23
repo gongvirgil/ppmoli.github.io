@@ -81,6 +81,7 @@ blockquote {
 }
 
 p code,
+ul>li code,
 table code {
     background: #f8f8f8 none repeat scroll 0 0;
     border: 1px solid #e1e1e1;
@@ -281,8 +282,8 @@ a:hover {
     color: #2fa691;
 }
 
-.post-item-title h3 {
-    font-size: 24px;
+.post-item-title h1 {
+    font-size: 1.5em;
     font-weight: normal;
 }
 
@@ -332,6 +333,30 @@ a:hover {
 
 .post-item-desc a:hover {
     text-decoration: underline;
+}
+
+a.more-btn {
+    background-color: #4D4D4D;
+    border: 1px solid #4D4D4D;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+a.more-btn:active,
+a.more-btn:hover {
+    background-color: #3D3D3D;
+    border-color: #3D3D3D;
 }
 
 .post-item-date,
