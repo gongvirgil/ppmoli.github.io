@@ -125,9 +125,23 @@ li {
     list-style: none;
 }
 
-.post-content li {
-    list-style: inside none disc;
+.post-content ul li::before {
+    background: #aaa none repeat scroll 0 0;
+    border: 1px solid #999;
+    border-radius: 10px;
+    content: "";
+    display: inline-block;
+    float: left;
+    height: 6px;
+    margin-right: 10px;
+    margin-top: 12px;
+    width: 6px;
 }
+
+
+/* .post-content li {
+    list-style: inside none disc;
+} */
 
 a {
     text-decoration: none;
