@@ -48,6 +48,7 @@ body {
     font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     font-size: 16px;
     line-height: 1.8;
+    background-color: #eaeaea;
     overflow-x: hidden;
 }
 
@@ -146,18 +147,21 @@ a:hover {
 /*-----Common-----*/
 
 .container {
-    margin-left: 33.3%;
-    width: calc(100% - 33.3%);
+    margin-left: 22%;
+    width: calc(100% - 22%);
+    background-color: #eaeaea;
 }
 
 .main-content {
-    padding: 5% 0;
+    margin: 3% 4%;
     min-height: 450px;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
 .inner {
     margin: 0 auto;
-    width: 80%;
+    width: 94%;
 }
 
 .underline {
@@ -170,7 +174,7 @@ a:hover {
 }
 
 .item-box h2 {
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #666;
     text-align: left;
     width: 100%;
     padding: 8px 0;
@@ -188,7 +192,7 @@ a:hover {
 /*-----Header-----*/
 
 .header {
-    width: 33.3%;
+    width: 22%;
     height: 100%;
     background-color: #ddd;
     position: fixed;
@@ -271,20 +275,10 @@ a:hover {
 }
 
 .post-item-title {
-    font-size: 24px;
-}
-
-.post-item-title a {
-    color: #000;
-}
-
-.post-item-title a:hover {
-    color: #2fa691;
-}
-
-.post-item-title h1 {
-    font-size: 1.5em;
-    font-weight: normal;
+    color: #696969;
+    font-size: 1em;
+    font-weight: 300;
+    transition: color 0.3s ease 0s;
 }
 
 .post-item-desc h1,
@@ -383,9 +377,7 @@ a.more-btn:hover {
 /*-----Sidebar-----*/
 
 .sidebar {
-    /* background-image: url("/public/images/overlay.png"), url("/public/images/sb1.jpg"); */
-    background-size: cover;
-    background-color: #fff;
+    background-color: #eaeaea;
     color: #000;
     display: none;
 }
@@ -429,7 +421,6 @@ a.more-btn:hover {
     line-height: 50px;
 }
 
-
 a.item-category {
     background-color: #c2c2c2;
     border: 1px solid #c2c2c2;
@@ -448,14 +439,13 @@ a.item-category {
     vertical-align: middle;
     white-space: nowrap;
 }
+
 a.item-category:active,
 a.item-category:hover {
     background-color: #bababa;
     border-color: #bababa;
     color: #fff;
 }
-
-
 
 .cate-size {
     color: #a7aab1;
@@ -472,27 +462,18 @@ a.item-category:hover {
 /*-----Footer-----*/
 
 .footer {
+    font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
     font-size: 13px;
+    text-shadow: 0 1px #fff;
 }
 
-.friendly-links a,
-.friendly-links span {
-    display: inline-block;
-    color: #ccc;
-    margin-right: 5px;
-}
-
-.friendly-links a:hover {
-    color: #2FA691;
+.footer a {
+    color: #258fb8;
 }
 
 .footer_info {
     padding: 15px 0;
     color: #000;
-}
-
-.friendly-links span {
-    margin-right: 15px;
 }
 
 .site-info {
@@ -576,7 +557,7 @@ a.item-category:hover {
 .categories h2,
 .tags h2 {
     padding: 8px 10px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #ddd;
     position: relative;
 }
 
