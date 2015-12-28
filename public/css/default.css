@@ -147,6 +147,7 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: #3e3b3f;
+    transition: color 0.3s ease 0s;
 }
 
 a:hover {
@@ -292,7 +293,6 @@ a:hover {
     color: #696969;
     font-size: 1em;
     font-weight: 300;
-    transition: color 0.3s ease 0s;
 }
 
 .post-item-desc h1,
@@ -352,7 +352,7 @@ a.more-btn {
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1;
     margin-bottom: 0;
     padding: 6px 12px;
     text-align: center;
