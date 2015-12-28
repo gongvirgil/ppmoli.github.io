@@ -558,9 +558,10 @@ a.item-category:hover {
     padding: 10px;
 }
 
-.cate-list,
-.tag-list {
-    margin-top: 30px;
+.cate-list-inner,
+.tag-list-inner,
+.archive-list-inner {
+    padding: 20px 0;
 }
 
 .archives,

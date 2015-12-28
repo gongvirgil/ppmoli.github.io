@@ -2,7 +2,10 @@
 layout: index
 ---
 <div class="archive-list">
-  <div class="inner">
+  <div class="archive-list-inner inner">
+    <div id="archive" class="item-box">
+        <h2>归档</h2>
+    </div>
     <div class="archives">
       {% for post in site.posts %}
         {% capture y %}{{ post.date | date:"%Y" }}{% endcapture %}
