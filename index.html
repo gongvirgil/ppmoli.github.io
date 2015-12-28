@@ -15,7 +15,7 @@ layout: index
           <div class="post-item-desc post-content">
             {% if post.content contains "<!-- more -->" %}
             {{ post.content | split:"<!-- more -->" | first % }}
-            <h4><a href="{{ post.url }}" title="阅读更多" class="more-btn">更多>></a></h4>
+            <h4><a href="{{ post.url }}" title="阅读更多" class="more-btn">>>More</a></h4>
             {% else %}
             {{ post.content }}
             {% endif %}
