@@ -45,7 +45,7 @@ section {
 }
 
 body {
-    font-family: "微软雅黑","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "微软雅黑", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.8;
     background-color: #eaeaea;
@@ -403,9 +403,11 @@ a.more-btn:hover {
 .sidebar-content a:hover {
     color: #2FA691;
 }
+
 .sidebar-content-inner {
     padding: 20px 0;
 }
+
 #search input {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -590,6 +592,16 @@ a.item-category:hover {
 
 
 /*-----ErrorPage End-----*/
+
+
+/*-----AboutPage -----*/
+
+.about-page-inner {
+    padding: 20px 0;
+}
+
+
+/*-----AboutPage END-----*/
 
 
 /*-----Others-----*/
