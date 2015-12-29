@@ -99,8 +99,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   var ID = getQueryParm("TAG")||getQueryParm("CATE");
   var one = $("#"+ID).parent();
-  one.clone().prependTo(one.parent()).show().siblings(".categories,.tags").hide();
-  one.remove();
+  one.show().siblings(".categories,.tags").hide();
 })
 //背景轮换
 /*
