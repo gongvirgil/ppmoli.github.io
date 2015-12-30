@@ -27,6 +27,16 @@ comments: true
                         {{ content }}            
                     </div>
                 </div>
+                <div class="donate">
+                    <div class="donate-to-me">
+                        <a class="donate-btn">￥打赏支持</a>
+                        <p class="donate-info">对你有所帮助？打赏一袋辣条吧~</p>
+                    </div>
+                    <div class="donate-qr-code">
+                        <img class="alipay" src="/public/images/alipay.png" />
+                        <img class="wechat" src="/public/images/wechat.png" />
+                    </div>
+                </div>
                 <div class="pre-next">
                     <li class="pre">{% if page.previous != null %}<a href="{{ page.previous.url }}">←{{ page.previous.title | truncatewords:5 }}</a>{% else %}<a href="#">←没有了{% endif %}</a></li>
                     <li class="next">{% if page.next != null %}<a href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}→</a>{% else %}<a href="#">没有了→</a>{% endif %}</li>

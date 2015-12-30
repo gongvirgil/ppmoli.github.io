@@ -34,13 +34,16 @@ $(document).ready(function(){
 	    }
 	    $("#AnchorContent").toggle();
 	});
-    /*
 
-	$('pre').each(function(index, el) {
-		$(this).addClass('c'+index);
-		$($('#tools-html').html()).insertBefore('pre:eq('+index+')').find('.copy').attr('tag', 'c'+index);
-		$($('#tools-html').html()).insertAfter('pre:eq('+index+')').find('.copy').attr('tag', 'c'+index);
-	});
+})
+
+    /*
+$(document).ready(function() {
+    $('pre').each(function(index, el) {
+        $(this).addClass('c'+index);
+        $($('#tools-html').html()).insertBefore('pre:eq('+index+')').find('.copy').attr('tag', 'c'+index);
+        $($('#tools-html').html()).insertAfter('pre:eq('+index+')').find('.copy').attr('tag', 'c'+index);
+    });
 
     function clipCallback(client) {
         client.setText($.trim(this.innerHTML));
@@ -55,7 +58,7 @@ $(document).ready(function(){
     }
     
     $('.copy').each(function(){
-    	var ol = $('ol', $('pre.'+$(this).attr('tag')) );
+        var ol = $('ol', $('pre.'+$(this).attr('tag')) );
         var clip = new ZeroClipboard(ol, {moviePath: "/public/js/ZeroClipboard.swf"});
         clip.on('mousedown', clipCallback);
         
@@ -63,5 +66,12 @@ $(document).ready(function(){
             $(clip.htmlBridge).css('opacity',0);
         }
     });
+});
     */
-})
+
+
+$(document).ready(function() {
+   $(".donate-btn").on('click', function() {
+        $(".donate-qr-code").toggle(1500);
+   }); 
+});
