@@ -16,7 +16,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body onload="PreLoad()">
     <div class="scene">
         <!-- page start -->
         <div class="page page-1 active">
@@ -94,12 +94,14 @@
     <script type="text/javascript" src="js/royal_preloader.min.js"></script>
     <script type="text/javascript" src="js/page_rotate.js"></script>
     <script type="text/javascript">
-    Royal_Preloader.config({
-        mode: 'number',
-        show_percentage: true,
-        background: "#000000",
-        text_colour: "#FFFFFF"
-    });
+    function PreLoad(){
+        Royal_Preloader.config({
+            mode: 'number',
+            show_percentage: true,
+            background: "#000000",
+            text_colour: "#FFFFFF"
+        });
+    }
     </script>
 </body>
 
