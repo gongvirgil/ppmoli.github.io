@@ -163,12 +163,12 @@ a:hover {
 
 .container {
     margin-left: 22%;
-    width: calc(100% - 22%);
-    background-color: #eaeaea;
+    padding: 3% 4%;
+    width: calc(100% - 22% - 3% - 4%);
+    background: rgba(0, 0, 0, 0) url("/public/images/main-bg.jpg") repeat scroll 0 0;
 }
 
 .main-content {
-    margin: 3% 4%;
     min-height: 450px;
     background-color: #fff;
     border: 1px solid #ddd;

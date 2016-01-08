@@ -1,0 +1,193 @@
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 99;
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+.page {
+    background-size: cover;
+}
+.page-1 {
+    background-image: url(../images/bg1.jpg);
+}
+
+.page-2 {
+    background-image: url(../images/bg2.jpg);
+}
+
+.page-3 {
+    background-image: url(/public/images/bg2.jpg);
+}
+
+.page-4 {
+    background-image: url(/public/images/bg3.jpg);
+}
+
+.page-5 {
+    background-image: url(/public/images/bg4.jpg);
+}
+
+.page-1 .inner-box h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.page-1 .inner-box h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1em 0 0.3em;
+}
+
+.page-1 .inner-box p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 1.2rem 0 1.6rem;
+}
+
+.page-1 .inner-box ul.social-icons li {
+    display: inline-block;
+}
+
+.page-1 .inner-box ul.social-icons li a {
+    display: inline-block;
+    background-color: #fff;
+    height: 60px;
+    margin-right: 10px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.page-1 .inner-box ul.details {
+    padding-top: 8rem;
+}
+
+.page-1 .inner-box ul.details li {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.page-1 .inner-box span.line {
+    background: #c4c0cf none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 10%;
+    bottom: 50%;
+}
+
+.page-1 .inner-box span.line-left {
+    right: 31.6%;
+}
+
+.page-1 .inner-box span.line-right {
+    right: 58.4%;
+}
+
+.progress-labels {
+    width: 50%;
+}
+
+.tm-progress-label {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.tm-info-label {
+    display: inline-block;
+    font-weight: bold;
+    width: 90px;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tm-progress {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.progress-bar {
+    background-color: #337ab7;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+
+.progress-bar-danger {
+    background: #eb5424 none repeat scroll 0 0;
+}
+
+.filter-wrapper li {
+    display: inline-block;
+    margin: 4px;
+}
+
+.filter-wrapper li a {
+    color: #999999;
+    display: block;
+    padding: 8px 17px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.filter-wrapper li a:focus,
+.filter-wrapper li a:hover,
+.filter-wrapper li a.selected {
+    background: #eb5424 none repeat scroll 0 0;
+    border-color: transparent;
+    color: #ffffff;
+}
+
+.fluid-img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.portfolio-overlay {
+    background: #eb5424 none repeat scroll 0 0;
+    bottom: 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 0 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition: all 0.4s ease-in-out 0s;
+    width: 100%;
+}

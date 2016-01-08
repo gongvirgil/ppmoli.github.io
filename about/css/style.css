@@ -11,6 +11,7 @@
         height: 100%;
         font-size: 62.5%;
         overflow: hidden;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     
     @media (max-width: 990px) {
@@ -94,8 +95,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 15rem;
+        padding: 5rem 8rem;
         font-size: 3rem;
+    }
+    
+    .inactive .page--content {
+        display: none;
     }
     
     @media (max-width: 990px) {
@@ -104,62 +109,52 @@
         }
     }
     
-    .page--content h1 {
-        color: #fff;
-        font-size: 8rem;
-        font-family: SouthRose;
-        text-transform: uppercase;
-        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-        transition: transform 0.3s, opacity 0.3s;
-        will-change: transform, opacity;
-    }
-    
     .page.page-1 {
         z-index: 10;
     }
-    
+    /*     
     .page.page-1 .page--rotater {
         background: #922D50;
-    }
+    } 
+    */
     
     .page.page-2 {
         z-index: 9;
     }
-    
+    /*     
     .page.page-2 .page--rotater {
         background: #9D8420;
-    }
+    } 
+    */
     
     .page.page-3 {
         z-index: 8;
     }
-    
-    .page.page-3 .page--rotater {
-        background: #4B2840;
-    }
+    /*     .page.page-3 .page--rotater {
+    background: #4B2840;
+} */
     
     .page.page-4 {
         z-index: 7;
     }
-    
-    .page.page-4 .page--rotater {
-        background: #204442;
-    }
+    /*     .page.page-4 .page--rotater {
+    background: #204442;
+} */
     
     .page.page-5 {
         z-index: 6;
     }
-    
-    .page.page-5 .page--rotater {
-        background: #324A5F;
-    }
+    /*     .page.page-5 .page--rotater {
+    background: #324A5F;
+} */
     
     .rt-point {
         z-index: 2000;
         position: absolute;
         bottom: 8rem;
-        left: calc(50% - 7.5rem);
-        width: 15rem;
+        left: calc(50% - 2rem);
+        border-radius: 50%;
+        width: 4rem;
         height: 4rem;
         border: 3px solid #fff;
         background: #DCC7BE;
