@@ -111,55 +111,16 @@
     right: 58.4%;
 }
 
-p {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+
+
+.page-3 .work{
+    width: 25%;
+    float: left;
+    padding: 0 1rem;
 }
 
-
-
-.filter-wrapper li {
-    display: inline-block;
-    margin: 4px;
-}
-
-.filter-wrapper li a {
-    color: #999999;
+.img-responsive {
     display: block;
-    padding: 8px 17px;
-    text-decoration: none;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-.filter-wrapper li a:focus,
-.filter-wrapper li a:hover,
-.filter-wrapper li a.selected {
-    background: #eb5424 none repeat scroll 0 0;
-    border-color: transparent;
-    color: #ffffff;
-}
-
-.fluid-img {
-    display: block;
+    max-width: 100%;
     height: auto;
-    width: 100%;
-}
-
-.portfolio-overlay {
-    background: #eb5424 none repeat scroll 0 0;
-    bottom: 0;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    opacity: 0;
-    padding: 0 40px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    transition: all 0.4s ease-in-out 0s;
-    width: 100%;
 }
