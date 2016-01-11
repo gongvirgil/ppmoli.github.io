@@ -15,28 +15,38 @@
 .text-center {
     text-align: center;
 }
+
 .page {
     background-size: cover;
 }
+
 .page-1 {
-    background-image: url(../images/bg1.jpg);
+    background-image: url(/public/images/overlay.png),url(../images/bg1.jpg);
 }
 
+
 .page-2 {
-    background-image: url(../images/bg2.jpg);
+    background-image: url(/public/images/overlay.png),url(../images/bg2.jpg);
 }
 
 .page-3 {
-    background-image: url(/public/images/bg2.jpg);
+    background-image: url(/public/images/overlay.png),url(/public/images/bg2.jpg);
 }
 
 .page-4 {
-    background-image: url(/public/images/bg3.jpg);
+    background-image: url(/public/images/overlay.png),url(/public/images/bg3.jpg);
 }
 
 .page-5 {
-    background-image: url(/public/images/bg4.jpg);
+    background-image: url(/public/images/overlay.png),url(/public/images/bg4.jpg);
 }
+
+.page a {
+    color: #DCC7BE;
+    text-decoration: underline;
+}
+
+
 
 .page-1 .inner-box h1 {
     color: #fff;
@@ -101,50 +111,12 @@
     right: 58.4%;
 }
 
-.progress-labels {
-    width: 50%;
-}
-
-.tm-progress-label {
-    font-size: 12px;
-    font-weight: bold;
-    padding-top: 10px;
-    text-transform: uppercase;
-}
-
-.tm-info-label {
-    display: inline-block;
-    font-weight: bold;
-    width: 90px;
-}
-
 p {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
 
-.tm-progress {
-    background: #fff none repeat scroll 0 0;
-    border-radius: 2px;
-    height: 4px;
-}
 
-.progress-bar {
-    background-color: #337ab7;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
-    color: #fff;
-    float: left;
-    font-size: 12px;
-    height: 100%;
-    line-height: 20px;
-    text-align: center;
-    transition: width 0.6s ease 0s;
-    width: 0;
-}
-
-.progress-bar-danger {
-    background: #eb5424 none repeat scroll 0 0;
-}
 
 .filter-wrapper li {
     display: inline-block;

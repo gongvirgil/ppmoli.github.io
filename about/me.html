@@ -21,6 +21,7 @@
     <script type="text/javascript" src='js/velocity.min.js'></script>
     <!--<script type="text/javascript" src="js/royal_preloader.min.js"></script>-->
     <script type="text/javascript" src="js/page_rotate.js"></script>
+    <script type="text/javascript" src="js/radar.js"></script>
     <!--
     <script type="text/javascript">
     Royal_Preloader.config({
@@ -49,8 +50,8 @@
                     <span class="line line-right"></span>
                     <ul class="details">
                         <li>Age : <a href="#">23</a></li>
-                        <li>Address : <a href="#">ZhenJiang JiangSu China</a></li>
-                        <li>Working at : <a href="#">FREELANCE</a></li>
+                        <li>Graduated from : <a href="http://eng.ujs.edu.cn/">Jiangsu university</a></li>
+                        <li>Address : <a href="http://www.google.cn/maps/place/Zhenjiang,+Jiangsu/@32.1752387,119.4593668,11z/data=!3m1!4b1!4m2!3m1!1s0x35b42ad8a70e54a3:0x3d27805b2c802e4c">ZhenJiang JiangSu China</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,21 +62,8 @@
             <div class="page--rotater"></div>
             <div class="page--content">
                 <div class="inner-box text-center">
-                    <h1>SKILLS</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-                    <div class="progress-labels">
-                        <h4 class="tm-progress-label">Bootstrap <small class="progress-percent-small">100%</small></h4>
-                        <div class="progress tm-progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                        </div>
-                        <h4 class="tm-progress-label">HTML5 <small class="progress-percent-small">90%</small></h4>
-                        <div class="progress tm-progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                        </div>
-                        <h4 class="tm-progress-label">SEO <small class="progress-percent-small">80%</small></h4>
-                        <div class="progress tm-progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                        </div>
+                    <div class="skill">
+                        <div id="my-skills"></div>
                     </div>
                 </div>
             </div>
@@ -226,6 +214,24 @@
         </div>
         <!-- footer end -->
     </div>
+    <script type="text/javascript">
+    $(function() {
+        $('#my-skills').radarChart({
+            size: [600, 500],
+            step: 1,
+            title: "Main skills",
+            values: {
+                "JavaScript": 3.1,
+                "jQuery": 4.5,
+                "PHP": 3.6,
+                "ThinkPHP": 4.7,
+                "HTML/CSS": 4,
+                "Git": 3.5
+            },
+            showAxisLabels: true
+        });
+    });
+    </script>
 </body>
 
 </html>

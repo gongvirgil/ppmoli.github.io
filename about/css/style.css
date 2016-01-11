@@ -97,10 +97,11 @@
         height: 100%;
         padding: 5rem 8rem;
         font-size: 3rem;
+        display: none;
     }
     
-    .inactive .page--content {
-        display: none;
+    .active .page--content {
+        display: block;
     }
     
     @media (max-width: 990px) {
