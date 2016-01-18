@@ -30,7 +30,7 @@ layout: index
     {% endfor %}   
 </div>
 <div class="page">
-<a href="{{ paginator.previous_page_path }}" class="pre_page">上一页</a>
-<span>{{ paginator.page }}/{{ paginator.total_pages }}</span>
-<a href="{{ paginator.next_page_path }}" class="next_page">下一页</a>
+<a href="{{ paginator.previous_page_path }}" class="pre_page">← Newer posts</a>
+<span>page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+<a href="{{ paginator.next_page_path }}" class="next_page">Older posts →</a>
 </div>                           
