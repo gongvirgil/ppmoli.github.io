@@ -180,6 +180,10 @@ li:hover .tab-icon {
     clear: none;
 }
 
+h2.tab-accordion {
+    display: none;
+}
+
 .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     background-color: #43b6b1;
 }
@@ -208,6 +212,12 @@ li:hover .tab-icon {
     line-height: 22px;
     margin: 0;
     text-align: left;
+}
+
+.cycle-slideshow {
+    height: 456px;
+    width: 348px;
+    margin: 20px auto;
 }
 
 .tab-content .tab-title {
@@ -512,4 +522,110 @@ li:hover .tab-icon {
     -webkit-transition: all 0.3s ease-in 0s;
     -moz-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s;
+}
+
+@media only screen and (max-width: 766px) {
+    .profile {
+        height: 285px !important;
+        margin-bottom: 20px;
+        float: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .profile-social {
+        display: none;
+    }
+    .profile-desc {
+        display: none;
+    }
+    .profile h1 {
+        font-size: 22px !important;
+        line-height: 39px !important;
+    }
+    .profile h4 {
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 991px) {
+    .profile {
+        height: 210px !important;
+        margin-bottom: 20px;
+        float: none;
+    }
+    .widget-profil {
+        height: 210px !important;
+        margin-bottom: 20px;
+        float: none;
+    }
+    .profile-social {
+        display: none;
+    }
+    .profile-desc {
+        border-bottom: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    ul.tab-list {
+        display: none;
+    }
+    h2.tab-accordion {
+        display: block;
+    }
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid #C1C1C1;
+        padding: 15px;
+    }
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display: none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid #c1c1c1 !important;
+    }
+    .scrollbar {
+        height: 100% !important;
+        overflow-y: hidden !important;
+    }
+    .contact-form .main-heading {
+        margin-top: 45px;
+    }
+    .tiltle_contacts {
+        margin-bottom: 0 !important;
+    }
+    .wrapper {
+        position: relative !important;
+        margin: 15px auto !important;
+    }
+    .flexy_content {
+        clear: both;
+    }
+    .resp-vtabs .resp-tabs-container {
+        margin-left: 0 !important;
+    }
+    ul.about li span.value {
+        margin-right: 30px;
+    }
+    .tite-list-resp {
+        position: relative;
+        top: -3px;
+        left: 10px;
+    }
+    .widget-profil #profile_desc {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+    }
+}
+
+@media screen and (min-width:850px) and (max-width: 1200px) {
+    .tabs-container {
+        width: 89%;
+    }
 }
