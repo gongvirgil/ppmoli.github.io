@@ -2,6 +2,35 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
     /*  ------------------------------- Loading ----------------------------- */
     /* ---------------------------------------------------------------------- */
+
+    /* ---------------------------------------------------------------------- */
+    /* ---------------------- redimensionnement ----------------------------- */
+    /* ---------------------------------------------------------------------- */
+
+    function redimensionnement() {
+
+        if (window.matchMedia("(max-width: 800px)").matches) {
+            $(".tab-content").mCustomScrollbar("destroy");
+            $(".tab-container").css("height", "100%");
+            $(".tab-content").css("height", "100%");
+        } else {
+            $(".resp-vtabs .resp-tabs-container").css("height", "580px");
+            $(".tab-content").css("height", "580px");
+            $(".tab-content").mCustomScrollbar("destroy");
+            $(".tab-content").mCustomScrollbar({
+                theme: "dark-2",
+                contentTouchScroll: true,
+                advanced: {
+                    updateOnContentResize: true,
+                    updateOnBrowserResize: true,
+                    autoScrollOnFocus: false
+                }
+            });
+        }
+    }
+
+    window.addEventListener('load', redimensionnement, false);
+    window.addEventListener('resize', redimensionnement, false);
     /* ---------------------------------------------------------------------- */
     /* --------------------------- Scroll tabs ------------------------------ */
     /* ---------------------------------------------------------------------- */
@@ -15,15 +44,32 @@ jQuery(document).ready(function($) {
         }
     });
     /* ---------------------------------------------------------------------- */
+    /* -------------------------- easyResponsiveTabs ------------------------ */
+    /* ---------------------------------------------------------------------- */
+
+    $('#verticalTab').easyResponsiveTabs({
+        type: 'vertical',
+        width: 'auto',
+        fit: true
+    });
+
+    /* ---------------------------------------------------------------------- */
     /* -------------------------- Tabs -------------------------------------- */
     /* ---------------------------------------------------------------------- */
+    $("h2.resp-accordion").click(function() {
+        $(this).toggleClass("active");
+        /*  Scroll To */
+        $('html, body').animate({
+            scrollTop: $('h2.resp-accordion').offset().top - 50
+        }, 600);
+    });
     $('.tab-list li').click(function(event) {
         $(this).addClass('active').siblings('li').removeClass('active');
-        $('.tabs-container').find('.tab-content').eq($(this).index()).addClass('active').siblings('.tab-content').removeClass('active');
+        $('.tab-container').find('.tab-content').eq($(this).index()).addClass('active').siblings('.tab-content').removeClass('active');
         var animation_style = 'bounceIn';
-        $('.tabs-container').addClass('animated ' + animation_style);
-        $('.tabs-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $('.tabs-container').removeClass('animated ' + animation_style);
+        $('.tab-container').addClass('animated ' + animation_style);
+        $('.tab-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $('.tab-container').removeClass('animated ' + animation_style);
         });
         $(".tab-content").mCustomScrollbar("destroy");
         $(".tab-content").mCustomScrollbar({
@@ -33,6 +79,28 @@ jQuery(document).ready(function($) {
                 updateOnContentResize: true,
                 updateOnBrowserResize: true,
                 autoScrollOnFocus: false
+            }
+        });
+    });
+
+    /* ---------------------------------------------------------------------- */
+    /* ---------------------------- icon menu ------------------------------- */
+    /* ---------------------------------------------------------------------- */
+
+    $(".tab-container h2.resp-accordion").each(function() {
+        if ($(this).hasClass('resp-tab-active')) {
+            $(this).append("<i class='glyphicon glyphicon-chevron-up arrow-tabs'></i>");
+        } else {
+            $(this).append("<i class='glyphicon glyphicon-chevron-down arrow-tabs'></i>");
+        }
+    });
+    $(".tab-container h2.resp-accordion").click(function() {
+        if ($(this).hasClass('resp-tab-active')) {
+            $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+        }
+        $(".tab-container h2.resp-accordion").each(function() {
+            if (!$(this).hasClass('resp-tab-active')) {
+                $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
             }
         });
     });

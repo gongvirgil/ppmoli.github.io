@@ -160,6 +160,7 @@ h6,
     cursor: pointer;
     font-size: 22px;
     display: inline-block;
+    text-align: center;
     -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -169,19 +170,6 @@ li.active .tab-icon,
 li:hover .tab-icon {
     color: #FFF;
     background-color: #43B6B1;
-}
-
-.tabs-container {
-    height: 580px;
-    width: 88%;
-    float: left;
-    margin-left: 13px;
-    background-color: #f4f4f4;
-    clear: none;
-}
-
-h2.tab-accordion {
-    display: none;
 }
 
 .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -506,7 +494,7 @@ h2.tab-accordion {
     background-color: #43b6b1;
 }
 
-#profile_social a {
+.profile-social a {
     color: #fff;
     background-color: #43b6b1;
     float: left;
@@ -516,13 +504,233 @@ h2.tab-accordion {
     line-height: 45px;
     margin-left: 5px;
     border: 1px solid #43b6b1;
-    ;
     font-size: 24px;
     text-align: center;
     -webkit-transition: all 0.3s ease-in 0s;
     -moz-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s;
 }
+
+
+
+
+
+/*--------------------------------------------------
+---------------------- resp-tabs -------------------
+---------------------------------------------------*/
+
+.icon_menu {
+    background-color: #fff !important;
+    color: #43B6B1;
+    font-size: 22px;
+    -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    width: 42px !important;
+    height: 42px !important;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    line-height: 43px;
+}
+
+#verticalTab {
+    z-index: 1;
+    height: 100%;
+    background: #fff;
+}
+
+li.tab-list,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-list li {
+    font-size: 13px;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+}
+
+.tab-container {
+    padding: 0;
+    background-color: #fff;
+    clear: left;
+}
+
+h2.resp-accordion {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.32em 0em 0.32em 0.70em;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    background: #43B6B1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 0px;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    padding: 12px 14px 14px 14px !important;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.resp-content-active,
+.resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    border: 1px solid #ccc;
+}
+
+h2.resp-accordion {
+    font-size: 17px;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+h2.resp-tab-active {
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 0 !important;
+    padding: 10px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #ccc !important;
+    background: blue;
+}
+
+
+/*-----------------------------------*/
+
+
+/*-----------Vertical tabs-----------*/
+
+
+/*-----------------------------------*/
+
+.resp-vtabs ul.tab-list {
+    float: left;
+    width: 9%;
+    margin-bottom: 10px;
+}
+
+.resp-vtabs .tab-list li {
+    display: block;
+    padding: 17px !important;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.resp-vtabs .tab-list li:first-child {
+    border-top: none;
+}
+
+.resp-vtabs .tab-list li:last-child {
+    border-bottom: none;
+}
+
+.resp-vtabs .tab-container {
+    padding: 0;
+    background-color: #f4f4f4;
+    float: left;
+    width: 88%;
+    height: 580px;
+    clear: none;
+    margin-left: 13px;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+    border-right: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 17px !important;
+    background: #fff;
+}
+
+.tab-list li:hover {
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+    background: #fff;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c1c1c1;
+}
+
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+.arrow-tabs {
+    float: right;
+    margin-top: 13px;
+    font-size: 12px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 766px) {
     .profile {
@@ -547,13 +755,19 @@ h2.tab-accordion {
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 991px) {
+@media only screen and (min-width: 766px) and (max-width: 800px) {
     .profile {
         height: 210px !important;
         margin-bottom: 20px;
         float: none;
     }
-    .widget-profil {
+    .profile-social {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 991px) {
+    .profile {
         height: 210px !important;
         margin-bottom: 20px;
         float: none;
@@ -567,17 +781,17 @@ h2.tab-accordion {
 }
 
 @media only screen and (max-width: 800px) {
-    ul.tab-list {
+    .resp-vtabs .tab-list {
         display: none;
     }
-    h2.tab-accordion {
+    h2.resp-accordion {
         display: block;
     }
-    .resp-vtabs .resp-tab-content {
+    .tab-content {
         border: 1px solid #C1C1C1;
         padding: 15px;
     }
-    .resp-vtabs .resp-tabs-container {
+    .resp-vtabs .tab-container {
         border: none;
         float: none;
         width: 100%;
@@ -587,45 +801,18 @@ h2.tab-accordion {
     .resp-accordion-closed {
         display: none !important;
     }
-    .resp-vtabs .resp-tab-content:last-child {
+    .resp-vtabs .tab-content:last-child {
         border-bottom: 1px solid #c1c1c1 !important;
     }
-    .scrollbar {
-        height: 100% !important;
-        overflow-y: hidden !important;
-    }
-    .contact-form .main-heading {
-        margin-top: 45px;
-    }
-    .tiltle_contacts {
-        margin-bottom: 0 !important;
-    }
-    .wrapper {
-        position: relative !important;
-        margin: 15px auto !important;
-    }
-    .flexy_content {
-        clear: both;
-    }
-    .resp-vtabs .resp-tabs-container {
+
+    .resp-vtabs .tab-container {
         margin-left: 0 !important;
     }
-    ul.about li span.value {
-        margin-right: 30px;
-    }
-    .tite-list-resp {
-        position: relative;
-        top: -3px;
-        left: 10px;
-    }
-    .widget-profil #profile_desc {
-        border-top: 0 !important;
-        border-bottom: 0 !important;
-    }
+
 }
 
 @media screen and (min-width:850px) and (max-width: 1200px) {
-    .tabs-container {
+    .tab-container {
         width: 89%;
     }
 }
