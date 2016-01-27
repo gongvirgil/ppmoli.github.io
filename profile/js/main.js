@@ -117,6 +117,16 @@ jQuery(document).ready(function($) {
             }, 2000);
         });
     });
+    $('#tab-content-2').prev('h2.resp-accordion').click(function(event) {
+        $('.skill').each(function() {
+            $(this).find('.skill-bar').width(0);
+        });
+        $('.skill').each(function() {
+            $(this).find('.skill-bar').animate({
+                width: $(this).attr('data-percent')
+            }, 2000);
+        });
+    });
     /* ---------------------------------------------------------------------- */
     /* ----------------------------- Portfolio ------------------------------ */
     /* ---------------------------------------------------------------------- */

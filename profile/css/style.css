@@ -753,6 +753,9 @@ h2.resp-tab-active span.resp-arrow {
     .profile h4 {
         font-size: 13px !important;
     }
+    .portfolio {
+        width: 48%;
+    }
 }
 
 @media only screen and (min-width: 766px) and (max-width: 800px) {
