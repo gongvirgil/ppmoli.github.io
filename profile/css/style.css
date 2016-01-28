@@ -29,6 +29,13 @@ h6,
     font-weight: 300;
 }
 
+h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
 .clear {
     clear: both;
     display: block;
@@ -36,6 +43,15 @@ h6,
     overflow: hidden;
     visibility: hidden;
     width: 0;
+}
+
+.wrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    margin: -290.5px auto 0 auto;
 }
 
 .profile {
@@ -148,6 +164,10 @@ h6,
     -moz-transition: all .6s ease-in;
     -o-transition: all .6s ease-in;
     transition: all .6s ease-in;
+}
+
+.tab-li-title {
+    display: none;
 }
 
 .tab-icon {
@@ -512,9 +532,6 @@ li:hover .tab-icon {
 }
 
 
-
-
-
 /*--------------------------------------------------
 ---------------------- resp-tabs -------------------
 ---------------------------------------------------*/
@@ -627,6 +644,12 @@ h2.resp-tab-title:last-child {
     background: blue;
 }
 
+.tite-list-resp {
+    position: relative;
+    top: -3px;
+    left: 10px;
+}
+
 
 /*-----------------------------------*/
 
@@ -714,23 +737,26 @@ h2.resp-tab-active span.resp-arrow {
     font-size: 12px !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width: 260px) {
+    .profile h1 {
+        font-size: 25px !important;
+        line-height: 39px !important;
+    }
+    .profile h4 {
+        font-size: 13px !important;
+    }
+    .profile {
+        height: 265px !important;
+        margin-bottom: 20px;
+        float: none;
+    }
+    .profile-social {
+        display: none;
+    }
+    .profile-desc {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 766px) {
     .profile {
@@ -752,6 +778,9 @@ h2.resp-tab-active span.resp-arrow {
     }
     .profile h4 {
         font-size: 13px !important;
+    }
+    .main {
+        margin: 0 10px;
     }
     .portfolio {
         width: 48%;
@@ -784,6 +813,10 @@ h2.resp-tab-active span.resp-arrow {
 }
 
 @media only screen and (max-width: 800px) {
+    .wrapper {
+        position: relative !important;
+        margin: 15px auto !important;
+    }
     .resp-vtabs .tab-list {
         display: none;
     }
@@ -807,15 +840,30 @@ h2.resp-tab-active span.resp-arrow {
     .resp-vtabs .tab-content:last-child {
         border-bottom: 1px solid #c1c1c1 !important;
     }
-
     .resp-vtabs .tab-container {
         margin-left: 0 !important;
     }
-
 }
 
 @media screen and (min-width:850px) and (max-width: 1200px) {
     .tab-container {
         width: 89%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile h1 {
+        font-size: 24px;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1130px !important;
+    }
+    .profile h1 {
+        font-size: 25px;
+        line-height: 60px;
     }
 }

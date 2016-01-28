@@ -13,6 +13,15 @@ jQuery(document).ready(function($) {
             $(".tab-content").mCustomScrollbar("destroy");
             $(".tab-container").css("height", "100%");
             $(".tab-content").css("height", "100%");
+
+            $(".tab-container h2.resp-accordion").each(function() {
+                if ($(this).hasClass('resp-tab-active')) {
+                    $(this).find('i').removeClass('glyphicon-chevron-left').addClass('glyphicon-chevron-down');
+                } else {
+                    $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-left');
+                }
+            });
+
         } else {
             $(".resp-vtabs .resp-tabs-container").css("height", "580px");
             $(".tab-content").css("height", "580px");
@@ -86,21 +95,20 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
     /* ---------------------------- icon menu ------------------------------- */
     /* ---------------------------------------------------------------------- */
-
     $(".tab-container h2.resp-accordion").each(function() {
         if ($(this).hasClass('resp-tab-active')) {
-            $(this).append("<i class='glyphicon glyphicon-chevron-up arrow-tabs'></i>");
-        } else {
             $(this).append("<i class='glyphicon glyphicon-chevron-down arrow-tabs'></i>");
+        } else {
+            $(this).append("<i class='glyphicon glyphicon-chevron-left arrow-tabs'></i>");
         }
     });
     $(".tab-container h2.resp-accordion").click(function() {
         if ($(this).hasClass('resp-tab-active')) {
-            $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-down");
         }
         $(".tab-container h2.resp-accordion").each(function() {
             if (!$(this).hasClass('resp-tab-active')) {
-                $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+                $(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-left");
             }
         });
     });

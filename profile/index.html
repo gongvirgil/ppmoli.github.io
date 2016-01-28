@@ -22,377 +22,379 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="row">
-                    <div class="profile col-md-3">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-12">
-                                <div class="profile-pic">
-                                    <img class="head-img circle" width="150" height="150" src="images/me.png">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="profile col-md-3">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3 col-md-12 col-lg-12">
+                                    <div class="profile-pic">
+                                        <img class="head-img circle" width="150" height="150" src="images/me.png">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-12">
-                                <div class="profile-info">
-                                    <h1>Virgil</h1>
-                                    <h4>PHP Programmer</h4>
-                                    <h6><span class="fa fa-map-marker"></span> Jiangsu Zhenjiang, China</h6>
-                                </div>
-                                <div class="profile-desc">
-                                    <p>Born in 1993 and graduated from <a class="college" href="http://eng.ujs.edu.cn/site2/" title="Jiangsu University" target="_blank">Jiangsu University</a></p>
-                                    <p>Worked as a PHP programmer&Front-End designer for almost 3 years</p>
-                                </div>
-                                <div class="profile-social">
-                                    <h6>My Social Profiles</h6>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-github"></i></a>
-                                    <a href="#"><i class="fa fa-weibo"></i></a>
+                                <div class="col-xs-12 col-sm-9 col-md-12 col-lg-12">
+                                    <div class="profile-info">
+                                        <h1 class="profile-info-name">Virgil</h1>
+                                        <h4>PHP Programmer</h4>
+                                        <h6><span class="fa fa-map-marker"></span> Jiangsu Zhenjiang, China</h6>
+                                    </div>
+                                    <div class="profile-desc">
+                                        <p>Born in 1993 and graduated from <a class="college" href="http://eng.ujs.edu.cn/site2/" title="Jiangsu University" target="_blank">Jiangsu University</a></p>
+                                        <p>Worked as a PHP programmer&Front-End designer for almost 3 years</p>
+                                    </div>
+                                    <div class="profile-social">
+                                        <h6>My Social Profiles</h6>
+                                        <a href="https://www.facebook.com/gongvirgil" target="_blank"><i class="fa fa-facebook"></i></a>
+                                        <a href="https://twitter.com/gongvirgil" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-instagram" target="_blank"></i></a>
+                                        <a href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+                                        <a href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="main col-md-9">
-                        <div class="main-content" id="verticalTab">
-                            <ul class="tab-list resp-tabs-list">
-                                <li class="active" data-tab-name="profile"><i class="tab-icon fa fa-user"></i></li>
-                                <li class="tab-li-2" data-tab-name="resume"><i class="tab-icon fa fa-tasks"></i></li>
-                                <li class="tab-li-3" data-tab-name="portfolio"><i class="tab-icon fa fa-briefcase"></i></li>
-                                <li class="tab-li-4" data-tab-name="contact"><i class="tab-icon fa fa-envelope"></i></li>
-                            </ul>
-                            <div class="tab-container resp-tabs-container">
-                                <div id="tab-content-1" class="tab-content active">
-                                    <h1 class="tab-title">Profile - About Me</h1>
-                                    <div class="row">
-                                        <div class="profile_l col-md-6">
-                                            <div class="title_content">
-                                                <div class="text_content">Virgil</div>
+                        <div class="main col-md-9">
+                            <div class="main-content" id="verticalTab">
+                                <ul class="tab-list resp-tabs-list">
+                                    <li class="active" data-tab-name="profile"><span class="tab-li-title">profile</span><i class="tab-icon fa fa-user"></i></li>
+                                    <li class="tab-li-2" data-tab-name="resume"><span class="tab-li-title">resume</span><i class="tab-icon fa fa-tasks"></i></li>
+                                    <li class="tab-li-3" data-tab-name="portfolio"><span class="tab-li-title">portfolio</span><i class="tab-icon fa fa-briefcase"></i></li>
+                                    <li class="tab-li-4" data-tab-name="contact"><span class="tab-li-title">contact</span><i class="tab-icon fa fa-envelope"></i></li>
+                                </ul>
+                                <div class="tab-container resp-tabs-container">
+                                    <div id="tab-content-1" class="tab-content active">
+                                        <h1 class="tab-title">Profile - About Me</h1>
+                                        <div class="row">
+                                            <div class="profile_l col-md-6">
+                                                <div class="title_content">
+                                                    <div class="text_content">Virgil</div>
+                                                </div>
+                                                <ul class="about">
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-user"></i>
+                                                        <label>Name</label>
+                                                        <span class="value">Virgil Gong</span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                        <label>Date of birth</label>
+                                                        <span class="value">April 3, 1993</span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-map-marker"></i>
+                                                        <label>Adress</label>
+                                                        <span class="value">Jiangsu Zhenjiang, China</span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-envelope"></i>
+                                                        <label>Email</label>
+                                                        <span class="value">gongvirgil@gmail.com</span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-phone"></i>
+                                                        <label>Phone</label>
+                                                        <span class="value">+86 xxxxxxxx</span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="glyphicon glyphicon-globe"></i>
+                                                        <label>Website</label>
+                                                        <span class="value"><a target="_blank" href="http://gongvirgil.github.io">gongvirgil.github.io</a></span>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                </ul>
+                                                <p style="margin-bottom:20px">
+                                                    <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec nulla sagittis, scelerisque mi vitae, congue turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec nulla sagittis, scelerisque mi vitae, congue turpis.
+                                                </p>
                                             </div>
-                                            <ul class="about">
-                                                <li>
-                                                    <i class="glyphicon glyphicon-user"></i>
-                                                    <label>Name</label>
-                                                    <span class="value">Virgil Gong</span>
-                                                    <div class="clear"></div>
-                                                </li>
-                                                <li>
-                                                    <i class="glyphicon glyphicon-calendar"></i>
-                                                    <label>Date of birth</label>
-                                                    <span class="value">April 3, 1993</span>
-                                                    <div class="clear"></div>
-                                                </li>
-                                                <li>
-                                                    <i class="glyphicon glyphicon-map-marker"></i>
-                                                    <label>Adress</label>
-                                                    <span class="value">Jiangsu Zhenjiang, China</span>
-                                                    <div class="clear"></div>
-                                                </li>
-                                                <li>
-                                                    <i class="glyphicon glyphicon-envelope"></i>
-                                                    <label>Email</label>
-                                                    <span class="value">gongvirgil@gmail.com</span>
-                                                    <div class="clear"></div>
-                                                </li>
-                                                <li>
-                                                    <i class="glyphicon glyphicon-phone"></i>
-                                                    <label>Phone</label>
-                                                    <span class="value">+86 xxxxxxxx</span>
-                                                    <div class="clear"></div>
-                                                </li>
-                                                <li>
-                                                    <i class="glyphicon glyphicon-globe"></i>
-                                                    <label>Website</label>
-                                                    <span class="value"><a target="_blank" href="http://gongvirgil.github.io">gongvirgil.github.io</a></span>
-                                                    <div class="clear"></div>
-                                                </li>
+                                            <div class="profile_r col-md-6">
+                                                <div class="cycle-slideshow">
+                                                    <img src="images/about_1.jpg" alt="" />
+                                                    <img src="images/about_2.png" alt="" />
+                                                    <img src="images/about_3.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab-content-2" class="tab-content">
+                                        <h1 class="tab-title">Resume - Personal Info</h1>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="title_content">
+                                                    <div class="text_content">Front-End Skills</div>
+                                                </div>
+                                                <div class="skills">
+                                                    <div class="skill" data-percent="95%">
+                                                        <div class="skill-title"><span>HTML / CSS</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">95%</div>
+                                                    </div>
+                                                    <div class="skill" data-percent="85%">
+                                                        <div class="skill-title"><span>javascript / jQuery</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">85%</div>
+                                                    </div>
+                                                    <div class="skill" data-percent="85%">
+                                                        <div class="skill-title"><span>Bootstrap</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">85%</div>
+                                                    </div>
+                                                    <div class="skill" data-percent="45%">
+                                                        <div class="skill-title"><span>Photoshop</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">45%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="title_content">
+                                                    <div class="text_content">Back-End Skills</div>
+                                                </div>
+                                                <div class="skills">
+                                                    <div class="skill" data-percent="95%">
+                                                        <div class="skill-title"><span>PHP / ThinkPHP</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">95%</div>
+                                                    </div>
+                                                    <div class="skill" data-percent="85%">
+                                                        <div class="skill-title"><span>Mysql</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">85%</div>
+                                                    </div>
+                                                    <div class="skill" data-percent="45%">
+                                                        <div class="skill-title"><span>Linux</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">45%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="title_content">
+                                                    <div class="text_content">Project Skills</div>
+                                                </div>
+                                                <div class="skills">
+                                                    <div class="skill" data-percent="65%">
+                                                        <div class="skill-title"><span>Git</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">65%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="title_content">
+                                                    <div class="text_content">Language Skills</div>
+                                                </div>
+                                                <div class="skills">
+                                                    <div class="skill" data-percent="75%">
+                                                        <div class="skill-title"><span>English</span></div>
+                                                        <div class="skill-bar"></div>
+                                                        <div class="skill-percent">75%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="title_content">
+                                                    <div class="text_content">Experience</div>
+                                                </div>
+                                                <ul class="attributes">
+                                                    <li class="first">
+                                                        <h5>PHP Programmer <span class="duration"><i class="fa fa-calendar color"></i> 2013 - 2016</span></h5>
+                                                        <h6><span class="fa fa-briefcase"></span> Jiangsu YiLe Tech</h6>
+                                                        <p>Since graduated from college, I start my work career in Jiangsu YiLe tech company, and I mainly do most part of PHP Developing work.</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Front-End Developer <span class="duration"><i class="fa fa-calendar color"></i> 2013 - 2016</span></h5>
+                                                        <h6><span class="fa fa-briefcase"></span> Jiangsu YiLe Tech</h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab-content-3" class="tab-content">
+                                        <h1 class="tab-title">Portfolio - My Works</h1>
+                                        <div class="portfolio-container">
+                                            <ul id="filters" class="filters">
+                                                <li><span class="filter active" data-filter="catWeb catGraphic catMotion logo">All</span></li>
+                                                <li><span class="filter" data-filter="catWeb">Web Design</span></li>
+                                                <li><span class="filter" data-filter="catGraphic">Graphic Design</span></li>
+                                                <li><span class="filter" data-filter="catMotion">Motion Graphic</span></li>
+                                                <li><span class="filter" data-filter="logo">Logo</span></li>
                                             </ul>
-                                            <p style="margin-bottom:20px">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec nulla sagittis, scelerisque mi vitae, congue turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec nulla sagittis, scelerisque mi vitae, congue turpis.
-                                            </p>
-                                        </div>
-                                        <div class="profile_r col-md-6">
-                                            <div class="cycle-slideshow">
-                                                <img src="images/about_1.jpg" alt="" />
-                                                <img src="images/about_2.png" alt="" />
-                                                <img src="images/about_3.png" alt="" />
+                                            <div id="portfolio-list">
+                                                <div class="portfolio logo" data-cat="logo">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/1.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/1.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">Logo</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catWeb" data-cat="catWeb">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/2.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/2.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catWeb</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catGraphic" data-cat="catGraphic">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/3.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/3.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catWeb</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catMotion" data-cat="catMotion">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/4.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/4.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catMotion</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio logo" data-cat="logo">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/5.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/5.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">Logo</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catWeb" data-cat="catWeb">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/6.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/6.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catWeb</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catGraphic" data-cat="catGraphic">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/7.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/7.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catWeb</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="portfolio catMotion" data-cat="catMotion">
+                                                    <div class="portfolio-wrapper">
+                                                        <a href="images/portfolio/8.jpg" rel="portfolio" title="Lorem">
+                                                            <img src="images/portfolio/8.jpg" alt="Visual Infography" />
+                                                            <div class="label">
+                                                                <div class="label-text">
+                                                                    <a class="text-title">Project Name</a>
+                                                                    <span class="text-category">catMotion</span>
+                                                                </div>
+                                                                <div class="label-bg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="clear"></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="tab-content-2" class="tab-content">
-                                    <h1 class="tab-title">Resume - Personal Info</h1>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="title_content">
-                                                <div class="text_content">Front-End Skills</div>
-                                            </div>
-                                            <div class="skills">
-                                                <div class="skill" data-percent="95%">
-                                                    <div class="skill-title"><span>HTML / CSS</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">95%</div>
-                                                </div>
-                                                <div class="skill" data-percent="85%">
-                                                    <div class="skill-title"><span>javascript / jQuery</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">85%</div>
-                                                </div>
-                                                <div class="skill" data-percent="85%">
-                                                    <div class="skill-title"><span>Bootstrap</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">85%</div>
-                                                </div>
-                                                <div class="skill" data-percent="45%">
-                                                    <div class="skill-title"><span>Photoshop</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">45%</div>
-                                                </div>
-                                            </div>
-                                            <div class="title_content">
-                                                <div class="text_content">Back-End Skills</div>
-                                            </div>
-                                            <div class="skills">
-                                                <div class="skill" data-percent="95%">
-                                                    <div class="skill-title"><span>PHP / ThinkPHP</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">95%</div>
-                                                </div>
-                                                <div class="skill" data-percent="85%">
-                                                    <div class="skill-title"><span>Mysql</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">85%</div>
-                                                </div>
-                                                <div class="skill" data-percent="45%">
-                                                    <div class="skill-title"><span>Linux</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">45%</div>
-                                                </div>
-                                            </div>
-                                            <div class="title_content">
-                                                <div class="text_content">Project Skills</div>
-                                            </div>
-                                            <div class="skills">
-                                                <div class="skill" data-percent="65%">
-                                                    <div class="skill-title"><span>Git</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">65%</div>
-                                                </div>
-                                            </div>
-                                            <div class="title_content">
-                                                <div class="text_content">Language Skills</div>
-                                            </div>
-                                            <div class="skills">
-                                                <div class="skill" data-percent="75%">
-                                                    <div class="skill-title"><span>English</span></div>
-                                                    <div class="skill-bar"></div>
-                                                    <div class="skill-percent">75%</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title_content">
-                                                <div class="text_content">Experience</div>
-                                            </div>
-                                            <ul class="attributes">
-                                                <li class="first">
-                                                    <h5>PHP Programmer <span class="duration"><i class="fa fa-calendar color"></i> 2013 - 2016</span></h5>
-                                                    <h6><span class="fa fa-briefcase"></span> Jiangsu YiLe Tech</h6>
-                                                    <p>Since graduated from college, I start my work career in Jiangsu YiLe tech company, and I mainly do most part of
-                                                    PHP Developing work.</p>
-                                                </li>
-                                                <li>
-                                                    <h5>Front-End Developer <span class="duration"><i class="fa fa-calendar color"></i> 2013 - 2016</span></h5>
-                                                    <h6><span class="fa fa-briefcase"></span> Jiangsu YiLe Tech</h6>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab-content-3" class="tab-content">
-                                    <h1 class="tab-title">Portfolio - My Works</h1>
-                                    <div class="portfolio-container">
-                                        <ul id="filters" class="filters">
-                                            <li><span class="filter active" data-filter="catWeb catGraphic catMotion logo">All</span></li>
-                                            <li><span class="filter" data-filter="catWeb">Web Design</span></li>
-                                            <li><span class="filter" data-filter="catGraphic">Graphic Design</span></li>
-                                            <li><span class="filter" data-filter="catMotion">Motion Graphic</span></li>
-                                            <li><span class="filter" data-filter="logo">Logo</span></li>
-                                        </ul>
-                                        <div id="portfolio-list">
-                                            <div class="portfolio logo" data-cat="logo">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/1.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/1.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">Logo</span>
+                                    <div id="tab-content-4" class="tab-content">
+                                        <h1 class="tab-title">Contact - Contact Me</h1>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="contact-user row">
+                                                    <div class="col-md-5">
+                                                        <div class="contact-info">
+                                                            <div class="title_content">
+                                                                <div class="text_content">Contact info</div>
                                                             </div>
-                                                            <div class="label-bg"></div>
+                                                            <ul>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-map-marker"></i> Adress:</span> Jiangsu Zhenjiang, China.
+                                                                    <br>
+                                                                    <br>
+                                                                </li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-envelope"></i> Email:</span> gongvirgil@gmail.com</li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-phone"></i> Phone:</span> +86 xxxx xxxx xxx</li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-globe"></i> Website:</span> gongvirgil.github.com</li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-comment"></i> Skype:</span> gong.virgil</li>
+                                                            </ul>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catWeb" data-cat="catWeb">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/2.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/2.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catWeb</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catGraphic" data-cat="catGraphic">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/3.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/3.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catWeb</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catMotion" data-cat="catMotion">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/4.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/4.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catMotion</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio logo" data-cat="logo">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/5.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/5.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">Logo</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catWeb" data-cat="catWeb">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/6.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/6.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catWeb</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catGraphic" data-cat="catGraphic">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/7.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/7.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catWeb</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="portfolio catMotion" data-cat="catMotion">
-                                                <div class="portfolio-wrapper">
-                                                    <a href="images/portfolio/8.jpg" rel="portfolio" title="Lorem">
-                                                        <img src="images/portfolio/8.jpg" alt="Visual Infography" />
-                                                        <div class="label">
-                                                            <div class="label-text">
-                                                                <a class="text-title">Project Name</a>
-                                                                <span class="text-category">catMotion</span>
-                                                            </div>
-                                                            <div class="label-bg"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                                <div id="tab-content-4" class="tab-content">
-                                    <h1 class="tab-title">Contact - Contact Me</h1>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="contact-user row">
-                                                <div class="col-md-5">
-                                                    <div class="contact-info">
                                                         <div class="title_content">
-                                                            <div class="text_content">Contact info</div>
+                                                            <div class="text_content">Follow me</div>
                                                         </div>
-                                                        <ul>
-                                                            <li><span class="span-info"><i class="glyphicon glyphicon-map-marker"></i> Adress:</span> Jiangsu Zhenjiang, China.
-                                                                <br>
-                                                                <br>
-                                                            </li>
-                                                            <li><span class="span-info"><i class="glyphicon glyphicon-envelope"></i> Email:</span> gongvirgil@gmail.com</li>
-                                                            <li><span class="span-info"><i class="glyphicon glyphicon-phone"></i> Phone:</span> +86 xxxx xxxx xxx</li>
-                                                            <li><span class="span-info"><i class="glyphicon glyphicon-globe"></i> Website:</span> gongvirgil.github.com</li>
-                                                            <li><span class="span-info"><i class="glyphicon glyphicon-comment"></i> Skype:</span> gong.virgil</li>
-                                                        </ul>
+                                                        <div class="profile-social">
+                                                            <a href="https://www.facebook.com/gongvirgil" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                            <a href="https://twitter.com/gongvirgil" target="_blank"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram" target="_blank"></i></a>
+                                                            <a href="https://github.com/gongvirgil" target="_blank"><i class="fa fa-github"></i></a>
+                                                            <a href="http://weibo.com/ppmoli" target="_blank"><i class="fa fa-weibo"></i></a>
+                                                        </div>
                                                     </div>
-                                                    <div class="title_content">
-                                                        <div class="text_content">Follow me</div>
-                                                    </div>
-                                                    <div id="profile_social">
-                                                        <a href="#"><i class="fa fa-weibo"></i></a>
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-github"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7">
-                                                    <div class="title_content">
-                                                        <div class="text_content">Leave me a message</div>
-                                                    </div>
-                                                    <div class="contact-form">
-                                                        <div id="contact-status"></div>
-                                                        <form id="contactform" action="#">
-                                                            <p id="contact-name" class="form-group">
-                                                                <label for="name">Your Name</label>
-                                                                <input type="text" placeholder="Name..." id="inputSuccess" class="form-control name-contact" name="name">
-                                                            </p>
-                                                            <p id="contact-email" class="form-group">
-                                                                <label for="email">Your Email</label>
-                                                                <input type="text" placeholder="Email..." id="inputSuccess" class="form-control email-contact" name="email">
-                                                            </p>
-                                                            <p id="contact-message" class="form-group">
-                                                                <label for="message">Your Message</label>
-                                                                <textarea placeholder="Message..." id="inputError" class="form-control message-contact" rows="6" cols="88" name="message"></textarea>
-                                                            </p>
-                                                            <input type="reset" class="reset" value="CLEAR" name="reset">
-                                                            <section style="display: inline-block;" class="button-demo">
-                                                                <button data-style="expand-left" data-color="green" name="submit" class="ladda-button submit send_email">SEND MESSAGE</button>
-                                                            </section>
-                                                        </form>
+                                                    <div class="col-md-7">
+                                                        <div class="title_content">
+                                                            <div class="text_content">Leave me a message</div>
+                                                        </div>
+                                                        <div class="contact-form">
+                                                            <div id="contact-status"></div>
+                                                            <form id="contactform" action="#">
+                                                                <p id="contact-name" class="form-group">
+                                                                    <label for="name">Your Name</label>
+                                                                    <input type="text" placeholder="Name..." id="inputSuccess" class="form-control name-contact" name="name">
+                                                                </p>
+                                                                <p id="contact-email" class="form-group">
+                                                                    <label for="email">Your Email</label>
+                                                                    <input type="text" placeholder="Email..." id="inputSuccess" class="form-control email-contact" name="email">
+                                                                </p>
+                                                                <p id="contact-message" class="form-group">
+                                                                    <label for="message">Your Message</label>
+                                                                    <textarea placeholder="Message..." id="inputError" class="form-control message-contact" rows="6" cols="88" name="message"></textarea>
+                                                                </p>
+                                                                <input type="reset" class="reset" value="CLEAR" name="reset">
+                                                                <section style="display: inline-block;" class="button-demo">
+                                                                    <button data-style="expand-left" data-color="green" name="submit" class="ladda-button submit send_email">SEND MESSAGE</button>
+                                                                </section>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
