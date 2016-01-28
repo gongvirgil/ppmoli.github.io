@@ -45,6 +45,27 @@ h1 {
     width: 0;
 }
 
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+#spinner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+    background: url(../images/spinner.gif) no-repeat;
+}
+
 .wrapper {
     display: block;
     width: 100%;
@@ -754,6 +775,12 @@ h2.resp-tab-active span.resp-arrow {
         display: none;
     }
     .profile-desc {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .cycle-slideshow {
         display: none;
     }
 }
