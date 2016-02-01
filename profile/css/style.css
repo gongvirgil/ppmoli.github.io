@@ -128,8 +128,10 @@ h1 {
     line-height: 45px;
     margin-left: 5px;
     color: #fff;
+    background-color: #43b6b1;
     border: 1px solid #fff;
     font-size: 24px;
+    text-align: center;
     -webkit-transition: all 0.3s ease-in 0s;
     -moz-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s;
@@ -535,22 +537,7 @@ li:hover .tab-icon {
     background-color: #43b6b1;
 }
 
-.profile-social a {
-    color: #fff;
-    background-color: #43b6b1;
-    float: left;
-    display: block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    margin-left: 5px;
-    border: 1px solid #43b6b1;
-    font-size: 24px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-in 0s;
-    -moz-transition: all 0.3s ease-in 0s;
-    transition: all 0.3s ease-in 0s;
-}
+
 
 
 /*--------------------------------------------------
