@@ -865,6 +865,9 @@ h2.resp-tab-active span.resp-arrow {
         padding-left: 2px;
         font-size: 9px;
     }
+    .tab-content .tab-title {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-width: 260px) {
@@ -916,6 +919,9 @@ h2.resp-tab-active span.resp-arrow {
 @media only screen and (max-width: 550px) {
     .cycle-slideshow {
         display: none;
+    }
+    .tab-content .tab-title {
+        font-size: 15px;
     }
 }
 
