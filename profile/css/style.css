@@ -895,12 +895,6 @@ h2.resp-tab-active span.resp-arrow {
 }
 
 @media only screen and (max-width: 320px) {
-    .contact-info,
-    #contactform .reset,
-    #comment_form .reset,
-    section.button-demo {
-        width: 100%;
-    }
     .text_content {
         font-size: 10px;
         padding-top: 0;
