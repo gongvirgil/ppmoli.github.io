@@ -780,6 +780,24 @@ h2.resp-tab-active span.resp-arrow {
     }
 }
 
+@media only screen and (max-width: 384px) {
+    .contact-info,
+    #contactform .reset,
+    #comment_form .reset,
+    section.button-demo {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    #contactform .submit,
+    #contactform .reset,
+    #comment_form .submit,
+    #comment_form .reset {
+        margin-left: 0;
+    }
+}
+
 @media only screen and (max-width: 550px) {
     .cycle-slideshow {
         display: none;
