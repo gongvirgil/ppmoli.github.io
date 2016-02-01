@@ -98,6 +98,7 @@ p {
     height: 150px;
     width: 150px;
     margin: 15px auto;
+    position: relative;
 }
 
 .profile-info {
@@ -158,10 +159,16 @@ p {
 .head-img {
     background-color: #fff;
     border: 10px solid #66c6c2;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .circle {
     border-radius: 50%;
+    margin: 1em auto;
 }
 
 .main {
