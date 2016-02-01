@@ -860,6 +860,13 @@ h2.resp-tab-active span.resp-arrow {
     font-size: 13px;
 }
 
+@media only screen and (max-width: 240px) {
+    .about li {
+        padding-left: 2px;
+        font-size: 9px;
+    }
+}
+
 @media only screen and (max-width: 260px) {
     .profile h1 {
         font-size: 25px !important;
@@ -888,9 +895,6 @@ h2.resp-tab-active span.resp-arrow {
     section.button-demo {
         width: 100%;
     }
-    .about li span.value {
-        float: none;
-    }
 }
 
 @media only screen and (max-width: 384px) {
@@ -899,6 +903,13 @@ h2.resp-tab-active span.resp-arrow {
     #comment_form .submit,
     #comment_form .reset {
         margin-left: 0;
+    }
+    .about li {
+        font-size: 11px;
+        margin: 0;
+    }
+    .about li span.value {
+        float: none;
     }
 }
 
@@ -1008,6 +1019,9 @@ h2.resp-tab-active span.resp-arrow {
     .profile h1 {
         font-size: 24px;
         line-height: 30px;
+    }
+    .about li span.value {
+        width: 196px;
     }
 }
 
