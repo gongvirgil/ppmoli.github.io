@@ -90,6 +90,10 @@ p {
     background-color: #43B6B1;
 }
 
+.profile p {
+    color: #b1e2df !important;
+}
+
 .profile-pic {
     height: 150px;
     width: 150px;
