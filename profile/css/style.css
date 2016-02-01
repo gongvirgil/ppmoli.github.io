@@ -86,7 +86,7 @@ p {
 
 .profile {
     float: right;
-    height: 580px;
+    height: 525px;
     background-color: #43B6B1;
 }
 
@@ -254,7 +254,7 @@ li:hover .tab-icon {
 
 .tab-content {
     display: none;
-    height: 580px;
+    height: 525px;
 }
 
 .tab-content.active {
@@ -710,7 +710,7 @@ h2.resp-tab-title:last-child {
     background-color: #f4f4f4;
     float: left;
     width: 88%;
-    height: 580px;
+    height: 525px;
     clear: none;
     margin-left: 13px;
 }
