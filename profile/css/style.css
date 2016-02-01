@@ -759,6 +759,107 @@ h2.resp-tab-active span.resp-arrow {
     font-size: 12px !important;
 }
 
+#contact-user {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.contact-info,
+.contact-form {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-info ul {
+    float: left;
+    margin-left: 0px;
+}
+
+.contact-info ul li {
+    font-size: 13px;
+    line-height: 20px;
+    color: #666;
+    overflow: hidden;
+    width: 267px;
+}
+
+#contactform,
+#comment_form {
+    padding-left: 0;
+}
+
+#contactform p,
+#comment_form p {
+    margin-bottom: 15px;
+}
+
+#contactform p label,
+#comment_form p label {
+    display: block;
+    color: #999;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+#contactform .input,
+#comment_form .input {
+    line-height: 20px;
+    height: 20px;
+    width: 60%;
+}
+
+#contactform .textarea,
+#comment_form .textarea {
+    width: 95%;
+}
+
+#contactform .submit,
+#contactform .reset,
+#comment_form .submit,
+#comment_form .reset {
+    color: #fff;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 23px;
+}
+
+#contactform .submit:hover,
+#comment_form .submit:hover {
+    -webkit-filter: brightness(98%) !important;
+}
+
+#contactform .reset:hover,
+#comment_form .reset:hover {
+    background-color: #666;
+    -webkit-filter: brightness(98%);
+}
+
+#contactform .reset,
+#comment_form .reset {
+    background-color: #999999;
+    width: 120px;
+}
+
+#contactform .input,
+.textarea,
+#comment_form .input,
+.textarea {
+    padding: 6px;
+    background-color: #f5f5f5;
+    border: 1px solid #CCC;
+    color: #999;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 260px) {
     .profile h1 {
         font-size: 25px !important;
