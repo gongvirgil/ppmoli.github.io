@@ -888,6 +888,9 @@ h2.resp-tab-active span.resp-arrow {
     section.button-demo {
         width: 100%;
     }
+    .about li span.value {
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 384px) {
@@ -989,6 +992,9 @@ h2.resp-tab-active span.resp-arrow {
     }
     .resp-vtabs .tab-container {
         margin-left: 0 !important;
+    }
+    .about li span.value {
+        margin-right: 30px;
     }
 }
 
