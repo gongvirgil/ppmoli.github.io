@@ -888,10 +888,10 @@ h2.resp-tab-active span.resp-arrow {
 
 @media (min-width: 1200px) {
     .container {
-        width: 1130px !important;
+        width: 1030px !important;
     }
     .profile h1 {
-        font-size: 25px;
-        line-height: 60px;
+        font-size: 24px;
+        line-height: 40px;
     }
 }
