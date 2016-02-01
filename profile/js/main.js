@@ -31,8 +31,8 @@ jQuery(document).ready(function($) {
             });
 
         } else {
-            $(".resp-vtabs .resp-tabs-container").css("height", "580px");
-            $(".tab-content").css("height", "580px");
+            $(".resp-vtabs .resp-tabs-container").css("height", "525px");
+            $(".tab-content").css("height", "525px");
             $(".tab-content").mCustomScrollbar("destroy");
             $(".tab-content").mCustomScrollbar({
                 theme: "dark-2",
