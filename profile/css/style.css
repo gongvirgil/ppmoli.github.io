@@ -107,6 +107,11 @@ p {
     padding-bottom: 15px;
 }
 
+.profile-info h4 {
+    font-size: 15px;
+    margin-top: 0;
+}
+
 .profile-info h6 {
     font-size: 14px;
 }
