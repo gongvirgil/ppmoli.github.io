@@ -322,9 +322,10 @@ li:hover .tab-icon {
 
 .about li span.value {
     color: #717171;
-    width: 220px;
+    width: 180px;
     text-align: left;
     float: right;
+    font-size: 12px;
 }
 
 .skill {
