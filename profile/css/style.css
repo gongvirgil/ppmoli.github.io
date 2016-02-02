@@ -159,6 +159,7 @@ p {
 
 .profile-social a:hover {
     color: #43B6B1;
+    border-color: #43b6b1;
     background-color: #fff;
 }
 
