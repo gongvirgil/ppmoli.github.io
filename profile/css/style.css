@@ -310,7 +310,7 @@ li:hover .tab-icon {
 .about li {
     color: #43b6b1;
     border-bottom: 1px solid #e6e6e6;
-    margin: 0;
+    margin: 3px 0 0;
     padding: 0;
     display: block;
     font-size: 13px;
