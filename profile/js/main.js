@@ -201,7 +201,7 @@ jQuery(document).ready(function($) {
         var email = $('#contact-email').val();
         var message = $('#contact-message').val();
         var content = '来源：'+location.href+'<br>'+'邮箱：'+email+'<br>'+message;
-        $.getJSON('http://test/mail.php', {
+        $.getJSON('http://ppmoli.esy.es/api/mail.php', {
                 email: 'ppmoli@qq.com',
                 type: '留言',
                 title: name+'的留言',
