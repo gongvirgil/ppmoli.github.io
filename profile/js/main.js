@@ -227,7 +227,7 @@ jQuery(document).ready(function($) {
                 },
             })
             .done(function(data) {
-                alert('发送成功');
+                alert('OK');
             });
         })
         .fail(function() {
@@ -244,7 +244,7 @@ jQuery(document).ready(function($) {
                 },
             })
             .always(function(data) {
-                alert('发送失败');
+                alert('Fail');
             });
         });
     });
