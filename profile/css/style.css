@@ -515,13 +515,11 @@ li:hover .tab-icon {
     color: #43b6b1;
 }
 
-#contactform p,
-#comment_form p {
+#contactform p{
     margin-bottom: 15px;
 }
 
-#contactform p label,
-#comment_form p label {
+#contactform p label{
     color: #999;
     display: block;
     font-size: 13px;
@@ -533,26 +531,22 @@ li:hover .tab-icon {
     border-radius: 0 !important;
 }
 
-#contactform .submit,
-#contactform .reset,
-#comment_form .submit,
-#comment_form .reset {
+#contactform .send_email,
+#contactform .reset{
     border: medium none;
     color: #fff;
     cursor: pointer;
     font-size: 13px;
     margin-left: 23px;
     padding: 8px;
-}
-
-#contactform .reset,
-#comment_form .reset {
-    background-color: #999999;
     width: 120px;
 }
 
-#contactform .submit,
-#comment_form .submit {
+#contactform .reset{
+    background-color: #999999;
+}
+
+#contactform .send_email{
     background-color: #43b6b1;
 }
 
@@ -790,40 +784,33 @@ h2.resp-tab-active span.resp-arrow {
     width: 267px;
 }
 
-#contactform,
-#comment_form {
+#contactform{
     padding-left: 0;
 }
 
-#contactform p,
-#comment_form p {
+#contactform p{
     margin-bottom: 15px;
 }
 
-#contactform p label,
-#comment_form p label {
+#contactform p label{
     display: block;
     color: #999;
     margin-bottom: 8px;
     font-size: 13px;
 }
 
-#contactform .input,
-#comment_form .input {
+#contactform .input{
     line-height: 20px;
     height: 20px;
     width: 60%;
 }
 
-#contactform .textarea,
-#comment_form .textarea {
+#contactform .textarea{
     width: 95%;
 }
 
-#contactform .submit,
-#contactform .reset,
-#comment_form .submit,
-#comment_form .reset {
+#contactform .send_email,
+#contactform .reset{
     color: #fff;
     padding: 8px;
     border: none;
@@ -832,27 +819,22 @@ h2.resp-tab-active span.resp-arrow {
     margin-left: 23px;
 }
 
-#contactform .submit:hover,
-#comment_form .submit:hover {
+#contactform .send_email:hover{
     -webkit-filter: brightness(98%) !important;
 }
 
-#contactform .reset:hover,
-#comment_form .reset:hover {
+#contactform .reset:hover{
     background-color: #666;
     -webkit-filter: brightness(98%);
 }
 
-#contactform .reset,
-#comment_form .reset {
+#contactform .reset{
     background-color: #999999;
     width: 120px;
 }
 
 #contactform .input,
-.textarea,
-#comment_form .input,
-.textarea {
+.textarea{
     padding: 6px;
     background-color: #f5f5f5;
     border: 1px solid #CCC;
@@ -906,10 +888,8 @@ h2.resp-tab-active span.resp-arrow {
 }
 
 @media only screen and (max-width: 384px) {
-    #contactform .submit,
-    #contactform .reset,
-    #comment_form .submit,
-    #comment_form .reset {
+    #contactform .send_email,
+    #contactform .reset{
         margin-left: 0;
     }
     .about li {
