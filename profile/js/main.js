@@ -201,13 +201,51 @@ jQuery(document).ready(function($) {
         var email = $('#contact-email').val();
         var message = $('#contact-message').val();
         var content = '来源：'+location.href+'<br>'+'邮箱：'+email+'<br>'+message;
-        $.getJSON('http://ppmoli.esy.es/api/mail.php', {
+        $.ajax({
+            url: 'http://ppmoli.esy.es/api/mail.php',
+            type: 'POST',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            data: {
                 email: 'ppmoli@qq.com',
                 type: '留言',
                 title: name+'的留言',
                 content: content
-            }, function(json, textStatus) {
-                alert(json['msg']);
-        }); 
+            },
+        })
+        .done(function(data) {
+            $.ajax({
+                url: 'http://ppmoli.esy.es/api/mail.php',
+                type: 'POST',
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                data: {
+                    email: email,
+                    type: '留言回馈',
+                    title: '感谢'+name+'的留言',
+                    content: '已收到您的留言！'
+                },
+            })
+            .done(function(data) {
+                alert('发送成功');
+            });
+        })
+        .fail(function() {
+            $.ajax({
+                url: 'http://ppmoli.esy.es/api/mail.php',
+                type: 'POST',
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                data: {
+                    email: email,
+                    type: '留言回馈',
+                    title: '感谢'+name+'的留言',
+                    content: '很抱歉未收到您的留言！请使用其他方式联系！'
+                },
+            })
+            .always(function(data) {
+                alert('发送失败');
+            });
+        });
     });
 });
