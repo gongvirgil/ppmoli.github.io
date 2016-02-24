@@ -13,18 +13,18 @@
 - 龚强/男/1993.4.3
 - 本科/江苏大学计算机系 
 - 工作年限：3年
-- 技术博客：http://gongvirgil.github.io/
+- 技术博客：[http://gongvirgil.github.io/](http://gongvirgil.github.io/)
 - Github：https://github.com/gongvirgil
 
 - 期望职位：PHP高级程序员
-- 期望薪资：税前月薪15k~20k，特别喜欢的公司可例外
+- 期望薪资：税前月薪15k~20k
 - 期望城市：北京
 
 ---
 
 # 工作经历
 
-## 江苏易乐科技公司 （ 2009年9月 ~ 至今 ）
+## 江苏易乐科技公司 （ 2009年9月 ~ ）
 
 ### 主要负责
 
@@ -36,7 +36,10 @@
 ---
 
 # 开源项目和作品
-（这一段用于放置工作以外的、可证明你的能力的材料）
+
+- 响应式自适应个人主页：[http://gongvirgil.github.io/profile/index-ch.html](http://gongvirgil.github.io/profile/index-ch.html)
+- Jekyll+Github搭建的博：[http://gongvirgil.github.io/](http://gongvirgil.github.io/)
+
 
 
 # 技能清单
