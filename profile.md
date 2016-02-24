@@ -44,7 +44,7 @@
 以下均为我熟练使用的技能
 
 - Web开发：HTML/HTML5+CSS/CSS3+Javascript/jQuery & Linux+Apache+Mysql+PHP
-- Web框架：ThinkPHP/MVC/DEDE CMS/Discuz
+- Web框架：ThinkPHP/MVC/CMS/Discuz
 - 前端框架：Bootstrap
 - 版本管理、文档和自动化部署工具：Svn/Git
 
