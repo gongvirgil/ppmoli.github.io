@@ -38,18 +38,20 @@
 # 开源项目和作品
 
 - 响应式自适应个人主页：[http://gongvirgil.github.io/profile/index-ch.html](http://gongvirgil.github.io/profile/index-ch.html)
-- Jekyll+Github搭建的博：[http://gongvirgil.github.io/](http://gongvirgil.github.io/)
-
-
+- 使用Jekyll+Github Page搭建的博客：[http://gongvirgil.github.io/](http://gongvirgil.github.io/)
 
 # 技能清单
 
-以下均为我熟练使用的技能
+## 熟练使用的技能
 
 - Web开发：HTML/HTML5+CSS/CSS3+Javascript/jQuery & Linux+Apache+Mysql+PHP
 - Web框架：ThinkPHP/MVC/CMS/Discuz
 - 前端框架：Bootstrap
 - 版本管理、文档和自动化部署工具：Svn/Git
+
+## 了解&使用过的技能
+
+- Nodejs/MemCache/Redis/MongoDB/Laravel
 
 ---
 
