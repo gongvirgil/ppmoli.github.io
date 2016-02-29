@@ -71,7 +71,7 @@
 
 主要特点：
 
-_ Bootstrap简约风格
+- Bootstrap简约风格
 - 使用ThinkPHP框架开发
 - 基于角色访问控制的权限管理系统(RBAC)
 
