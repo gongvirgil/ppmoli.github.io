@@ -61,13 +61,23 @@
 
 # 主要的项目经验
 
-### 多端响应式自适应后台开发
+### 手机端自适应后台
 
-<img src="./images/profile-pic-wap.jpg" height="200" alt="多端响应式自适应后台.jpg" align="center" />
+<img src="./images/profile-pic-wap.jpg" height="200" title="多端响应式自适应后台" alt="多端响应式自适应后台.jpg" align="center" />
 
-### 自动补单功能 
+### Bootstrap风格系统管理后台
 
-完成任务：Linux下的Crontab定时任务配置 + ThinkPHP开发后台补单API
+<img src="./images/profile-pic-admin.jpg" height="200" title="Bootstrap风格系统管理后台" alt="Bootstrap风格系统管理后台.jpg" align="center" />
+
+主要特点：
+
+_ Bootstrap简约风格
+- 使用ThinkPHP框架开发
+- 基于角色访问控制的权限管理系统(RBAC)
+
+### Linux下服务器自动补单功能 
+
+Linux下的Crontab定时任务配置 + ThinkPHP开发后台补单API
 
 
 ---
