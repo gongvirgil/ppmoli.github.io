@@ -63,7 +63,7 @@
 
 ### 多端响应式自适应后台开发
 
-![多端响应式自适应后台]("https://gongvirgil.github.io/images/profile-pic-wap.jpg 多端响应式自适应后台")
+![多端响应式自适应后台.jpg](https://gongvirgil.github.io/images/profile-pic-wap.jpg "多端响应式自适应后台")
 
 ### 自动补单功能 
 
