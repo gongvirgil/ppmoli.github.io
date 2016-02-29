@@ -90,7 +90,8 @@
 
 ### Linux下服务器自动补单功能 
 
-Linux下的Crontab定时任务配置 + ThinkPHP开发后台补单API
+- Linux下的Crontab定时任务配置
+- ThinkPHP开发后台补单API
 
 ---
 
