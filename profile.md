@@ -34,7 +34,7 @@
 
 熟练使用的技能
 
-- Web开发：HTML+CSS+Javascript & Linux/Nginx+Apache+Mysql+PHP (精通 使用3年以上)
+- Web开发：HTML+CSS+Javascript+Ajax & Linux/Nginx+Apache+Mysql+PHP (精通 使用3年以上)
 - Web框架：jQuery/ThinkPHP/MVC模式/CMS/Discuz （精通 使用2年以上）
 - 前端框架：Bootstrap （熟练 使用1年以上）
 - 版本管理、文档和自动化部署工具：Svn/Git （熟练 使用1年以上）
@@ -51,7 +51,7 @@
 
 运营技术支持，负责多个平台的以下事情：
 
-- 平台官网&页面制作
+- 平台游戏官网&活动
 - API接口开发&对接
 - 后台维护&功能开发
 - 多端响应式自适应后台开发
@@ -60,6 +60,17 @@
 ---
 
 # 主要的项目经验
+
+### 游戏官网与活动
+
+- 游戏官网/首页/文章页/列表页/选服页/游戏卡领取页
+- 游戏抽奖活动/平台返利活动/积分兑换活动/游戏内部活动等
+
+### CPL&CPS广告
+
+- 注册入口/Flash动画广告页面
+- 广告注入接口/等级查询接口
+- 提供给广告商的运营数据后台
 
 ### 手机端自适应后台
 
@@ -72,13 +83,14 @@
 主要特点：
 
 - Bootstrap简约风格
-- 使用ThinkPHP框架开发
+- 使用ThinkPHP框架
+- 基于MVC模式开发
+- 使用Widget扩展代替传统的iframe结构布局
 - 基于角色访问控制的权限管理系统(RBAC)
 
 ### Linux下服务器自动补单功能 
 
 Linux下的Crontab定时任务配置 + ThinkPHP开发后台补单API
-
 
 ---
 
