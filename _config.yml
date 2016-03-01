@@ -3,7 +3,7 @@ include: []
 encoding : utf-8
 timezone: Asia/Shanghai
 markdown: rdiscount
-highlighter: pygments
+highlighter: rouge
 paginate: 8
 permalink: /:title
 title: 莫离君的博客
