@@ -41,7 +41,7 @@
 
 了解&使用过的技能
 
-- HTML5/CSS3/Nodejs/MemCache/Redis/MongoDB/Laravel
+- HTML5/CSS3/React/Nodejs/MemCache/Redis/MongoDB/Laravel
 
 ---
 
