@@ -197,7 +197,7 @@ date: 2016-03-04
         echo $str . ' <=> ' . $mstr;
     ?>
 
-##PHP hex2bin
+##PHP hexXbin
 
     <?php
         function hexXbin($data, $types = false) {
