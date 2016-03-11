@@ -34,7 +34,7 @@
 
 熟练使用的技能
 
-- Web开发：HTML+CSS+Javascript+Ajax & Linux/Nginx+Apache+Mysql+PHP (精通 使用3年以上)
+- Web开发：HTML+CSS+Javascript+Ajax & Linux/Nginx+Apache+MySQL+PHP (精通 使用3年以上)
 - Web框架：jQuery/ThinkPHP/MVC模式/CMS/Discuz （精通 使用2年以上）
 - 前端框架：Bootstrap （熟练 使用1年以上）
 - 版本管理、文档和自动化部署工具：Svn/Git （熟练 使用1年以上）
