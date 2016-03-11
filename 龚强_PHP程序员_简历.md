@@ -22,14 +22,6 @@
 
 ---
 
-# 开源项目和作品
-
-- 响应式自适应个人主页：[http://gongvirgil.github.io/profile/index-ch.html](http://gongvirgil.github.io/profile/index-ch.html)
-- 使用Jekyll+Github Page搭建的博客：[http://gongvirgil.github.io/](http://gongvirgil.github.io/)
-- Bootstrap风格后台管理系统：[http://ppmoli.esy.es/admin](http://ppmoli.esy.es/admin)
-
----
-
 # 技能清单
 
 熟练使用的技能
@@ -89,6 +81,15 @@
 
 <img src="./images/profile-pic-wap.jpg" height="200" title="多端响应式自适应后台" alt="多端响应式自适应后台.jpg" align="center" />
 
+简述：PC端和手机端自适应的简易后台，便于在手机上处理业务，主要使用Bootstrap框架搭建前台模板
+
+### Linux下服务器自动补单功能 
+
+- Linux下的Crontab定时任务配置
+- ThinkPHP开发后台补单API
+
+简述：针对充值业务偶然出现的掉单现象，开发的自动补单功能
+
 ### Bootstrap风格系统管理后台
 
 <img src="./images/profile-pic-admin.jpg" height="200" title="Bootstrap风格系统管理后台" alt="Bootstrap风格系统管理后台.jpg" align="center" />
@@ -101,16 +102,27 @@
 - 使用Widget扩展代替传统的iframe结构布局
 - 基于角色访问控制的权限管理系统(RBAC)
 
-### Linux下服务器自动补单功能 
+---
 
-- Linux下的Crontab定时任务配置
-- ThinkPHP开发后台补单API
+# 开源项目和作品
 
-简述：针对充值业务偶然出现的掉单现象，开发的自动补单功能
+||
+---|---|---
+[profile-page][P1]|响应式自适应个人主页|[演示][S1]
+[gongvirgil.github.io][P2](/)|使用Jekyll+Github Page搭建的博客|[演示][S2]
+[bootstrap-admin][P3]|Bootstrap风格后台管理系统|[演示][S3]
 
 ---
 
-# 致谢
+# 致谢 
 
 感谢您花时间阅读我的简历，期待能有机会和您共事。
+
+[P1] : https://github.com/gongvirgil/profile
+[P2] : https://github.com/gongvirgil/gongvirgil.github.io "gongvirgil.github.io"
+[P3] : https://github.com/gongvirgil/bootstrap-admin "bootstrap-admin"
+
+[S1] : http://gongvirgil.github.io/profile/index-ch.html "个人主页"
+[S2] : http://gongvirgil.github.io/ "莫离君的博客"
+[S3] : http://ppmoli.esy.es/admin/ "后台管理系统"
 
