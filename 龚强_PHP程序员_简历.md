@@ -106,10 +106,10 @@
 
 # 开源项目和作品
 
-||
+项目|说明|演示
 ---|---|---
 [profile-page][P1]|响应式自适应个人主页|[演示][S1]
-[gongvirgil.github.io][P2](/)|使用Jekyll+Github Page搭建的博客|[演示][S2]
+[gongvirgil.github.io][P2]|使用Jekyll+Github Page搭建的博客|[演示][S2]
 [bootstrap-admin][P3]|Bootstrap风格后台管理系统|[演示][S3]
 
 ---
@@ -118,11 +118,11 @@
 
 感谢您花时间阅读我的简历，期待能有机会和您共事。
 
-[P1] : https://github.com/gongvirgil/profile
-[P2] : https://github.com/gongvirgil/gongvirgil.github.io "gongvirgil.github.io"
-[P3] : https://github.com/gongvirgil/bootstrap-admin "bootstrap-admin"
+[P1]: https://github.com/gongvirgil/profile
+[P2]: https://github.com/gongvirgil/gongvirgil.github.io "gongvirgil.github.io"
+[P3]: https://github.com/gongvirgil/bootstrap-admin "bootstrap-admin"
 
-[S1] : http://gongvirgil.github.io/profile/index-ch.html "个人主页"
-[S2] : http://gongvirgil.github.io/ "莫离君的博客"
-[S3] : http://ppmoli.esy.es/admin/ "后台管理系统"
+[S1]: http://gongvirgil.github.io/profile/index-ch.html "个人主页"
+[S2]: http://gongvirgil.github.io/ "莫离君的博客"
+[S3]: http://ppmoli.esy.es/admin/ "后台管理系统"
 
