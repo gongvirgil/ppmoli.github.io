@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Git Bash 更改初始目录
-description：Git Bash 更改初始目录
+title: GitBash更改初始目录
+description：GitBash更改初始目录
 category: Git
 tags: [Git,软件]
 date: 2016-04-14
