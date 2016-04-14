@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: post
 title: Git Bash 更改初始目录
 description：Git Bash 更改初始目录
 category: Git
