@@ -2,7 +2,7 @@ exclude: []
 include: []
 encoding : utf-8
 timezone: Asia/Shanghai
-markdown: rdiscount
+markdown: kramdown
 highlighter: rouge
 paginate: 8
 permalink: /:title
