@@ -48,3 +48,6 @@ $ sudo service apache2 restart
 ```
 $ sudo update-alternatives --set php /usr/bin/php5.6
 ```
+
+> 原文地址：[如何在Ubuntu上在多个PHP版本之间切换](https://www.howtoing.com/switch-between-multiple-php-version-on-ubuntu/)
+
