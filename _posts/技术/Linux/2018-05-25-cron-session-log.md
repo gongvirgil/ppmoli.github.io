@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cron: pam_unix (cron:session): session opened/closed for user root by (uid=0)
-description: Cron: pam_unix (cron:session): session opened/closed for user root by (uid=0)
+title: session opened/closed for user root by (uid=0)
+description: session opened/closed for user root by (uid=0)
 category: Linux
 tags: [Linux,Cron]
 date: 2018-05-25
